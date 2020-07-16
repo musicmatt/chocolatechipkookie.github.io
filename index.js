@@ -22,10 +22,10 @@ function elementExists(elem, parent){
 }
 
 function checkboxFunction(elem){
-    var new_colony = getElementInsideContainer("colony-list", elem.value)
+    var colony = getElementInsideContainer("colony-list", elem.value)
     div_list = document.getElementById("colony-list")
 
-    if (elem.checked && new_colony == false){
+    if (elem.checked && colony == false){
         colony_name = elem.value
         div_list.innerHTML += 
             `<div class="colony-container" id="${colony_name}">
@@ -35,10 +35,10 @@ function checkboxFunction(elem){
                 </div>
             </div>
             `
-    } else if(!elem.checked && new_colony != false){
-        x.remove();
+    } else if(!elem.checked && colony != false){
+        colony.remove();
     }
 
-    console.log(div_list.querySelectorAll(".colony-container").length)
+    current_colonies = div_list.querySelectorAll(".colony-container").length
 }
 
