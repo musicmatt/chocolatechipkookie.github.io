@@ -1,1 +1,42 @@
-Hello_world!
+
+<head>
+    <title>Deimos down</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <link href="css/index.css" rel="stylesheet" type="text/css">
+    <link href="css/index-colonies.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+
+    <div class="title-box">
+        <h1>Zdravo</h1>
+    </div>
+
+    <div class="colony-options">
+        <div class="colony-options-title"><h1>Colonies</h1></div>
+        <div class="colony-selector">
+            <h3 class="colony-selector-title">Select colonies:</h3>
+            <input class="colony-selector-hide-button" type="button" value="Hide" onclick="hideCheckboxContainer(this)">
+
+            <div class="colony-checkbox-container" id="checkbox-container">
+                <label class="checkbox-label"><input type="checkbox" class="colony-checkbox" onclick="checkboxFunction(this)" id="callisto-checkbox" value="callisto">Callisto</label>
+                <label class="checkbox-label"><input type="checkbox" class="colony-checkbox" onclick="checkboxFunction(this)" id="ceres-checkbox" value="ceres">Ceres</label>
+                <label class="checkbox-label"><input type="checkbox" class="colony-checkbox" onclick="checkboxFunction(this)" id="europa-checkbox" value="europa">Europa</label>
+                <label class="checkbox-label"><input type="checkbox" class="colony-checkbox" onclick="checkboxFunction(this)" id="enceladus-checkbox" value="enceladus">Enceladus</label>
+                <label class="checkbox-label"><input type="checkbox" class="colony-checkbox" onclick="checkboxFunction(this)" id="ganymede-checkbox" value="ganymede">Ganymede</label>
+                <label class="checkbox-label"><input type="checkbox" class="colony-checkbox" onclick="checkboxFunction(this)" id="io-checkbox" value="io">Io</label>
+                <label class="checkbox-label"><input type="checkbox" class="colony-checkbox" onclick="checkboxFunction(this)" id="luna-checkbox" value="luna">Luna</label>
+                <label class="checkbox-label"><input type="checkbox" class="colony-checkbox" onclick="checkboxFunction(this)" id="miranda-checkbox" value="miranda">Miranda</label>
+                <label class="checkbox-label"><input type="checkbox" class="colony-checkbox" onclick="checkboxFunction(this)" id="pluto-checkbox" value="pluto">Pluto</label>
+                <label class="checkbox-label"><input type="checkbox" class="colony-checkbox" onclick="checkboxFunction(this)" id="titan-checkbox" value="titan">Titan</label>
+                <label class="checkbox-label"><input type="checkbox" class="colony-checkbox" onclick="checkboxFunction(this)" id="triton-checkbox" value="triton">Triton</label>
+            </div>
+        </div>
+
+        <div class="colony-list" id="colony-list">
+        </div>
+    </div>
+</body>
+<footer>
+    <script src="index.js"></script> 
+</footer>
+

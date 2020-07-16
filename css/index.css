@@ -1,0 +1,80 @@
+body {
+    background-color: #ffa778;
+    font-family: 'Courier New';
+} 
+
+.title-box{
+    margin-left: 30%;
+    margin-right: 30%;
+
+    padding-top: 3%;
+    text-align: center;
+    margin:0 auto;    
+    color: #44AA44;
+    background-color: hotpink;
+}
+
+.Box{
+    padding-left: 32%;
+    padding-top: 3%;
+    text-align: center;
+    margin:0 auto;
+}
+
+.rectangle{
+    position: relative;
+    left : 25%;
+    width : 50%;
+    border-style: solid;
+    border-radius: 15px;
+    border-color: #838383;
+    text-align: center;
+}
+.formLabel{
+    border: 1px solid #D0D0D0;
+    border-radius: 10px;
+    width: 70%;
+    height: 20px;
+    margin-bottom: 3%;
+    border-radius: 6px;
+    padding: 10px;
+    text-align: left;
+    font-weight: bold;
+    vertical-align: middle;
+    display: inline-block;
+}
+.Description{
+    border: 1px solid #D0D0D0;
+    border-radius: 10px;
+    width: 85%;
+    height: 60px;
+    margin-bottom: 3%;
+    border-radius: 6px;
+    padding: 10px;
+    text-align: left;
+    font-weight: bold;
+    vertical-align: middle;
+    display: inline-block;
+}
+.formControls {
+    border: 1px solid #D0D0D0;
+    border-radius: 17px;
+    width: 40%;
+    height: 10%;
+    margin-top: 5%;
+    margin-bottom: 5%;
+    margin-left: 4%;
+    margin-right: 1;
+
+    padding: 10px;
+
+    text-align: center;
+    font-weight: bold;
+    font-size: 100%;
+    color: white;
+
+    vertical-align: middle;
+    display: inline-block;
+
+    background: #44AA44;
+}
