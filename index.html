@@ -32,7 +32,7 @@
                         <span class="checkmark"></span>
                     </label>
                     <label class="checkbox-label">
-                        <input type="checkbox" checked="true" value="colonies">Colonies
+                        <input type="checkbox" checked="true" value="colonies" onclick="activateColonies(this)">Colonies
                         <span class="checkmark"></span>
                     </label>
                     <label class="checkbox-label">
@@ -64,6 +64,12 @@
                     <input type="number" min="1" max="5" id="player-number">
                 </label>
                 <input type="button" id="generate-player-inputs" value="Confirm" onclick="generatePlayerInputs()">
+
+                <div class = "players-list" id="players-list">
+                </div>
+
+                <datalist id="datalist-players">
+                </datalist>
             </div>
             
             <div class="base-option">
@@ -75,7 +81,7 @@
         </div>
     </div>
 
-    <div class="options-div">
+    <div class="options-div" id="colonies-options">
         <div class="options-title">
             <h2>Colonies</h2>
         </div>

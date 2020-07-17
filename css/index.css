@@ -41,6 +41,17 @@ body {
     background-color: yellowgreen;
 }
 
+.players-list{
+    display: none;
+    margin: 10 px;
+}
+
+.player-input{
+    display: block;
+    margin: 5px;
+}
+
+
 .Box{
     padding-left: 32%;
     padding-top: 3%;
