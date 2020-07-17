@@ -7,9 +7,8 @@
     <link href="css/checkbox.css" rel="stylesheet" type="text/css">
 </head>
 <body>
-
     <div class="title-box">
-        Zdravo
+        <h1>Zdravo</h1>
     </div>
 
     <div class="options-div">
@@ -28,7 +27,7 @@
                 <input class="colony-selector-hide-button" type="button" value="Hide" onclick="hideCheckboxContainer(this, 'expansion-checkbox-container')">
                 <div class="colony-checkbox-container" id="expansion-checkbox-container">
                     <label class="checkbox-label">
-                        <input type="checkbox" checked="true" value="base">Base
+                        <input type="checkbox" checked="true" value="base" disabled="true">Base
                         <span class="checkmark"></span>
                     </label>
                     <label class="checkbox-label">
@@ -135,8 +134,8 @@
                 </label>
             </div>
         </div>
-
         <div class="colony-list" id="colony-list">
+            <div class="warning-label" id="colony-warning"></div>
         </div>
     </div>
 </body>

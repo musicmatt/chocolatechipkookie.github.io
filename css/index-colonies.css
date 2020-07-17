@@ -27,19 +27,20 @@
     text-align: justify;
     -ms-text-justify: distribute-all-lines;
     text-justify: distribute-all-lines;
-    /* just for demo */
-    min-width: 612px;
+
+    height: auto;
 
     margin-left: 5%;
     margin-right: 5%;
     overflow: hidden;
 
-    padding-top: 3%;
     text-align: center;
     background-color: crimson;
 }
 
 .colony-container{
+    margin-top: 2%;
+    margin-bottom: 2%;
     width: 10%;
     vertical-align: middle;
     display: inline-block;
@@ -52,36 +53,15 @@
     height: auto;
 }
   
-.colony-overlay{
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    height: 100%;
-    width: 100%;
-    opacity: 0;
-    transition: .5s ease;
-}
-  
-.colony-container:hover .colony-overlay{
-    opacity: 1;
-}
-  
 .colony-text{
     color: white;
     -webkit-text-stroke: 1px black;
-
     font-weight: bold;
     font-size: 1.25vw;
     font-family: sans-serif;
 
-
     position: absolute;
     top: 50%;
     left: 50%;
-    -webkit-transform: translate(-50%, -50%);
-    -ms-transform: translate(-50%, -50%);
     transform: translate(-50%, -50%);
-    text-align: center;
 }

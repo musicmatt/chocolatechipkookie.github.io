@@ -51,6 +51,14 @@ body {
     margin: 5px;
 }
 
+.warning-label{
+    display: none;
+    background-color: aqua; 
+    color: red;
+    font-size: 25px;
+    text-align: center;
+}
+
 
 .Box{
     padding-left: 32%;

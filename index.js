@@ -1,3 +1,7 @@
+function capitalize(str){
+    return str.charAt(0).toUpperCase() + str.slice(1);
+}
+
 function hideCheckboxContainer(elem, checkbox_container){
     var x = document.getElementById(checkbox_container);
     if (x.style.display === "none") {
@@ -20,25 +24,46 @@ function elementExists(elem, parent){
     return typeof(element) != 'undefined' && element != null;
 }
 
+function updateWarning(){
+    var current_colonies = document.getElementById("colony-list").querySelectorAll(".colony-container").length;
+    var players = parseInt(document.getElementById("player-number").value);
+    var expected_colonies = 5;
+    if(players != 2){
+        expected_colonies = players + 2;
+    }
+
+    var warning = document.getElementById("colony-warning")
+    if (expected_colonies != current_colonies){
+        warning.innerHTML = 
+        `WARNING! Wrong number of colonies, ${expected_colonies} expected!`
+        warning.style.display = 'block'
+    }
+    else{
+        warning.style.display = 'none'
+    }
+}
+
 function checkboxFunction(elem){
-    var colony = getElementInsideContainer("colony-list", elem.value);
-    div_list = document.getElementById("colony-list");
+    var colony = getElementInsideContainer("colony-list", elem.value + '-icon');
+    var div_list = document.getElementById("colony-list");
 
     if (elem.checked && colony == false){
-        colony_name = elem.value;
+        var colony_name = elem.value;
         div_list.innerHTML += 
-            `<div class="colony-container" id="${colony_name}">
-                <img src="resources/icons/colonies/${colony_name}.png" class="colony-icon">
-                <div class="colony-overlay">
-                <div class="colony-text">${colony_name.charAt(0).toUpperCase() + colony_name.slice(1)}</div>
-                </div>
+        `
+        <div class="colony-container" id="${colony_name}-icon" onclick="increaseColonyNumber(this)">
+            <img src="resources/icons/colonies/${colony_name}.png" class="colony-icon">
+            <input type="hidden" id="variable-number" value="0">
+            <div class="colony-text">
+                ${capitalize(colony_name)}<br>(0)
             </div>
-            `;
+        </div>
+        `;
     } else if(!elem.checked && colony != false){
         colony.remove();
     }
 
-    current_colonies = div_list.querySelectorAll(".colony-container").length;
+    updateWarning();
 }
 
 function setDefaultDate(){
@@ -66,6 +91,8 @@ function generatePlayerInputs(){
     `.repeat(players);
     
     players_list.style.display = "block"
+
+    updateWarning();
 }
 
 var number_of_players_input = document.getElementById("player-number");
@@ -99,3 +126,13 @@ function addDefaultPlayers(){
 }
 
 addDefaultPlayers();
+
+function increaseColonyNumber(elem){
+    var text = elem.querySelector("div");
+    var colony = elem.id.substring(0, elem.id.length - 5);
+    var current_colonies = elem.querySelector("#variable-number");
+
+    current_colonies.value = (parseInt(current_colonies.value) + 1) % 4;
+
+    text.innerHTML = `${capitalize(colony)}<br>(${current_colonies.value})`
+}

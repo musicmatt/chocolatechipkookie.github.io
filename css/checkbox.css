@@ -42,13 +42,18 @@
     content: "";
     position: absolute;
     display: none;
-  }
-  
+}
+
 /* Show the checkmark when checked */
 .checkbox-label input:checked ~ .checkmark:after {
     display: block;
 }
-  
+
+/* If checkmark is disabled */
+.checkbox-label input:disabled ~ .checkmark {
+    background-color: #777;
+}
+
 /* Style the checkmark/indicator */
 .checkbox-label .checkmark:after {
     left: 9px;
