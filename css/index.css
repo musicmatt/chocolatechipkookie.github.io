@@ -14,6 +14,33 @@ body {
     background-color: hotpink;
 }
 
+.options-div{
+    margin-left: 30%;
+    margin-right: 30%;
+
+    margin: 5%;
+    background-color: orange;
+}
+
+.options-title{
+    font-size: 22px;
+    text-align: center;
+    background-color: yellow;
+}
+
+/*
+    Base options
+*/
+
+.base-options{
+    background-color: tomato;
+    margin: 5%;
+}
+
+.base-option{
+    background-color: yellowgreen;
+}
+
 .Box{
     padding-left: 32%;
     padding-top: 3%;

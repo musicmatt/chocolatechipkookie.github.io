@@ -1,6 +1,5 @@
-
-function hideCheckboxContainer(elem){
-    var x = document.getElementById("checkbox-container");
+function hideCheckboxContainer(elem, checkbox_container){
+    var x = document.getElementById(checkbox_container);
     if (x.style.display === "none") {
         x.style.display = "block";
         elem.value = "Hide"
@@ -42,3 +41,30 @@ function checkboxFunction(elem){
     current_colonies = div_list.querySelectorAll(".colony-container").length
 }
 
+function setDefaultDate(){
+    var today = new Date()
+    const dateTimeFormat = new Intl.DateTimeFormat('en', { year: 'numeric', month: '2-digit', day: '2-digit' })
+    const [{ value: month },,{ value: day },,{ value: year }] = dateTimeFormat .formatToParts(today) 
+    document.getElementById("datepicker").value = `${year}-${month}-${day}`;
+}
+
+setDefaultDate()
+
+function generatePlayerInputs(){
+    var number_of_players_input = document.getElementById("player-number");
+    if (number_of_players_input.value > 5)
+        number_of_players_input.value = 5
+    else if (number_of_players_input.value < 1)
+             number_of_players_input.value = 1
+
+
+    console.log("AAAAAAAAAAAAAAAA")
+}
+
+var number_of_players_input = document.getElementById("player-number");
+number_of_players_input.addEventListener("keyup", function(event) {
+  if (event.keyCode === 13) {
+    event.preventDefault();
+    document.getElementById("generate-player-inputs").click();
+  }
+}); 
