@@ -5,6 +5,7 @@
     <link href="css/index.css" rel="stylesheet" type="text/css">
     <link href="css/index-colonies.css" rel="stylesheet" type="text/css">
     <link href="css/checkbox.css" rel="stylesheet" type="text/css">
+    <link href="css/table.css" rel="stylesheet" type="text/css">
 </head>
 <body>
     <div class="title-box">
@@ -17,12 +18,15 @@
         </div>        
 
         <div class="base-options">
-            <label for="date">
-                date 
-               <input type="date" class="datepicker" id="datepicker">
-            </label>
+            
+            <div class="base-option" id="base-option-date">
+                <label for="date">
+                    date 
+                   <input type="date" class="datepicker" id="datepicker">
+                </label>
+            </div>
 
-            <div class="base-option">
+            <div class="base-option" id="base-option-expansions">
                 <h3 style="display: inline">Select expansion:</h3>
                 <input class="colony-selector-hide-button" type="button" value="Hide" onclick="hideCheckboxContainer(this, 'expansion-checkbox-container')">
                 <div class="colony-checkbox-container" id="expansion-checkbox-container">
@@ -57,25 +61,29 @@
                 </div>
             </div>
 
-            <div class="base-option">
+            <div class="base-option" id="base-option-generations">
+                <label for="generations">
+                    Number of generations
+                    <input type="number" min="1" max="20" id="generations">
+                </label>            
+            </div>
+
+            <div class="base-option" id="base-option-players">
                 <label for="player-number">
                     Number of players
                     <input type="number" min="1" max="5" id="player-number">
-                </label>
+                </label>                
                 <input type="button" id="generate-player-inputs" value="Confirm" onclick="generatePlayerInputs()">
 
-                <div class = "players-list" id="players-list">
+                <div class = "player-list" id="player-list">  
                 </div>
 
                 <datalist id="datalist-players">
                 </datalist>
             </div>
-            
-            <div class="base-option">
-                <label for="generations">
-                    Number of generations
-                    <input type="number" min="1" max="20" id="generations">
-                </label>            
+
+            <div class="base-option no-display" id="base-option-generate">
+                <input type="button" id="generate-table" value="Generate table" onclick="generatePointTable()">
             </div>
         </div>
     </div>
@@ -138,6 +146,17 @@
             <div class="warning-label" id="colony-warning"></div>
         </div>
     </div>
+
+
+    <div class="options-div no-display" id="points">
+        <div class="options-title">
+            <h2>Points</h2>
+        </div>
+
+        <table class="table" id="points-table">
+        </table>
+    </div>
+
 </body>
 <footer>
     <script src="index.js"></script> 
