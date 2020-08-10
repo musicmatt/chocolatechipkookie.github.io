@@ -32,6 +32,10 @@ function updateWarning(){
     }
 
     var warning = document.getElementById("colony-warning")
+    if (current_colonies == 0){
+        provjeriti ovo!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+        current_colonies.style.display = "none"
+    }
     if (expected_colonies != current_colonies){
         warning.innerHTML = 
         `WARNING! Wrong number of colonies, ${expected_colonies} expected!`
@@ -76,7 +80,7 @@ function hideCheckboxContainer(elem, checkbox_container){
         elem.value = "Hide";
     } else {
         x.style.display = "none";
-        elem.value = "Unhide";
+        elem.value = "Show";
     }
 } 
 
@@ -113,8 +117,8 @@ function generatePlayerInputs(){
     `
     <div class="player-input-div">
         <input list="datalist-players" class="player-input" id="player">
-        <select id="player-colony-select" name="player-colony">
-            <option value="Aridor">Aridor</option>
+        <select class="player-input" id="player-colony-select" name="player-colony">
+            <option value="Aridor/">Aridor</option>
             <option value="Arklight">Arklight</option>
             <option value="Beginner">Beginner</option>
             <option value="Cheung Shing Mars">Cheung Shing Mars</option>
@@ -136,7 +140,7 @@ function generatePlayerInputs(){
             <option value="Thorgate">Thorgate</option>
             <option value="UNMI">UNMI</option>
             <option value="Valley Trust">Valley Trust</option>
-            <option value="Vitor">Vitor</option>
+            <option value="Vitor">Vitor<option>
         </select>
     </div>
     `.repeat(players);
@@ -147,6 +151,8 @@ function generatePlayerInputs(){
     players_list.style.display = "block"
     document.getElementById("base-option-generate").style.display = "block";
 }
+
+generatePlayerInputs();
 
 var number_of_players_input = document.getElementById("player-number");
 number_of_players_input.addEventListener("keyup", function(event) {

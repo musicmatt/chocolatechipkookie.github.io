@@ -13,29 +13,27 @@
     float: right;
 }
 
-.colony-checkbox-container{
-    padding-right: 10%; 
-    padding-left: 10%;
-    display: block;
-}
+
 
 /*
     Colony list connected attributes
 */
 
 .colony-list{
+
+    margin-top: 10px;
+    margin-bottom: 15px;
+    border-top: 5px black solid;
+    border-bottom: 5px black solid;
+
     text-align: justify;
     -ms-text-justify: distribute-all-lines;
     text-justify: distribute-all-lines;
 
     height: auto;
-
-    margin-left: 5%;
-    margin-right: 5%;
     overflow: hidden;
-
     text-align: center;
-    background-color: crimson;
+    background-color: rgb(240, 240, 240);
 }
 
 .colony-container{
