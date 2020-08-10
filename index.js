@@ -3,40 +3,46 @@
 //    UTIL
 ///////////////
 
+//Capitalizes given string
 function capitalize(str){
     return str.charAt(0).toUpperCase() + str.slice(1);
 }
 
+// Gets the child of a parent
+// If the child doesnt exist in the parent node, returns false
 function getElementInsideContainer(containerID, childID) {
     var elm = document.getElementById(childID);
     var parent = elm ? elm.parentNode : {};
     return (parent.id && parent.id === containerID) ? elm : false;
 }
 
-function elementExists(elem, parent){
-    var element = parent.querry(elem);
-    return typeof(element) != 'undefined' && element != null;
-}
-
-
 ////////////////////
 //     WARNING
 ////////////////////
 
 function updateWarning(){
-    var current_colonies = document.getElementById("colony-list").querySelectorAll(".colony-container").length;
+    // Fetch colony list element and number of selected colonies
+    var colony_list = document.getElementById("colony-list")
+    var current_colonies = colony_list.querySelectorAll(".colony-container").length;
+
+    // Update the style of the container depending if any of the colonies is selected
+    colony_list.style.display = current_colonies == 0 ? "none" : "block";
+
+    // Get the number of players playing
     var players = parseInt(document.getElementById("player-number").value);
+
+    // Set the expected players value
+    // Add the exception for company with additional colny
     var expected_colonies = 5;
     if(players != 2){
         expected_colonies = players + 2;
     }
 
+    // Set warning if necessary
     var warning = document.getElementById("colony-warning")
-    if (current_colonies == 0){
-        provjeriti ovo!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-        current_colonies.style.display = "none"
-    }
+
     if (expected_colonies != current_colonies){
+        
         warning.innerHTML = 
         `WARNING! Wrong number of colonies, ${expected_colonies} expected!`
         warning.style.display = 'block'
@@ -50,12 +56,18 @@ function updateWarning(){
 //    CHECKBOXES
 //////////////////////
 
+
+//Updates the list of colonies when a checkbox is clicked
 function checkboxFunction(elem){
+
+    //Gets colony
     var colony = getElementInsideContainer("colony-list", elem.value + '-icon');
     var div_list = document.getElementById("colony-list");
 
     if (elem.checked && colony == false){
+        //Get colony name
         var colony_name = elem.value;
+        // Add colony to the colony list
         div_list.innerHTML += 
         `
         <div class="colony-container" id="${colony_name}-icon" onclick="increaseColonyNumber(this)">
@@ -67,14 +79,20 @@ function checkboxFunction(elem){
         </div>
         `;
     } else if(!elem.checked && colony != false){
+        // If enement is unchecked and colony exists remove it
         colony.remove();
     }
 
+    // Updates warning
     updateWarning();
 }
 
+// Hides the given checkbox container
 function hideCheckboxContainer(elem, checkbox_container){
+    //Fetches the checkbox container
     var x = document.getElementById(checkbox_container);
+
+    // Updates the style and button text
     if (x.style.display === "none") {
         x.style.display = "block";
         elem.value = "Hide";
@@ -89,6 +107,7 @@ function hideCheckboxContainer(elem, checkbox_container){
 //    DATE
 ///////////////
 
+//Sets the default date
 function setDefaultDate(){
     var today = new Date();
     const dateTimeFormat = new Intl.DateTimeFormat('en', { year: 'numeric', month: '2-digit', day: '2-digit' });
@@ -102,17 +121,21 @@ setDefaultDate()
 //     PLAYERS
 /////////////////////
 
-
+//Generates player input fields
 function generatePlayerInputs(){
+    // Fetch number of players
     var number_of_players_input = document.getElementById("player-number");
+    // Check and update the range
     if (number_of_players_input.value > 5)
         number_of_players_input.value = 5;
     else if (number_of_players_input.value < 1)
              number_of_players_input.value = 1;
 
+    // Fetch number of players and player input list
     var players = number_of_players_input.value;
     var players_list = document.getElementById("player-list");
     
+    // Create input fields
     players_list.innerHTML = 
     `
     <div class="player-input-div">
@@ -145,15 +168,17 @@ function generatePlayerInputs(){
     </div>
     `.repeat(players);
     
-
+    // Update warning
     updateWarning();
 
+    // Set players input list to visible
     players_list.style.display = "block"
     document.getElementById("base-option-generate").style.display = "block";
 }
 
 generatePlayerInputs();
 
+// Set the listener to listen to enter key presses
 var number_of_players_input = document.getElementById("player-number");
 number_of_players_input.addEventListener("keyup", function(event) {
   if (event.keyCode === 13) {
@@ -163,8 +188,10 @@ number_of_players_input.addEventListener("keyup", function(event) {
 }); 
 
 
+// Adds default players to the datalist
+// To be replaced with addPlayers()
 function addDefaultPlayers(){
-    var datalist = document.getElementById("datalist-players").innerHTML = 
+    document.getElementById("datalist-players").innerHTML = 
     `
         <option value="Dolores Frančišković">
         <option value="Vito Papa">
@@ -178,29 +205,33 @@ function addDefaultPlayers(){
 addDefaultPlayers();
 
 
+// Loads players from database and adds them to the datalist
+function addPlayers(){
+
+}
+
 //////////////////////
 //     COLONIES
 //////////////////////
 
-
+// Activates colonies expansion
 function activateColonies(elem){
+    // Fetches the colonies option field
     var colony_options = document.getElementById("colonies-options");
-    if (elem.checked){
-        colony_options.style.display = "block"
-    } 
-    else{
-        colony_options.style.display = "none"
-    }
-    current_colonies = div_list.querySelectorAll(".colony-container").length
+    colony_options.style.display = elem.checked ? "block" : "none";
 }
 
+// Increases the colony counter text by one in modulo 4 arithmetic
 function increaseColonyNumber(elem){
-    var text = elem.querySelector("div");
+    // Gets the name of the colony
     var colony = elem.id.substring(0, elem.id.length - 5);
-    var current_colonies = elem.querySelector("#variable-number");
 
+    // Gets the current number of colonies on a moon
+    var current_colonies = elem.querySelector("#variable-number");
     current_colonies.value = (parseInt(current_colonies.value) + 1) % 4;
 
+    // Gets the text div element of elem
+    var text = elem.querySelector("div");
     text.innerHTML = `${capitalize(colony)}<br>(${current_colonies.value})`
 }
 
@@ -209,21 +240,26 @@ function increaseColonyNumber(elem){
 //     TABLE
 //////////////////
 
+// Generates the point table for the scores
 function generatePointTable(){
+    // Gets the points div, points table and player list nodes
     var points_div = document.getElementById("points");
     var table = document.getElementById("points-table");
     var player_list = document.getElementById("player-list");
 
+    // Fetches the names of the players
     player_names = Array.from(player_list.children).map(
         function(element) { return element.children[0].value; }
     );
 
+    // Creates the name row for the table
     var name_row = 
     `<tr id="player-names">
         <td class="table-cell">Name</td>
         ${player_names.map(element => `<td class="table-cell">${element}</td>`).join("\n")}
     </tr>`;
 
+    // Constant value for the score categories
     const categories = [
         ["TR", "tr-points"], 
         ["Awards", "award-points"], 
@@ -232,8 +268,8 @@ function generatePointTable(){
         ["Cities", "city-points"], 
         ["Cards", "card-points"]]
 
+    // Creates the inputs for the scores
     var inputs = `<td class="table-cell"><input class="table-input" type="number"></td>`.repeat(player_names.length)
-
     var points = categories.map( option =>
     `<tr id="${option[1]}">
         <td class="table-cell">${option[0]}</td>
@@ -241,7 +277,7 @@ function generatePointTable(){
     </tr>
     `)
 
+    // Creates the table and sets the style to visible
     table.innerHTML = name_row + points.join('\n');
-
     points_div.style.display = 'block'
 }
