@@ -1,155 +1,173 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Drive API Quickstart</title>
+    <meta charset="utf-8" />
+  </head>
+  <body>
+    <p>Drive API Quickstart</p>
 
-<head>
-    <title>Deimos down</title>
-    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-    <link href="css/index.css" rel="stylesheet" type="text/css">
-    <link href="css/index-colonies.css" rel="stylesheet" type="text/css">
-    <link href="css/checkbox.css" rel="stylesheet" type="text/css">
-    <link href="css/table.css" rel="stylesheet" type="text/css">
-</head>
-<body>
-    <div class="title-box">
-        Terraforming Mars score tracker
-    </div>
+    <!--Add buttons to initiate auth sequence and sign out-->
+    <button id="authorize_button" style="display: none;">Authorize</button>
+    <button id="signout_button" style="display: none;">Sign Out</button>
 
-    <div class="options-div">
-        <div class="options-title">
-            Base options
-        </div>        
-        <div class="base-options">
-            <div class="base-option" id="base-option-date">
-                <label for="date">Date:</label>
-                <input type="date" class="input" id="datepicker">
-            </div>
+    <button id="nesto" onclick="printFile('1f4UGZ35UKvcHSEI-Ba7v28QKR_ev70T5')">List</button>
 
-            <div class="base-option" id="base-option-expansions">
-                Select expansion:
-                <input class="input" type="button" value="Hide" onclick="hideCheckboxContainer(this, 'expansion-checkbox-container')">
-                <div class="checkbox-container" id="expansion-checkbox-container">
-                    <label class="checkbox-label">
-                        <input type="checkbox" checked="true" value="base" disabled="true">Base
-                        <span class="checkmark"></span>
-                    </label>
-                    <label class="checkbox-label">
-                        <input type="checkbox" checked="true" value="colonies" onclick="activateColonies(this)">Colonies
-                        <span class="checkmark"></span>
-                    </label>
-                    <label class="checkbox-label">
-                        <input type="checkbox" checked="true" value="corporate">Corporate era
-                        <span class="checkmark"></span>
-                    </label>
-                    <label class="checkbox-label">
-                        <input type="checkbox" checked="true" value="draft">Draft
-                        <span class="checkmark"></span>
-                    </label>
-                    <label class="checkbox-label">
-                        <input type="checkbox" checked="true" value="prelude">Prelude
-                        <span class="checkmark"></span>
-                    </label>
-                    <label class="checkbox-label">
-                        <input type="checkbox" checked="false" value="turmoil">Turmoil
-                        <span class="checkmark"></span>
-                    </label>
-                    <label class="checkbox-label">
-                        <input type="checkbox" checked="false" value="venus">Venus next
-                        <span class="checkmark"></span>
-                    </label>
-                </div>
-            </div>
+    <pre id="content" style="white-space: pre-wrap;"></pre>
 
-            <div class="base-option" id="base-option-generations">
-                <label for="generations">Number of generations</label>            
-                <input type="number" class="input" min="1" max="20" id="generations">
-            </div>
+    <script type="text/javascript">
+      // Client ID and API key from the Developer Console
+      var CLIENT_ID = '944978305357-a6rlfv9cceqf49900u13rif5rc1qj7me.apps.googleusercontent.com';
+      var API_KEY = 'AIzaSyDXdljUV5FEC_DQyCWPchYcX8ptsFwp0hE';
 
-            <div class="base-option" id="base-option-players">
-                <label for="player-number">Number of players</label>                
-                <input type="number" class="input" min="1" max="5" id="player-number" value="2" onchange="generatePlayerInputs()">
-                
-                <div class = "player-list" id="player-list">  
-                </div>
+      // Array of API discovery doc URLs for APIs used by the quickstart
+      var DISCOVERY_DOCS = ["https://www.googleapis.com/discovery/v1/apis/drive/v3/rest"];
 
-                <datalist id="datalist-players">
-                </datalist>
-            </div>
+      // Authorization scopes required by the API; multiple scopes can be
+      // included, separated by spaces.
+      var SCOPES = 'https://www.googleapis.com/auth/drive.metadata.readonly';
 
-            <div class="" id="base-option-generate">
-                <input type="button" id="generate-table-button" value="Generate table" onclick="generatePointTable()">
-            </div>
-        </div>
-    </div>
+      var authorizeButton = document.getElementById('authorize_button');
+      var signoutButton = document.getElementById('signout_button');
 
-    <div class="options-div" id="colonies-options">
-        <div class="options-title">
-            Colonies
-        </div>
-        <div class="base-options base-option">
-            Select colonies:
-            <input class="colony-selector-hide-button" type="button" value="Hide" onclick="hideCheckboxContainer(this, 'colony-checkbox-container')">
-            <div class="checkbox-container" id="colony-checkbox-container">
-                <label class="checkbox-label">
-                    <input type="checkbox" onclick="checkboxFunction(this)" id="callisto-checkbox" value="callisto">Callisto
-                    <span class="checkmark"></span>
-                </label>
-                <label class="checkbox-label">
-                    <input type="checkbox" class="checkbox" onclick="checkboxFunction(this)" id="ceres-checkbox" value="ceres">Ceres
-                    <span class="checkmark"></span>
-                </label>
-                <label class="checkbox-label">
-                    <input type="checkbox" class="checkbox" onclick="checkboxFunction(this)" id="europa-checkbox" value="europa">Europa
-                    <span class="checkmark"></span>
-                </label>
-                <label class="checkbox-label">
-                    <input type="checkbox" class="checkbox" onclick="checkboxFunction(this)" id="enceladus-checkbox" value="enceladus">Enceladus
-                    <span class="checkmark"></span>
-                </label>
-                <label class="checkbox-label">
-                    <input type="checkbox" class="checkbox" onclick="checkboxFunction(this)" id="ganymede-checkbox" value="ganymede">Ganymede
-                    <span class="checkmark"></span>
-                </label>
-                <label class="checkbox-label">
-                    <input type="checkbox" class="checkbox" onclick="checkboxFunction(this)" id="io-checkbox" value="io">Io
-                    <span class="checkmark"></span>
-                </label>
-                <label class="checkbox-label">
-                    <input type="checkbox" class="checkbox" onclick="checkboxFunction(this)" id="luna-checkbox" value="luna">Luna
-                    <span class="checkmark"></span>
-                </label>
-                <label class="checkbox-label">
-                    <input type="checkbox" class="checkbox" onclick="checkboxFunction(this)" id="miranda-checkbox" value="miranda">Miranda
-                    <span class="checkmark"></span>
-                </label>
-                <label class="checkbox-label">
-                    <input type="checkbox" class="checkbox" onclick="checkboxFunction(this)" id="pluto-checkbox" value="pluto">Pluto
-                    <span class="checkmark"></span>
-                </label>
-                <label class="checkbox-label">
-                    <input type="checkbox" class="checkbox" onclick="checkboxFunction(this)" id="titan-checkbox" value="titan">Titan
-                    <span class="checkmark"></span>
-                </label>
-                <label class="checkbox-label">
-                    <input type="checkbox" class="checkbox" onclick="checkboxFunction(this)" id="triton-checkbox" value="triton">Triton
-                    <span class="checkmark"></span>
-                </label>
-            </div>
-        </div>
-        <div class="colony-list" id="colony-list">
-            <div class="warning-label" id="colony-warning"></div>
-        </div>
-    </div>
+      /**
+       *  On load, called to load the auth2 library and API client library.
+       */
+      function handleClientLoad() {
+        gapi.load('client:auth2', initClient);
+      }
+
+      /**
+       *  Initializes the API client library and sets up sign-in state
+       *  listeners.
+       */
+      function initClient() {
+        gapi.client.init({
+          apiKey: API_KEY,
+          clientId: CLIENT_ID,
+          discoveryDocs: DISCOVERY_DOCS,
+          scope: SCOPES
+        }).then(function () {
+          // Listen for sign-in state changes.
+          gapi.auth2.getAuthInstance().isSignedIn.listen(updateSigninStatus);
+
+          // Handle the initial sign-in state.
+          updateSigninStatus(gapi.auth2.getAuthInstance().isSignedIn.get());
+          authorizeButton.onclick = handleAuthClick;
+          signoutButton.onclick = handleSignoutClick;
+        }, function(error) {
+          appendPre(JSON.stringify(error, null, 2));
+        });
+      }
+
+      /**
+       *  Called when the signed in status changes, to update the UI
+       *  appropriately. After a sign-in, the API is called.
+       */
+      function updateSigninStatus(isSignedIn) {
+        if (isSignedIn) {
+          authorizeButton.style.display = 'none';
+          signoutButton.style.display = 'block';
+          listFiles();
+        } else {
+          authorizeButton.style.display = 'block';
+          signoutButton.style.display = 'none';
+        }
+      }
+
+      /**
+       *  Sign in the user upon button click.
+       */
+      function handleAuthClick(event) {
+        gapi.auth2.getAuthInstance().signIn();
+      }
+
+      /**
+       *  Sign out the user upon button click.
+       */
+      function handleSignoutClick(event) {
+        gapi.auth2.getAuthInstance().signOut();
+      }
+
+      /**
+       * Append a pre element to the body containing the given message
+       * as its text node. Used to display the results of the API call.
+       *
+       * @param {string} message Text to be placed in pre element.
+       */
+      function appendPre(message) {
+        var pre = document.getElementById('content');
+        var textContent = document.createTextNode(message + '\n');
+        pre.appendChild(textContent);
+      }
+
+      function locateFile(){
+
+      }
 
 
-    <div class="options-div no-display" id="points">
-        <div class="options-title">
-            Points
-        </div>
+      /**
+       * Print files.
+       */
+      function listFiles(fileId = null) {
+        gapi.client.drive.files.list({
+          'fields': "nextPageToken, files(id, name)",
+          'q': "name = 'tm_files'"
+        }).then(function(response) {
+          files = response.result.files;
+          if (files.length == 1){
+            folderId = files[0].id
+          }
+          // Fajlovi su ovdje
+          console.log(folderId)
+        });
+      }
 
-        <table class="table" id="points-table">
-        </table>
-    </div>
+      /**
+      * Print a file's metadata.
+      *
+      * @param {String} fileId ID of the file to print metadata for.
+      */
+      function printFile(fileId) {
+        var request = gapi.client.drive.files.get({
+          'fileId': fileId
+        });
+        request.execute(function(resp) {
+          console.log('Title: ' + resp.name);
+          console.log('Description: ' + resp.description);
+          console.log('MIME type: ' + resp.mimeType);
+        });
+      }
 
-</body>
-<footer>
-    <script src="index.js"></script> 
-</footer>
+      /**
+      * Download a file's content.
+      *
+      * @param {File} file Drive File instance.
+      * @param {Function} callback Function to call when the request is complete.
+      */
+      function downloadFile(file, callback) {
+        if (file.downloadUrl) {
+          var accessToken = gapi.auth.getToken().access_token;
+          var xhr = new XMLHttpRequest();
+          xhr.open('GET', file.downloadUrl);
+          xhr.setRequestHeader('Authorization', 'Bearer ' + accessToken);
+          xhr.onload = function() {
+            callback(xhr.responseText);
+          };
+          xhr.onerror = function() {
+            callback(null);
+          };
+          xhr.send();
+        } else {
+          callback(null);
+        }
+      }
 
+    </script>
+
+    <script async defer src="https://apis.google.com/js/api.js"
+      onload="this.onload=function(){};handleClientLoad()"
+      onreadystatechange="if (this.readyState === 'complete') this.onload()">
+    </script>
+  </body>
+</html>
