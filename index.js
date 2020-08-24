@@ -286,24 +286,22 @@ function generatePointTable(){
 
 //Commit
 
+async function update_git(message){
+    const octokit = new Octokit({ auth: 'c58b1da616befa9c045948f5788dbf022270d474' });
 
+    var blob = await octokit.request("GET https://api.github.com/repos/ChocolateChipKookie/chocolatechipkookie.github.io/contents/text2.txt")
+    var sha = blob.data.sha
 
-
-async function test(){
-
-    const octokit = new Octokit({ auth: 'd44df20b99c943d6844546b6882ac3e7244d1904' });
-
-    const response = await octokit.request("PUT https://api.github.com/repos/ChocolateChipKookie/chocolatechipkookie.github.io/contents/text1.txt", 
+    const response = await octokit.request("PUT https://api.github.com/repos/ChocolateChipKookie/chocolatechipkookie.github.io/contents/text2.txt", 
     {
-      owner: "ChocolateChipKookie",
-      repo: "chocolatechipkookie.github.io",
-      path: "text1.txt",
-      message: "Ejla",
-      content: "SmEgc2FtIG1hbGkgTWF0ZQ==",
+        owner: "ChocolateChipKookie",
+        repo: "chocolatechipkookie.github.io",
+        path: "text2.txt",
+        message: "Ejla",
+        content: btoa(message),
+        sha: sha,
     });
     return response;
 }
 
-
-
-console.log(test())
+console.log(update_git("Ovo radi i ja sam sretan"))
