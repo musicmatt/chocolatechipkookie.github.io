@@ -286,6 +286,9 @@ function generatePointTable(){
 
 //Commit
 
+
+
+
 async function test(){
 
     const octokit = new Octokit({ auth: 'd44df20b99c943d6844546b6882ac3e7244d1904' });
@@ -296,7 +299,7 @@ async function test(){
       repo: "chocolatechipkookie.github.io",
       path: "text1.txt",
       message: "Ejla",
-      content: "bXkgbmV3IGZpbGUgY29udGVudHM=",
+      content: "SmEgc2FtIG1hbGkgTWF0ZQ==",
     });
     return response;
 }
