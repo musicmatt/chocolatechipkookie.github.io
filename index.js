@@ -1,3 +1,4 @@
+import { Octokit } from "https://cdn.pika.dev/@octokit/core";
 
 ///////////////
 //    UTIL
@@ -281,3 +282,25 @@ function generatePointTable(){
     table.innerHTML = name_row + points.join('\n');
     points_div.style.display = 'block'
 }
+
+
+//Commit
+
+async function test(){
+
+    const octokit = new Octokit({ auth: '210bb02dcae4746cbe8ff94c34cbc24ca6ed82f9' });
+
+    const response = await octokit.request("PUT https://api.github.com/repos/ChocolateChipKookie/chocolatechipkookie.github.io/contents/text1.txt", 
+    {
+      owner: "ChocolateChipKookie",
+      repo: "chocolatechipkookie.github.io",
+      path: "text1.txt",
+      message: "Ejla",
+      content: "bXkgbmV3IGZpbGUgY29udGVudHM=",
+    });
+    return response;
+}
+
+
+
+console.log(test())
