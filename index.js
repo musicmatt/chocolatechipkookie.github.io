@@ -288,7 +288,7 @@ function generatePointTable(){
 
 async function test(){
 
-    const octokit = new Octokit({ auth: '210bb02dcae4746cbe8ff94c34cbc24ca6ed82f9' });
+    const octokit = new Octokit({ auth: 'd44df20b99c943d6844546b6882ac3e7244d1904' });
 
     const response = await octokit.request("PUT https://api.github.com/repos/ChocolateChipKookie/chocolatechipkookie.github.io/contents/text1.txt", 
     {
