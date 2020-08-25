@@ -1,3 +1,7049 @@
 {
-    "games" : [],
+  "games": [
+    {
+      "name": "Game1",
+      "note": "No stat",
+      "date": "9/24/2019",
+      "mode": [
+        "Base"
+      ],
+      "mode_code": "B",
+      "map": "Tharsis",
+      "winner": "Romana Ivković",
+      "win_corp": "Beginner",
+      "win_score": 75,
+      "players": 3,
+      "generation": 0,
+      "scores": [
+        {
+          "player": "Matteo Samsa",
+          "corporation": "Beginner",
+          "tr": 69,
+          "awards": 0,
+          "milestones": 0,
+          "greenery": 0,
+          "cities": 0,
+          "cards": 0,
+          "total": 69,
+          "rank": 2,
+          "note": ""
+        },
+        {
+          "player": "Romana Ivković",
+          "corporation": "Beginner",
+          "tr": 75,
+          "awards": 0,
+          "milestones": 0,
+          "greenery": 0,
+          "cities": 0,
+          "cards": 0,
+          "total": 75,
+          "rank": 1,
+          "note": ""
+        },
+        {
+          "player": "Jan Mastrović",
+          "corporation": "Beginner",
+          "tr": 68,
+          "awards": 0,
+          "milestones": 0,
+          "greenery": 0,
+          "cities": 0,
+          "cards": 0,
+          "total": 68,
+          "rank": 3,
+          "note": ""
+        }
+      ]
+    },
+    {
+      "name": "Game2",
+      "note": "No stat",
+      "date": "9/25/2019",
+      "mode": [
+        "Base"
+      ],
+      "mode_code": "B",
+      "map": "Tharsis",
+      "winner": "Romana Ivković",
+      "win_corp": "Beginner",
+      "win_score": 81,
+      "players": 3,
+      "generation": 0,
+      "scores": [
+        {
+          "player": "Matteo Samsa",
+          "corporation": "Beginner",
+          "tr": 64,
+          "awards": 0,
+          "milestones": 0,
+          "greenery": 0,
+          "cities": 0,
+          "cards": 0,
+          "total": 64,
+          "rank": 3,
+          "note": ""
+        },
+        {
+          "player": "Romana Ivković",
+          "corporation": "Beginner",
+          "tr": 81,
+          "awards": 0,
+          "milestones": 0,
+          "greenery": 0,
+          "cities": 0,
+          "cards": 0,
+          "total": 81,
+          "rank": 1,
+          "note": ""
+        },
+        {
+          "player": "Jan Mastrović",
+          "corporation": "Beginner",
+          "tr": 72,
+          "awards": 0,
+          "milestones": 0,
+          "greenery": 0,
+          "cities": 0,
+          "cards": 0,
+          "total": 72,
+          "rank": 2,
+          "note": ""
+        }
+      ]
+    },
+    {
+      "name": "Game3",
+      "note": "No stat",
+      "date": "9/26/2019",
+      "mode": [
+        "Base"
+      ],
+      "mode_code": "B",
+      "map": "Tharsis",
+      "winner": "Romana Ivković",
+      "win_corp": "Inventrix",
+      "win_score": 86,
+      "players": 3,
+      "generation": 0,
+      "scores": [
+        {
+          "player": "Matteo Samsa",
+          "corporation": "Helion",
+          "tr": 65,
+          "awards": 0,
+          "milestones": 0,
+          "greenery": 0,
+          "cities": 0,
+          "cards": 0,
+          "total": 65,
+          "rank": 3,
+          "note": ""
+        },
+        {
+          "player": "Romana Ivković",
+          "corporation": "Inventrix",
+          "tr": 86,
+          "awards": 0,
+          "milestones": 0,
+          "greenery": 0,
+          "cities": 0,
+          "cards": 0,
+          "total": 86,
+          "rank": 1,
+          "note": ""
+        },
+        {
+          "player": "Jan Mastrović",
+          "corporation": "Tharsis Republic",
+          "tr": 75,
+          "awards": 0,
+          "milestones": 0,
+          "greenery": 0,
+          "cities": 0,
+          "cards": 0,
+          "total": 75,
+          "rank": 2,
+          "note": ""
+        }
+      ]
+    },
+    {
+      "name": "Game4",
+      "note": "No stat",
+      "date": "9/27/2019",
+      "mode": [
+        "Base"
+      ],
+      "mode_code": "B",
+      "map": "Tharsis",
+      "winner": "Matteo Samsa",
+      "win_corp": "Tharsis Republic",
+      "win_score": 95,
+      "players": 3,
+      "generation": 0,
+      "scores": [
+        {
+          "player": "Matteo Samsa",
+          "corporation": "Tharsis Republic",
+          "tr": 95,
+          "awards": 0,
+          "milestones": 0,
+          "greenery": 0,
+          "cities": 0,
+          "cards": 0,
+          "total": 95,
+          "rank": 1,
+          "note": ""
+        },
+        {
+          "player": "Romana Ivković",
+          "corporation": "Credicor",
+          "tr": 82,
+          "awards": 0,
+          "milestones": 0,
+          "greenery": 0,
+          "cities": 0,
+          "cards": 0,
+          "total": 82,
+          "rank": 3,
+          "note": ""
+        },
+        {
+          "player": "Jan Mastrović",
+          "corporation": "Ecoline",
+          "tr": 86,
+          "awards": 0,
+          "milestones": 0,
+          "greenery": 0,
+          "cities": 0,
+          "cards": 0,
+          "total": 86,
+          "rank": 2,
+          "note": ""
+        }
+      ]
+    },
+    {
+      "name": "Game5",
+      "note": "",
+      "date": "10/9/2019",
+      "mode": [
+        "Base"
+      ],
+      "mode_code": "B",
+      "map": "Tharsis",
+      "winner": "Matteo Samsa",
+      "win_corp": "Interplanetary Cinematics",
+      "win_score": 74,
+      "players": 4,
+      "generation": 0,
+      "scores": [
+        {
+          "player": "Matteo Samsa",
+          "corporation": "Interplanetary Cinematics",
+          "tr": 39,
+          "awards": 5,
+          "milestones": 10,
+          "greenery": 4,
+          "cities": 7,
+          "cards": 9,
+          "total": 74,
+          "rank": 1,
+          "note": ""
+        },
+        {
+          "player": "Romana Ivković",
+          "corporation": "Helion",
+          "tr": 34,
+          "awards": 5,
+          "milestones": 0,
+          "greenery": 3,
+          "cities": 5,
+          "cards": 11,
+          "total": 58,
+          "rank": 4,
+          "note": ""
+        },
+        {
+          "player": "Mia Čaušević",
+          "corporation": "Beginner",
+          "tr": 32,
+          "awards": 5,
+          "milestones": 5,
+          "greenery": 8,
+          "cities": 8,
+          "cards": 11,
+          "total": 69,
+          "rank": 2,
+          "note": ""
+        },
+        {
+          "player": "Jan Mastrović",
+          "corporation": "Tharsis Republic",
+          "tr": 31,
+          "awards": 6,
+          "milestones": 0,
+          "greenery": 8,
+          "cities": 11,
+          "cards": 8,
+          "total": 64,
+          "rank": 3,
+          "note": ""
+        }
+      ]
+    },
+    {
+      "name": "Game6",
+      "note": "",
+      "date": "10/10/2019",
+      "mode": [
+        "Base"
+      ],
+      "mode_code": "B",
+      "map": "Tharsis",
+      "winner": "Matteo Samsa",
+      "win_corp": "Thorgate",
+      "win_score": 106,
+      "players": 3,
+      "generation": 0,
+      "scores": [
+        {
+          "player": "Jan Mastrović",
+          "corporation": "Helion",
+          "tr": 33,
+          "awards": 2,
+          "milestones": 0,
+          "greenery": 9,
+          "cities": 21,
+          "cards": 16,
+          "total": 81,
+          "rank": 2,
+          "note": ""
+        },
+        {
+          "player": "Matteo Samsa",
+          "corporation": "Thorgate",
+          "tr": 43,
+          "awards": 9,
+          "milestones": 15,
+          "greenery": 10,
+          "cities": 23,
+          "cards": 6,
+          "total": 106,
+          "rank": 1,
+          "note": ""
+        },
+        {
+          "player": "Mia Čaušević",
+          "corporation": "Mining Guild",
+          "tr": 33,
+          "awards": 12,
+          "milestones": 0,
+          "greenery": 10,
+          "cities": 12,
+          "cards": 9,
+          "total": 76,
+          "rank": 3,
+          "note": ""
+        }
+      ]
+    },
+    {
+      "name": "Game7",
+      "note": "",
+      "date": "10/10/2019",
+      "mode": [
+        "Base"
+      ],
+      "mode_code": "B",
+      "map": "Tharsis",
+      "winner": "Matteo Samsa",
+      "win_corp": "Tharsis Republic",
+      "win_score": 95,
+      "players": 4,
+      "generation": 0,
+      "scores": [
+        {
+          "player": "Jan Mastrović",
+          "corporation": "UNMI",
+          "tr": 38,
+          "awards": 2,
+          "milestones": 0,
+          "greenery": 3,
+          "cities": 4,
+          "cards": 7,
+          "total": 54,
+          "rank": 4,
+          "note": ""
+        },
+        {
+          "player": "Matteo Samsa",
+          "corporation": "Tharsis Republic",
+          "tr": 34,
+          "awards": 9,
+          "milestones": 15,
+          "greenery": 10,
+          "cities": 20,
+          "cards": 7,
+          "total": 95,
+          "rank": 1,
+          "note": ""
+        },
+        {
+          "player": "Mia Čaušević",
+          "corporation": "Credicor",
+          "tr": 33,
+          "awards": 2,
+          "milestones": 0,
+          "greenery": 4,
+          "cities": 9,
+          "cards": 15,
+          "total": 63,
+          "rank": 3,
+          "note": ""
+        },
+        {
+          "player": "Andro Slavić",
+          "corporation": "Beginner",
+          "tr": 37,
+          "awards": 9,
+          "milestones": 0,
+          "greenery": 7,
+          "cities": 9,
+          "cards": 8,
+          "total": 70,
+          "rank": 2,
+          "note": ""
+        }
+      ]
+    },
+    {
+      "name": "Game8",
+      "note": "",
+      "date": "10/18/2019",
+      "mode": [
+        "Base"
+      ],
+      "mode_code": "B",
+      "map": "Tharsis",
+      "winner": "Marijan Vukelić",
+      "win_corp": "Beginner",
+      "win_score": 75,
+      "players": 4,
+      "generation": 0,
+      "scores": [
+        {
+          "player": "Matteo Samsa",
+          "corporation": "Helion",
+          "tr": 28,
+          "awards": 5,
+          "milestones": 0,
+          "greenery": 3,
+          "cities": 10,
+          "cards": 16,
+          "total": 62,
+          "rank": 3,
+          "note": ""
+        },
+        {
+          "player": "Luka Lozina",
+          "corporation": "Beginner",
+          "tr": 30,
+          "awards": 4,
+          "milestones": 0,
+          "greenery": 3,
+          "cities": 5,
+          "cards": 7,
+          "total": 49,
+          "rank": 4,
+          "note": ""
+        },
+        {
+          "player": "Andro Slavić",
+          "corporation": "Ecoline",
+          "tr": 31,
+          "awards": 5,
+          "milestones": 5,
+          "greenery": 10,
+          "cities": 9,
+          "cards": 5,
+          "total": 65,
+          "rank": 2,
+          "note": ""
+        },
+        {
+          "player": "Marijan Vukelić",
+          "corporation": "Beginner",
+          "tr": 40,
+          "awards": 7,
+          "milestones": 10,
+          "greenery": 3,
+          "cities": 11,
+          "cards": 4,
+          "total": 75,
+          "rank": 1,
+          "note": ""
+        }
+      ]
+    },
+    {
+      "name": "Game9",
+      "note": "",
+      "date": "10/22/2019",
+      "mode": [
+        "Base",
+        "Corporate Era"
+      ],
+      "mode_code": "B+CE",
+      "map": "Tharsis",
+      "winner": "Jan Mastrović",
+      "win_corp": "Helion",
+      "win_score": 126,
+      "players": 2,
+      "generation": 0,
+      "scores": [
+        {
+          "player": "Matteo Samsa",
+          "corporation": "Credicor",
+          "tr": 63,
+          "awards": 5,
+          "milestones": 5,
+          "greenery": 9,
+          "cities": 10,
+          "cards": 22,
+          "total": 114,
+          "rank": 2,
+          "note": ""
+        },
+        {
+          "player": "Jan Mastrović",
+          "corporation": "Helion",
+          "tr": 42,
+          "awards": 10,
+          "milestones": 10,
+          "greenery": 13,
+          "cities": 26,
+          "cards": 25,
+          "total": 126,
+          "rank": 1,
+          "note": ""
+        }
+      ]
+    },
+    {
+      "name": "Game10",
+      "note": "",
+      "date": "10/23/2019",
+      "mode": [
+        "Base",
+        "Corporate Era"
+      ],
+      "mode_code": "B+CE",
+      "map": "Tharsis",
+      "winner": "Matteo Samsa",
+      "win_corp": "Tharsis Republic",
+      "win_score": 156,
+      "players": 2,
+      "generation": 0,
+      "scores": [
+        {
+          "player": "Matteo Samsa",
+          "corporation": "Tharsis Republic",
+          "tr": 47,
+          "awards": 15,
+          "milestones": 5,
+          "greenery": 12,
+          "cities": 27,
+          "cards": 50,
+          "total": 156,
+          "rank": 1,
+          "note": ""
+        },
+        {
+          "player": "Jan Mastrović",
+          "corporation": "Thorgate",
+          "tr": 54,
+          "awards": 0,
+          "milestones": 10,
+          "greenery": 14,
+          "cities": 26,
+          "cards": 28,
+          "total": 132,
+          "rank": 2,
+          "note": ""
+        }
+      ]
+    },
+    {
+      "name": "Game11",
+      "note": "",
+      "date": "10/30/2019",
+      "mode": [
+        "Base",
+        "Corporate Era"
+      ],
+      "mode_code": "B+CE",
+      "map": "Tharsis",
+      "winner": "Jan Mastrović",
+      "win_corp": "Saturn Systems",
+      "win_score": 93,
+      "players": 4,
+      "generation": 0,
+      "scores": [
+        {
+          "player": "Jan Mastrović",
+          "corporation": "Saturn Systems",
+          "tr": 31,
+          "awards": 10,
+          "milestones": 5,
+          "greenery": 8,
+          "cities": 15,
+          "cards": 24,
+          "total": 93,
+          "rank": 1,
+          "note": ""
+        },
+        {
+          "player": "Matteo Samsa",
+          "corporation": "Mining Guild",
+          "tr": 46,
+          "awards": 2,
+          "milestones": 5,
+          "greenery": 6,
+          "cities": 8,
+          "cards": 24,
+          "total": 91,
+          "rank": 2,
+          "note": ""
+        },
+        {
+          "player": "Romana Ivković",
+          "corporation": "Credicor",
+          "tr": 34,
+          "awards": 7,
+          "milestones": 5,
+          "greenery": 5,
+          "cities": 8,
+          "cards": 18,
+          "total": 77,
+          "rank": 3,
+          "note": ""
+        },
+        {
+          "player": "Mia Čaušević",
+          "corporation": "Thorgate",
+          "tr": 34,
+          "awards": 6,
+          "milestones": 0,
+          "greenery": 6,
+          "cities": 10,
+          "cards": 16,
+          "total": 72,
+          "rank": 4,
+          "note": ""
+        }
+      ]
+    },
+    {
+      "name": "Game12",
+      "note": "",
+      "date": "11/16/2019",
+      "mode": [
+        "Base"
+      ],
+      "mode_code": "B",
+      "map": "Tharsis",
+      "winner": "Vito Papa",
+      "win_corp": "Beginner",
+      "win_score": 77,
+      "players": 4,
+      "generation": 0,
+      "scores": [
+        {
+          "player": "Matteo Samsa",
+          "corporation": "Credicor",
+          "tr": 30,
+          "awards": 9,
+          "milestones": 10,
+          "greenery": 4,
+          "cities": 11,
+          "cards": 10,
+          "total": 74,
+          "rank": 2,
+          "note": ""
+        },
+        {
+          "player": "Andro Slavić",
+          "corporation": "Ecoline",
+          "tr": 37,
+          "awards": 2,
+          "milestones": 0,
+          "greenery": 11,
+          "cities": 17,
+          "cards": 6,
+          "total": 73,
+          "rank": 3,
+          "note": ""
+        },
+        {
+          "player": "Natan Turčinović",
+          "corporation": "Beginner",
+          "tr": 32,
+          "awards": 10,
+          "milestones": 0,
+          "greenery": 3,
+          "cities": 4,
+          "cards": 9,
+          "total": 58,
+          "rank": 4,
+          "note": ""
+        },
+        {
+          "player": "Vito Papa",
+          "corporation": "Beginner",
+          "tr": 31,
+          "awards": 2,
+          "milestones": 5,
+          "greenery": 10,
+          "cities": 15,
+          "cards": 14,
+          "total": 77,
+          "rank": 1,
+          "note": ""
+        }
+      ]
+    },
+    {
+      "name": "Game13",
+      "note": "",
+      "date": "12/16/2019",
+      "mode": [
+        "Base"
+      ],
+      "mode_code": "B",
+      "map": "Tharsis",
+      "winner": "Andro Slavić",
+      "win_corp": "Credicor",
+      "win_score": 62,
+      "players": 4,
+      "generation": 0,
+      "scores": [
+        {
+          "player": "Andro Slavić",
+          "corporation": "Credicor",
+          "tr": 29,
+          "awards": 5,
+          "milestones": 5,
+          "greenery": 5,
+          "cities": 7,
+          "cards": 11,
+          "total": 62,
+          "rank": 1,
+          "note": ""
+        },
+        {
+          "player": "Matteo Samsa",
+          "corporation": "Helion",
+          "tr": 32,
+          "awards": 5,
+          "milestones": 0,
+          "greenery": 2,
+          "cities": 2,
+          "cards": 5,
+          "total": 46,
+          "rank": 4,
+          "note": ""
+        },
+        {
+          "player": "Dino Šarić",
+          "corporation": "Beginner",
+          "tr": 30,
+          "awards": 4,
+          "milestones": 5,
+          "greenery": 3,
+          "cities": 6,
+          "cards": 5,
+          "total": 53,
+          "rank": 3,
+          "note": ""
+        },
+        {
+          "player": "Marijan Vukelić",
+          "corporation": "Interplanetary Cinematics",
+          "tr": 40,
+          "awards": 0,
+          "milestones": 5,
+          "greenery": 4,
+          "cities": 5,
+          "cards": 5,
+          "total": 59,
+          "rank": 2,
+          "note": ""
+        }
+      ]
+    },
+    {
+      "name": "Game14",
+      "note": "",
+      "date": "12/19/2019",
+      "mode": [
+        "Base",
+        "Corporate Era",
+        "Colonies"
+      ],
+      "mode_code": "B+CE+Col",
+      "map": "Tharsis",
+      "winner": "Matteo Samsa",
+      "win_corp": "Polyphemos",
+      "win_score": 66,
+      "players": 4,
+      "generation": 0,
+      "scores": [
+        {
+          "player": "Jan Mastrović",
+          "corporation": "Poseidon",
+          "tr": 35,
+          "awards": 2,
+          "milestones": 5,
+          "greenery": 5,
+          "cities": 4,
+          "cards": 9,
+          "total": 60,
+          "rank": 2,
+          "note": ""
+        },
+        {
+          "player": "Matteo Samsa",
+          "corporation": "Polyphemos",
+          "tr": 29,
+          "awards": 5,
+          "milestones": 10,
+          "greenery": 4,
+          "cities": 10,
+          "cards": 8,
+          "total": 66,
+          "rank": 1,
+          "note": ""
+        },
+        {
+          "player": "Mia Čaušević",
+          "corporation": "Aridor",
+          "tr": 29,
+          "awards": 7,
+          "milestones": 0,
+          "greenery": 3,
+          "cities": 5,
+          "cards": 12,
+          "total": 56,
+          "rank": 3,
+          "note": ""
+        },
+        {
+          "player": "Luka Jenuš",
+          "corporation": "Credicor",
+          "tr": 33,
+          "awards": 10,
+          "milestones": 0,
+          "greenery": 0,
+          "cities": 0,
+          "cards": 12,
+          "total": 55,
+          "rank": 4,
+          "note": ""
+        }
+      ],
+      "colonies": []
+    },
+    {
+      "name": "Game15",
+      "note": "",
+      "date": "12/20/2019",
+      "mode": [
+        "Base",
+        "Corporate Era",
+        "Colonies"
+      ],
+      "mode_code": "B+CE+Col",
+      "map": "Tharsis",
+      "winner": "Luka Jenuš",
+      "win_corp": "Stormcraft Incorporated",
+      "win_score": 81,
+      "players": 3,
+      "generation": 0,
+      "scores": [
+        {
+          "player": "Matteo Samsa",
+          "corporation": "Tharsis Republic",
+          "tr": 31,
+          "awards": 12,
+          "milestones": 5,
+          "greenery": 1,
+          "cities": 5,
+          "cards": 15,
+          "total": 69,
+          "rank": 3,
+          "note": ""
+        },
+        {
+          "player": "Luka Jenuš",
+          "corporation": "Stormcraft Incorporated",
+          "tr": 39,
+          "awards": 7,
+          "milestones": 5,
+          "greenery": 4,
+          "cities": 6,
+          "cards": 20,
+          "total": 81,
+          "rank": 1,
+          "note": ""
+        },
+        {
+          "player": "Mia Čaušević",
+          "corporation": "UNMI",
+          "tr": 45,
+          "awards": 5,
+          "milestones": 5,
+          "greenery": 3,
+          "cities": 3,
+          "cards": 10,
+          "total": 71,
+          "rank": 2,
+          "note": ""
+        }
+      ],
+      "colonies": []
+    },
+    {
+      "name": "Game16",
+      "note": "",
+      "date": "12/20/2019",
+      "mode": [
+        "Base",
+        "Corporate Era",
+        "Colonies"
+      ],
+      "mode_code": "B+CE+Col",
+      "map": "Tharsis",
+      "winner": "Mia Čaušević",
+      "win_corp": "Thorgate",
+      "win_score": 81,
+      "players": 3,
+      "generation": 0,
+      "scores": [
+        {
+          "player": "Matteo Samsa",
+          "corporation": "Aridor",
+          "tr": 42,
+          "awards": 5,
+          "milestones": 5,
+          "greenery": 3,
+          "cities": 4,
+          "cards": 7,
+          "total": 66,
+          "rank": 3,
+          "note": ""
+        },
+        {
+          "player": "Luka Jenuš",
+          "corporation": "Poseidon",
+          "tr": 33,
+          "awards": 12,
+          "milestones": 0,
+          "greenery": 6,
+          "cities": 8,
+          "cards": 17,
+          "total": 76,
+          "rank": 2,
+          "note": ""
+        },
+        {
+          "player": "Mia Čaušević",
+          "corporation": "Thorgate",
+          "tr": 37,
+          "awards": 4,
+          "milestones": 10,
+          "greenery": 9,
+          "cities": 11,
+          "cards": 10,
+          "total": 81,
+          "rank": 1,
+          "note": ""
+        }
+      ],
+      "colonies": []
+    },
+    {
+      "name": "Game17",
+      "note": "",
+      "date": "12/22/2019",
+      "mode": [
+        "Base",
+        "Corporate Era",
+        "Colonies"
+      ],
+      "mode_code": "B+CE+Col",
+      "map": "Tharsis",
+      "winner": "Jan/Karla",
+      "win_corp": "Poseidon",
+      "win_score": 79,
+      "players": 4,
+      "generation": 0,
+      "scores": [
+        {
+          "player": "Jan/Karla",
+          "corporation": "Poseidon",
+          "tr": 33,
+          "awards": 15,
+          "milestones": 0,
+          "greenery": 5,
+          "cities": 10,
+          "cards": 16,
+          "total": 79,
+          "rank": 1,
+          "note": ""
+        },
+        {
+          "player": "Matteo Samsa",
+          "corporation": "Mining Guild",
+          "tr": 32,
+          "awards": 5,
+          "milestones": 5,
+          "greenery": 3,
+          "cities": 5,
+          "cards": 8,
+          "total": 58,
+          "rank": 3,
+          "note": ""
+        },
+        {
+          "player": "Luka Jenuš",
+          "corporation": "Phobolog",
+          "tr": 35,
+          "awards": 0,
+          "milestones": 0,
+          "greenery": 4,
+          "cities": 4,
+          "cards": 9,
+          "total": 52,
+          "rank": 4,
+          "note": ""
+        },
+        {
+          "player": "Mia/Romana",
+          "corporation": "Aridor",
+          "tr": 31,
+          "awards": 4,
+          "milestones": 10,
+          "greenery": 4,
+          "cities": 6,
+          "cards": 6,
+          "total": 61,
+          "rank": 2,
+          "note": ""
+        }
+      ],
+      "colonies": []
+    },
+    {
+      "name": "Game18",
+      "note": "",
+      "date": "12/22/2019",
+      "mode": [
+        "Base",
+        "Corporate Era",
+        "Colonies"
+      ],
+      "mode_code": "B+CE+Col",
+      "map": "Tharsis",
+      "winner": "Mia/Romana",
+      "win_corp": "Poseidon",
+      "win_score": 85,
+      "players": 4,
+      "generation": 0,
+      "scores": [
+        {
+          "player": "Jan/Karla",
+          "corporation": "Saturn Systems",
+          "tr": 35,
+          "awards": 0,
+          "milestones": 0,
+          "greenery": 7,
+          "cities": 15,
+          "cards": 19,
+          "total": 76,
+          "rank": 2,
+          "note": ""
+        },
+        {
+          "player": "Matteo Samsa",
+          "corporation": "Credicor",
+          "tr": 30,
+          "awards": 0,
+          "milestones": 10,
+          "greenery": 2,
+          "cities": 8,
+          "cards": 11,
+          "total": 61,
+          "rank": 4,
+          "note": ""
+        },
+        {
+          "player": "Luka Jenuš",
+          "corporation": "Stormcraft Incorporated",
+          "tr": 30,
+          "awards": 7,
+          "milestones": 0,
+          "greenery": 2,
+          "cities": 3,
+          "cards": 22,
+          "total": 64,
+          "rank": 3,
+          "note": ""
+        },
+        {
+          "player": "Mia/Romana",
+          "corporation": "Poseidon",
+          "tr": 38,
+          "awards": 7,
+          "milestones": 5,
+          "greenery": 8,
+          "cities": 8,
+          "cards": 19,
+          "total": 85,
+          "rank": 1,
+          "note": ""
+        }
+      ],
+      "colonies": []
+    },
+    {
+      "name": "Game19",
+      "note": "",
+      "date": "12/24/2019",
+      "mode": [
+        "Base",
+        "Corporate Era",
+        "Colonies"
+      ],
+      "mode_code": "B+CE+Col",
+      "map": "Tharsis",
+      "winner": "Matteo Samsa",
+      "win_corp": "Poseidon",
+      "win_score": 91,
+      "players": 4,
+      "generation": 0,
+      "scores": [
+        {
+          "player": "Matteo Samsa",
+          "corporation": "Poseidon",
+          "tr": 34,
+          "awards": 10,
+          "milestones": 10,
+          "greenery": 7,
+          "cities": 17,
+          "cards": 13,
+          "total": 91,
+          "rank": 1,
+          "note": ""
+        },
+        {
+          "player": "Jan Mastrović",
+          "corporation": "Helion",
+          "tr": 37,
+          "awards": 5,
+          "milestones": 5,
+          "greenery": 5,
+          "cities": 13,
+          "cards": 13,
+          "total": 78,
+          "rank": 2,
+          "note": ""
+        },
+        {
+          "player": "Mia Čaušević",
+          "corporation": "Aridor",
+          "tr": 28,
+          "awards": 6,
+          "milestones": 0,
+          "greenery": 8,
+          "cities": 15,
+          "cards": 4,
+          "total": 61,
+          "rank": 4,
+          "note": ""
+        },
+        {
+          "player": "Adi Čaušević",
+          "corporation": "Saturn Systems",
+          "tr": 31,
+          "awards": 2,
+          "milestones": 0,
+          "greenery": 3,
+          "cities": 3,
+          "cards": 25,
+          "total": 64,
+          "rank": 3,
+          "note": ""
+        }
+      ],
+      "colonies": []
+    },
+    {
+      "name": "Game20",
+      "note": "",
+      "date": "12/25/2019",
+      "mode": [
+        "Base",
+        "Corporate Era",
+        "Colonies"
+      ],
+      "mode_code": "B+CE+Col",
+      "map": "Tharsis",
+      "winner": "Matteo Samsa",
+      "win_corp": "Saturn Systems",
+      "win_score": 68,
+      "players": 4,
+      "generation": 0,
+      "scores": [
+        {
+          "player": "Matteo Samsa",
+          "corporation": "Saturn Systems",
+          "tr": 39,
+          "awards": 7,
+          "milestones": 5,
+          "greenery": 4,
+          "cities": 3,
+          "cards": 10,
+          "total": 68,
+          "rank": 1,
+          "note": ""
+        },
+        {
+          "player": "Luka Jenuš",
+          "corporation": "UNMI",
+          "tr": 39,
+          "awards": 2,
+          "milestones": 0,
+          "greenery": 2,
+          "cities": 4,
+          "cards": 7,
+          "total": 54,
+          "rank": 3,
+          "note": ""
+        },
+        {
+          "player": "Mia/Jan",
+          "corporation": "Helion",
+          "tr": 28,
+          "awards": 4,
+          "milestones": 5,
+          "greenery": 4,
+          "cities": 10,
+          "cards": 11,
+          "total": 62,
+          "rank": 2,
+          "note": ""
+        },
+        {
+          "player": "Adi Čaušević",
+          "corporation": "Mining Guild",
+          "tr": 25,
+          "awards": 12,
+          "milestones": 5,
+          "greenery": 0,
+          "cities": 0,
+          "cards": 9,
+          "total": 51,
+          "rank": 4,
+          "note": ""
+        }
+      ],
+      "colonies": []
+    },
+    {
+      "name": "Game21",
+      "note": "",
+      "date": "12/30/2019",
+      "mode": [
+        "Base",
+        "Corporate Era",
+        "Colonies"
+      ],
+      "mode_code": "B+CE+Col",
+      "map": "Tharsis",
+      "winner": "Hrvoje Maligec",
+      "win_corp": "Poseidon",
+      "win_score": 62,
+      "players": 5,
+      "generation": 0,
+      "scores": [
+        {
+          "player": "Matteo Samsa",
+          "corporation": "Polyphemos",
+          "tr": 33,
+          "awards": 2,
+          "milestones": 10,
+          "greenery": 3,
+          "cities": 7,
+          "cards": 3,
+          "total": 58,
+          "rank": 2,
+          "note": ""
+        },
+        {
+          "player": "Adi Čaušević",
+          "corporation": "Saturn Systems",
+          "tr": 22,
+          "awards": 7,
+          "milestones": 0,
+          "greenery": 1,
+          "cities": 4,
+          "cards": 17,
+          "total": 51,
+          "rank": 3,
+          "note": ""
+        },
+        {
+          "player": "Filip Pavletić",
+          "corporation": "Inventrix",
+          "tr": 27,
+          "awards": 0,
+          "milestones": 0,
+          "greenery": 2,
+          "cities": 3,
+          "cards": 11,
+          "total": 43,
+          "rank": 5,
+          "note": ""
+        },
+        {
+          "player": "Hrvoje Maligec",
+          "corporation": "Poseidon",
+          "tr": 38,
+          "awards": 5,
+          "milestones": 5,
+          "greenery": 5,
+          "cities": 5,
+          "cards": 4,
+          "total": 62,
+          "rank": 1,
+          "note": ""
+        },
+        {
+          "player": "Andro Slavić",
+          "corporation": "Teractor",
+          "tr": 25,
+          "awards": 0,
+          "milestones": 0,
+          "greenery": 3,
+          "cities": 4,
+          "cards": 17,
+          "total": 49,
+          "rank": 4,
+          "note": ""
+        }
+      ],
+      "colonies": []
+    },
+    {
+      "name": "Game22",
+      "note": "",
+      "date": "12/30/2019",
+      "mode": [
+        "Base",
+        "Corporate Era",
+        "Colonies"
+      ],
+      "mode_code": "B+CE+Col",
+      "map": "Tharsis",
+      "winner": "Matteo Samsa",
+      "win_corp": "Poseidon",
+      "win_score": 92,
+      "players": 4,
+      "generation": 0,
+      "scores": [
+        {
+          "player": "Matteo Samsa",
+          "corporation": "Poseidon",
+          "tr": 36,
+          "awards": 9,
+          "milestones": 5,
+          "greenery": 3,
+          "cities": 5,
+          "cards": 34,
+          "total": 92,
+          "rank": 1,
+          "note": ""
+        },
+        {
+          "player": "Filip Pavletić",
+          "corporation": "Stormcraft Incorporated",
+          "tr": 36,
+          "awards": 7,
+          "milestones": 0,
+          "greenery": 2,
+          "cities": 3,
+          "cards": 8,
+          "total": 56,
+          "rank": 4,
+          "note": ""
+        },
+        {
+          "player": "Hrvoje Maligec",
+          "corporation": "Interplanetary Cinematics",
+          "tr": 32,
+          "awards": 5,
+          "milestones": 5,
+          "greenery": 3,
+          "cities": 3,
+          "cards": 10,
+          "total": 58,
+          "rank": 3,
+          "note": ""
+        },
+        {
+          "player": "Adi Čaušević",
+          "corporation": "UNMI",
+          "tr": 47,
+          "awards": 0,
+          "milestones": 5,
+          "greenery": 3,
+          "cities": 6,
+          "cards": 11,
+          "total": 72,
+          "rank": 2,
+          "note": ""
+        }
+      ],
+      "colonies": []
+    },
+    {
+      "name": "Game23",
+      "note": "",
+      "date": "1/1/2020",
+      "mode": [
+        "Base",
+        "Corporate Era",
+        "Colonies",
+        "Draft"
+      ],
+      "mode_code": "B+CE+Col+Dr",
+      "map": "Tharsis",
+      "winner": "Matteo Samsa",
+      "win_corp": "Poseidon",
+      "win_score": 95,
+      "players": 4,
+      "generation": 0,
+      "scores": [
+        {
+          "player": "Matteo Samsa",
+          "corporation": "Poseidon",
+          "tr": 38,
+          "awards": 5,
+          "milestones": 5,
+          "greenery": 9,
+          "cities": 13,
+          "cards": 25,
+          "total": 95,
+          "rank": 1,
+          "note": ""
+        },
+        {
+          "player": "Luka Jenuš",
+          "corporation": "UNMI",
+          "tr": 40,
+          "awards": 5,
+          "milestones": 0,
+          "greenery": 2,
+          "cities": 3,
+          "cards": 26,
+          "total": 76,
+          "rank": 4,
+          "note": ""
+        },
+        {
+          "player": "Jan Mastrović",
+          "corporation": "Mining Guild",
+          "tr": 29,
+          "awards": 7,
+          "milestones": 5,
+          "greenery": 2,
+          "cities": 9,
+          "cards": 28,
+          "total": 80,
+          "rank": 3,
+          "note": ""
+        },
+        {
+          "player": "Andro Slavić",
+          "corporation": "Aridor",
+          "tr": 39,
+          "awards": 4,
+          "milestones": 5,
+          "greenery": 11,
+          "cities": 12,
+          "cards": 14,
+          "total": 85,
+          "rank": 2,
+          "note": ""
+        }
+      ],
+      "colonies": []
+    },
+    {
+      "name": "Game24",
+      "note": "",
+      "date": "1/8/2020",
+      "mode": [
+        "Base",
+        "Corporate Era",
+        "Colonies",
+        "Draft"
+      ],
+      "mode_code": "B+CE+Col+Dr",
+      "map": "Tharsis",
+      "winner": "Matteo Samsa",
+      "win_corp": "Interplanetary Cinematics",
+      "win_score": 90,
+      "players": 4,
+      "generation": 0,
+      "scores": [
+        {
+          "player": "Matteo Samsa",
+          "corporation": "Interplanetary Cinematics",
+          "tr": 31,
+          "awards": 10,
+          "milestones": 5,
+          "greenery": 6,
+          "cities": 10,
+          "cards": 28,
+          "total": 90,
+          "rank": 1,
+          "note": ""
+        },
+        {
+          "player": "Mia Čaušević",
+          "corporation": "Aridor",
+          "tr": 31,
+          "awards": 0,
+          "milestones": 0,
+          "greenery": 6,
+          "cities": 11,
+          "cards": 13,
+          "total": 61,
+          "rank": 4,
+          "note": ""
+        },
+        {
+          "player": "Adi Čaušević",
+          "corporation": "Polyphemos",
+          "tr": 32,
+          "awards": 7,
+          "milestones": 0,
+          "greenery": 3,
+          "cities": 5,
+          "cards": 28,
+          "total": 75,
+          "rank": 3,
+          "note": ""
+        },
+        {
+          "player": "Jan Mastrović",
+          "corporation": "Ecoline",
+          "tr": 38,
+          "awards": 4,
+          "milestones": 10,
+          "greenery": 7,
+          "cities": 12,
+          "cards": 15,
+          "total": 86,
+          "rank": 2,
+          "note": ""
+        }
+      ],
+      "colonies": [
+        {
+          "name": "Calisto ",
+          "resource": "Energy",
+          "count": 0
+        },
+        {
+          "name": "Enceladus ",
+          "resource": "Microbes",
+          "count": 1
+        },
+        {
+          "name": "Luna ",
+          "resource": "MC",
+          "count": 3
+        },
+        {
+          "name": "Miranda ",
+          "resource": "Animals",
+          "count": 0
+        },
+        {
+          "name": "Pluto ",
+          "resource": "Cards",
+          "count": 3
+        },
+        {
+          "name": "Titan ",
+          "resource": "Floaters",
+          "count": 3
+        },
+        {
+          "name": "Triton ",
+          "resource": "Titanium",
+          "count": 3
+        }
+      ]
+    },
+    {
+      "name": "Game25",
+      "note": "",
+      "date": "1/10/2020",
+      "mode": [
+        "Base",
+        "Corporate Era",
+        "Colonies",
+        "Draft"
+      ],
+      "mode_code": "B+CE+Col+Dr",
+      "map": "Tharsis",
+      "winner": "Matteo Samsa",
+      "win_corp": "Thorgate",
+      "win_score": 96,
+      "players": 4,
+      "generation": 0,
+      "scores": [
+        {
+          "player": "Matteo Samsa",
+          "corporation": "Thorgate",
+          "tr": 33,
+          "awards": 7,
+          "milestones": 0,
+          "greenery": 5,
+          "cities": 9,
+          "cards": 42,
+          "total": 96,
+          "rank": 1,
+          "note": "science struja"
+        },
+        {
+          "player": "Marijan Vukelić",
+          "corporation": "Credicor",
+          "tr": 32,
+          "awards": 2,
+          "milestones": 10,
+          "greenery": 6,
+          "cities": 14,
+          "cards": 16,
+          "total": 80,
+          "rank": 3,
+          "note": ""
+        },
+        {
+          "player": "Dino Šarić",
+          "corporation": "Stormcraft Incorporated",
+          "tr": 33,
+          "awards": 2,
+          "milestones": 0,
+          "greenery": 1,
+          "cities": 1,
+          "cards": 38,
+          "total": 75,
+          "rank": 4,
+          "note": ""
+        },
+        {
+          "player": "Andro Slavić",
+          "corporation": "Polyphemos",
+          "tr": 37,
+          "awards": 10,
+          "milestones": 5,
+          "greenery": 10,
+          "cities": 12,
+          "cards": 12,
+          "total": 86,
+          "rank": 2,
+          "note": ""
+        }
+      ],
+      "colonies": [
+        {
+          "name": "Ceres ",
+          "resource": "Steel",
+          "count": 2
+        },
+        {
+          "name": "Enceladus ",
+          "resource": "Microbes",
+          "count": 0
+        },
+        {
+          "name": "Calisto ",
+          "resource": "Energy",
+          "count": 2
+        },
+        {
+          "name": "Titan ",
+          "resource": "Floaters",
+          "count": 1
+        },
+        {
+          "name": "Luna ",
+          "resource": "MC",
+          "count": 3
+        },
+        {
+          "name": "Ganymede ",
+          "resource": "Plant",
+          "count": 2
+        }
+      ]
+    },
+    {
+      "name": "Game26",
+      "note": "",
+      "date": "2/9/2020",
+      "mode": [
+        "Base",
+        "Corporate Era",
+        "Colonies",
+        "Draft"
+      ],
+      "mode_code": "B+CE+Col+Dr",
+      "map": "Tharsis",
+      "winner": "Luka Jenuš",
+      "win_corp": "Inventrix",
+      "win_score": 92,
+      "players": 4,
+      "generation": 0,
+      "scores": [
+        {
+          "player": "Matteo Samsa",
+          "corporation": "Stormcraft Incorporated",
+          "tr": 43,
+          "awards": 0,
+          "milestones": 10,
+          "greenery": 6,
+          "cities": 11,
+          "cards": 19,
+          "total": 89,
+          "rank": 2,
+          "note": ""
+        },
+        {
+          "player": "Jan Mastrović",
+          "corporation": "Saturn Systems",
+          "tr": 29,
+          "awards": 10,
+          "milestones": 0,
+          "greenery": 8,
+          "cities": 15,
+          "cards": 22,
+          "total": 84,
+          "rank": 3,
+          "note": ""
+        },
+        {
+          "player": "Luka Jenuš",
+          "corporation": "Inventrix",
+          "tr": 33,
+          "awards": 9,
+          "milestones": 5,
+          "greenery": 8,
+          "cities": 16,
+          "cards": 21,
+          "total": 92,
+          "rank": 1,
+          "note": ""
+        },
+        {
+          "player": "Mia Čaušević",
+          "corporation": "Helion",
+          "tr": 27,
+          "awards": 5,
+          "milestones": 0,
+          "greenery": 6,
+          "cities": 14,
+          "cards": 17,
+          "total": 69,
+          "rank": 4,
+          "note": ""
+        }
+      ],
+      "colonies": [
+        {
+          "name": "Titan ",
+          "resource": "Floaters",
+          "count": 0
+        },
+        {
+          "name": "Europa ",
+          "resource": "Oceans",
+          "count": 1
+        },
+        {
+          "name": "Luna ",
+          "resource": "MC",
+          "count": 3
+        },
+        {
+          "name": "Miranda ",
+          "resource": "Animals",
+          "count": 2
+        },
+        {
+          "name": "Triton ",
+          "resource": "Titanium",
+          "count": 3
+        },
+        {
+          "name": "Ganymede ",
+          "resource": "Plant",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "name": "Game27",
+      "note": "",
+      "date": "2/11/2020",
+      "mode": [
+        "Base",
+        "Corporate Era",
+        "Colonies",
+        "Draft"
+      ],
+      "mode_code": "B+CE+Col+Dr",
+      "map": "Tharsis",
+      "winner": "Matteo Samsa",
+      "win_corp": "Inventrix",
+      "win_score": 99,
+      "players": 4,
+      "generation": 0,
+      "scores": [
+        {
+          "player": "Matteo Samsa",
+          "corporation": "Inventrix",
+          "tr": 39,
+          "awards": 5,
+          "milestones": 5,
+          "greenery": 10,
+          "cities": 15,
+          "cards": 25,
+          "total": 99,
+          "rank": 1,
+          "note": ""
+        },
+        {
+          "player": "Jan Mastrović",
+          "corporation": "Aridor",
+          "tr": 30,
+          "awards": 7,
+          "milestones": 5,
+          "greenery": 0,
+          "cities": 3,
+          "cards": 46,
+          "total": 91,
+          "rank": 2,
+          "note": ""
+        },
+        {
+          "player": "Luka Jenuš",
+          "corporation": "Arklight",
+          "tr": 28,
+          "awards": 4,
+          "milestones": 0,
+          "greenery": 5,
+          "cities": 5,
+          "cards": 35,
+          "total": 77,
+          "rank": 3,
+          "note": ""
+        },
+        {
+          "player": "Mia Čaušević",
+          "corporation": "Stormcraft Incorporated",
+          "tr": 35,
+          "awards": 5,
+          "milestones": 5,
+          "greenery": 8,
+          "cities": 11,
+          "cards": 12,
+          "total": 76,
+          "rank": 4,
+          "note": ""
+        }
+      ],
+      "colonies": [
+        {
+          "name": "Calisto ",
+          "resource": "Energy",
+          "count": 0
+        },
+        {
+          "name": "Miranda ",
+          "resource": "Animals",
+          "count": 1
+        },
+        {
+          "name": "Ceres ",
+          "resource": "Steel",
+          "count": 0
+        },
+        {
+          "name": "Io ",
+          "resource": "Heat",
+          "count": 0
+        },
+        {
+          "name": "Titan ",
+          "resource": "Floaters",
+          "count": 1
+        },
+        {
+          "name": "Triton ",
+          "resource": "Titanium",
+          "count": 3
+        },
+        {
+          "name": "Pluto ",
+          "resource": "Cards",
+          "count": 3
+        }
+      ]
+    },
+    {
+      "name": "Game28",
+      "note": "",
+      "date": "2/14/2020",
+      "mode": [
+        "Base",
+        "Corporate Era",
+        "Colonies",
+        "Draft"
+      ],
+      "mode_code": "B+CE+Col+Dr",
+      "map": "Tharsis",
+      "winner": "Matteo Samsa",
+      "win_corp": "Teractor",
+      "win_score": 78,
+      "players": 4,
+      "generation": 0,
+      "scores": [
+        {
+          "player": "Matteo Samsa",
+          "corporation": "Teractor",
+          "tr": 38,
+          "awards": 0,
+          "milestones": 5,
+          "greenery": 8,
+          "cities": 8,
+          "cards": 19,
+          "total": 78,
+          "rank": 1,
+          "note": ""
+        },
+        {
+          "player": "Jan Mastrović",
+          "corporation": "Tharsis Republic",
+          "tr": 29,
+          "awards": 9,
+          "milestones": 5,
+          "greenery": 4,
+          "cities": 10,
+          "cards": 10,
+          "total": 67,
+          "rank": 2,
+          "note": ""
+        },
+        {
+          "player": "Luka Jenuš",
+          "corporation": "Polyphemos",
+          "tr": 27,
+          "awards": 5,
+          "milestones": 0,
+          "greenery": 4,
+          "cities": 6,
+          "cards": 23,
+          "total": 65,
+          "rank": 4,
+          "note": ""
+        },
+        {
+          "player": "Mia Čaušević",
+          "corporation": "Phobolog",
+          "tr": 32,
+          "awards": 7,
+          "milestones": 5,
+          "greenery": 5,
+          "cities": 7,
+          "cards": 10,
+          "total": 66,
+          "rank": 3,
+          "note": ""
+        }
+      ],
+      "colonies": [
+        {
+          "name": "Io ",
+          "resource": "Heat",
+          "count": 0
+        },
+        {
+          "name": "Europa ",
+          "resource": "Oceans",
+          "count": 2
+        },
+        {
+          "name": "Triton ",
+          "resource": "Titanium",
+          "count": 3
+        },
+        {
+          "name": "Miranda ",
+          "resource": "Animals",
+          "count": 0
+        },
+        {
+          "name": "Luna ",
+          "resource": "MC",
+          "count": 3
+        },
+        {
+          "name": "Ganymede ",
+          "resource": "Plant",
+          "count": 3
+        }
+      ]
+    },
+    {
+      "name": "Game29",
+      "note": "",
+      "date": "2/18/2020",
+      "mode": [
+        "Base",
+        "Corporate Era",
+        "Prelude",
+        "Colonies",
+        "Draft"
+      ],
+      "mode_code": "B+CE+Col+Dr+Pr",
+      "map": "Tharsis",
+      "winner": "Matteo Samsa",
+      "win_corp": "Phobolog",
+      "win_score": 127,
+      "players": 3,
+      "generation": 0,
+      "scores": [
+        {
+          "player": "Matteo Samsa",
+          "corporation": "Phobolog",
+          "tr": 49,
+          "awards": 2,
+          "milestones": 5,
+          "greenery": 8,
+          "cities": 10,
+          "cards": 53,
+          "total": 127,
+          "rank": 1,
+          "note": ""
+        },
+        {
+          "player": "Jan Mastrović",
+          "corporation": "Robinson Industries",
+          "tr": 38,
+          "awards": 10,
+          "milestones": 0,
+          "greenery": 8,
+          "cities": 22,
+          "cards": 24,
+          "total": 102,
+          "rank": 3,
+          "note": ""
+        },
+        {
+          "player": "Mia Čaušević",
+          "corporation": "Cheung Shing Mars",
+          "tr": 34,
+          "awards": 12,
+          "milestones": 10,
+          "greenery": 9,
+          "cities": 19,
+          "cards": 27,
+          "total": 111,
+          "rank": 2,
+          "note": ""
+        }
+      ],
+      "colonies": [
+        {
+          "name": "Enceladus ",
+          "resource": "Microbes",
+          "count": 2
+        },
+        {
+          "name": "Luna ",
+          "resource": "MC",
+          "count": 3
+        },
+        {
+          "name": "Calisto ",
+          "resource": "Energy",
+          "count": 0
+        },
+        {
+          "name": "Triton ",
+          "resource": "Titanium",
+          "count": 2
+        },
+        {
+          "name": "Io ",
+          "resource": "Heat",
+          "count": 0
+        }
+      ]
+    },
+    {
+      "name": "Game30",
+      "note": "",
+      "date": "2/20/2020",
+      "mode": [
+        "Base",
+        "Corporate Era",
+        "Prelude",
+        "Colonies",
+        "Draft"
+      ],
+      "mode_code": "B+CE+Col+Dr+Pr",
+      "map": "Tharsis",
+      "winner": "Matteo Samsa",
+      "win_corp": "Teractor",
+      "win_score": 73,
+      "players": 5,
+      "generation": 0,
+      "scores": [
+        {
+          "player": "Matteo Samsa",
+          "corporation": "Teractor",
+          "tr": 46,
+          "awards": 0,
+          "milestones": 0,
+          "greenery": 2,
+          "cities": 2,
+          "cards": 23,
+          "total": 73,
+          "rank": 1,
+          "note": ""
+        },
+        {
+          "player": "Luka Jenuš",
+          "corporation": "Robinson Industries",
+          "tr": 31,
+          "awards": 12,
+          "milestones": 5,
+          "greenery": 4,
+          "cities": 8,
+          "cards": 9,
+          "total": 69,
+          "rank": 3,
+          "note": ""
+        },
+        {
+          "player": "Mislav Monjac",
+          "corporation": "Tharsis Republic",
+          "tr": 30,
+          "awards": 2,
+          "milestones": 10,
+          "greenery": 4,
+          "cities": 10,
+          "cards": 15,
+          "total": 71,
+          "rank": 2,
+          "note": ""
+        },
+        {
+          "player": "Mia Čaušević",
+          "corporation": "Cheung Shing Mars",
+          "tr": 30,
+          "awards": 5,
+          "milestones": 0,
+          "greenery": 5,
+          "cities": 7,
+          "cards": 10,
+          "total": 57,
+          "rank": 4,
+          "note": ""
+        },
+        {
+          "player": "Adi Čaušević",
+          "corporation": "Stormcraft Incorporated",
+          "tr": 29,
+          "awards": 2,
+          "milestones": 0,
+          "greenery": 5,
+          "cities": 7,
+          "cards": 11,
+          "total": 54,
+          "rank": 5,
+          "note": ""
+        }
+      ],
+      "colonies": [
+        {
+          "name": "Pluto ",
+          "resource": "Cards",
+          "count": 3
+        },
+        {
+          "name": "Titan ",
+          "resource": "Floaters",
+          "count": 1
+        },
+        {
+          "name": "Miranda ",
+          "resource": "Animals",
+          "count": 0
+        },
+        {
+          "name": "Enceladus ",
+          "resource": "Microbes",
+          "count": 0
+        },
+        {
+          "name": "Europa ",
+          "resource": "Oceans",
+          "count": 0
+        },
+        {
+          "name": "Ceres ",
+          "resource": "Steel",
+          "count": 0
+        },
+        {
+          "name": "Ganymede ",
+          "resource": "Plant",
+          "count": 3
+        }
+      ]
+    },
+    {
+      "name": "Game31",
+      "note": "",
+      "date": "2/21/2020",
+      "mode": [
+        "Base",
+        "Corporate Era",
+        "Prelude",
+        "Colonies",
+        "Draft"
+      ],
+      "mode_code": "B+CE+Col+Dr+Pr",
+      "map": "Tharsis",
+      "winner": "Matteo Samsa",
+      "win_corp": "Polyphemos",
+      "win_score": 82,
+      "players": 5,
+      "generation": 0,
+      "scores": [
+        {
+          "player": "Matteo Samsa",
+          "corporation": "Polyphemos",
+          "tr": 34,
+          "awards": 10,
+          "milestones": 5,
+          "greenery": 2,
+          "cities": 4,
+          "cards": 27,
+          "total": 82,
+          "rank": 1,
+          "note": ""
+        },
+        {
+          "player": "Jan Mastrović",
+          "corporation": "Tharsis Republic",
+          "tr": 30,
+          "awards": 7,
+          "milestones": 5,
+          "greenery": 5,
+          "cities": 13,
+          "cards": 14,
+          "total": 74,
+          "rank": 2,
+          "note": ""
+        },
+        {
+          "player": "Luka Jenuš",
+          "corporation": "Cheung Shing Mars",
+          "tr": 28,
+          "awards": 5,
+          "milestones": 0,
+          "greenery": 1,
+          "cities": 3,
+          "cards": 15,
+          "total": 52,
+          "rank": 5,
+          "note": ""
+        },
+        {
+          "player": "Mia Čaušević",
+          "corporation": "Inventrix",
+          "tr": 31,
+          "awards": 2,
+          "milestones": 5,
+          "greenery": 4,
+          "cities": 7,
+          "cards": 21,
+          "total": 70,
+          "rank": 3,
+          "note": ""
+        },
+        {
+          "player": "Nola Smolica",
+          "corporation": "Saturn Systems",
+          "tr": 35,
+          "awards": 0,
+          "milestones": 0,
+          "greenery": 1,
+          "cities": 5,
+          "cards": 14,
+          "total": 55,
+          "rank": 4,
+          "note": ""
+        }
+      ],
+      "colonies": [
+        {
+          "name": "Ceres ",
+          "resource": "Steel",
+          "count": 0
+        },
+        {
+          "name": "Pluto ",
+          "resource": "Cards",
+          "count": 3
+        },
+        {
+          "name": "Calisto ",
+          "resource": "Energy",
+          "count": 0
+        },
+        {
+          "name": "Titan ",
+          "resource": "Floaters",
+          "count": 0
+        },
+        {
+          "name": "Triton ",
+          "resource": "Titanium",
+          "count": 3
+        },
+        {
+          "name": "Miranda ",
+          "resource": "Animals",
+          "count": 0
+        },
+        {
+          "name": "Ganymede ",
+          "resource": "Plant",
+          "count": 2
+        }
+      ]
+    },
+    {
+      "name": "Game32",
+      "note": "",
+      "date": "2/25/2020",
+      "mode": [
+        "Base",
+        "Corporate Era",
+        "Prelude",
+        "Colonies",
+        "Draft"
+      ],
+      "mode_code": "B+CE+Col+Dr+Pr",
+      "map": "Tharsis",
+      "winner": "Jan Mastrović",
+      "win_corp": "Arklight",
+      "win_score": 89,
+      "players": 3,
+      "generation": 0,
+      "scores": [
+        {
+          "player": "Matteo Samsa",
+          "corporation": "Valley Trust",
+          "tr": 37,
+          "awards": 4,
+          "milestones": 0,
+          "greenery": 4,
+          "cities": 6,
+          "cards": 31,
+          "total": 82,
+          "rank": 3,
+          "note": ""
+        },
+        {
+          "player": "Jan Mastrović",
+          "corporation": "Arklight",
+          "tr": 28,
+          "awards": 10,
+          "milestones": 10,
+          "greenery": 7,
+          "cities": 12,
+          "cards": 22,
+          "total": 89,
+          "rank": 1,
+          "note": ""
+        },
+        {
+          "player": "Luka Jenuš",
+          "corporation": "Polyphemos",
+          "tr": 40,
+          "awards": 9,
+          "milestones": 5,
+          "greenery": 3,
+          "cities": 8,
+          "cards": 22,
+          "total": 87,
+          "rank": 2,
+          "note": ""
+        }
+      ],
+      "colonies": [
+        {
+          "name": "Ganymede ",
+          "resource": "Plant",
+          "count": 3
+        },
+        {
+          "name": "Calisto ",
+          "resource": "Energy",
+          "count": 1
+        },
+        {
+          "name": "Triton ",
+          "resource": "Titanium",
+          "count": 3
+        },
+        {
+          "name": "Luna ",
+          "resource": "MC",
+          "count": 3
+        },
+        {
+          "name": "Enceladus ",
+          "resource": "Microbes",
+          "count": 0
+        }
+      ]
+    },
+    {
+      "name": "Game33",
+      "note": "",
+      "date": "2/26/2020",
+      "mode": [
+        "Base",
+        "Corporate Era",
+        "Prelude",
+        "Colonies",
+        "Draft"
+      ],
+      "mode_code": "B+CE+Col+Dr+Pr",
+      "map": "Tharsis",
+      "winner": "Luka Jenuš",
+      "win_corp": "Saturn Systems",
+      "win_score": 106,
+      "players": 3,
+      "generation": 0,
+      "scores": [
+        {
+          "player": "Matteo Samsa",
+          "corporation": "Thorgate",
+          "tr": 40,
+          "awards": 2,
+          "milestones": 15,
+          "greenery": 2,
+          "cities": 2,
+          "cards": 26,
+          "total": 87,
+          "rank": 2,
+          "note": ""
+        },
+        {
+          "player": "Jan Mastrović",
+          "corporation": "Valley Trust",
+          "tr": 38,
+          "awards": 7,
+          "milestones": 0,
+          "greenery": 8,
+          "cities": 10,
+          "cards": 22,
+          "total": 85,
+          "rank": 3,
+          "note": ""
+        },
+        {
+          "player": "Luka Jenuš",
+          "corporation": "Saturn Systems",
+          "tr": 40,
+          "awards": 12,
+          "milestones": 0,
+          "greenery": 6,
+          "cities": 12,
+          "cards": 36,
+          "total": 106,
+          "rank": 1,
+          "note": ""
+        }
+      ],
+      "colonies": [
+        {
+          "name": "Luna ",
+          "resource": "MC",
+          "count": 3
+        },
+        {
+          "name": "Triton ",
+          "resource": "Titanium",
+          "count": 3
+        },
+        {
+          "name": "Ceres ",
+          "resource": "Steel",
+          "count": 1
+        },
+        {
+          "name": "Calisto ",
+          "resource": "Energy",
+          "count": 0
+        },
+        {
+          "name": "Io ",
+          "resource": "Heat",
+          "count": 0
+        }
+      ]
+    },
+    {
+      "name": "Game34",
+      "note": "",
+      "date": "3/7/2020",
+      "mode": [
+        "Base",
+        "Corporate Era",
+        "Prelude",
+        "Colonies",
+        "Draft"
+      ],
+      "mode_code": "B+CE+Col+Dr+Pr",
+      "map": "Tharsis",
+      "winner": "Matteo Samsa",
+      "win_corp": "Thorgate",
+      "win_score": 114,
+      "players": 4,
+      "generation": 0,
+      "scores": [
+        {
+          "player": "Matteo Samsa",
+          "corporation": "Thorgate",
+          "tr": 36,
+          "awards": 10,
+          "milestones": 5,
+          "greenery": 1,
+          "cities": 4,
+          "cards": 58,
+          "total": 114,
+          "rank": 1,
+          "note": ""
+        },
+        {
+          "player": "Jan Mastrović",
+          "corporation": "Point Luna",
+          "tr": 38,
+          "awards": 9,
+          "milestones": 0,
+          "greenery": 9,
+          "cities": 10,
+          "cards": 38,
+          "total": 104,
+          "rank": 3,
+          "note": ""
+        },
+        {
+          "player": "Mia Čaušević",
+          "corporation": "Phobolog",
+          "tr": 38,
+          "awards": 2,
+          "milestones": 5,
+          "greenery": 3,
+          "cities": 7,
+          "cards": 44,
+          "total": 99,
+          "rank": 4,
+          "note": ""
+        },
+        {
+          "player": "Luka Jenuš",
+          "corporation": "Arklight",
+          "tr": 35,
+          "awards": 0,
+          "milestones": 5,
+          "greenery": 4,
+          "cities": 4,
+          "cards": 59,
+          "total": 107,
+          "rank": 2,
+          "note": ""
+        }
+      ],
+      "colonies": [
+        {
+          "name": "Calisto ",
+          "resource": "Energy",
+          "count": 1
+        },
+        {
+          "name": "Miranda ",
+          "resource": "Animals",
+          "count": 3
+        },
+        {
+          "name": "Io ",
+          "resource": "Heat",
+          "count": 0
+        },
+        {
+          "name": "Pluto ",
+          "resource": "Cards",
+          "count": 3
+        },
+        {
+          "name": "Enceladus ",
+          "resource": "Microbes",
+          "count": 1
+        },
+        {
+          "name": "Calisto ",
+          "resource": "Energy",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "name": "Game35",
+      "note": "",
+      "date": "4/15/2020",
+      "mode": [
+        "Base",
+        "Corporate Era",
+        "Prelude",
+        "Colonies",
+        "Draft"
+      ],
+      "mode_code": "B+CE+Col+Dr+Pr",
+      "map": "Tharsis",
+      "winner": "Jan Mastrović",
+      "win_corp": "Ecoline",
+      "win_score": 94,
+      "players": 4,
+      "generation": 0,
+      "scores": [
+        {
+          "player": "Jan Mastrović",
+          "corporation": "Ecoline",
+          "tr": 36,
+          "awards": 5,
+          "milestones": 5,
+          "greenery": 13,
+          "cities": 15,
+          "cards": 20,
+          "total": 94,
+          "rank": 1,
+          "note": ""
+        },
+        {
+          "player": "Mia Čaušević",
+          "corporation": "Helion",
+          "tr": 37,
+          "awards": 6,
+          "milestones": 5,
+          "greenery": 5,
+          "cities": 10,
+          "cards": 17,
+          "total": 80,
+          "rank": 2,
+          "note": ""
+        },
+        {
+          "player": "Dolores Frančišković",
+          "corporation": "Tharsis Republic",
+          "tr": 31,
+          "awards": 5,
+          "milestones": 0,
+          "greenery": 2,
+          "cities": 7,
+          "cards": 16,
+          "total": 61,
+          "rank": 4,
+          "note": ""
+        },
+        {
+          "player": "Adi Čaušević",
+          "corporation": "Mining Guild",
+          "tr": 28,
+          "awards": 5,
+          "milestones": 5,
+          "greenery": 0,
+          "cities": 2,
+          "cards": 33,
+          "total": 73,
+          "rank": 3,
+          "note": ""
+        }
+      ],
+      "colonies": [
+        {
+          "name": "Pluto ",
+          "resource": "Cards",
+          "count": 1
+        },
+        {
+          "name": "Calisto ",
+          "resource": "Energy",
+          "count": 1
+        },
+        {
+          "name": "Ganymede ",
+          "resource": "Plant",
+          "count": 0
+        },
+        {
+          "name": "Enceladus ",
+          "resource": "Microbes",
+          "count": 2
+        },
+        {
+          "name": "Titan ",
+          "resource": "Floaters",
+          "count": 2
+        },
+        {
+          "name": "Miranda ",
+          "resource": "Animals",
+          "count": 0
+        }
+      ]
+    },
+    {
+      "name": "Game36",
+      "note": "",
+      "date": "4/16/2020",
+      "mode": [
+        "Base",
+        "Corporate Era",
+        "Prelude",
+        "Colonies",
+        "Draft"
+      ],
+      "mode_code": "B+CE+Col+Dr+Pr",
+      "map": "Tharsis",
+      "winner": "Mia Čaušević",
+      "win_corp": "Phobolog",
+      "win_score": 103,
+      "players": 4,
+      "generation": 0,
+      "scores": [
+        {
+          "player": "Mia Čaušević",
+          "corporation": "Phobolog",
+          "tr": 34,
+          "awards": 5,
+          "milestones": 0,
+          "greenery": 4,
+          "cities": 8,
+          "cards": 52,
+          "total": 103,
+          "rank": 1,
+          "note": ""
+        },
+        {
+          "player": "Dolores Frančišković",
+          "corporation": "Robinson Industries",
+          "tr": 38,
+          "awards": 5,
+          "milestones": 0,
+          "greenery": 7,
+          "cities": 9,
+          "cards": 20,
+          "total": 79,
+          "rank": 3,
+          "note": ""
+        },
+        {
+          "player": "Adi Čaušević",
+          "corporation": "Valley Trust",
+          "tr": 28,
+          "awards": 10,
+          "milestones": 15,
+          "greenery": 7,
+          "cities": 13,
+          "cards": 29,
+          "total": 102,
+          "rank": 2,
+          "note": ""
+        },
+        {
+          "player": "Jan Mastrović",
+          "corporation": "Helion",
+          "tr": 36,
+          "awards": 4,
+          "milestones": 0,
+          "greenery": 5,
+          "cities": 14,
+          "cards": 18,
+          "total": 77,
+          "rank": 4,
+          "note": ""
+        }
+      ],
+      "colonies": [
+        {
+          "name": "Pluto ",
+          "resource": "Cards",
+          "count": 1
+        },
+        {
+          "name": "Ceres ",
+          "resource": "Steel",
+          "count": 0
+        },
+        {
+          "name": "Triton ",
+          "resource": "Titanium",
+          "count": 3
+        },
+        {
+          "name": "Ganymede ",
+          "resource": "Plant",
+          "count": 3
+        },
+        {
+          "name": "Calisto ",
+          "resource": "Energy",
+          "count": 0
+        },
+        {
+          "name": "Europa ",
+          "resource": "Oceans",
+          "count": 2
+        }
+      ]
+    },
+    {
+      "name": "Game37",
+      "note": "",
+      "date": "4/18/2020",
+      "mode": [
+        "Base",
+        "Corporate Era",
+        "Prelude",
+        "Colonies",
+        "Draft"
+      ],
+      "mode_code": "B+CE+Col+Dr+Pr",
+      "map": "Tharsis",
+      "winner": "Jan Mastrović",
+      "win_corp": "Saturn Systems",
+      "win_score": 71,
+      "players": 4,
+      "generation": 0,
+      "scores": [
+        {
+          "player": "Mia Čaušević",
+          "corporation": "Robinson Industries",
+          "tr": 27,
+          "awards": 10,
+          "milestones": 5,
+          "greenery": 6,
+          "cities": 9,
+          "cards": 13,
+          "total": 70,
+          "rank": 2,
+          "note": ""
+        },
+        {
+          "player": "Dolores Frančišković",
+          "corporation": "Tharsis Republic",
+          "tr": 31,
+          "awards": 2,
+          "milestones": 5,
+          "greenery": 4,
+          "cities": 4,
+          "cards": 23,
+          "total": 69,
+          "rank": 3,
+          "note": ""
+        },
+        {
+          "player": "Adi Čaušević",
+          "corporation": "Phobolog",
+          "tr": 33,
+          "awards": 2,
+          "milestones": 0,
+          "greenery": 5,
+          "cities": 7,
+          "cards": 14,
+          "total": 61,
+          "rank": 4,
+          "note": ""
+        },
+        {
+          "player": "Jan Mastrović",
+          "corporation": "Saturn Systems",
+          "tr": 33,
+          "awards": 0,
+          "milestones": 5,
+          "greenery": 1,
+          "cities": 2,
+          "cards": 30,
+          "total": 71,
+          "rank": 1,
+          "note": ""
+        }
+      ],
+      "colonies": [
+        {
+          "name": "Io ",
+          "resource": "Heat",
+          "count": 2
+        },
+        {
+          "name": "Europa ",
+          "resource": "Oceans",
+          "count": 1
+        },
+        {
+          "name": "Titan ",
+          "resource": "Floaters",
+          "count": 2
+        },
+        {
+          "name": "Enceladus ",
+          "resource": "Microbes",
+          "count": 0
+        },
+        {
+          "name": "Miranda ",
+          "resource": "Animals",
+          "count": 0
+        },
+        {
+          "name": "Ganymede ",
+          "resource": "Plant",
+          "count": 2
+        }
+      ]
+    },
+    {
+      "name": "Game38",
+      "note": "",
+      "date": "4/19/2020",
+      "mode": [
+        "Base",
+        "Corporate Era",
+        "Prelude",
+        "Colonies",
+        "Draft"
+      ],
+      "mode_code": "B+CE+Col+Dr+Pr",
+      "map": "Tharsis",
+      "winner": "Jan Mastrović",
+      "win_corp": "Tharsis Republic",
+      "win_score": 129,
+      "players": 3,
+      "generation": 0,
+      "scores": [
+        {
+          "player": "Jan Mastrović",
+          "corporation": "Tharsis Republic",
+          "tr": 34,
+          "awards": 12,
+          "milestones": 10,
+          "greenery": 12,
+          "cities": 31,
+          "cards": 30,
+          "total": 129,
+          "rank": 1,
+          "note": ""
+        },
+        {
+          "player": "Adi Čaušević",
+          "corporation": "Arklight",
+          "tr": 37,
+          "awards": 4,
+          "milestones": 5,
+          "greenery": 6,
+          "cities": 10,
+          "cards": 35,
+          "total": 97,
+          "rank": 3,
+          "note": ""
+        },
+        {
+          "player": "Mia Čaušević",
+          "corporation": "Helion",
+          "tr": 38,
+          "awards": 5,
+          "milestones": 0,
+          "greenery": 12,
+          "cities": 16,
+          "cards": 37,
+          "total": 108,
+          "rank": 2,
+          "note": ""
+        }
+      ],
+      "colonies": [
+        {
+          "name": "Io ",
+          "resource": "Heat",
+          "count": 0
+        },
+        {
+          "name": "Titan ",
+          "resource": "Floaters",
+          "count": 0
+        },
+        {
+          "name": "Pluto ",
+          "resource": "Cards",
+          "count": 1
+        },
+        {
+          "name": "Enceladus ",
+          "resource": "Microbes",
+          "count": 0
+        },
+        {
+          "name": "Miranda ",
+          "resource": "Animals",
+          "count": 2
+        }
+      ]
+    },
+    {
+      "name": "Game39",
+      "note": "",
+      "date": "4/21/2020",
+      "mode": [
+        "Base",
+        "Corporate Era",
+        "Prelude",
+        "Colonies",
+        "Draft"
+      ],
+      "mode_code": "B+CE+Col+Dr+Pr",
+      "map": "Tharsis",
+      "winner": "Jan Mastrović",
+      "win_corp": "Aridor",
+      "win_score": 118,
+      "players": 3,
+      "generation": 0,
+      "scores": [
+        {
+          "player": "Mia Čaušević",
+          "corporation": "Phobolog",
+          "tr": 36,
+          "awards": 10,
+          "milestones": 5,
+          "greenery": 7,
+          "cities": 16,
+          "cards": 29,
+          "total": 103,
+          "rank": 2,
+          "note": ""
+        },
+        {
+          "player": "Adi Čaušević",
+          "corporation": "Polyphemos",
+          "tr": 34,
+          "awards": 7,
+          "milestones": 5,
+          "greenery": 6,
+          "cities": 10,
+          "cards": 29,
+          "total": 91,
+          "rank": 3,
+          "note": ""
+        },
+        {
+          "player": "Jan Mastrović",
+          "corporation": "Aridor",
+          "tr": 41,
+          "awards": 4,
+          "milestones": 5,
+          "greenery": 9,
+          "cities": 18,
+          "cards": 41,
+          "total": 118,
+          "rank": 1,
+          "note": ""
+        }
+      ],
+      "colonies": [
+        {
+          "name": "Io ",
+          "resource": "Heat",
+          "count": 0
+        },
+        {
+          "name": "Titan ",
+          "resource": "Floaters",
+          "count": 0
+        },
+        {
+          "name": "Pluto ",
+          "resource": "Cards",
+          "count": 2
+        },
+        {
+          "name": "Europa ",
+          "resource": "Oceans",
+          "count": 1
+        },
+        {
+          "name": "Miranda ",
+          "resource": "Animals",
+          "count": 0
+        },
+        {
+          "name": "Ceres ",
+          "resource": "Steel",
+          "count": 0
+        }
+      ]
+    },
+    {
+      "name": "Game40",
+      "note": "",
+      "date": "4/23/2020",
+      "mode": [
+        "Base",
+        "Corporate Era",
+        "Prelude",
+        "Colonies",
+        "Draft"
+      ],
+      "mode_code": "B+CE+Col+Dr+Pr",
+      "map": "Tharsis",
+      "winner": "Jan Mastrović",
+      "win_corp": "Stormcraft Incorporated",
+      "win_score": 124,
+      "players": 3,
+      "generation": 12,
+      "scores": [
+        {
+          "player": "Mia Čaušević",
+          "corporation": "Cheung Shing Mars",
+          "tr": 39,
+          "awards": 12,
+          "milestones": 10,
+          "greenery": 7,
+          "cities": 13,
+          "cards": 34,
+          "total": 115,
+          "rank": 2,
+          "note": ""
+        },
+        {
+          "player": "Adi Čaušević",
+          "corporation": "Arklight",
+          "tr": 40,
+          "awards": 7,
+          "milestones": 0,
+          "greenery": 8,
+          "cities": 13,
+          "cards": 23,
+          "total": 91,
+          "rank": 3,
+          "note": ""
+        },
+        {
+          "player": "Jan Mastrović",
+          "corporation": "Stormcraft Incorporated",
+          "tr": 34,
+          "awards": 2,
+          "milestones": 5,
+          "greenery": 1,
+          "cities": 4,
+          "cards": 78,
+          "total": 124,
+          "rank": 1,
+          "note": ""
+        }
+      ],
+      "colonies": [
+        {
+          "name": "Calisto ",
+          "resource": "Energy",
+          "count": 0
+        },
+        {
+          "name": "Titan ",
+          "resource": "Floaters",
+          "count": 3
+        },
+        {
+          "name": "Pluto ",
+          "resource": "Cards",
+          "count": 1
+        },
+        {
+          "name": "Ganymede ",
+          "resource": "Plant",
+          "count": 2
+        },
+        {
+          "name": "Miranda ",
+          "resource": "Animals",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "name": "Game41",
+      "note": "",
+      "date": "4/24/2020",
+      "mode": [
+        "Base",
+        "Corporate Era",
+        "Prelude",
+        "Colonies",
+        "Draft"
+      ],
+      "mode_code": "B+CE+Col+Dr+Pr",
+      "map": "Tharsis",
+      "winner": "Adi Čaušević",
+      "win_corp": "Saturn Systems",
+      "win_score": 65,
+      "players": 4,
+      "generation": 7,
+      "scores": [
+        {
+          "player": "Mia Čaušević",
+          "corporation": "Stormcraft Incorporated",
+          "tr": 33,
+          "awards": 5,
+          "milestones": 5,
+          "greenery": 0,
+          "cities": 0,
+          "cards": 11,
+          "total": 54,
+          "rank": 3,
+          "note": ""
+        },
+        {
+          "player": "Matteo Samsa",
+          "corporation": "Aridor",
+          "tr": 30,
+          "awards": 2,
+          "milestones": 5,
+          "greenery": 3,
+          "cities": 4,
+          "cards": 16,
+          "total": 60,
+          "rank": 2,
+          "note": ""
+        },
+        {
+          "player": "Adi Čaušević",
+          "corporation": "Saturn Systems",
+          "tr": 37,
+          "awards": 7,
+          "milestones": 5,
+          "greenery": 0,
+          "cities": 0,
+          "cards": 16,
+          "total": 65,
+          "rank": 1,
+          "note": ""
+        },
+        {
+          "player": "Jan Mastrović",
+          "corporation": "Cheung Shing Mars",
+          "tr": 29,
+          "awards": 2,
+          "milestones": 0,
+          "greenery": 2,
+          "cities": 2,
+          "cards": 13,
+          "total": 48,
+          "rank": 4,
+          "note": ""
+        }
+      ],
+      "colonies": [
+        {
+          "name": "Io ",
+          "resource": "Heat",
+          "count": 0
+        },
+        {
+          "name": "Calisto ",
+          "resource": "Energy",
+          "count": 1
+        },
+        {
+          "name": "Titan ",
+          "resource": "Floaters",
+          "count": 1
+        },
+        {
+          "name": "Triton ",
+          "resource": "Titanium",
+          "count": 2
+        },
+        {
+          "name": "Europa ",
+          "resource": "Oceans",
+          "count": 1
+        },
+        {
+          "name": "Enceladus ",
+          "resource": "Microbes",
+          "count": 0
+        },
+        {
+          "name": "Miranda ",
+          "resource": "Animals",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "name": "Game42",
+      "note": "",
+      "date": "4/27/2020",
+      "mode": [
+        "Base",
+        "Corporate Era",
+        "Prelude",
+        "Colonies",
+        "Draft"
+      ],
+      "mode_code": "B+CE+Col+Dr+Pr",
+      "map": "Tharsis",
+      "winner": "Jan Mastrović",
+      "win_corp": "Valley Trust",
+      "win_score": 75,
+      "players": 5,
+      "generation": 8,
+      "scores": [
+        {
+          "player": "Matteo Samsa",
+          "corporation": "Teractor",
+          "tr": 38,
+          "awards": 2,
+          "milestones": 5,
+          "greenery": 2,
+          "cities": 2,
+          "cards": 25,
+          "total": 74,
+          "rank": 2,
+          "note": ""
+        },
+        {
+          "player": "Jan Mastrović",
+          "corporation": "Valley Trust",
+          "tr": 28,
+          "awards": 5,
+          "milestones": 0,
+          "greenery": 1,
+          "cities": 5,
+          "cards": 36,
+          "total": 75,
+          "rank": 1,
+          "note": "gold win"
+        },
+        {
+          "player": "Mia Čaušević",
+          "corporation": "Tharsis Republic",
+          "tr": 27,
+          "awards": 7,
+          "milestones": 5,
+          "greenery": 6,
+          "cities": 15,
+          "cards": 10,
+          "total": 70,
+          "rank": 3,
+          "note": ""
+        },
+        {
+          "player": "Adi Čaušević",
+          "corporation": "Ecoline",
+          "tr": 25,
+          "awards": 10,
+          "milestones": 0,
+          "greenery": 9,
+          "cities": 9,
+          "cards": 9,
+          "total": 62,
+          "rank": 5,
+          "note": ""
+        },
+        {
+          "player": "Dolores Frančišković",
+          "corporation": "Saturn Systems",
+          "tr": 32,
+          "awards": 4,
+          "milestones": 5,
+          "greenery": 2,
+          "cities": 5,
+          "cards": 20,
+          "total": 68,
+          "rank": 4,
+          "note": ""
+        }
+      ],
+      "colonies": [
+        {
+          "name": "Io ",
+          "resource": "Heat",
+          "count": 0
+        },
+        {
+          "name": "Pluto ",
+          "resource": "Cards",
+          "count": 2
+        },
+        {
+          "name": "Enceladus ",
+          "resource": "Microbes",
+          "count": 0
+        },
+        {
+          "name": "Ganymede ",
+          "resource": "Plant",
+          "count": 3
+        },
+        {
+          "name": "Miranda ",
+          "resource": "Animals",
+          "count": 0
+        },
+        {
+          "name": "Ceres ",
+          "resource": "Steel",
+          "count": 1
+        },
+        {
+          "name": "Triton ",
+          "resource": "Titanium",
+          "count": 2
+        }
+      ]
+    },
+    {
+      "name": "Game43",
+      "note": "",
+      "date": "5/3/2020",
+      "mode": [
+        "Base",
+        "Corporate Era",
+        "Prelude",
+        "Colonies",
+        "Draft"
+      ],
+      "mode_code": "B+CE+Col+Dr+Pr",
+      "map": "Tharsis",
+      "winner": "Matteo Samsa",
+      "win_corp": "Phobolog",
+      "win_score": 87,
+      "players": 4,
+      "generation": 9,
+      "scores": [
+        {
+          "player": "Jan Mastrović",
+          "corporation": "Cheung Shing Mars",
+          "tr": 29,
+          "awards": 7,
+          "milestones": 5,
+          "greenery": 0,
+          "cities": 0,
+          "cards": 36,
+          "total": 77,
+          "rank": 2,
+          "note": ""
+        },
+        {
+          "player": "Mia Čaušević",
+          "corporation": "Point Luna",
+          "tr": 35,
+          "awards": 7,
+          "milestones": 0,
+          "greenery": 3,
+          "cities": 7,
+          "cards": 17,
+          "total": 69,
+          "rank": 3,
+          "note": ""
+        },
+        {
+          "player": "Adi Čaušević",
+          "corporation": "Mining Guild",
+          "tr": 24,
+          "awards": 7,
+          "milestones": 5,
+          "greenery": 3,
+          "cities": 6,
+          "cards": 23,
+          "total": 68,
+          "rank": 4,
+          "note": ""
+        },
+        {
+          "player": "Matteo Samsa",
+          "corporation": "Phobolog",
+          "tr": 41,
+          "awards": 0,
+          "milestones": 5,
+          "greenery": 8,
+          "cities": 8,
+          "cards": 25,
+          "total": 87,
+          "rank": 1,
+          "note": ""
+        }
+      ],
+      "colonies": [
+        {
+          "name": "Calisto ",
+          "resource": "Energy",
+          "count": 3
+        },
+        {
+          "name": "Titan ",
+          "resource": "Floaters",
+          "count": 2
+        },
+        {
+          "name": "Europa ",
+          "resource": "Oceans",
+          "count": 2
+        },
+        {
+          "name": "Miranda ",
+          "resource": "Animals",
+          "count": 1
+        },
+        {
+          "name": "Ganymede ",
+          "resource": "Plant",
+          "count": 0
+        },
+        {
+          "name": "Triton ",
+          "resource": "Titanium",
+          "count": 3
+        }
+      ]
+    },
+    {
+      "name": "Game44",
+      "note": "",
+      "date": "5/6/2020",
+      "mode": [
+        "Base",
+        "Corporate Era",
+        "Prelude",
+        "Colonies",
+        "Draft"
+      ],
+      "mode_code": "B+CE+Col+Dr+Pr",
+      "map": "Tharsis",
+      "winner": "Jan Mastrović",
+      "win_corp": "Teractor",
+      "win_score": 109,
+      "players": 3,
+      "generation": 11,
+      "scores": [
+        {
+          "player": "Adi Čaušević",
+          "corporation": "Ecoline",
+          "tr": 40,
+          "awards": 10,
+          "milestones": 15,
+          "greenery": 9,
+          "cities": 12,
+          "cards": 3,
+          "total": 89,
+          "rank": 3,
+          "note": ""
+        },
+        {
+          "player": "Mia Čaušević",
+          "corporation": "Inventrix",
+          "tr": 32,
+          "awards": 4,
+          "milestones": 0,
+          "greenery": 6,
+          "cities": 10,
+          "cards": 38,
+          "total": 90,
+          "rank": 2,
+          "note": "gold lead"
+        },
+        {
+          "player": "Jan Mastrović",
+          "corporation": "Teractor",
+          "tr": 43,
+          "awards": 7,
+          "milestones": 0,
+          "greenery": 3,
+          "cities": 8,
+          "cards": 48,
+          "total": 109,
+          "rank": 1,
+          "note": ""
+        }
+      ],
+      "colonies": [
+        {
+          "name": "Io ",
+          "resource": "Heat",
+          "count": 1
+        },
+        {
+          "name": "Calisto ",
+          "resource": "Energy",
+          "count": 1
+        },
+        {
+          "name": "Pluto ",
+          "resource": "Cards",
+          "count": 3
+        },
+        {
+          "name": "Europa ",
+          "resource": "Oceans",
+          "count": 1
+        },
+        {
+          "name": "Ganymede ",
+          "resource": "Plant",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "name": "Game45",
+      "note": "",
+      "date": "5/8/2020",
+      "mode": [
+        "Base",
+        "Corporate Era",
+        "Prelude",
+        "Colonies",
+        "Draft"
+      ],
+      "mode_code": "B+CE+Col+Dr+Pr",
+      "map": "Tharsis",
+      "winner": "Mia Čaušević",
+      "win_corp": "Teractor",
+      "win_score": 81,
+      "players": 4,
+      "generation": 9,
+      "scores": [
+        {
+          "player": "Romana Ivković",
+          "corporation": "Phobolog",
+          "tr": 31,
+          "awards": 4,
+          "milestones": 0,
+          "greenery": 6,
+          "cities": 11,
+          "cards": 13,
+          "total": 65,
+          "rank": 2,
+          "note": ""
+        },
+        {
+          "player": "Mia Čaušević",
+          "corporation": "Teractor",
+          "tr": 41,
+          "awards": 5,
+          "milestones": 10,
+          "greenery": 3,
+          "cities": 9,
+          "cards": 13,
+          "total": 81,
+          "rank": 1,
+          "note": ""
+        },
+        {
+          "player": "Matteo Samsa",
+          "corporation": "Tharsis Republic",
+          "tr": 27,
+          "awards": 10,
+          "milestones": 0,
+          "greenery": 12,
+          "cities": 15,
+          "cards": 0,
+          "total": 64,
+          "rank": 3,
+          "note": ""
+        },
+        {
+          "player": "Jan Mastrović",
+          "corporation": "Saturn Systems",
+          "tr": 35,
+          "awards": 2,
+          "milestones": 5,
+          "greenery": 2,
+          "cities": 3,
+          "cards": 0,
+          "total": 47,
+          "rank": 4,
+          "note": ""
+        }
+      ],
+      "colonies": [
+        {
+          "name": "Titan ",
+          "resource": "Floaters",
+          "count": 1
+        },
+        {
+          "name": "Io ",
+          "resource": "Heat",
+          "count": 2
+        },
+        {
+          "name": "Pluto ",
+          "resource": "Cards",
+          "count": 3
+        },
+        {
+          "name": "Ceres ",
+          "resource": "Steel",
+          "count": 1
+        },
+        {
+          "name": "Ganymede ",
+          "resource": "Plant",
+          "count": 2
+        },
+        {
+          "name": "Miranda ",
+          "resource": "Animals",
+          "count": 0
+        }
+      ]
+    },
+    {
+      "name": "Game47",
+      "note": "",
+      "date": "5/17/2020",
+      "mode": [
+        "Base",
+        "Corporate Era",
+        "Prelude",
+        "Colonies",
+        "Draft"
+      ],
+      "mode_code": "B+CE+Col+Dr+Pr",
+      "map": "Tharsis",
+      "winner": "Mia Čaušević",
+      "win_corp": "UNMI",
+      "win_score": 90,
+      "players": 4,
+      "generation": 10,
+      "scores": [
+        {
+          "player": "Matteo Samsa",
+          "corporation": "Robinson Industries",
+          "tr": 32,
+          "awards": 4,
+          "milestones": 5,
+          "greenery": 3,
+          "cities": 7,
+          "cards": 32,
+          "total": 83,
+          "rank": 2,
+          "note": ""
+        },
+        {
+          "player": "Mia Čaušević",
+          "corporation": "UNMI",
+          "tr": 45,
+          "awards": 5,
+          "milestones": 10,
+          "greenery": 8,
+          "cities": 13,
+          "cards": 9,
+          "total": 90,
+          "rank": 1,
+          "note": ""
+        },
+        {
+          "player": "Adi Čaušević",
+          "corporation": "Phobolog",
+          "tr": 30,
+          "awards": 10,
+          "milestones": 0,
+          "greenery": 2,
+          "cities": 3,
+          "cards": 32,
+          "total": 77,
+          "rank": 4,
+          "note": ""
+        },
+        {
+          "player": "Jan Mastrović",
+          "corporation": "Stormcraft Incorporated",
+          "tr": 35,
+          "awards": 2,
+          "milestones": 0,
+          "greenery": 3,
+          "cities": 5,
+          "cards": 34,
+          "total": 79,
+          "rank": 3,
+          "note": ""
+        }
+      ],
+      "colonies": [
+        {
+          "name": "Calisto ",
+          "resource": "Energy",
+          "count": 3
+        },
+        {
+          "name": "Titan ",
+          "resource": "Floaters",
+          "count": 2
+        },
+        {
+          "name": "Enceladus ",
+          "resource": "Microbes",
+          "count": 0
+        },
+        {
+          "name": "Europa ",
+          "resource": "Oceans",
+          "count": 1
+        },
+        {
+          "name": "Ganymede ",
+          "resource": "Plant",
+          "count": 1
+        },
+        {
+          "name": "Ceres ",
+          "resource": "Steel",
+          "count": 0
+        }
+      ]
+    },
+    {
+      "name": "Game48",
+      "note": "",
+      "date": "3/23/2020",
+      "mode": [
+        "Base",
+        "Corporate Era",
+        "Prelude",
+        "Colonies",
+        "Draft"
+      ],
+      "mode_code": "B+CE+Col+Dr+Pr",
+      "map": "Tharsis",
+      "winner": "Adi Čaušević",
+      "win_corp": "Cheung Shing Mars",
+      "win_score": 74,
+      "players": 5,
+      "generation": 8,
+      "scores": [
+        {
+          "player": "Mia Čaušević",
+          "corporation": "Saturn Systems",
+          "tr": 22,
+          "awards": 9,
+          "milestones": 0,
+          "greenery": 2,
+          "cities": 4,
+          "cards": 27,
+          "total": 64,
+          "rank": 3,
+          "note": ""
+        },
+        {
+          "player": "Adi Čaušević",
+          "corporation": "Cheung Shing Mars",
+          "tr": 25,
+          "awards": 12,
+          "milestones": 10,
+          "greenery": 3,
+          "cities": 4,
+          "cards": 20,
+          "total": 74,
+          "rank": 1,
+          "note": ""
+        },
+        {
+          "player": "Dolores Frančišković",
+          "corporation": "Helion",
+          "tr": 34,
+          "awards": 0,
+          "milestones": 5,
+          "greenery": 2,
+          "cities": 3,
+          "cards": 6,
+          "total": 50,
+          "rank": 5,
+          "note": ""
+        },
+        {
+          "player": "Matteo Samsa",
+          "corporation": "Credicor",
+          "tr": 36,
+          "awards": 0,
+          "milestones": 0,
+          "greenery": 2,
+          "cities": 5,
+          "cards": 25,
+          "total": 68,
+          "rank": 2,
+          "note": ""
+        },
+        {
+          "player": "Jan Mastrović",
+          "corporation": "Inventrix",
+          "tr": 30,
+          "awards": 2,
+          "milestones": 0,
+          "greenery": 2,
+          "cities": 2,
+          "cards": 21,
+          "total": 57,
+          "rank": 4,
+          "note": ""
+        }
+      ],
+      "colonies": [
+        {
+          "name": "Io ",
+          "resource": "Heat",
+          "count": 1
+        },
+        {
+          "name": "Calisto ",
+          "resource": "Energy",
+          "count": 1
+        },
+        {
+          "name": "Pluto ",
+          "resource": "Cards",
+          "count": 3
+        },
+        {
+          "name": "Europa ",
+          "resource": "Oceans",
+          "count": 1
+        },
+        {
+          "name": "Enceladus ",
+          "resource": "Microbes",
+          "count": 2
+        },
+        {
+          "name": "Miranda ",
+          "resource": "Animals",
+          "count": 0
+        },
+        {
+          "name": "Triton ",
+          "resource": "Titanium",
+          "count": 3
+        }
+      ]
+    },
+    {
+      "name": "Game50",
+      "note": "",
+      "date": "6/14/2020",
+      "mode": [
+        "Base",
+        "Corporate Era",
+        "Prelude",
+        "Colonies",
+        "Draft"
+      ],
+      "mode_code": "B+CE+Col+Dr+Pr",
+      "map": "Tharsis",
+      "winner": "Luka Jenuš",
+      "win_corp": "Phobolog",
+      "win_score": 82,
+      "players": 3,
+      "generation": 9,
+      "scores": [
+        {
+          "player": "Matteo Samsa",
+          "corporation": "Point Luna",
+          "tr": 43,
+          "awards": 2,
+          "milestones": 5,
+          "greenery": 5,
+          "cities": 7,
+          "cards": 14,
+          "total": 76,
+          "rank": 3,
+          "note": ""
+        },
+        {
+          "player": "Jan Mastrović",
+          "corporation": "Tharsis Republic",
+          "tr": 35,
+          "awards": 7,
+          "milestones": 5,
+          "greenery": 4,
+          "cities": 2,
+          "cards": 25,
+          "total": 78,
+          "rank": 2,
+          "note": ""
+        },
+        {
+          "player": "Luka Jenuš",
+          "corporation": "Phobolog",
+          "tr": 41,
+          "awards": 12,
+          "milestones": 5,
+          "greenery": 1,
+          "cities": 5,
+          "cards": 18,
+          "total": 82,
+          "rank": 1,
+          "note": ""
+        }
+      ],
+      "colonies": [
+        {
+          "name": "Enceladus ",
+          "resource": "Microbes",
+          "count": 1
+        },
+        {
+          "name": "Titan ",
+          "resource": "Floaters",
+          "count": 2
+        },
+        {
+          "name": "Calisto ",
+          "resource": "Energy",
+          "count": 1
+        },
+        {
+          "name": "Io ",
+          "resource": "Heat",
+          "count": 0
+        },
+        {
+          "name": "Ceres ",
+          "resource": "Steel",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "name": "Game51",
+      "note": "",
+      "date": "6/18/2020",
+      "mode": [
+        "Base",
+        "Corporate Era",
+        "Prelude",
+        "Colonies",
+        "Draft"
+      ],
+      "mode_code": "B+CE+Col+Dr+Pr",
+      "map": "Tharsis",
+      "winner": "Matteo Samsa",
+      "win_corp": "Point Luna",
+      "win_score": 101,
+      "players": 4,
+      "generation": 9,
+      "scores": [
+        {
+          "player": "Luka Jenuš",
+          "corporation": "Phobolog",
+          "tr": 37,
+          "awards": 5,
+          "milestones": 0,
+          "greenery": 3,
+          "cities": 2,
+          "cards": 27,
+          "total": 74,
+          "rank": 3,
+          "note": ""
+        },
+        {
+          "player": "Andro Slavić",
+          "corporation": "Polyphemos",
+          "tr": 27,
+          "awards": 5,
+          "milestones": 5,
+          "greenery": 8,
+          "cities": 17,
+          "cards": 9,
+          "total": 71,
+          "rank": 4,
+          "note": ""
+        },
+        {
+          "player": "Jan Mastrović",
+          "corporation": "Cheung Shing Mars",
+          "tr": 29,
+          "awards": 4,
+          "milestones": 5,
+          "greenery": 3,
+          "cities": 2,
+          "cards": 56,
+          "total": 99,
+          "rank": 2,
+          "note": ""
+        },
+        {
+          "player": "Matteo Samsa",
+          "corporation": "Point Luna",
+          "tr": 40,
+          "awards": 9,
+          "milestones": 5,
+          "greenery": 2,
+          "cities": 3,
+          "cards": 42,
+          "total": 101,
+          "rank": 1,
+          "note": ""
+        }
+      ],
+      "colonies": [
+        {
+          "name": "Titan ",
+          "resource": "Floaters",
+          "count": 1
+        },
+        {
+          "name": "Triton ",
+          "resource": "Titanium",
+          "count": 3
+        },
+        {
+          "name": "Miranda ",
+          "resource": "Animals",
+          "count": 3
+        },
+        {
+          "name": "Ganymede ",
+          "resource": "Plant",
+          "count": 0
+        },
+        {
+          "name": "Europa ",
+          "resource": "Oceans",
+          "count": 2
+        },
+        {
+          "name": "Pluto ",
+          "resource": "Cards",
+          "count": 3
+        }
+      ]
+    },
+    {
+      "name": "Game52",
+      "note": "",
+      "date": "7/1/2020",
+      "mode": [
+        "Base",
+        "Corporate Era",
+        "Prelude",
+        "Colonies",
+        "Draft"
+      ],
+      "mode_code": "B+CE+Col+Dr+Pr",
+      "map": "Tharsis",
+      "winner": "Matteo Samsa",
+      "win_corp": "Cheung Shing Mars",
+      "win_score": 91,
+      "players": 3,
+      "generation": 10,
+      "scores": [
+        {
+          "player": "Matteo Samsa",
+          "corporation": "Cheung Shing Mars",
+          "tr": 49,
+          "awards": 7,
+          "milestones": 10,
+          "greenery": 5,
+          "cities": 5,
+          "cards": 15,
+          "total": 91,
+          "rank": 1,
+          "note": "gold win"
+        },
+        {
+          "player": "Luka Jenuš",
+          "corporation": "Polyphemos",
+          "tr": 33,
+          "awards": 7,
+          "milestones": 0,
+          "greenery": 3,
+          "cities": 14,
+          "cards": 32,
+          "total": 89,
+          "rank": 3,
+          "note": ""
+        },
+        {
+          "player": "Andro Slavić",
+          "corporation": "Phobolog",
+          "tr": 37,
+          "awards": 9,
+          "milestones": 5,
+          "greenery": 9,
+          "cities": 15,
+          "cards": 15,
+          "total": 90,
+          "rank": 2,
+          "note": ""
+        }
+      ],
+      "colonies": [
+        {
+          "name": "Titan ",
+          "resource": "Floaters",
+          "count": 0
+        },
+        {
+          "name": "Triton ",
+          "resource": "Titanium",
+          "count": 2
+        },
+        {
+          "name": "Calisto ",
+          "resource": "Energy",
+          "count": 0
+        },
+        {
+          "name": "Ganymede ",
+          "resource": "Plant",
+          "count": 2
+        },
+        {
+          "name": "Io ",
+          "resource": "Heat",
+          "count": 0
+        }
+      ]
+    },
+    {
+      "name": "Game53",
+      "note": "",
+      "date": "7/4/2020",
+      "mode": [
+        "Base",
+        "Corporate Era",
+        "Prelude",
+        "Colonies",
+        "Draft"
+      ],
+      "mode_code": "B+CE+Col+Dr+Pr",
+      "map": "Tharsis",
+      "winner": "Matteo Samsa",
+      "win_corp": "Point Luna",
+      "win_score": 89,
+      "players": 4,
+      "generation": 9,
+      "scores": [
+        {
+          "player": "Matteo Samsa",
+          "corporation": "Point Luna",
+          "tr": 43,
+          "awards": 10,
+          "milestones": 5,
+          "greenery": 1,
+          "cities": 0,
+          "cards": 30,
+          "total": 89,
+          "rank": 1,
+          "note": ""
+        },
+        {
+          "player": "Luka Jenuš",
+          "corporation": "Valley Trust",
+          "tr": 35,
+          "awards": 2,
+          "milestones": 0,
+          "greenery": 7,
+          "cities": 8,
+          "cards": 25,
+          "total": 77,
+          "rank": 2,
+          "note": ""
+        },
+        {
+          "player": "Mislav Monjac",
+          "corporation": "Aridor",
+          "tr": 32,
+          "awards": 9,
+          "milestones": 5,
+          "greenery": 5,
+          "cities": 8,
+          "cards": 12,
+          "total": 71,
+          "rank": 3,
+          "note": ""
+        },
+        {
+          "player": "Andro Slavić",
+          "corporation": "Arklight",
+          "tr": 33,
+          "awards": 0,
+          "milestones": 5,
+          "greenery": 1,
+          "cities": 2,
+          "cards": 29,
+          "total": 70,
+          "rank": 4,
+          "note": ""
+        }
+      ],
+      "colonies": [
+        {
+          "name": "Miranda ",
+          "resource": "Animals",
+          "count": 2
+        },
+        {
+          "name": "Io ",
+          "resource": "Heat",
+          "count": 0
+        },
+        {
+          "name": "Ceres ",
+          "resource": "Steel",
+          "count": 0
+        },
+        {
+          "name": "Titan ",
+          "resource": "Floaters",
+          "count": 1
+        },
+        {
+          "name": "Ganymede ",
+          "resource": "Plant",
+          "count": 1
+        },
+        {
+          "name": "Calisto ",
+          "resource": "Energy",
+          "count": 2
+        },
+        {
+          "name": "Pluto ",
+          "resource": "Cards",
+          "count": 2
+        }
+      ]
+    },
+    {
+      "name": "Game54",
+      "note": "",
+      "date": "7/5/2020",
+      "mode": [
+        "Base",
+        "Corporate Era",
+        "Prelude",
+        "Colonies",
+        "Draft"
+      ],
+      "mode_code": "B+CE+Col+Dr+Pr",
+      "map": "Tharsis",
+      "winner": "Luka Jenuš",
+      "win_corp": "UNMI",
+      "win_score": 78,
+      "players": 4,
+      "generation": 8,
+      "scores": [
+        {
+          "player": "Matteo Samsa",
+          "corporation": "Vitor",
+          "tr": 32,
+          "awards": 5,
+          "milestones": 0,
+          "greenery": 2,
+          "cities": 2,
+          "cards": 19,
+          "total": 60,
+          "rank": 3,
+          "note": "gold lose 0"
+        },
+        {
+          "player": "Jan Mastrović",
+          "corporation": "Valley Trust",
+          "tr": 26,
+          "awards": 7,
+          "milestones": 5,
+          "greenery": 0,
+          "cities": 1,
+          "cards": 20,
+          "total": 59,
+          "rank": 4,
+          "note": "gold lose -1"
+        },
+        {
+          "player": "Luka Jenuš",
+          "corporation": "UNMI",
+          "tr": 46,
+          "awards": 4,
+          "milestones": 0,
+          "greenery": 4,
+          "cities": 4,
+          "cards": 20,
+          "total": 78,
+          "rank": 1,
+          "note": ""
+        },
+        {
+          "player": "Andro Slavić",
+          "corporation": "Tharsis Republic",
+          "tr": 32,
+          "awards": 2,
+          "milestones": 10,
+          "greenery": 2,
+          "cities": 3,
+          "cards": 12,
+          "total": 61,
+          "rank": 2,
+          "note": "gold win +1"
+        }
+      ],
+      "colonies": [
+        {
+          "name": "Io ",
+          "resource": "Heat",
+          "count": 0
+        },
+        {
+          "name": "Calisto ",
+          "resource": "Energy",
+          "count": 0
+        },
+        {
+          "name": "Ceres ",
+          "resource": "Steel",
+          "count": 3
+        },
+        {
+          "name": "Europa ",
+          "resource": "Oceans",
+          "count": 1
+        },
+        {
+          "name": "Enceladus ",
+          "resource": "Microbes",
+          "count": 0
+        },
+        {
+          "name": "Miranda ",
+          "resource": "Animals",
+          "count": 0
+        }
+      ]
+    },
+    {
+      "name": "Game55",
+      "note": "",
+      "date": "7/6/2020",
+      "mode": [
+        "Base",
+        "Corporate Era",
+        "Prelude",
+        "Colonies",
+        "Draft"
+      ],
+      "mode_code": "B+CE+Col+Dr+Pr",
+      "map": "Tharsis",
+      "winner": "Mislav Monjac",
+      "win_corp": "Vitor",
+      "win_score": 78,
+      "players": 5,
+      "generation": 9,
+      "scores": [
+        {
+          "player": "Luka Jenuš",
+          "corporation": "Stormcraft Incorporated",
+          "tr": 37,
+          "awards": 5,
+          "milestones": 0,
+          "greenery": 5,
+          "cities": 9,
+          "cards": 15,
+          "total": 71,
+          "rank": 3,
+          "note": ""
+        },
+        {
+          "player": "Mislav Monjac",
+          "corporation": "Vitor",
+          "tr": 29,
+          "awards": 7,
+          "milestones": 5,
+          "greenery": 6,
+          "cities": 4,
+          "cards": 27,
+          "total": 78,
+          "rank": 1,
+          "note": ""
+        },
+        {
+          "player": "Matteo Samsa",
+          "corporation": "UNMI",
+          "tr": 40,
+          "awards": 0,
+          "milestones": 10,
+          "greenery": 3,
+          "cities": 9,
+          "cards": 15,
+          "total": 77,
+          "rank": 2,
+          "note": ""
+        },
+        {
+          "player": "Jan Mastrović",
+          "corporation": "Teractor",
+          "tr": 29,
+          "awards": 2,
+          "milestones": 0,
+          "greenery": 0,
+          "cities": 4,
+          "cards": 26,
+          "total": 61,
+          "rank": 4,
+          "note": ""
+        },
+        {
+          "player": "Adi Čaušević",
+          "corporation": "Thorgate",
+          "tr": 30,
+          "awards": 10,
+          "milestones": 0,
+          "greenery": 0,
+          "cities": 0,
+          "cards": 19,
+          "total": 59,
+          "rank": 5,
+          "note": ""
+        }
+      ],
+      "colonies": [
+        {
+          "name": "Io ",
+          "resource": "Heat",
+          "count": 0
+        },
+        {
+          "name": "Calisto ",
+          "resource": "Energy",
+          "count": 1
+        },
+        {
+          "name": "Titan ",
+          "resource": "Floaters",
+          "count": 2
+        },
+        {
+          "name": "Europa ",
+          "resource": "Oceans",
+          "count": 0
+        },
+        {
+          "name": "Ganymede ",
+          "resource": "Plant",
+          "count": 0
+        },
+        {
+          "name": "Miranda ",
+          "resource": "Animals",
+          "count": 1
+        },
+        {
+          "name": "Ceres ",
+          "resource": "Steel",
+          "count": 2
+        }
+      ]
+    },
+    {
+      "name": "Game56",
+      "note": "",
+      "date": "7/7/2020",
+      "mode": [
+        "Base",
+        "Corporate Era",
+        "Prelude",
+        "Colonies",
+        "Draft"
+      ],
+      "mode_code": "B+CE+Col+Dr+Pr",
+      "map": "Tharsis",
+      "winner": "Luka Jenuš",
+      "win_corp": "Helion",
+      "win_score": 90,
+      "players": 5,
+      "generation": 9,
+      "scores": [
+        {
+          "player": "Luka Jenuš",
+          "corporation": "Helion",
+          "tr": 32,
+          "awards": 7,
+          "milestones": 0,
+          "greenery": 2,
+          "cities": 2,
+          "cards": 47,
+          "total": 90,
+          "rank": 1,
+          "note": ""
+        },
+        {
+          "player": "Jan Mastrović",
+          "corporation": "Tharsis Republic",
+          "tr": 39,
+          "awards": 5,
+          "milestones": 5,
+          "greenery": 2,
+          "cities": 7,
+          "cards": 30,
+          "total": 88,
+          "rank": 2,
+          "note": ""
+        },
+        {
+          "player": "Matteo Samsa",
+          "corporation": "Ecoline",
+          "tr": 34,
+          "awards": 2,
+          "milestones": 5,
+          "greenery": 9,
+          "cities": 10,
+          "cards": 22,
+          "total": 82,
+          "rank": 4,
+          "note": ""
+        },
+        {
+          "player": "Andro Slavić",
+          "corporation": "Phobolog",
+          "tr": 27,
+          "awards": 2,
+          "milestones": 0,
+          "greenery": 2,
+          "cities": 12,
+          "cards": 37,
+          "total": 80,
+          "rank": 5,
+          "note": ""
+        },
+        {
+          "player": "Mislav Monjac",
+          "corporation": "Aridor",
+          "tr": 40,
+          "awards": 5,
+          "milestones": 5,
+          "greenery": 10,
+          "cities": 18,
+          "cards": 5,
+          "total": 83,
+          "rank": 3,
+          "note": ""
+        }
+      ],
+      "colonies": [
+        {
+          "name": "Titan ",
+          "resource": "Floaters",
+          "count": 3
+        },
+        {
+          "name": "Titan ",
+          "resource": "Floaters",
+          "count": 1
+        },
+        {
+          "name": "Miranda ",
+          "resource": "Animals",
+          "count": 0
+        },
+        {
+          "name": "Europa ",
+          "resource": "Oceans",
+          "count": 0
+        },
+        {
+          "name": "Ceres ",
+          "resource": "Steel",
+          "count": 1
+        },
+        {
+          "name": "Enceladus ",
+          "resource": "Microbes",
+          "count": 2
+        },
+        {
+          "name": "Calisto ",
+          "resource": "Energy",
+          "count": 0
+        },
+        {
+          "name": "Pluto ",
+          "resource": "Cards",
+          "count": 3
+        }
+      ]
+    },
+    {
+      "name": "Game57",
+      "note": "",
+      "date": "7/7/2020",
+      "mode": [
+        "Base",
+        "Corporate Era",
+        "Prelude",
+        "Colonies",
+        "Draft"
+      ],
+      "mode_code": "B+CE+Col+Dr+Pr",
+      "map": "Tharsis",
+      "winner": "Luka Jenuš",
+      "win_corp": "Point Luna",
+      "win_score": 85,
+      "players": 5,
+      "generation": 9,
+      "scores": [
+        {
+          "player": "Luka Jenuš",
+          "corporation": "Point Luna",
+          "tr": 35,
+          "awards": 9,
+          "milestones": 0,
+          "greenery": 2,
+          "cities": 4,
+          "cards": 35,
+          "total": 85,
+          "rank": 1,
+          "note": ""
+        },
+        {
+          "player": "Andro Slavić",
+          "corporation": "UNMI",
+          "tr": 39,
+          "awards": 2,
+          "milestones": 0,
+          "greenery": 2,
+          "cities": 7,
+          "cards": 31,
+          "total": 81,
+          "rank": 2,
+          "note": ""
+        },
+        {
+          "player": "Marko Blaženić",
+          "corporation": "Tharsis Republic",
+          "tr": 29,
+          "awards": 0,
+          "milestones": 15,
+          "greenery": 6,
+          "cities": 13,
+          "cards": 15,
+          "total": 78,
+          "rank": 3,
+          "note": ""
+        },
+        {
+          "player": "Robert Bulaić",
+          "corporation": "Phobolog",
+          "tr": 29,
+          "awards": 10,
+          "milestones": 0,
+          "greenery": 2,
+          "cities": 1,
+          "cards": 12,
+          "total": 54,
+          "rank": 5,
+          "note": ""
+        },
+        {
+          "player": "Matteo Samsa",
+          "corporation": "Saturn Systems",
+          "tr": 31,
+          "awards": 2,
+          "milestones": 0,
+          "greenery": 3,
+          "cities": 2,
+          "cards": 26,
+          "total": 64,
+          "rank": 4,
+          "note": ""
+        }
+      ],
+      "colonies": [
+        {
+          "name": "Ceres ",
+          "resource": "Steel",
+          "count": 1
+        },
+        {
+          "name": "Pluto ",
+          "resource": "Cards",
+          "count": 3
+        },
+        {
+          "name": "Miranda ",
+          "resource": "Animals",
+          "count": 1
+        },
+        {
+          "name": "Europa ",
+          "resource": "Oceans",
+          "count": 1
+        },
+        {
+          "name": "Io ",
+          "resource": "Heat",
+          "count": 1
+        },
+        {
+          "name": "Titan ",
+          "resource": "Floaters",
+          "count": 1
+        },
+        {
+          "name": "Calisto ",
+          "resource": "Energy",
+          "count": 0
+        }
+      ]
+    },
+    {
+      "name": "Game58",
+      "note": "",
+      "date": "7/8/2020",
+      "mode": [
+        "Base",
+        "Corporate Era",
+        "Prelude",
+        "Colonies",
+        "Draft"
+      ],
+      "mode_code": "B+CE+Col+Dr+Pr",
+      "map": "Tharsis",
+      "winner": "Jan Mastrović",
+      "win_corp": "Point Luna",
+      "win_score": 114,
+      "players": 3,
+      "generation": 11,
+      "scores": [
+        {
+          "player": "Luka Jenuš",
+          "corporation": "UNMI",
+          "tr": 52,
+          "awards": 4,
+          "milestones": 0,
+          "greenery": 6,
+          "cities": 8,
+          "cards": 32,
+          "total": 102,
+          "rank": 3,
+          "note": ""
+        },
+        {
+          "player": "Andro Slavić",
+          "corporation": "Vitor",
+          "tr": 46,
+          "awards": 2,
+          "milestones": 10,
+          "greenery": 7,
+          "cities": 9,
+          "cards": 29,
+          "total": 103,
+          "rank": 2,
+          "note": ""
+        },
+        {
+          "player": "Jan Mastrović",
+          "corporation": "Point Luna",
+          "tr": 34,
+          "awards": 15,
+          "milestones": 5,
+          "greenery": 5,
+          "cities": 7,
+          "cards": 48,
+          "total": 114,
+          "rank": 1,
+          "note": ""
+        }
+      ],
+      "colonies": [
+        {
+          "name": "Io ",
+          "resource": "Heat",
+          "count": 0
+        },
+        {
+          "name": "Calisto ",
+          "resource": "Energy",
+          "count": 0
+        },
+        {
+          "name": "Pluto ",
+          "resource": "Cards",
+          "count": 3
+        },
+        {
+          "name": "Ganymede ",
+          "resource": "Plant",
+          "count": 1
+        },
+        {
+          "name": "Ceres ",
+          "resource": "Steel",
+          "count": 3
+        }
+      ]
+    },
+    {
+      "name": "Game59",
+      "note": "",
+      "date": "7/11/2020",
+      "mode": [
+        "Base",
+        "Corporate Era",
+        "Prelude",
+        "Colonies",
+        "Draft"
+      ],
+      "mode_code": "B+CE+Col+Dr+Pr",
+      "map": "Tharsis",
+      "winner": "Matteo Samsa",
+      "win_corp": "Teractor",
+      "win_score": 91,
+      "players": 3,
+      "generation": 9,
+      "scores": [
+        {
+          "player": "Mia Čaušević",
+          "corporation": "Tharsis Republic",
+          "tr": 35,
+          "awards": 0,
+          "milestones": 10,
+          "greenery": 3,
+          "cities": 10,
+          "cards": 31,
+          "total": 89,
+          "rank": 3,
+          "note": ""
+        },
+        {
+          "player": "Andro Slavić",
+          "corporation": "Stormcraft Incorporated",
+          "tr": 39,
+          "awards": 12,
+          "milestones": 0,
+          "greenery": 11,
+          "cities": 12,
+          "cards": 16,
+          "total": 90,
+          "rank": 2,
+          "note": ""
+        },
+        {
+          "player": "Matteo Samsa",
+          "corporation": "Teractor",
+          "tr": 44,
+          "awards": 9,
+          "milestones": 5,
+          "greenery": 5,
+          "cities": 7,
+          "cards": 21,
+          "total": 91,
+          "rank": 1,
+          "note": "gold win"
+        }
+      ],
+      "colonies": [
+        {
+          "name": "Ganymede ",
+          "resource": "Plant",
+          "count": 1
+        },
+        {
+          "name": "Europa ",
+          "resource": "Oceans",
+          "count": 2
+        },
+        {
+          "name": "Calisto ",
+          "resource": "Energy",
+          "count": 0
+        },
+        {
+          "name": "Triton ",
+          "resource": "Titanium",
+          "count": 3
+        },
+        {
+          "name": "Ceres ",
+          "resource": "Steel",
+          "count": 0
+        }
+      ]
+    },
+    {
+      "name": "Game60",
+      "note": "",
+      "date": "7/12/2020",
+      "mode": [
+        "Base",
+        "Corporate Era",
+        "Prelude",
+        "Colonies",
+        "Draft"
+      ],
+      "mode_code": "B+CE+Col+Dr+Pr",
+      "map": "Tharsis",
+      "winner": "Matteo Samsa",
+      "win_corp": "Tharsis Republic",
+      "win_score": 66,
+      "players": 4,
+      "generation": 8,
+      "scores": [
+        {
+          "player": "Matteo Samsa",
+          "corporation": "Tharsis Republic",
+          "tr": 34,
+          "awards": 9,
+          "milestones": 5,
+          "greenery": 3,
+          "cities": 7,
+          "cards": 8,
+          "total": 66,
+          "rank": 1,
+          "note": ""
+        },
+        {
+          "player": "Jan Mastrović",
+          "corporation": "Inventrix",
+          "tr": 28,
+          "awards": 5,
+          "milestones": 5,
+          "greenery": 3,
+          "cities": 6,
+          "cards": 12,
+          "total": 59,
+          "rank": 3,
+          "note": ""
+        },
+        {
+          "player": "Mia Čaušević",
+          "corporation": "UNMI",
+          "tr": 36,
+          "awards": 5,
+          "milestones": 5,
+          "greenery": 0,
+          "cities": 0,
+          "cards": 17,
+          "total": 63,
+          "rank": 2,
+          "note": ""
+        },
+        {
+          "player": "Andro Slavić",
+          "corporation": "Credicor",
+          "tr": 36,
+          "awards": 5,
+          "milestones": 0,
+          "greenery": 3,
+          "cities": 3,
+          "cards": 2,
+          "total": 49,
+          "rank": 4,
+          "note": ""
+        }
+      ],
+      "colonies": [
+        {
+          "name": "Io ",
+          "resource": "Heat",
+          "count": 1
+        },
+        {
+          "name": "Pluto ",
+          "resource": "Cards",
+          "count": 3
+        },
+        {
+          "name": "Europa ",
+          "resource": "Oceans",
+          "count": 0
+        },
+        {
+          "name": "Ganymede ",
+          "resource": "Plant",
+          "count": 0
+        },
+        {
+          "name": "Miranda ",
+          "resource": "Animals",
+          "count": 0
+        },
+        {
+          "name": "Ceres ",
+          "resource": "Steel",
+          "count": 0
+        }
+      ]
+    },
+    {
+      "name": "Game61",
+      "note": "",
+      "date": "7/12/2020",
+      "mode": [
+        "Base",
+        "Corporate Era",
+        "Prelude",
+        "Colonies",
+        "Draft"
+      ],
+      "mode_code": "B+CE+Col+Dr+Pr",
+      "map": "Tharsis",
+      "winner": "Luka Jenuš",
+      "win_corp": "Aridor",
+      "win_score": 88,
+      "players": 4,
+      "generation": 9,
+      "scores": [
+        {
+          "player": "Matteo Samsa",
+          "corporation": "Valley Trust",
+          "tr": 26,
+          "awards": 5,
+          "milestones": 5,
+          "greenery": 6,
+          "cities": 11,
+          "cards": 18,
+          "total": 71,
+          "rank": 3,
+          "note": "gold lead"
+        },
+        {
+          "player": "Mia Čaušević",
+          "corporation": "Phobolog",
+          "tr": 31,
+          "awards": 10,
+          "milestones": 0,
+          "greenery": 1,
+          "cities": 5,
+          "cards": 23,
+          "total": 70,
+          "rank": 4,
+          "note": ""
+        },
+        {
+          "player": "Andro Slavić",
+          "corporation": "Teractor",
+          "tr": 34,
+          "awards": 0,
+          "milestones": 5,
+          "greenery": 2,
+          "cities": 3,
+          "cards": 32,
+          "total": 76,
+          "rank": 2,
+          "note": ""
+        },
+        {
+          "player": "Luka Jenuš",
+          "corporation": "Aridor",
+          "tr": 42,
+          "awards": 6,
+          "milestones": 5,
+          "greenery": 3,
+          "cities": 7,
+          "cards": 25,
+          "total": 88,
+          "rank": 1,
+          "note": ""
+        }
+      ],
+      "colonies": [
+        {
+          "name": "Enceladus ",
+          "resource": "Microbes",
+          "count": 0
+        },
+        {
+          "name": "Io ",
+          "resource": "Heat",
+          "count": 0
+        },
+        {
+          "name": "Pluto ",
+          "resource": "Cards",
+          "count": 3
+        },
+        {
+          "name": "Ceres ",
+          "resource": "Steel",
+          "count": 0
+        },
+        {
+          "name": "Ganymede ",
+          "resource": "Plant",
+          "count": 1
+        },
+        {
+          "name": "Miranda ",
+          "resource": "Animals",
+          "count": 2
+        },
+        {
+          "name": "Europa ",
+          "resource": "Oceans",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "name": "Game62",
+      "note": "",
+      "date": "7/15/2020",
+      "mode": [
+        "Base",
+        "Corporate Era",
+        "Prelude",
+        "Colonies",
+        "Draft"
+      ],
+      "mode_code": "B+CE+Col+Dr+Pr",
+      "map": "Tharsis",
+      "winner": "Adi Čaušević",
+      "win_corp": "Saturn Systems",
+      "win_score": 78,
+      "players": 5,
+      "generation": 8,
+      "scores": [
+        {
+          "player": "Luka Jenuš",
+          "corporation": "Polyphemos",
+          "tr": 32,
+          "awards": 4,
+          "milestones": 5,
+          "greenery": 0,
+          "cities": 0,
+          "cards": 29,
+          "total": 70,
+          "rank": 4,
+          "note": ""
+        },
+        {
+          "player": "Matteo Samsa",
+          "corporation": "Teractor",
+          "tr": 29,
+          "awards": 5,
+          "milestones": 5,
+          "greenery": 2,
+          "cities": 4,
+          "cards": 29,
+          "total": 74,
+          "rank": 2,
+          "note": ""
+        },
+        {
+          "player": "Robert Bulaić",
+          "corporation": "Cheung Shing Mars",
+          "tr": 28,
+          "awards": 0,
+          "milestones": 5,
+          "greenery": 6,
+          "cities": 10,
+          "cards": 16,
+          "total": 65,
+          "rank": 5,
+          "note": ""
+        },
+        {
+          "player": "Adi Čaušević",
+          "corporation": "Saturn Systems",
+          "tr": 25,
+          "awards": 2,
+          "milestones": 0,
+          "greenery": 2,
+          "cities": 3,
+          "cards": 46,
+          "total": 78,
+          "rank": 1,
+          "note": ""
+        },
+        {
+          "player": "Andro Slavić",
+          "corporation": "Phobolog",
+          "tr": 37,
+          "awards": 10,
+          "milestones": 0,
+          "greenery": 5,
+          "cities": 11,
+          "cards": 10,
+          "total": 73,
+          "rank": 3,
+          "note": ""
+        }
+      ],
+      "colonies": [
+        {
+          "name": "Ceres ",
+          "resource": "Steel",
+          "count": 2
+        },
+        {
+          "name": "Pluto ",
+          "resource": "Cards",
+          "count": 3
+        },
+        {
+          "name": "Enceladus ",
+          "resource": "Microbes",
+          "count": 0
+        },
+        {
+          "name": "Miranda ",
+          "resource": "Animals",
+          "count": 0
+        },
+        {
+          "name": "Europa ",
+          "resource": "Oceans",
+          "count": 2
+        },
+        {
+          "name": "Io ",
+          "resource": "Heat",
+          "count": 0
+        },
+        {
+          "name": "Ganymede ",
+          "resource": "Plant",
+          "count": 2
+        }
+      ]
+    },
+    {
+      "name": "Game63",
+      "note": "",
+      "date": "7/15/2020",
+      "mode": [
+        "Base",
+        "Corporate Era",
+        "Prelude",
+        "Colonies",
+        "Draft"
+      ],
+      "mode_code": "B+CE+Col+Dr+Pr",
+      "map": "Tharsis",
+      "winner": "Mislav Monjac",
+      "win_corp": "Saturn Systems",
+      "win_score": 79,
+      "players": 5,
+      "generation": 8,
+      "scores": [
+        {
+          "player": "Adi Čaušević",
+          "corporation": "Inventrix",
+          "tr": 23,
+          "awards": 10,
+          "milestones": 0,
+          "greenery": 3,
+          "cities": 2,
+          "cards": 23,
+          "total": 61,
+          "rank": 4,
+          "note": ""
+        },
+        {
+          "player": "Andro Slavić",
+          "corporation": "Cheung Shing Mars",
+          "tr": 34,
+          "awards": 0,
+          "milestones": 5,
+          "greenery": 4,
+          "cities": 9,
+          "cards": 20,
+          "total": 72,
+          "rank": 2,
+          "note": ""
+        },
+        {
+          "player": "Mislav Monjac",
+          "corporation": "Saturn Systems",
+          "tr": 43,
+          "awards": 5,
+          "milestones": 5,
+          "greenery": 1,
+          "cities": 5,
+          "cards": 20,
+          "total": 79,
+          "rank": 1,
+          "note": ""
+        },
+        {
+          "player": "Jan Mastrović",
+          "corporation": "UNMI",
+          "tr": 24,
+          "awards": 2,
+          "milestones": 0,
+          "greenery": 1,
+          "cities": 0,
+          "cards": 11,
+          "total": 38,
+          "rank": 5,
+          "note": ""
+        },
+        {
+          "player": "Luka Jenuš",
+          "corporation": "Point Luna",
+          "tr": 40,
+          "awards": 2,
+          "milestones": 5,
+          "greenery": 4,
+          "cities": 5,
+          "cards": 15,
+          "total": 71,
+          "rank": 3,
+          "note": ""
+        }
+      ],
+      "colonies": [
+        {
+          "name": "Calisto ",
+          "resource": "Energy",
+          "count": 0
+        },
+        {
+          "name": "Ceres ",
+          "resource": "Steel",
+          "count": 0
+        },
+        {
+          "name": "Enceladus ",
+          "resource": "Microbes",
+          "count": 0
+        },
+        {
+          "name": "Europa ",
+          "resource": "Oceans",
+          "count": 1
+        },
+        {
+          "name": "Ganymede ",
+          "resource": "Plant",
+          "count": 1
+        },
+        {
+          "name": "Miranda ",
+          "resource": "Animals",
+          "count": 0
+        },
+        {
+          "name": "Pluto ",
+          "resource": "Cards",
+          "count": 3
+        }
+      ]
+    },
+    {
+      "name": "Game64",
+      "note": "",
+      "date": "7/22/2020",
+      "mode": [
+        "Base",
+        "Venus",
+        "Corporate Era",
+        "Colonies",
+        "Draft"
+      ],
+      "mode_code": "B+CE+Col+Dr+Ve",
+      "map": "Tharsis",
+      "winner": "Matteo Samsa",
+      "win_corp": "Teractor",
+      "win_score": 95,
+      "players": 4,
+      "generation": 9,
+      "scores": [
+        {
+          "player": "Andro Slavić",
+          "corporation": "Arcadian Communities",
+          "tr": 34,
+          "awards": 12,
+          "milestones": 5,
+          "greenery": 5,
+          "cities": 10,
+          "cards": 14,
+          "total": 80,
+          "rank": 3,
+          "note": ""
+        },
+        {
+          "player": "Matteo Samsa",
+          "corporation": "Teractor",
+          "tr": 33,
+          "awards": 7,
+          "milestones": 5,
+          "greenery": 4,
+          "cities": 7,
+          "cards": 39,
+          "total": 95,
+          "rank": 1,
+          "note": ""
+        },
+        {
+          "player": "Adi Čaušević",
+          "corporation": "Credicor",
+          "tr": 37,
+          "awards": 2,
+          "milestones": 5,
+          "greenery": 2,
+          "cities": 3,
+          "cards": 37,
+          "total": 86,
+          "rank": 2,
+          "note": ""
+        },
+        {
+          "player": "Mia Čaušević",
+          "corporation": "Helion",
+          "tr": 32,
+          "awards": 0,
+          "milestones": 0,
+          "greenery": 5,
+          "cities": 13,
+          "cards": 16,
+          "total": 66,
+          "rank": 4,
+          "note": ""
+        }
+      ],
+      "colonies": [
+        {
+          "name": "Io ",
+          "resource": "Heat",
+          "count": 0
+        },
+        {
+          "name": "Ceres ",
+          "resource": "Steel",
+          "count": 0
+        },
+        {
+          "name": "Pluto ",
+          "resource": "Cards",
+          "count": 3
+        },
+        {
+          "name": "Calisto ",
+          "resource": "Energy",
+          "count": 0
+        },
+        {
+          "name": "Triton ",
+          "resource": "Titanium",
+          "count": 3
+        },
+        {
+          "name": "Titan ",
+          "resource": "Floaters",
+          "count": 2
+        }
+      ]
+    },
+    {
+      "name": "Game65",
+      "note": "",
+      "date": "7/23/2020",
+      "mode": [
+        "Base",
+        "Venus",
+        "Corporate Era",
+        "Colonies",
+        "Draft"
+      ],
+      "mode_code": "B+CE+Col+Dr+Ve",
+      "map": "Tharsis",
+      "winner": "Luka Jenuš",
+      "win_corp": "Point Luna",
+      "win_score": 92,
+      "players": 5,
+      "generation": 9,
+      "scores": [
+        {
+          "player": "Matteo Samsa",
+          "corporation": "Polyphemos",
+          "tr": 41,
+          "awards": 0,
+          "milestones": 5,
+          "greenery": 3,
+          "cities": 8,
+          "cards": 26,
+          "total": 83,
+          "rank": 2,
+          "note": ""
+        },
+        {
+          "player": "Andro Slavić",
+          "corporation": "Inventrix",
+          "tr": 28,
+          "awards": 7,
+          "milestones": 5,
+          "greenery": 1,
+          "cities": 0,
+          "cards": 40,
+          "total": 81,
+          "rank": 3,
+          "note": ""
+        },
+        {
+          "player": "Jan Mastrović",
+          "corporation": "Helion",
+          "tr": 33,
+          "awards": 2,
+          "milestones": 0,
+          "greenery": 2,
+          "cities": 4,
+          "cards": 34,
+          "total": 75,
+          "rank": 5,
+          "note": ""
+        },
+        {
+          "player": "Adi Čaušević",
+          "corporation": "Saturn Systems",
+          "tr": 32,
+          "awards": 7,
+          "milestones": 5,
+          "greenery": 4,
+          "cities": 11,
+          "cards": 17,
+          "total": 76,
+          "rank": 4,
+          "note": ""
+        },
+        {
+          "player": "Luka Jenuš",
+          "corporation": "Point Luna",
+          "tr": 29,
+          "awards": 5,
+          "milestones": 0,
+          "greenery": 4,
+          "cities": 3,
+          "cards": 51,
+          "total": 92,
+          "rank": 1,
+          "note": ""
+        }
+      ],
+      "colonies": [
+        {
+          "name": "Io ",
+          "resource": "Heat",
+          "count": 0
+        },
+        {
+          "name": "Pluto ",
+          "resource": "Cards",
+          "count": 3
+        },
+        {
+          "name": "Ceres ",
+          "resource": "Steel",
+          "count": 0
+        },
+        {
+          "name": "Triton ",
+          "resource": "Titanium",
+          "count": 3
+        },
+        {
+          "name": "Europa ",
+          "resource": "Oceans",
+          "count": 1
+        },
+        {
+          "name": "Miranda ",
+          "resource": "Animals",
+          "count": 2
+        },
+        {
+          "name": "Titan ",
+          "resource": "Floaters",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "name": "Game66",
+      "note": "",
+      "date": "7/26/2020",
+      "mode": [
+        "Base",
+        "Corporate Era",
+        "Prelude",
+        "Colonies",
+        "Draft"
+      ],
+      "mode_code": "B+CE+Col+Dr+Pr",
+      "map": "Tharsis",
+      "winner": "Andro Slavić",
+      "win_corp": "Teractor",
+      "win_score": 115,
+      "players": 3,
+      "generation": 10,
+      "scores": [
+        {
+          "player": "Andro Slavić",
+          "corporation": "Teractor",
+          "tr": 37,
+          "awards": 10,
+          "milestones": 0,
+          "greenery": 5,
+          "cities": 10,
+          "cards": 53,
+          "total": 115,
+          "rank": 1,
+          "note": ""
+        },
+        {
+          "player": "Robert Bulaić",
+          "corporation": "Viron",
+          "tr": 32,
+          "awards": 7,
+          "milestones": 5,
+          "greenery": 2,
+          "cities": 4,
+          "cards": 13,
+          "total": 63,
+          "rank": 3,
+          "note": ""
+        },
+        {
+          "player": "Luka Jenuš",
+          "corporation": "Valley Trust",
+          "tr": 55,
+          "awards": 4,
+          "milestones": 10,
+          "greenery": 6,
+          "cities": 5,
+          "cards": 25,
+          "total": 105,
+          "rank": 2,
+          "note": ""
+        }
+      ],
+      "colonies": []
+    },
+    {
+      "name": "Game67",
+      "note": "venera",
+      "date": "7/28/2020",
+      "mode": [
+        "Base",
+        "Venus",
+        "Corporate Era",
+        "Colonies",
+        "Draft"
+      ],
+      "mode_code": "B+CE+Col+Dr+Ve",
+      "map": "Tharsis",
+      "winner": "Andro Slavić",
+      "win_corp": "Tharsis Republic",
+      "win_score": 109,
+      "players": 3,
+      "generation": 9,
+      "scores": [
+        {
+          "player": "Andro Slavić",
+          "corporation": "Tharsis Republic",
+          "tr": 35,
+          "awards": 7,
+          "milestones": 5,
+          "greenery": 6,
+          "cities": 8,
+          "cards": 48,
+          "total": 109,
+          "rank": 1,
+          "note": "mala prevara od pocetka"
+        },
+        {
+          "player": "Mia Čaušević",
+          "corporation": "Phobolog",
+          "tr": 55,
+          "awards": 7,
+          "milestones": 5,
+          "greenery": 0,
+          "cities": 3,
+          "cards": 17,
+          "total": 87,
+          "rank": 2,
+          "note": ""
+        },
+        {
+          "player": "Luka Jenuš",
+          "corporation": "Recyclon",
+          "tr": 33,
+          "awards": 5,
+          "milestones": 5,
+          "greenery": 10,
+          "cities": 9,
+          "cards": 12,
+          "total": 74,
+          "rank": 3,
+          "note": ""
+        }
+      ],
+      "colonies": [
+        {
+          "name": "Pluto ",
+          "resource": "Cards",
+          "count": 1
+        },
+        {
+          "name": "Triton ",
+          "resource": "Titanium",
+          "count": 1
+        },
+        {
+          "name": "Miranda ",
+          "resource": "Animals",
+          "count": 1
+        },
+        {
+          "name": "Europa ",
+          "resource": "Oceans",
+          "count": 1
+        },
+        {
+          "name": "Calisto ",
+          "resource": "Energy",
+          "count": 0
+        }
+      ]
+    },
+    {
+      "name": "Game68",
+      "note": "",
+      "date": "8/2/2020",
+      "mode": [
+        "Base",
+        "Venus",
+        "Corporate Era",
+        "Colonies",
+        "Draft"
+      ],
+      "mode_code": "B+CE+Col+Dr+Ve",
+      "map": "Tharsis",
+      "winner": "Luka Jenuš",
+      "win_corp": "Teractor",
+      "win_score": 85,
+      "players": 5,
+      "generation": 9,
+      "scores": [
+        {
+          "player": "Andro Slavić",
+          "corporation": "Viron",
+          "tr": 27,
+          "awards": 0,
+          "milestones": 5,
+          "greenery": 5,
+          "cities": 6,
+          "cards": 32,
+          "total": 75,
+          "rank": 3,
+          "note": ""
+        },
+        {
+          "player": "Mia Čaušević",
+          "corporation": "Stormcraft Incorporated",
+          "tr": 37,
+          "awards": 0,
+          "milestones": 0,
+          "greenery": 2,
+          "cities": 6,
+          "cards": 28,
+          "total": 73,
+          "rank": 5,
+          "note": ""
+        },
+        {
+          "player": "Matteo Samsa",
+          "corporation": "Celestic",
+          "tr": 25,
+          "awards": 6,
+          "milestones": 5,
+          "greenery": 0,
+          "cities": 2,
+          "cards": 36,
+          "total": 74,
+          "rank": 4,
+          "note": ""
+        },
+        {
+          "player": "Jan Mastrović",
+          "corporation": "Thorgate",
+          "tr": 43,
+          "awards": 7,
+          "milestones": 0,
+          "greenery": 2,
+          "cities": 2,
+          "cards": 28,
+          "total": 82,
+          "rank": 2,
+          "note": ""
+        },
+        {
+          "player": "Luka Jenuš",
+          "corporation": "Teractor",
+          "tr": 37,
+          "awards": 10,
+          "milestones": 5,
+          "greenery": 1,
+          "cities": 1,
+          "cards": 31,
+          "total": 85,
+          "rank": 1,
+          "note": ""
+        }
+      ],
+      "colonies": [
+        {
+          "name": "Io ",
+          "resource": "Heat",
+          "count": 0
+        },
+        {
+          "name": "Calisto ",
+          "resource": "Energy",
+          "count": 0
+        },
+        {
+          "name": "Pluto ",
+          "resource": "Cards",
+          "count": 3
+        },
+        {
+          "name": "Europa ",
+          "resource": "Oceans",
+          "count": 0
+        },
+        {
+          "name": "Ganymede ",
+          "resource": "Plant",
+          "count": 1
+        },
+        {
+          "name": "Enceladus ",
+          "resource": "Microbes",
+          "count": 2
+        },
+        {
+          "name": "Triton ",
+          "resource": "Titanium",
+          "count": 3
+        }
+      ]
+    },
+    {
+      "name": "Game69",
+      "note": "2xcorp",
+      "date": "8/5/2020",
+      "mode": [
+        "Base",
+        "Corporate Era",
+        "Prelude",
+        "Draft"
+      ],
+      "mode_code": "B+CE+Dr+Pr",
+      "map": "Tharsis",
+      "winner": "Matteo Samsa",
+      "win_corp": "Robinson Industries",
+      "win_score": 115,
+      "players": 2,
+      "generation": 9,
+      "scores": [
+        {
+          "player": "Matteo Samsa",
+          "corporation": "Robinson Industries",
+          "tr": 53,
+          "awards": 5,
+          "milestones": 15,
+          "greenery": 9,
+          "cities": 14,
+          "cards": 19,
+          "total": 115,
+          "rank": 1,
+          "note": "mining guild"
+        },
+        {
+          "player": "Jan Mastrović",
+          "corporation": "Credicor",
+          "tr": 32,
+          "awards": 10,
+          "milestones": 0,
+          "greenery": 7,
+          "cities": 14,
+          "cards": 32,
+          "total": 95,
+          "rank": 2,
+          "note": "saturn systems"
+        }
+      ]
+    },
+    {
+      "name": "Game70",
+      "note": "",
+      "date": "8/5/2020",
+      "mode": [
+        "Base",
+        "Venus",
+        "Corporate Era",
+        "Colonies",
+        "Draft"
+      ],
+      "mode_code": "B+CE+Col+Dr+Ve",
+      "map": "Tharsis",
+      "winner": "Luka Jenuš",
+      "win_corp": "Manutech",
+      "win_score": 85,
+      "players": 5,
+      "generation": 9,
+      "scores": [
+        {
+          "player": "Luka Jenuš",
+          "corporation": "Manutech",
+          "tr": 33,
+          "awards": 10,
+          "milestones": 10,
+          "greenery": 1,
+          "cities": 2,
+          "cards": 29,
+          "total": 85,
+          "rank": 1,
+          "note": ""
+        },
+        {
+          "player": "Matteo Samsa",
+          "corporation": "Polyphemos",
+          "tr": 37,
+          "awards": 0,
+          "milestones": 0,
+          "greenery": 5,
+          "cities": 5,
+          "cards": 27,
+          "total": 74,
+          "rank": 5,
+          "note": ""
+        },
+        {
+          "player": "Jan Mastrović",
+          "corporation": "Point Luna",
+          "tr": 32,
+          "awards": 9,
+          "milestones": 5,
+          "greenery": 1,
+          "cities": 1,
+          "cards": 28,
+          "total": 76,
+          "rank": 3,
+          "note": ""
+        },
+        {
+          "player": "Andro Slavić",
+          "corporation": "Arcadian Communities",
+          "tr": 44,
+          "awards": 0,
+          "milestones": 0,
+          "greenery": 4,
+          "cities": 9,
+          "cards": 18,
+          "total": 75,
+          "rank": 4,
+          "note": ""
+        },
+        {
+          "player": "Mia Čaušević",
+          "corporation": "UNMI",
+          "tr": 39,
+          "awards": 2,
+          "milestones": 0,
+          "greenery": 0,
+          "cities": 0,
+          "cards": 42,
+          "total": 83,
+          "rank": 2,
+          "note": ""
+        }
+      ],
+      "colonies": [
+        {
+          "name": "Io ",
+          "resource": "Heat",
+          "count": 0
+        },
+        {
+          "name": "Ganymede ",
+          "resource": "Plant",
+          "count": 0
+        },
+        {
+          "name": "Europa ",
+          "resource": "Oceans",
+          "count": 1
+        },
+        {
+          "name": "Pluto ",
+          "resource": "Cards",
+          "count": 3
+        },
+        {
+          "name": "Calisto ",
+          "resource": "Energy",
+          "count": 1
+        },
+        {
+          "name": "Titan ",
+          "resource": "Floaters",
+          "count": 3
+        },
+        {
+          "name": "Enceladus ",
+          "resource": "Microbes",
+          "count": 2
+        }
+      ]
+    },
+    {
+      "name": "Game71",
+      "note": "",
+      "date": "8/7/2020",
+      "mode": [
+        "Base",
+        "Corporate Era",
+        "Prelude",
+        "Draft"
+      ],
+      "mode_code": "B+CE+Dr+Pr",
+      "map": "Tharsis",
+      "winner": "Mia Čaušević",
+      "win_corp": "Arcadian Communities",
+      "win_score": 85,
+      "players": 4,
+      "generation": 10,
+      "scores": [
+        {
+          "player": "Mia Čaušević",
+          "corporation": "Arcadian Communities",
+          "tr": 44,
+          "awards": 7,
+          "milestones": 0,
+          "greenery": 5,
+          "cities": 9,
+          "cards": 20,
+          "total": 85,
+          "rank": 1,
+          "note": ""
+        },
+        {
+          "player": "Andro Slavić",
+          "corporation": "Valley Trust",
+          "tr": 29,
+          "awards": 0,
+          "milestones": 5,
+          "greenery": 3,
+          "cities": 5,
+          "cards": 39,
+          "total": 81,
+          "rank": 3,
+          "note": ""
+        },
+        {
+          "player": "Matteo Samsa",
+          "corporation": "Inventrix",
+          "tr": 33,
+          "awards": 7,
+          "milestones": 5,
+          "greenery": 8,
+          "cities": 10,
+          "cards": 19,
+          "total": 82,
+          "rank": 2,
+          "note": ""
+        },
+        {
+          "player": "Jan Mastrović",
+          "corporation": "Credicor",
+          "tr": 26,
+          "awards": 7,
+          "milestones": 5,
+          "greenery": 1,
+          "cities": 6,
+          "cards": 35,
+          "total": 80,
+          "rank": 4,
+          "note": ""
+        }
+      ]
+    },
+    {
+      "name": "Game72",
+      "note": "jan exp",
+      "date": "8/9/2020",
+      "mode": [
+        "Base",
+        "Corporate Era",
+        "Prelude",
+        "Draft"
+      ],
+      "mode_code": "B+CE+Dr+Pr",
+      "map": "Tharsis",
+      "winner": "Matteo Samsa",
+      "win_corp": "Point Luna",
+      "win_score": 82,
+      "players": 4,
+      "generation": 9,
+      "scores": [
+        {
+          "player": "Mia Čaušević",
+          "corporation": "Saturn Systems",
+          "tr": 28,
+          "awards": 7,
+          "milestones": 0,
+          "greenery": 1,
+          "cities": 3,
+          "cards": 28,
+          "total": 67,
+          "rank": 3,
+          "note": ""
+        },
+        {
+          "player": "Andro Slavić",
+          "corporation": "Valley Trust",
+          "tr": 27,
+          "awards": 7,
+          "milestones": 5,
+          "greenery": 2,
+          "cities": 6,
+          "cards": 22,
+          "total": 69,
+          "rank": 2,
+          "note": ""
+        },
+        {
+          "player": "Matteo Samsa",
+          "corporation": "Point Luna",
+          "tr": 41,
+          "awards": 5,
+          "milestones": 10,
+          "greenery": 6,
+          "cities": 12,
+          "cards": 8,
+          "total": 82,
+          "rank": 1,
+          "note": ""
+        },
+        {
+          "player": "Jan Mastrović",
+          "corporation": "Helion",
+          "tr": 33,
+          "awards": 4,
+          "milestones": 0,
+          "greenery": 4,
+          "cities": 5,
+          "cards": 18,
+          "total": 64,
+          "rank": 4,
+          "note": ""
+        }
+      ]
+    },
+    {
+      "name": "Game73",
+      "note": "",
+      "date": "8/13/2020",
+      "mode": [
+        "Base",
+        "Venus",
+        "Corporate Era",
+        "Colonies",
+        "Draft"
+      ],
+      "mode_code": "B+CE+Col+Dr+Ve",
+      "map": "Tharsis",
+      "winner": "Matteo Samsa",
+      "win_corp": "Cheung Shing Mars",
+      "win_score": 81,
+      "players": 5,
+      "generation": 8,
+      "scores": [
+        {
+          "player": "Matteo Samsa",
+          "corporation": "Cheung Shing Mars",
+          "tr": 29,
+          "awards": 7,
+          "milestones": 5,
+          "greenery": 0,
+          "cities": 0,
+          "cards": 40,
+          "total": 81,
+          "rank": 1,
+          "note": ""
+        },
+        {
+          "player": "Filip Pavletić",
+          "corporation": "Aridor",
+          "tr": 29,
+          "awards": 0,
+          "milestones": 0,
+          "greenery": 4,
+          "cities": 7,
+          "cards": 13,
+          "total": 53,
+          "rank": 5,
+          "note": ""
+        },
+        {
+          "player": "Hrvoje Maligec",
+          "corporation": "Saturn Systems",
+          "tr": 37,
+          "awards": 0,
+          "milestones": 0,
+          "greenery": 1,
+          "cities": 2,
+          "cards": 15,
+          "total": 55,
+          "rank": 4,
+          "note": ""
+        },
+        {
+          "player": "Adi Čaušević",
+          "corporation": "Morning Star INC",
+          "tr": 35,
+          "awards": 10,
+          "milestones": 10,
+          "greenery": 6,
+          "cities": 7,
+          "cards": 7,
+          "total": 75,
+          "rank": 2,
+          "note": ""
+        },
+        {
+          "player": "Juraj Vladika",
+          "corporation": "Teractor",
+          "tr": 28,
+          "awards": 4,
+          "milestones": 0,
+          "greenery": 4,
+          "cities": 6,
+          "cards": 14,
+          "total": 56,
+          "rank": 3,
+          "note": ""
+        }
+      ],
+      "colonies": [
+        {
+          "name": "Io ",
+          "resource": "Heat",
+          "count": 0
+        },
+        {
+          "name": "Calisto ",
+          "resource": "Energy",
+          "count": 0
+        },
+        {
+          "name": "Titan ",
+          "resource": "Floaters",
+          "count": 1
+        },
+        {
+          "name": "Ceres ",
+          "resource": "Steel",
+          "count": 0
+        },
+        {
+          "name": "Europa ",
+          "resource": "Oceans",
+          "count": 0
+        },
+        {
+          "name": "Ganymede ",
+          "resource": "Plant",
+          "count": 0
+        },
+        {
+          "name": "Miranda ",
+          "resource": "Animals",
+          "count": 0
+        },
+        {
+          "name": "Pluto ",
+          "resource": "Cards",
+          "count": 3
+        }
+      ]
+    },
+    {
+      "name": "Game74",
+      "note": "dual corp+jan",
+      "date": "8/14/2020",
+      "mode": [
+        "Base",
+        "Venus",
+        "Corporate Era",
+        "Colonies",
+        "Draft"
+      ],
+      "mode_code": "B+CE+Col+Dr+Ve",
+      "map": "Tharsis",
+      "winner": "Matteo Samsa",
+      "win_corp": "Phobolog",
+      "win_score": 116,
+      "players": 3,
+      "generation": 10,
+      "scores": [
+        {
+          "player": "Matteo Samsa",
+          "corporation": "Phobolog",
+          "tr": 43,
+          "awards": 6,
+          "milestones": 5,
+          "greenery": 4,
+          "cities": 4,
+          "cards": 54,
+          "total": 116,
+          "rank": 1,
+          "note": "point luna"
+        },
+        {
+          "player": "Andro Slavić",
+          "corporation": "Teractor",
+          "tr": 43,
+          "awards": 5,
+          "milestones": 5,
+          "greenery": 4,
+          "cities": 8,
+          "cards": 37,
+          "total": 102,
+          "rank": 3,
+          "note": "valley trust"
+        },
+        {
+          "player": "Jan Mastrović",
+          "corporation": "Saturn Systems",
+          "tr": 48,
+          "awards": 12,
+          "milestones": 5,
+          "greenery": 6,
+          "cities": 8,
+          "cards": 34,
+          "total": 113,
+          "rank": 2,
+          "note": "tharsis republic"
+        }
+      ],
+      "colonies": [
+        {
+          "name": "Ganymede ",
+          "resource": "Plant",
+          "count": 0
+        },
+        {
+          "name": "Europa ",
+          "resource": "Oceans",
+          "count": 2
+        },
+        {
+          "name": "Miranda ",
+          "resource": "Animals",
+          "count": 0
+        },
+        {
+          "name": "Titan ",
+          "resource": "Floaters",
+          "count": 2
+        },
+        {
+          "name": "Ceres ",
+          "resource": "Steel",
+          "count": 2
+        }
+      ]
+    },
+    {
+      "name": "Game75",
+      "note": "",
+      "date": "8/16/2020",
+      "mode": [
+        "Base",
+        "Venus",
+        "Corporate Era",
+        "Colonies",
+        "Draft"
+      ],
+      "mode_code": "B+CE+Col+Dr+Ve",
+      "map": "Tharsis",
+      "winner": "Andro Slavić",
+      "win_corp": "Valley Trust",
+      "win_score": 93,
+      "players": 4,
+      "generation": 9,
+      "scores": [
+        {
+          "player": "Matteo Samsa",
+          "corporation": "Saturn Systems",
+          "tr": 35,
+          "awards": 9,
+          "milestones": 0,
+          "greenery": 4,
+          "cities": 10,
+          "cards": 34,
+          "total": 92,
+          "rank": 2,
+          "note": ""
+        },
+        {
+          "player": "Luka Jenuš",
+          "corporation": "Inventrix",
+          "tr": 37,
+          "awards": 7,
+          "milestones": 0,
+          "greenery": 2,
+          "cities": 3,
+          "cards": 39,
+          "total": 88,
+          "rank": 3,
+          "note": ""
+        },
+        {
+          "player": "Andro Slavić",
+          "corporation": "Valley Trust",
+          "tr": 40,
+          "awards": 2,
+          "milestones": 5,
+          "greenery": 2,
+          "cities": 4,
+          "cards": 40,
+          "total": 93,
+          "rank": 1,
+          "note": ""
+        },
+        {
+          "player": "Adi Čaušević",
+          "corporation": "Recyclon",
+          "tr": 27,
+          "awards": 5,
+          "milestones": 10,
+          "greenery": 11,
+          "cities": 14,
+          "cards": 13,
+          "total": 80,
+          "rank": 4,
+          "note": ""
+        }
+      ],
+      "colonies": [
+        {
+          "name": "Io ",
+          "resource": "Heat",
+          "count": 0
+        },
+        {
+          "name": "Pluto ",
+          "resource": "Cards",
+          "count": 1
+        },
+        {
+          "name": "Ceres ",
+          "resource": "Steel",
+          "count": 1
+        },
+        {
+          "name": "Triton ",
+          "resource": "Titanium",
+          "count": 3
+        },
+        {
+          "name": "Enceladus ",
+          "resource": "Microbes",
+          "count": 0
+        },
+        {
+          "name": "Miranda ",
+          "resource": "Animals",
+          "count": 2
+        }
+      ]
+    },
+    {
+      "name": "Game76",
+      "note": "jan exp",
+      "date": "8/17/2020",
+      "mode": [
+        "Base",
+        "Venus",
+        "Corporate Era",
+        "Colonies",
+        "Draft"
+      ],
+      "mode_code": "B+CE+Col+Dr+Ve",
+      "map": "Tharsis",
+      "winner": "Matteo Samsa",
+      "win_corp": "Credicor",
+      "win_score": 89,
+      "players": 5,
+      "generation": 9,
+      "scores": [
+        {
+          "player": "Matteo Samsa",
+          "corporation": "Credicor",
+          "tr": 36,
+          "awards": 5,
+          "milestones": 0,
+          "greenery": 4,
+          "cities": 9,
+          "cards": 35,
+          "total": 89,
+          "rank": 1,
+          "note": ""
+        },
+        {
+          "player": "Dolores Frančišković",
+          "corporation": "Celestic",
+          "tr": 32,
+          "awards": 2,
+          "milestones": 5,
+          "greenery": 1,
+          "cities": 3,
+          "cards": 0,
+          "total": 43,
+          "rank": 5,
+          "note": ""
+        },
+        {
+          "player": "Adi Čaušević",
+          "corporation": "Arklight",
+          "tr": 34,
+          "awards": 5,
+          "milestones": 5,
+          "greenery": 9,
+          "cities": 7,
+          "cards": 15,
+          "total": 75,
+          "rank": 3,
+          "note": ""
+        },
+        {
+          "player": "Luka Jenuš",
+          "corporation": "Point Luna",
+          "tr": 39,
+          "awards": 4,
+          "milestones": 5,
+          "greenery": 3,
+          "cities": 10,
+          "cards": 26,
+          "total": 87,
+          "rank": 2,
+          "note": ""
+        },
+        {
+          "player": "Jan Mastrović",
+          "corporation": "UNMI",
+          "tr": 42,
+          "awards": 5,
+          "milestones": 0,
+          "greenery": 1,
+          "cities": 2,
+          "cards": 12,
+          "total": 62,
+          "rank": 4,
+          "note": ""
+        }
+      ],
+      "colonies": [
+        {
+          "name": "Titan ",
+          "resource": "Floaters",
+          "count": 0
+        },
+        {
+          "name": "Triton ",
+          "resource": "Titanium",
+          "count": 3
+        },
+        {
+          "name": "Ceres ",
+          "resource": "Steel",
+          "count": 0
+        },
+        {
+          "name": "Pluto ",
+          "resource": "Cards",
+          "count": 3
+        },
+        {
+          "name": "Enceladus ",
+          "resource": "Microbes",
+          "count": 0
+        },
+        {
+          "name": "Ganymede ",
+          "resource": "Plant",
+          "count": 1
+        },
+        {
+          "name": "Miranda ",
+          "resource": "Animals",
+          "count": 0
+        }
+      ]
+    },
+    {
+      "name": "Game77",
+      "note": "",
+      "date": "8/21/2020",
+      "mode": [
+        "Base",
+        "Venus",
+        "Corporate Era",
+        "Colonies",
+        "Draft"
+      ],
+      "mode_code": "B+CE+Col+Dr+Ve",
+      "map": "Tharsis",
+      "winner": "Matteo Samsa",
+      "win_corp": "Tharsis Republic",
+      "win_score": 85,
+      "players": 4,
+      "generation": 8,
+      "scores": [
+        {
+          "player": "Matteo Samsa",
+          "corporation": "Tharsis Republic",
+          "tr": 38,
+          "awards": 7,
+          "milestones": 10,
+          "greenery": 11,
+          "cities": 16,
+          "cards": 3,
+          "total": 85,
+          "rank": 1,
+          "note": ""
+        },
+        {
+          "player": "Adi Čaušević",
+          "corporation": "Helion",
+          "tr": 29,
+          "awards": 7,
+          "milestones": 5,
+          "greenery": 0,
+          "cities": 3,
+          "cards": 12,
+          "total": 56,
+          "rank": 4,
+          "note": ""
+        },
+        {
+          "player": "Luka Jenuš",
+          "corporation": "Phobolog",
+          "tr": 38,
+          "awards": 0,
+          "milestones": 0,
+          "greenery": 0,
+          "cities": 1,
+          "cards": 26,
+          "total": 65,
+          "rank": 2,
+          "note": ""
+        },
+        {
+          "player": "Dolores Frančišković",
+          "corporation": "Robinson Industries",
+          "tr": 37,
+          "awards": 7,
+          "milestones": 0,
+          "greenery": 2,
+          "cities": 3,
+          "cards": 11,
+          "total": 60,
+          "rank": 3,
+          "note": ""
+        }
+      ],
+      "colonies": [
+        {
+          "name": "Calisto ",
+          "resource": "Energy",
+          "count": 0
+        },
+        {
+          "name": "Io ",
+          "resource": "Heat",
+          "count": 0
+        },
+        {
+          "name": "Titan ",
+          "resource": "Floaters",
+          "count": 0
+        },
+        {
+          "name": "Ceres ",
+          "resource": "Steel",
+          "count": 1
+        },
+        {
+          "name": "Europa ",
+          "resource": "Oceans",
+          "count": 1
+        },
+        {
+          "name": "Miranda ",
+          "resource": "Animals",
+          "count": 0
+        }
+      ]
+    },
+    {
+      "name": "Game78",
+      "note": "",
+      "date": "8/22/2020",
+      "mode": [
+        "Base",
+        "Venus",
+        "Corporate Era",
+        "Colonies",
+        "Draft"
+      ],
+      "mode_code": "B+CE+Col+Dr+Ve",
+      "map": "Tharsis",
+      "winner": "Luka Jenuš",
+      "win_corp": "Manutech",
+      "win_score": 88,
+      "players": 4,
+      "generation": 10,
+      "scores": [
+        {
+          "player": "Matteo Samsa",
+          "corporation": "Mining Guild",
+          "tr": 35,
+          "awards": 9,
+          "milestones": 10,
+          "greenery": 1,
+          "cities": 3,
+          "cards": 24,
+          "total": 82,
+          "rank": 3,
+          "note": ""
+        },
+        {
+          "player": "Adi Čaušević",
+          "corporation": "Morning Star INC",
+          "tr": 40,
+          "awards": 10,
+          "milestones": 0,
+          "greenery": 5,
+          "cities": 7,
+          "cards": 21,
+          "total": 83,
+          "rank": 2,
+          "note": "gold lead"
+        },
+        {
+          "player": "Luka Jenuš",
+          "corporation": "Manutech",
+          "tr": 45,
+          "awards": 4,
+          "milestones": 0,
+          "greenery": 6,
+          "cities": 6,
+          "cards": 27,
+          "total": 88,
+          "rank": 1,
+          "note": ""
+        },
+        {
+          "player": "Dolores Frančišković",
+          "corporation": "Credicor",
+          "tr": 39,
+          "awards": 0,
+          "milestones": 5,
+          "greenery": 4,
+          "cities": 5,
+          "cards": 27,
+          "total": 80,
+          "rank": 4,
+          "note": ""
+        }
+      ],
+      "colonies": [
+        {
+          "name": "Calisto ",
+          "resource": "Energy",
+          "count": 1
+        },
+        {
+          "name": "Io ",
+          "resource": "Heat",
+          "count": 0
+        },
+        {
+          "name": "Titan ",
+          "resource": "Floaters",
+          "count": 2
+        },
+        {
+          "name": "Europa ",
+          "resource": "Oceans",
+          "count": 0
+        },
+        {
+          "name": "Ganymede ",
+          "resource": "Plant",
+          "count": 3
+        },
+        {
+          "name": "Miranda ",
+          "resource": "Animals",
+          "count": 0
+        }
+      ]
+    },
+    {
+      "name": "Game79",
+      "note": "",
+      "date": "8/23/2020",
+      "mode": [
+        "Base",
+        "Venus",
+        "Corporate Era",
+        "Colonies",
+        "Draft"
+      ],
+      "mode_code": "B+CE+Col+Dr+Ve",
+      "map": "Tharsis",
+      "winner": "Matteo Samsa",
+      "win_corp": "Phobolog",
+      "win_score": 97,
+      "players": 4,
+      "generation": 9,
+      "scores": [
+        {
+          "player": "Luka Jenuš",
+          "corporation": "Vitor",
+          "tr": 44,
+          "awards": 7,
+          "milestones": 0,
+          "greenery": 5,
+          "cities": 6,
+          "cards": 34,
+          "total": 96,
+          "rank": 2,
+          "note": ""
+        },
+        {
+          "player": "Matteo Samsa",
+          "corporation": "Phobolog",
+          "tr": 35,
+          "awards": 4,
+          "milestones": 5,
+          "greenery": 4,
+          "cities": 4,
+          "cards": 45,
+          "total": 97,
+          "rank": 1,
+          "note": ""
+        },
+        {
+          "player": "Adi Čaušević",
+          "corporation": "Manutech",
+          "tr": 33,
+          "awards": 10,
+          "milestones": 5,
+          "greenery": 1,
+          "cities": 5,
+          "cards": 27,
+          "total": 81,
+          "rank": 3,
+          "note": ""
+        },
+        {
+          "player": "Mia Čaušević",
+          "corporation": "UNMI",
+          "tr": 45,
+          "awards": 2,
+          "milestones": 5,
+          "greenery": 4,
+          "cities": 7,
+          "cards": 15,
+          "total": 78,
+          "rank": 4,
+          "note": ""
+        }
+      ],
+      "colonies": [
+        {
+          "name": "Calisto ",
+          "resource": "Energy",
+          "count": 1
+        },
+        {
+          "name": "Titan ",
+          "resource": "Floaters",
+          "count": 2
+        },
+        {
+          "name": "Triton ",
+          "resource": "Titanium",
+          "count": 3
+        },
+        {
+          "name": "Europa ",
+          "resource": "Oceans",
+          "count": 3
+        },
+        {
+          "name": "Ganymede ",
+          "resource": "Plant",
+          "count": 1
+        },
+        {
+          "name": "Miranda ",
+          "resource": "Animals",
+          "count": 0
+        }
+      ]
+    }
+  ]
 }

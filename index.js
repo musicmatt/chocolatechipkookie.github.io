@@ -283,25 +283,41 @@ function generatePointTable(){
     points_div.style.display = 'block'
 }
 
+const owner = 'ChocolateChipKookie';
+const repo = "chocolatechipkookie.github.io";
+const octokit = new Octokit({ auth: '49528b4c7d4dd7f8b4694623a2ac73e9fdffda7b' });
+
 
 //Commit
+async function get_git_file(filepath, octokit){
+    return octokit.request(`GET https://api.github.com/repos/${owner}/${repo}/contents/${filepath}`)
+}
 
-async function update_git(message){
-    const octokit = new Octokit({ auth: 'c58b1da616befa9c045948f5788dbf022270d474' });
-
-    var blob = await octokit.request("GET https://api.github.com/repos/ChocolateChipKookie/chocolatechipkookie.github.io/contents/text2.txt")
-    var sha = blob.data.sha
-
+async function update_git(content, filepath, octokit, message=''){
+    var prev_blob = await get_file(filepath, octokit);
+    
     const response = await octokit.request("PUT https://api.github.com/repos/ChocolateChipKookie/chocolatechipkookie.github.io/contents/text2.txt", 
     {
-        owner: "ChocolateChipKookie",
-        repo: "chocolatechipkookie.github.io",
-        path: "text2.txt",
-        message: "Ejla",
-        content: btoa(message),
-        sha: sha,
+        owner: owner,
+        repo: repo,
+        path: filepath,
+        message: message,
+        content: btoa(content),
+        sha: prev_blob.data.sha,
     });
     return response;
 }
 
-console.log(update_git("Ovo radi i ja sam sretan"))
+
+
+async function test(){
+    const file = await get_git_file('data/data.json', octokit);
+    const json = JSON.parse(atob(file.data.content));
+    console.log(JSON.stringify(json));
+}
+
+
+
+test()
+
+//console.log(await update_git("Ovo radi i ja sam sretan", 'text.txt', octokit));
