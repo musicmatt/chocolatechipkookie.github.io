@@ -518,7 +518,6 @@ window.submitForm = async function(){
     if(mode.includes("Colonies")){
         var colonies = document.getElementsByClassName("colony-container");
         colonies = Array.from(colonies).map(function(entry){
-                    console.log(entry);
                     return {
                         name: entry.children[2].childNodes[0].nodeValue.trim(),
                         count: entry.children[1].value
@@ -569,9 +568,12 @@ window.submitForm = async function(){
     });
 
     // Push files
-    updateFile(JSON.stringify(log, spaces=2), "data/log.json", `Added game "${name}"`, octokit);
-    updateFile(JSON.stringify(player_data, spaces=2), "data/data.json", `Added game "${name}"`, octokit);
-    updateFile(JSON.stringify(games_data, spaces=2), "data/games.json", `Added game "${name}"`, octokit);
+    var response = await updateFile(JSON.stringify(log, null, 2), "data/log.json", `Added game "${name}"`, octokit);
+    console.log(response)
+    var response = await updateFile(JSON.stringify(player_data, null, 2), "data/data.json", `Added game "${name}"`, octokit);
+    console.log(response)
+    var response = await updateFile(JSON.stringify(games_data, null, 2), "data/games.json", `Added game "${name}"`, octokit);
+    console.log(response)
 
     console.log(entry);
 }
