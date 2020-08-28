@@ -4,6 +4,24 @@ import { Octokit } from "https://cdn.pika.dev/@octokit/core";
 //    UTIL
 ///////////////
 
+function utf8_to_b64(str) {
+    // first we use encodeURIComponent to get percent-encoded UTF-8,
+    // then we convert the percent encodings into raw bytes which
+    // can be fed into btoa.
+    return btoa(encodeURIComponent(str).replace(/%([0-9A-F]{2})/g,
+        function toSolidBytes(match, p1) {
+            return String.fromCharCode('0x' + p1);
+    }));
+}
+
+function b64_to_utf8(str) {
+    // Going backwards: from bytestream, to percent-encoding, to original string.
+    return decodeURIComponent(atob(str).split('').map(function(c) {
+        return '%' + ('00' + c.charCodeAt(0).toString(16)).slice(-2);
+    }).join(''));
+}
+
+
 //Capitalizes given string
 function capitalize(str){
     return str.charAt(0).toUpperCase() + str.slice(1);
@@ -15,6 +33,42 @@ function getElementInsideContainer(containerID, childID) {
     var elm = document.getElementById(childID);
     var parent = elm ? elm.parentNode : {};
     return (parent.id && parent.id === containerID) ? elm : false;
+}
+
+// Gets active game modes
+function getActiveModes(){
+    var mode_selection = document.getElementById("expansion-checkbox-container");
+    var mode = Array.from(mode_selection.querySelectorAll("input"))
+        .filter(function(elem){return elem.checked;})
+        .map(function(elem){return elem.value;});
+    return mode;
+}
+
+//////////////
+//    GIT
+//////////////
+const owner = 'ChocolateChipKookie';
+const repo = "chocolatechipkookie.github.io";
+
+//Loads git file
+async function getFile(filepath, octokit){
+    return octokit.request(`GET https://api.github.com/repos/${owner}/${repo}/contents/${filepath}`)
+}
+
+//Updates git file
+async function updateFile(content, filepath, message='', octokit){
+    var prev_blob = await get_file(filepath, octokit);
+    
+    const response = await octokit.request("PUT https://api.github.com/repos/ChocolateChipKookie/chocolatechipkookie.github.io/contents/text2.txt", 
+    {
+        owner: owner,
+        repo: repo,
+        path: filepath,
+        message: message,
+        content: utf8_to_b64(content),
+        sha: prev_blob.data.sha,
+    });
+    return response;
 }
 
 ////////////////////
@@ -32,11 +86,17 @@ function updateWarning(){
     // Get the number of players playing
     var players = parseInt(document.getElementById("player-number").value);
 
+
     // Set the expected players value
-    // Add the exception for company with additional colny
     var expected_colonies = 5;
     if(players != 2){
         expected_colonies = players + 2;
+    }
+
+    // Add the exception for Aridor
+    var colonies_in_play = Array.from(document.getElementsByClassName("player-colony-select")).map(function(elem){return elem.value;});
+    if (colonies_in_play.includes("Aridor")){
+        expected_colonies += 1;
     }
 
     // Set warning if necessary
@@ -59,7 +119,7 @@ function updateWarning(){
 
 
 //Updates the list of colonies when a checkbox is clicked
-function checkboxFunction(elem){
+window.checkboxFunction = function (elem){
 
     //Gets colony
     var colony = getElementInsideContainer("colony-list", elem.value + '-icon');
@@ -73,7 +133,7 @@ function checkboxFunction(elem){
         `
         <div class="colony-container" id="${colony_name}-icon" onclick="increaseColonyNumber(this)">
             <img src="resources/icons/colonies/${colony_name}.png" class="colony-icon">
-            <input type="hidden" id="variable-number" value="0">
+            <input type="hidden" value="0">
             <div class="colony-text">
                 ${capitalize(colony_name)}<br>(0)
             </div>
@@ -89,7 +149,7 @@ function checkboxFunction(elem){
 }
 
 // Hides the given checkbox container
-function hideCheckboxContainer(elem, checkbox_container){
+window.hideCheckboxContainer = function (elem, checkbox_container){
     //Fetches the checkbox container
     var x = document.getElementById(checkbox_container);
 
@@ -102,7 +162,6 @@ function hideCheckboxContainer(elem, checkbox_container){
         elem.value = "Show";
     }
 } 
-
 
 ///////////////
 //    DATE
@@ -123,7 +182,7 @@ setDefaultDate()
 /////////////////////
 
 //Generates player input fields
-function generatePlayerInputs(){
+window.generatePlayerInputs = function (){
     // Fetch number of players
     var number_of_players_input = document.getElementById("player-number");
     // Check and update the range
@@ -142,7 +201,7 @@ function generatePlayerInputs(){
     <div class="player-input-div">
         <input list="datalist-players" class="player-input" id="player">
         <select class="player-input" id="player-colony-select" name="player-colony">
-            <option value="Aridor/">Aridor</option>
+            <option value="Aridor">Aridor</option>
             <option value="Arklight">Arklight</option>
             <option value="Beginner">Beginner</option>
             <option value="Cheung Shing Mars">Cheung Shing Mars</option>
@@ -182,53 +241,48 @@ generatePlayerInputs();
 // Set the listener to listen to enter key presses
 var number_of_players_input = document.getElementById("player-number");
 number_of_players_input.addEventListener("keyup", function(event) {
-  if (event.keyCode === 13) {
-    event.preventDefault();
-    document.getElementById("generate-player-inputs").click();
-  }
-}); 
-
-
-// Adds default players to the datalist
-// To be replaced with addPlayers()
-function addDefaultPlayers(){
-    document.getElementById("datalist-players").innerHTML = 
-    `
-        <option value="Dolores Frančišković">
-        <option value="Vito Papa">
-        <option value="Adi Čaušević">
-        <option value="Mia Čaušević">
-        <option value="Matteo Samsa">
-        <option value="Jan Mastrović">
-    `;
-}
-
-addDefaultPlayers();
+    if (event.keyCode === 13) {
+        event.preventDefault();
+        generatePlayerInputs();
+    }
+});
 
 
 // Loads players from database and adds them to the datalist
-function addPlayers(){
-
+async function addPlayers(){
+    const octokit = new Octokit();
+    //Fetch file from git
+    var data = await getFile("data/data.json", octokit);
+    //Decode base64 file content and parse json
+    var players = JSON.parse(b64_to_utf8(data.data.content)).players;
+    //Filter names of players
+    var names = players.map(function(player) { return player.name; });
+    //Create datalist for HTML
+    var datalist = names.map(function(name){return `<option value="${name}">`}).join('\n');
+    document.getElementById("datalist-players").innerHTML = datalist;
 }
+
+addPlayers();
+
 
 //////////////////////
 //     COLONIES
 //////////////////////
 
 // Activates colonies expansion
-function activateColonies(elem){
+window.activateColonies = function (elem){
     // Fetches the colonies option field
     var colony_options = document.getElementById("colonies-options");
     colony_options.style.display = elem.checked ? "block" : "none";
 }
 
 // Increases the colony counter text by one in modulo 4 arithmetic
-function increaseColonyNumber(elem){
+window.increaseColonyNumber = function (elem){
     // Gets the name of the colony
     var colony = elem.id.substring(0, elem.id.length - 5);
 
     // Gets the current number of colonies on a moon
-    var current_colonies = elem.querySelector("#variable-number");
+    var current_colonies = elem.querySelector("input");
     current_colonies.value = (parseInt(current_colonies.value) + 1) % 4;
 
     // Gets the text div element of elem
@@ -236,20 +290,84 @@ function increaseColonyNumber(elem){
     text.innerHTML = `${capitalize(colony)}<br>(${current_colonies.value})`
 }
 
-
 //////////////////
 //     TABLE
 //////////////////
 
+// Updates totals and ranks
+window.updateTotals = function(){
+    // Define keys of scores that are tracked
+    var categories = [
+        "tr-points",
+        "award-points",
+        "milestone-points",
+        "greenery-points",
+        "city-points",
+        "card-points",
+        "gold-lead-points"]
+
+    // Case turmoil is in game
+    if (getActiveModes().includes("Turmoil")){
+        categories.push("turmoil-points")
+    }
+
+    // Fetch number of players
+    var no_players = parseInt(document.getElementById("player-number").value);
+    // Init scores
+    var scores = new Array(no_players).fill(0);
+    // Calculate totals, iterating over all scores
+    categories.forEach(
+        function(key){
+            // Get all points from the category defined by the category key
+            var points = document.getElementById(key).querySelectorAll("input");
+            for(var i = 0; i < no_players; ++i){
+                // Try parsing the key, in case it is not a number, ignore 
+                var value = parseInt(points[i].value);
+                if(!isNaN(value)){
+                    scores[i] += value;
+                }
+            }
+        }
+    );
+
+    // Update totals
+    var totals = document
+        .getElementById("total-points")
+        .querySelectorAll("input");
+
+    for (var i = 0; i < no_players; ++i){
+        totals[i].value = scores[i];
+    }
+
+    // Define Decorate-Sort-Undecorate
+    const dsu = (arr1, arr2) => arr1
+        .map((item, index) => [arr2[index], item]) 
+        .sort(([arg1], [arg2]) => arg2 - arg1) 
+        .map(([, item]) => item);
+
+    // Create arranged array, and calculate indexes
+    const iota = Array.from(Array(no_players).keys());
+    const result = dsu(iota, scores);
+
+    // Update ranks
+    var ranks = document
+        .getElementById("ranks")
+        .querySelectorAll("input");
+
+    for (var i = 0; i < no_players; ++i){
+        ranks[result[i]].value = i + 1;
+    }
+}
+
 // Generates the point table for the scores
-function generatePointTable(){
+window.generatePointTable = function(){
     // Gets the points div, points table and player list nodes
     var points_div = document.getElementById("points");
     var table = document.getElementById("points-table");
     var player_list = document.getElementById("player-list");
 
     // Fetches the names of the players
-    player_names = Array.from(player_list.children).map(
+    var player_names = Array.from(player_list.children).map(
         function(element) { return element.children[0].value; }
     );
 
@@ -261,63 +379,229 @@ function generatePointTable(){
     </tr>`;
 
     // Constant value for the score categories
-    const categories = [
+    var categories = [
         ["TR", "tr-points"], 
         ["Awards", "award-points"], 
         ["Milestones", "milestone-points"], 
         ["Greenery", "greenery-points"], 
         ["Cities", "city-points"], 
-        ["Cards", "card-points"]]
+        ["Cards", "card-points"],
+        ["Gold lead", "gold-lead-points"]];
+
+    // Inserts turmoil before gold lead
+    if (getActiveModes().includes("Turmoil")){
+        categories.splice(categories.length - 1, 0, ["Turmoil", "turmoil-points"]);
+    }
 
     // Creates the inputs for the scores
-    var inputs = `<td class="table-cell"><input class="table-input" type="number"></td>`.repeat(player_names.length)
+    var createInputs = (type, additional = "") => `<td class="table-cell"><input class="table-input" type="${type}" ${additional}></td>`.repeat(player_names.length);
+
+    // Adds all point rows
     var points = categories.map( option =>
     `<tr id="${option[1]}">
         <td class="table-cell">${option[0]}</td>
-        ${inputs}
+        ${createInputs("number", 'onchange="updateTotals()"')}
     </tr>
     `)
 
+    // Adds total points rows
+    var total_points = 
+        `<tr id="total-points">
+            <td class="table-cell">Total</td>
+            ${createInputs("text", 'value="0" disabled')}
+        </tr>`
+
+    // Adds ranks rows
+    var ranks = 
+        `<tr id="ranks">
+            <td class="table-cell">Rank</td>
+            ${createInputs("text", 'value="1" disabled')}
+        </tr>`
+
+    // Adds possibility for notes
+    var note_input = 
+        `<tr id="player-note">
+            <td class="table-cell">Notes</td>
+            ${createInputs("text")}
+        </tr>`
+    
     // Creates the table and sets the style to visible
-    table.innerHTML = name_row + points.join('\n');
+    table.innerHTML = name_row + points.join('\n') + total_points + ranks + note_input;
+
+    // Update display of gold lead
+    goldLeadFunction();
+    
+    // Show points div
     points_div.style.display = 'block'
 }
 
-const owner = 'ChocolateChipKookie';
-const repo = "chocolatechipkookie.github.io";
-const octokit = new Octokit({ auth: '49528b4c7d4dd7f8b4694623a2ac73e9fdffda7b' });
-
-
-//Commit
-async function get_git_file(filepath, octokit){
-    return octokit.request(`GET https://api.github.com/repos/${owner}/${repo}/contents/${filepath}`)
+// Update the visibility of the gold lead field
+window.goldLeadFunction = function(){
+    var gold_lead = document.getElementById("gold-lead-input").checked;
+    document.getElementById("gold-lead-points").style.display = gold_lead ? "" : "none";
 }
 
-async function update_git(content, filepath, octokit, message=''){
-    var prev_blob = await get_file(filepath, octokit);
+//////////////////
+//     SUBMIT
+//////////////////
+
+function createCode(modes){
+    var mode_dict = {
+        "Base": "B",
+        "Corporate Era": "CE",
+        "Prelude": "Pr",
+        "Colonies": "Col",
+        "Draft": "Dr",
+        "Venus": "Ve",
+        "Turmoil": "Tu",
+    }
+    return modes.map( mode => mode_dict[mode]).join("+");
+}
+
+window.submitForm = async function(){
+    // Fetch global values
+    var name = document.getElementById("name-input").value;
+    var note = document.getElementById("game-notes").value;
+    var date = document.getElementById("datepicker").value;
+
+    var mode = getActiveModes()
+    var mode_code = createCode(mode);
+
+    var map = "Tharsis"
+    var no_players = parseInt(document.getElementById("player-number").value);
+    var generations = parseInt(document.getElementById("generations").value);
+
+    // Fetch player specific inputs
+    var players = Array.from(document.getElementsByClassName("player-input-div"))
+        .map(function(elem){
+            return {name: elem.children[0].value, corporation: elem.children[1].value}
+        });
+
+    var categories = [
+        ["tr-points", "tr"],
+        ["award-points", "awards"],
+        ["milestone-points", "milestones"],
+        ["greenery-points", "greenery"],
+        ["city-points", "cities"],
+        ["card-points", "cards"],
+        ["gold-lead-points", "lead"],
+        ["total-points", "total"],
+        ["ranks", "rank"],
+        ["player-note", "note"],
+    ]
+
+    if (mode.includes("Turmoil")){
+        categories.push(["turmoil-points", "turmoil"])
+    }
+
+    // Iterate over the categories and add them to player stats
+    categories.forEach(
+        function(elem){
+            var key = elem[0];
+            var category = elem[1];
+            var points = document
+                .getElementById(key)
+                .querySelectorAll("input");
+
+            for(var i = 0; i < no_players; ++i){
+                //Points vs note in the end
+                players[i][category] = 
+                    category != "note" ? 
+                    parseInt(points[i].value) : points[i].value;
+            }
+        }
+    )
+
+    var winner = players.filter(player => player.rank == 1);
+
+    var entry = {
+        name: name,
+        note: note,
+        date: date,
+        mode: mode,
+        mode_code: mode_code,
+        map: map,
+        winner: winner.name,
+        win_corp: winner.corporation,
+        win_score: winner.total,
+        players: no_players,
+        generation: generations,
+        scores: players
+    }
+
+    // Add colonies
+    if(mode.includes("Colonies")){
+        var colonies = document.getElementsByClassName("colony-container");
+        colonies = Array.from(colonies).map(function(entry){
+                    console.log(entry);
+                    return {
+                        name: entry.children[2].childNodes[0].nodeValue.trim(),
+                        count: entry.children[1].value
+                    }
+                }
+            );
+        entry.colonies = colonies;
+    }
+
+    // Get GitHub api token by decrypting encrypted token
+    const encrypted_token = "U2FsdGVkX1+n1ehJgHqx60l9tKl1nu1zx0MlMiCXO+YDPnIW/5I0+1JboKey3qjNMo10biUocmSAMHrD0bwJ8Q==";
+    var password = document.getElementById("password-field").value;
+    var decrypted = CryptoJS.AES.decrypt(encrypted_token, password);
+
+    // Init Octokit
+    const octokit = new Octokit({auth: decrypted.toString(CryptoJS.enc.Utf8)});
+
+
+    // Add all players to the database
+    var data = await getFile("data/log.json", octokit);
+    var log = JSON.parse(b64_to_utf8(data.data.content));
+    data = await getFile("data/data.json", octokit);
+    var player_data = JSON.parse(b64_to_utf8(data.data.content));
+    data = await getFile("data/games.json", octokit);
+    var games_data = JSON.parse(b64_to_utf8(data.data.content));
     
-    const response = await octokit.request("PUT https://api.github.com/repos/ChocolateChipKookie/chocolatechipkookie.github.io/contents/text2.txt", 
-    {
-        owner: owner,
-        repo: repo,
-        path: filepath,
-        message: message,
-        content: btoa(content),
-        sha: prev_blob.data.sha,
+    // Add redundant log
+    log.push(
+        {
+            action: "Added game entry",
+            date: new Date(),
+            data: entry
+        }
+    );
+
+    // Add game
+    games_data.push(entry);
+
+    // Add players
+
+    var player_names = Array.from(document.getElementsByClassName("player-input-div"))
+        .map( elem => elem.children[0].value);
+
+    player_names.forEach(function (name){
+        if (!player_data.player_names.includes(name)){
+            player_data.player_names.push(name);
+        }
     });
-    return response;
+
+    // Push files
+    updateFile(JSON.stringify(log, spaces=2), "data/log.json", `Added game "${name}"`, octokit);
+    updateFile(JSON.stringify(player_data, spaces=2), "data/data.json", `Added game "${name}"`, octokit);
+    updateFile(JSON.stringify(games_data, spaces=2), "data/games.json", `Added game "${name}"`, octokit);
+
+    console.log(entry);
 }
 
-
-
-async function test(){
-    const file = await get_git_file('data/data.json', octokit);
-    const json = JSON.parse(atob(file.data.content));
-    console.log(JSON.stringify(json));
+//Used to update the encrypted token in function above
+function encryptToken(token, password){
+    var encrypted = CryptoJS.AES.encrypt(token, password)
+    print(encrypted.toString())
 }
 
-
-
-test()
-
-//console.log(await update_git("Ovo radi i ja sam sretan", 'text.txt', octokit));
+//Add listener to password field
+var password_field = document.getElementById("password-field");
+password_field.addEventListener("keyup", function(event) {
+    if (event.keyCode === 13) {
+        event.preventDefault();
+        submitForm();
+    }
+});

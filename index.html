@@ -8,15 +8,20 @@
     <link href="css/table.css" rel="stylesheet" type="text/css">
 </head>
 <body>
-    <div class="title-box">
+    <div class="options-div title-box">
         Terraforming Mars score tracker
     </div>
 
     <div class="options-div">
         <div class="options-title">
             Base options
-        </div>        
+        </div>
         <div class="base-options">
+            <div class="base-option" id="base-option-game-name">
+                <label for="name">Name:</label>
+                <input type="text" class="input" id="name-input">
+            </div>
+
             <div class="base-option" id="base-option-date">
                 <label for="date">Date:</label>
                 <input type="date" class="input" id="datepicker">
@@ -27,31 +32,31 @@
                 <input class="input" type="button" value="Hide" onclick="hideCheckboxContainer(this, 'expansion-checkbox-container')">
                 <div class="checkbox-container" id="expansion-checkbox-container">
                     <label class="checkbox-label">
-                        <input type="checkbox" checked="true" value="base" disabled="true">Base
+                        <input type="checkbox" checked="true" value="Base" disabled="true">Base
                         <span class="checkmark"></span>
                     </label>
                     <label class="checkbox-label">
-                        <input type="checkbox" checked="true" value="colonies" onclick="activateColonies(this)">Colonies
+                        <input type="checkbox" checked="true" value="Colonies" onclick="activateColonies(this)">Colonies
                         <span class="checkmark"></span>
                     </label>
                     <label class="checkbox-label">
-                        <input type="checkbox" checked="true" value="corporate">Corporate era
+                        <input type="checkbox" checked="true" value="Corporate Era">Corporate Era
                         <span class="checkmark"></span>
                     </label>
                     <label class="checkbox-label">
-                        <input type="checkbox" checked="true" value="draft">Draft
+                        <input type="checkbox" checked="true" value="Draft">Draft
                         <span class="checkmark"></span>
                     </label>
                     <label class="checkbox-label">
-                        <input type="checkbox" checked="true" value="prelude">Prelude
+                        <input type="checkbox" checked="true" value="Prelude">Prelude
                         <span class="checkmark"></span>
                     </label>
                     <label class="checkbox-label">
-                        <input type="checkbox" checked="false" value="turmoil">Turmoil
+                        <input type="checkbox" checked="false" value="Turmoil">Turmoil
                         <span class="checkmark"></span>
                     </label>
                     <label class="checkbox-label">
-                        <input type="checkbox" checked="false" value="venus">Venus next
+                        <input type="checkbox" checked="false" value="Venus">Venus next
                         <span class="checkmark"></span>
                     </label>
                 </div>
@@ -63,7 +68,7 @@
             </div>
 
             <div class="base-option" id="base-option-players">
-                <label for="player-number">Number of players</label>                
+                <label for="player-number">Number of players</label>
                 <input type="number" class="input" min="1" max="5" id="player-number" value="2" onchange="generatePlayerInputs()">
                 
                 <div class = "player-list" id="player-list">  
@@ -144,13 +149,29 @@
             Points
         </div>
 
-        <table class="table" id="points-table">
-        </table>
-    </div>
+        <div class="base-option checkbox-container">
+            <label class="checkbox-label">
+                <input type="checkbox" id="gold-lead-input" checked="false" value="Gold lead" onclick="goldLeadFunction()">Gold lead
+                <span class="checkmark"></span>
+            </label>
+        </div>
 
+        <div class="base-options base-option" id="points-table-div">
+            <table class="table" id="points-table">
+            </table>
+        </div>
+        
+        <textarea id="game-notes"></textarea>
+        
+        <div id="submit-div">
+            <input type="password" class="submit-input" id="password-field" placeholder="Password" >
+            <input type="button" class="submit-input" id="submit-button" value="Submit" onclick="submitForm()">
+        </div>
+        
+    </div>
 </body>
 <footer>
-    <script type="module" src="index.js">
-    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/3.1.2/rollups/aes.js"></script>    
+    <script type="module" src="index.js"></script>
 </footer>
 

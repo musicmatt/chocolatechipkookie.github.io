@@ -12,7 +12,11 @@ body {
     background: url(../resources/mars_slim.png) bottom no-repeat, linear-gradient(#010b19, #010b19, #03214a,#85c7f1);
     background-size: 100% auto;
     font-family: 'tm-default';
+    text-transform: uppercase;
     background-attachment: fixed;
+    padding-left: 5%; 
+    padding-right: 5%;
+
 } 
 
 .title-box{
@@ -22,12 +26,16 @@ body {
     border-radius: 20px;
 
     background: linear-gradient(145deg, #787776, #f5f5f5, #aaaaaa,#ebebeb, #f5f5f5);
-    margin: 5%;
-    padding: 10px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 4%;
+    margin-bottom: 4%;
+
+    text-transform: uppercase;
+    max-width: 900px;
 
     text-align: center;
-    text-transform: uppercase;
-    font-size: 40px;
+    font-size: 60px;
 
     color: black;
 }
@@ -39,7 +47,11 @@ body {
     border-color: white;
     border-radius: 20px;
 
-    margin: 5%;
+    max-width: 900px;
+    font-family: "tm-default";
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 4%;
     text-align: center;
     text-transform: uppercase;
     color: black;
@@ -85,13 +97,17 @@ body {
 
 .base-option{
     width: 100%;
-    max-width: 500px;
+    max-width: 700px;
     margin: 10px auto;
     min-height: 30px;
     text-align: left;
 }
 
 .input{
+    text-align: center;
+    font-family: tm-default;
+    font-size: 15px;
+
     float: right;
     margin: auto;
     height: 30px;
@@ -107,12 +123,60 @@ body {
     background-color: rgb(240, 240, 240);
     margin: 5 auto;
 
+    text-align: center;
+    text-transform: uppercase;
+    font-family: 'tm-default';
+    font-size: 20px;
+
     width: 100%;
     max-width: 500px;
     height: 40px;
-
 }
 
+
+#game-notes{
+    border-style: solid;
+    border-width: 2px;
+    border-color: black;
+    border-radius: 5px;
+    box-sizing: border-box;
+
+    resize:none;
+
+    background-color: rgb(240, 240, 240);
+    margin: 5 auto;
+
+
+    width: 100%;
+    max-width: 700px;
+    height: 40px;
+}
+
+#submit-div{
+    margin: auto;
+    margin-top: 5;
+    margin-bottom: 10;
+
+    text-align: center;
+    max-width: 500px;
+}
+
+.submit-input{
+    border-style: solid;
+    border-width: 2px;
+    border-color: black;
+    border-radius: 5px;
+
+    background-color: rgb(240, 240, 240);
+
+    font-family: 'tm-default';
+    text-transform: uppercase;
+    text-align: center;
+    font-size: 20px;
+
+    width: 49.5%;
+    height: 40px;
+}
 
 /*
     Player list
@@ -135,8 +199,11 @@ body {
 
 .player-input{
     display: inline-block;
-
     background-color: white;
+
+    text-align: center;
+    font-family: "tm-default";
+    font-size: 15px;
 
     width: 45%;
     height: 30px;
@@ -145,6 +212,12 @@ body {
 
     margin-top: 5px;
     margin-bottom: 5px;
+}
+
+#player{
+    font-weight: bolder;
+    font-size: 15px;
+    font-family: 'Courier New', Courier, monospace;
 }
 
 .warning-label{

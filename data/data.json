@@ -1,73 +1,26 @@
 {
-  "players": [
-    {
-      "name": "Adi Čaušević"
-    },
-    {
-      "name": "Andro Slavić"
-    },
-    {
-      "name": "Dino Šarić"
-    },
-    {
-      "name": "Dolores Frančišković"
-    },
-    {
-      "name": "Filip Pavletić"
-    },
-    {
-      "name": "Hrvoje Maligec"
-    },
-    {
-      "name": "Jan Mastrović"
-    },
-    {
-      "name": "Jan/Karla"
-    },
-    {
-      "name": "Juraj Vladika"
-    },
-    {
-      "name": "Luka Jenuš"
-    },
-    {
-      "name": "Luka Lozina"
-    },
-    {
-      "name": "Marijan Vukelić"
-    },
-    {
-      "name": "Marko Blaženić"
-    },
-    {
-      "name": "Matteo Samsa"
-    },
-    {
-      "name": "Mia Čaušević"
-    },
-    {
-      "name": "Mia/Jan"
-    },
-    {
-      "name": "Mia/Romana"
-    },
-    {
-      "name": "Mislav Monjac"
-    },
-    {
-      "name": "Natan Turčinović"
-    },
-    {
-      "name": "Nola Smolica"
-    },
-    {
-      "name": "Robert Bulaić"
-    },
-    {
-      "name": "Romana Ivković"
-    },
-    {
-      "name": "Vito Papa"
-    }
-  ]
+  "player_names": [
+    "Adi Čaušević",
+    "Andro Slavić",
+    "Dino Šarić",
+    "Dolores Frančišković",
+    "Filip Pavletić",
+    "Hrvoje Maligec",
+    "Jan Mastrović",
+    "Jan/Karla",
+    "Juraj Vladika",
+    "Luka Jenuš",
+    "Luka Lozina",
+    "Marijan Vukelić",
+    "Marko Blaženić",
+    "Matteo Samsa",
+    "Mia Čaušević",
+    "Mia/Jan",
+    "Mia/Romana",
+    "Mislav Monjac",
+    "Natan Turčinović",
+    "Nola Smolica",
+    "Robert Bulaić",
+    "Romana Ivković",
+    "Vito Papa"]
 }
