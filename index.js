@@ -201,7 +201,7 @@ window.generatePlayerInputs = function (){
     `
     <div class="player-input-div">
         <input list="datalist-players" class="player-input" id="player">
-        <select class="player-input" id="player-colony-select" name="player-colony">
+        <select class="player-input corporation-select" name="player-colony">
         </select>
     </div>
     `.repeat(players);
@@ -244,7 +244,8 @@ async function addExternData(){
     var corporations = data.corporation_names;
     corporations.sort();
     var corporation_list = corporations.map(corp => `<option value="${corp}">${corp}</option>`).join("\n");
-    document.getElementById("player-colony-select").innerHTML = corporation_list;
+    Array.from(document.getElementsByClassName("corporation-select"))
+        .forEach(elem => elem.innerHTML = corporation_list);
 }
 
 addExternData();
