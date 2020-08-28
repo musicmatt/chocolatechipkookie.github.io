@@ -254,9 +254,7 @@ async function addPlayers(){
     //Fetch file from git
     var data = await getFile("data/data.json", octokit);
     //Decode base64 file content and parse json
-    var players = JSON.parse(b64_to_utf8(data.data.content)).players;
-    //Filter names of players
-    var names = players.map(function(player) { return player.name; });
+    var names = JSON.parse(b64_to_utf8(data.data.content)).player_names;
     //Create datalist for HTML
     var datalist = names.map(function(name){return `<option value="${name}">`}).join('\n');
     document.getElementById("datalist-players").innerHTML = datalist;
