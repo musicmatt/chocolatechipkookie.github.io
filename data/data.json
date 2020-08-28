@@ -1,5 +1,5 @@
 {
-  "corporation_names":[
+  "corporation_names": [
     "Beginner",
     "Credicor",
     "Ecoline",
@@ -63,5 +63,7 @@
     "Nola Smolica",
     "Robert Bulaić",
     "Romana Ivković",
-    "Vito Papa"]
+    "Vito Papa",
+    ""
+  ]
 }
