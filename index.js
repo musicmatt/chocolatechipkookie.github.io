@@ -568,12 +568,9 @@ window.submitForm = async function(){
     });
 
     // Push files
-    var response = await updateFile(JSON.stringify(log, null, 2), "data/log.json", `Added game "${name}"`, octokit);
-    console.log(response)
-    var response = await updateFile(JSON.stringify(player_data, null, 2), "data/data.json", `Added game "${name}"`, octokit);
-    console.log(response)
-    var response = await updateFile(JSON.stringify(games_data, null, 2), "data/games.json", `Added game "${name}"`, octokit);
-    console.log(response)
+    updateFile(JSON.stringify(log, null, 2), "data/log.json", `Added game "${name}"`, octokit);
+    updateFile(JSON.stringify(player_data, null, 2), "data/data.json", `Added game "${name}"`, octokit);
+    updateFile(JSON.stringify(games_data, null, 2), "data/games.json", `Added game "${name}"`, octokit);
 
     console.log(entry);
 }
