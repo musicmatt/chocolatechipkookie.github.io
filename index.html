@@ -163,6 +163,10 @@
         
         <textarea id="game-notes"></textarea>
         
+        <div class="options-title" id="game-added-banner" style="display: none;">
+            Added game
+        </div>
+
         <div id="submit-div">
             <input type="password" class="submit-input" id="password-field" placeholder="Password" >
             <input type="button" class="submit-input" id="submit-button" value="Submit" onclick="submitForm()">
@@ -172,6 +176,7 @@
 </body>
 <footer>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/3.1.2/rollups/aes.js"></script>    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/3.1.2/rollups/sha256.js"></script>    
     <script type="module" src="index.js"></script>
 </footer>
 

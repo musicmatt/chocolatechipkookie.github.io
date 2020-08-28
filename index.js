@@ -59,7 +59,7 @@ async function getFile(filepath, octokit){
 async function updateFile(content, filepath, message='', octokit){
     var prev_blob = await getFile(filepath, octokit);
     
-    const response = await octokit.request("PUT https://api.github.com/repos/ChocolateChipKookie/chocolatechipkookie.github.io/contents/text2.txt", 
+    const response = await octokit.request(`PUT https://api.github.com/repos/${owner}/${repo}/contents/${filepath}`, 
     {
         owner: owner,
         repo: repo,
@@ -444,6 +444,27 @@ function createCode(modes){
 }
 
 window.submitForm = async function(){
+
+    const password_hash = "2127c97b1c21f675c8ea7c47ce5fffb827b15035aea988e525ab8a24fd8ad6d0"
+    var password = document.getElementById("password-field").value;
+
+    if (CryptoJS.SHA256(password).toString() != password_hash){
+        var banner = document.getElementById("game-added-banner");
+        banner.innerHTML = "Wrong password!";
+        banner.style.backgroundColor = "black";
+        banner.style.color = "white";
+        banner.style.display = "block";
+        return;
+    }
+
+    // Get GitHub api token by decrypting encrypted token
+    const encrypted_token = "U2FsdGVkX1+n1ehJgHqx60l9tKl1nu1zx0MlMiCXO+YDPnIW/5I0+1JboKey3qjNMo10biUocmSAMHrD0bwJ8Q==";
+    var decrypted = CryptoJS.AES.decrypt(encrypted_token, password);
+
+    // Init Octokit
+    const octokit = new Octokit({auth: decrypted.toString(CryptoJS.enc.Utf8)});
+
+
     // Fetch global values
     var name = document.getElementById("name-input").value;
     var note = document.getElementById("game-notes").value;
@@ -527,15 +548,6 @@ window.submitForm = async function(){
         entry.colonies = colonies;
     }
 
-    // Get GitHub api token by decrypting encrypted token
-    const encrypted_token = "U2FsdGVkX1+n1ehJgHqx60l9tKl1nu1zx0MlMiCXO+YDPnIW/5I0+1JboKey3qjNMo10biUocmSAMHrD0bwJ8Q==";
-    var password = document.getElementById("password-field").value;
-    var decrypted = CryptoJS.AES.decrypt(encrypted_token, password);
-
-    // Init Octokit
-    const octokit = new Octokit({auth: decrypted.toString(CryptoJS.enc.Utf8)});
-
-
     // Add all players to the database
     var data = await getFile("data/log.json", octokit);
     var log = JSON.parse(b64_to_utf8(data.data.content));
@@ -568,9 +580,17 @@ window.submitForm = async function(){
     });
 
     // Push files
-    updateFile(JSON.stringify(log, null, 2), "data/log.json", `Added game "${name}"`, octokit);
-    updateFile(JSON.stringify(player_data, null, 2), "data/data.json", `Added game "${name}"`, octokit);
-    updateFile(JSON.stringify(games_data, null, 2), "data/games.json", `Added game "${name}"`, octokit);
+    await updateFile(JSON.stringify(log, null, 2), "data/log.json", `Added game "${name}"`, octokit);
+    await updateFile(JSON.stringify(player_data, null, 2), "data/data.json", `Added game "${name}"`, octokit);
+    await updateFile(JSON.stringify(games_data, null, 2), "data/games.json", `Added game "${name}"`, octokit);
+
+    document.getElementById("password-field").value = "";
+
+    var banner = document.getElementById("game-added-banner");
+    banner.innerHTML = "Game added!";
+    banner.style.backgroundColor = "rgb(240, 240, 240)";
+    banner.style.color = "black";
+    banner.style.display = "block";
 
     console.log(entry);
 }
@@ -580,6 +600,7 @@ function encryptToken(token, password){
     var encrypted = CryptoJS.AES.encrypt(token, password)
     print(encrypted.toString())
 }
+
 
 //Add listener to password field
 var password_field = document.getElementById("password-field");
