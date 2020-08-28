@@ -21,7 +21,6 @@ function b64_to_utf8(str) {
     }).join(''));
 }
 
-
 //Capitalizes given string
 function capitalize(str){
     return str.charAt(0).toUpperCase() + str.slice(1);
@@ -279,6 +278,9 @@ window.increaseColonyNumber = function (elem){
 //     TABLE
 //////////////////
 
+// Uncheck the checkbox
+document.getElementById("gold-lead-input").checked = false;
+
 // Updates totals and ranks
 window.updateTotals = function(){
     // Define keys of scores that are tracked
@@ -445,8 +447,13 @@ function createCode(modes){
 
 window.submitForm = async function(){
 
-    const password_hash = "2127c97b1c21f675c8ea7c47ce5fffb827b15035aea988e525ab8a24fd8ad6d0"
-    var password = document.getElementById("password-field").value;
+    var submit_button = document.getElementById("submit-button");
+    submit_button.disabled = true;
+
+    const password_hash = "2127c97b1c21f675c8ea7c47ce5fffb827b15035aea988e525ab8a24fd8ad6d0";
+    var password_field = document.getElementById("password-field");
+    var password = password_field.value;
+    password_field.value = "";
 
     if (CryptoJS.SHA256(password).toString() != password_hash){
         var banner = document.getElementById("game-added-banner");
@@ -454,6 +461,7 @@ window.submitForm = async function(){
         banner.style.backgroundColor = "black";
         banner.style.color = "white";
         banner.style.display = "block";
+        submit_button.disabled = false;
         return;
     }
 
@@ -470,17 +478,17 @@ window.submitForm = async function(){
     var note = document.getElementById("game-notes").value;
     var date = document.getElementById("datepicker").value;
 
-    var mode = getActiveModes()
+    var mode = getActiveModes();
     var mode_code = createCode(mode);
 
-    var map = "Tharsis"
+    var map = "Tharsis";
     var no_players = parseInt(document.getElementById("player-number").value);
     var generations = parseInt(document.getElementById("generations").value);
 
     // Fetch player specific inputs
     var players = Array.from(document.getElementsByClassName("player-input-div"))
         .map(function(elem){
-            return {name: elem.children[0].value, corporation: elem.children[1].value}
+            return {name: elem.children[0].value, corporation: elem.children[1].value};
         });
 
     var categories = [
@@ -494,10 +502,10 @@ window.submitForm = async function(){
         ["total-points", "total"],
         ["ranks", "rank"],
         ["player-note", "note"],
-    ]
+    ];
 
     if (mode.includes("Turmoil")){
-        categories.push(["turmoil-points", "turmoil"])
+        categories.push(["turmoil-points", "turmoil"]);
     }
 
     // Iterate over the categories and add them to player stats
@@ -542,7 +550,7 @@ window.submitForm = async function(){
                     return {
                         name: entry.children[2].childNodes[0].nodeValue.trim(),
                         count: entry.children[1].value
-                    }
+                    };
                 }
             );
         entry.colonies = colonies;
@@ -584,21 +592,21 @@ window.submitForm = async function(){
     await updateFile(JSON.stringify(player_data, null, 2), "data/data.json", `Added game "${name}"`, octokit);
     await updateFile(JSON.stringify(games_data, null, 2), "data/games.json", `Added game "${name}"`, octokit);
 
-    document.getElementById("password-field").value = "";
-
     var banner = document.getElementById("game-added-banner");
     banner.innerHTML = "Game added!";
     banner.style.backgroundColor = "rgb(240, 240, 240)";
     banner.style.color = "black";
     banner.style.display = "block";
 
+    submit_button.disabled = false;
     console.log(entry);
 }
 
 //Used to update the encrypted token in function above
 function encryptToken(token, password){
-    var encrypted = CryptoJS.AES.encrypt(token, password)
-    print(encrypted.toString())
+    var encrypted = CryptoJS.AES.encrypt(token, password);
+    console.log(encrypted.toString());
+    console.log(CryptoJS.SHA256(password).toString());
 }
 
 

@@ -178,6 +178,12 @@ body {
     height: 40px;
 }
 
+.submit-input:disabled{
+    background-color: black;
+    color: white;
+}
+
+
 /*
     Player list
 */
