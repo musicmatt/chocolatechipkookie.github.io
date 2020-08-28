@@ -57,7 +57,7 @@ async function getFile(filepath, octokit){
 
 //Updates git file
 async function updateFile(content, filepath, message='', octokit){
-    var prev_blob = await get_file(filepath, octokit);
+    var prev_blob = await getFile(filepath, octokit);
     
     const response = await octokit.request("PUT https://api.github.com/repos/ChocolateChipKookie/chocolatechipkookie.github.io/contents/text2.txt", 
     {
