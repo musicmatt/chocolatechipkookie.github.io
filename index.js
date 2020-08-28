@@ -194,36 +194,14 @@ window.generatePlayerInputs = function (){
     // Fetch number of players and player input list
     var players = number_of_players_input.value;
     var players_list = document.getElementById("player-list");
-    
+
+
     // Create input fields
     players_list.innerHTML = 
     `
     <div class="player-input-div">
         <input list="datalist-players" class="player-input" id="player">
         <select class="player-input" id="player-colony-select" name="player-colony">
-            <option value="Aridor">Aridor</option>
-            <option value="Arklight">Arklight</option>
-            <option value="Beginner">Beginner</option>
-            <option value="Cheung Shing Mars">Cheung Shing Mars</option>
-            <option value="Credicor">Credicor</option>
-            <option value="Ecoline">Ecoline</option>
-            <option value="Helion">Helion</option>
-            <option value="Interplaneraty Cinematics">Interplaneraty Cinematics</option>
-            <option value="Inventrix">Inventrix</option>
-            <option value="Mining Guild">Mining Guild</option>
-            <option value="Phobolog">Phobolog</option>
-            <option value="Point Luna">Point Luna</option>
-            <option value="Polyphemos">Polyphemos</option>
-            <option value="Poseidon">Poseidon</option>
-            <option value="Robinson Industries">Robinson Industries</option>
-            <option value="Saturn Systems">Saturn Systems</option>
-            <option value="Stormcraft Incorporated">Stormcraft Incorporated</option>
-            <option value="Teractor">Teractor</option>
-            <option value="Tharsis Republic">Tharsis Republic</option>
-            <option value="Thorgate">Thorgate</option>
-            <option value="UNMI">UNMI</option>
-            <option value="Valley Trust">Valley Trust</option>
-            <option value="Vitor">Vitor<option>
         </select>
     </div>
     `.repeat(players);
@@ -248,20 +226,28 @@ number_of_players_input.addEventListener("keyup", function(event) {
 });
 
 
-// Loads players from database and adds them to the datalist
-async function addPlayers(){
+// Loads players and corporations from database and adds them to the datalist
+async function addExternData(){
     const octokit = new Octokit();
     //Fetch file from git
     var data = await getFile("data/data.json", octokit);
     //Decode base64 file content and parse json
-    var names = JSON.parse(b64_to_utf8(data.data.content)).player_names;
+    var data = JSON.parse(b64_to_utf8(data.data.content));
+
+    //Add names
+    var names = data.player_names;
     //Create datalist for HTML
     var datalist = names.map(function(name){return `<option value="${name}">`}).join('\n');
     document.getElementById("datalist-players").innerHTML = datalist;
+
+    //Add colonies
+    var corporations = data.corporation_names;
+    corporations.sort();
+    var corporation_list = corporations.map(corp => `<option value="${corp}">${corp}</option>`).join("\n");
+    document.getElementById("player-colony-select").innerHTML = corporation_list;
 }
 
-addPlayers();
-
+addExternData();
 
 //////////////////////
 //     COLONIES
