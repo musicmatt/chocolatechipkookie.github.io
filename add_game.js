@@ -623,7 +623,9 @@ window.submitForm = async function(){
     await updateFile(JSON.stringify(games_data, null, 2), "data/games.json", `Added game "${name}"`, octokit);
 
     updateBanner("Game added!", true);
-    console.log(entry);
+
+    // TODO: Goto location of game!
+    window.location = "/index.html"
 }
 
 //Used to update the encrypted token in function above
