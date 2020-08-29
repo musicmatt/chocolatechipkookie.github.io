@@ -9,3 +9,9 @@ curl \
   -H "Accept: application/vnd.github.v3+json" \
   https://api.github.com/repos/ChocolateChipKookie/chocolatechipkookie.github.io/contents/text.txt \
   -d '{"message":"message","content":"bXkgbmV3IGZpbGUgY29udGVudHM="}'
+
+    <link href="css/index.css" rel="stylesheet" type="text/css">    
+    <link href="css/index-colonies.css" rel="stylesheet" type="text/css">    
+    <link href="css/checkbox.css" rel="stylesheet" type="text/css">    
+    <link href="css/table.css" rel="stylesheet" type="text/css">
+

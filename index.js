@@ -51,7 +51,7 @@ const repo = "chocolatechipkookie.github.io";
 
 //Loads git file
 async function getFile(filepath, octokit){
-    return octokit.request(`GET https://api.github.com/repos/${owner}/${repo}/contents/${filepath}`)
+    return octokit.request(`GET https://api.github.com/repos/${owner}/${repo}/contents/${filepath}`);
 }
 
 //Updates git file
@@ -180,8 +180,26 @@ setDefaultDate()
 //     PLAYERS
 /////////////////////
 
+var externalData = null;
+
+// Loads players and corporations from database
+async function loadExternalData(){
+    const octokit = new Octokit();
+    //Fetch file from git
+    var data = await getFile("data/data.json", octokit);
+    //Decode base64 file content and parse json
+    var data = JSON.parse(b64_to_utf8(data.data.content));
+    externalData = data;
+
+    //Add names to datalist
+    var names = data.player_names;
+    //Create datalist for HTML
+    var datalist = names.map(function(name){return `<option value="${name}">`}).join('\n');
+    document.getElementById("datalist-players").innerHTML = datalist;
+}
+
 //Generates player input fields
-window.generatePlayerInputs = function (){
+window.generatePlayerInputs = async function (){
     // Fetch number of players
     var number_of_players_input = document.getElementById("player-number");
     // Check and update the range
@@ -195,13 +213,23 @@ window.generatePlayerInputs = function (){
     var players_list = document.getElementById("player-list");
 
 
+    //Initial loading of player names and corporations
+
+    if (externalData == null){
+        await loadExternalData();
+    }
+
+    //Add corporations
+    var corporations = externalData.corporation_names;
+    corporations.sort();
+    var corporation_list = corporations.map(corp => `<option value="${corp}">${corp}</option>`).join("\n");
+    
     // Create input fields
     players_list.innerHTML = 
     `
     <div class="player-input-div">
-        <input list="datalist-players" class="player-input" id="player">
-        <select class="player-input corporation-select" name="player-colony">
-        </select>
+        <input  class="player-input" id="player" list="datalist-players">
+        <select class="player-input"> ${corporation_list}</select>
     </div>
     `.repeat(players);
     
@@ -224,30 +252,6 @@ number_of_players_input.addEventListener("keyup", function(event) {
     }
 });
 
-
-// Loads players and corporations from database and adds them to the datalist
-async function addExternData(){
-    const octokit = new Octokit();
-    //Fetch file from git
-    var data = await getFile("data/data.json", octokit);
-    //Decode base64 file content and parse json
-    var data = JSON.parse(b64_to_utf8(data.data.content));
-
-    //Add names
-    var names = data.player_names;
-    //Create datalist for HTML
-    var datalist = names.map(function(name){return `<option value="${name}">`}).join('\n');
-    document.getElementById("datalist-players").innerHTML = datalist;
-
-    //Add colonies
-    var corporations = data.corporation_names;
-    corporations.sort();
-    var corporation_list = corporations.map(corp => `<option value="${corp}">${corp}</option>`).join("\n");
-    Array.from(document.getElementsByClassName("corporation-select"))
-        .forEach(elem => elem.innerHTML = corporation_list);
-}
-
-addExternData();
 
 //////////////////////
 //     COLONIES
@@ -346,6 +350,20 @@ window.updateTotals = function(){
     }
 }
 
+// Update the visibility of the gold lead field
+window.goldLeadFunction = function(){
+    var gold_lead = document.getElementById("gold-lead-input").checked;
+    document.getElementById("gold-lead-points").style.display = gold_lead ? "" : "none";
+}
+
+// Update the visibility of the turmoil field
+window.updateTurmoil = function(){
+    var gold_lead = document.getElementById("turmoil-checkbox").checked;
+    try{
+        document.getElementById("turmoil-points").style.display = gold_lead ? "" : "none";
+    } catch {}
+}
+
 // Generates the point table for the scores
 window.generatePointTable = function(){
     // Gets the points div, points table and player list nodes
@@ -373,12 +391,8 @@ window.generatePointTable = function(){
         ["Greenery", "greenery-points"], 
         ["Cities", "city-points"], 
         ["Cards", "card-points"],
+        ["Turmoil", "turmoil-points"],
         ["Gold lead", "gold-lead-points"]];
-
-    // Inserts turmoil before gold lead
-    if (getActiveModes().includes("Turmoil")){
-        categories.splice(categories.length - 1, 0, ["Turmoil", "turmoil-points"]);
-    }
 
     // Creates the inputs for the scores
     var createInputs = (type, additional = "") => `<td class="table-cell"><input class="table-input" type="${type}" ${additional}></td>`.repeat(player_names.length);
@@ -417,15 +431,11 @@ window.generatePointTable = function(){
 
     // Update display of gold lead
     goldLeadFunction();
-    
+
+    updateTurmoil();
+
     // Show points div
     points_div.style.display = 'block'
-}
-
-// Update the visibility of the gold lead field
-window.goldLeadFunction = function(){
-    var gold_lead = document.getElementById("gold-lead-input").checked;
-    document.getElementById("gold-lead-points").style.display = gold_lead ? "" : "none";
 }
 
 //////////////////
@@ -446,22 +456,43 @@ function createCode(modes){
 }
 
 window.submitForm = async function(){
-
+    // Fetch submit button and set it to disabled
     var submit_button = document.getElementById("submit-button");
     submit_button.disabled = true;
 
+    // Update banner to given value and enable submit button
+    function updateBanner(value, isWarning){
+        var banner = document.getElementById("game-added-banner");
+        banner.style.backgroundColor = isWarning ? "black" : "rgb(240, 240, 240)";
+        banner.style.color = isWarning ? "white" : "black";
+        banner.style.display = "block";
+        banner.innerHTML = value;
+        submit_button.disabled = false;
+    }
+
+    // Passeword management
     const password_hash = "2127c97b1c21f675c8ea7c47ce5fffb827b15035aea988e525ab8a24fd8ad6d0";
     var password_field = document.getElementById("password-field");
     var password = password_field.value;
     password_field.value = "";
 
+    // Check if password is valid
     if (CryptoJS.SHA256(password).toString() != password_hash){
-        var banner = document.getElementById("game-added-banner");
-        banner.innerHTML = "Wrong password!";
-        banner.style.backgroundColor = "black";
-        banner.style.color = "white";
-        banner.style.display = "block";
-        submit_button.disabled = false;
+        updateBanner("Wrong password!", true);
+        return;
+    }
+
+    // Fetch player names
+    var player_names = Array.from(document.getElementsByClassName("player-input-div"))
+        .map( elem => elem.children[0].value);
+
+    // Check if there are several same names or "" in player names    
+    if (player_names.includes("")){
+        updateBanner("Empty name not allowed", true);
+        return;
+    } 
+    else if (player_names.length != (new Set(player_names)).size){
+        updateBanner("Players with same name not allowed", true);
         return;
     }
 
@@ -471,7 +502,6 @@ window.submitForm = async function(){
 
     // Init Octokit
     const octokit = new Octokit({auth: decrypted.toString(CryptoJS.enc.Utf8)});
-
 
     // Fetch global values
     var name = document.getElementById("name-input").value;
@@ -526,8 +556,10 @@ window.submitForm = async function(){
         }
     )
 
+    // Get winner
     var winner = players.filter(player => player.rank == 1);
 
+    // Create entry
     var entry = {
         name: name,
         note: note,
@@ -549,12 +581,14 @@ window.submitForm = async function(){
         colonies = Array.from(colonies).map(function(entry){
                     return {
                         name: entry.children[2].childNodes[0].nodeValue.trim(),
-                        count: entry.children[1].value
+                        count: parseInt(entry.children[1].value)
                     };
                 }
             );
         entry.colonies = colonies;
     }
+
+    // TODO: Add image
 
     // Add all players to the database
     var data = await getFile("data/log.json", octokit);
@@ -577,10 +611,6 @@ window.submitForm = async function(){
     games_data.push(entry);
 
     // Add players
-
-    var player_names = Array.from(document.getElementsByClassName("player-input-div"))
-        .map( elem => elem.children[0].value);
-
     player_names.forEach(function (name){
         if (!player_data.player_names.includes(name)){
             player_data.player_names.push(name);
@@ -592,13 +622,7 @@ window.submitForm = async function(){
     await updateFile(JSON.stringify(player_data, null, 2), "data/data.json", `Added game "${name}"`, octokit);
     await updateFile(JSON.stringify(games_data, null, 2), "data/games.json", `Added game "${name}"`, octokit);
 
-    var banner = document.getElementById("game-added-banner");
-    banner.innerHTML = "Game added!";
-    banner.style.backgroundColor = "rgb(240, 240, 240)";
-    banner.style.color = "black";
-    banner.style.display = "block";
-
-    submit_button.disabled = false;
+    updateBanner("Game added!", true);
     console.log(entry);
 }
 

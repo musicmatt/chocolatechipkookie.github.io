@@ -1,36 +1,43 @@
-
+<!DOCTYPE html>
+<html lang="en">
 <head>
+    <meta charset="utf-8"/>
     <title>Deimos down</title>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-    <link href="css/index.css" rel="stylesheet" type="text/css">
-    <link href="css/index-colonies.css" rel="stylesheet" type="text/css">
-    <link href="css/checkbox.css" rel="stylesheet" type="text/css">
-    <link href="css/table.css" rel="stylesheet" type="text/css">
+    
+    <link href="css/meta.css" rel="stylesheet" type="text/css">    
+    <link href="css/add_game.css" rel="stylesheet" type="text/css">    
+    <link href="css/checkbox.css" rel="stylesheet" type="text/css">    
+    <link href="css/table.css" rel="stylesheet" type="text/css">    
+    <link href="css/index-colonies.css" rel="stylesheet" type="text/css">    
+
 </head>
 <body>
-    <div class="options-div title-box">
+    <div class="container page-title">
         Terraforming Mars score tracker
     </div>
 
-    <div class="options-div">
-        <div class="options-title">
+    <div class="container">
+        
+        <div class="container-banner">
             Base options
         </div>
-        <div class="base-options">
-            <div class="base-option" id="base-option-game-name">
+
+        <div class="options">
+            <div class="option">
                 <label for="name">Name:</label>
-                <input type="text" class="input" id="name-input">
+                <input type="text" class="option-input" id="name-input">
             </div>
 
-            <div class="base-option" id="base-option-date">
+            <div class="option">
                 <label for="date">Date:</label>
-                <input type="date" class="input" id="datepicker">
+                <input type="date" class="option-input" id="datepicker">
             </div>
 
-            <div class="base-option" id="base-option-expansions">
+            <div class="option">
                 Select expansion:
-                <input class="input" type="button" value="Hide" onclick="hideCheckboxContainer(this, 'expansion-checkbox-container')">
-                <div class="checkbox-container" id="expansion-checkbox-container">
+                <input type="button" class="option-input" value="Show" onclick="hideCheckboxContainer(this, 'expansion-checkbox-container')">
+                <div class="checkbox-list" style="display: none;" id="expansion-checkbox-container">
                     <label class="checkbox-label">
                         <input type="checkbox" checked="true" value="Base" disabled="true">Base
                         <span class="checkmark"></span>
@@ -52,7 +59,7 @@
                         <span class="checkmark"></span>
                     </label>
                     <label class="checkbox-label">
-                        <input type="checkbox" checked="false" value="Turmoil">Turmoil
+                        <input id="turmoil-checkbox" type="checkbox" checked="false" value="Turmoil" onclick="updateTurmoil()">Turmoil
                         <span class="checkmark"></span>
                     </label>
                     <label class="checkbox-label">
@@ -62,14 +69,14 @@
                 </div>
             </div>
 
-            <div class="base-option" id="base-option-generations">
+            <div class="option">
                 <label for="generations">Number of generations</label>            
-                <input type="number" class="input" min="1" max="20" id="generations">
+                <input type="number" class="option-input"  min="1" max="20" id="generations">
             </div>
 
-            <div class="base-option" id="base-option-players">
+            <div class="option">
                 <label for="player-number">Number of players</label>
-                <input type="number" class="input" min="1" max="5" id="player-number" value="2" onchange="generatePlayerInputs()">
+                <input type="number" class="option-input"  min="1" max="5" id="player-number" value="2" onchange="generatePlayerInputs()">
                 
                 <div class = "player-list" id="player-list">  
                 </div>
@@ -84,14 +91,14 @@
         </div>
     </div>
 
-    <div class="options-div" id="colonies-options">
-        <div class="options-title">
+    <div class="container" id="colonies-options">
+        <div class="container-banner">
             Colonies
         </div>
-        <div class="base-options base-option">
+        <div class="options option">
             Select colonies:
-            <input class="colony-selector-hide-button" type="button" value="Hide" onclick="hideCheckboxContainer(this, 'colony-checkbox-container')">
-            <div class="checkbox-container" id="colony-checkbox-container">
+            <input class="option-input" type="button" value="Hide" onclick="hideCheckboxContainer(this, 'colony-checkbox-container')">
+            <div class="checkbox-list" id="colony-checkbox-container">
                 <label class="checkbox-label">
                     <input type="checkbox" onclick="checkboxFunction(this)" id="callisto-checkbox" value="callisto">Callisto
                     <span class="checkmark"></span>
@@ -139,35 +146,35 @@
             </div>
         </div>
         <div class="colony-list" id="colony-list">
-            <div class="warning-label" id="colony-warning"></div>
+            <div id="colony-warning"></div>
         </div>
     </div>
 
 
-    <div class="options-div no-display" id="points">
-        <div class="options-title">
+    <div class="container" style="display: none;" id="points">
+        <div class="container-banner">
             Points
         </div>
 
-        <div class="base-option checkbox-container">
+        <div class="option checkbox-list" style="width: 350px;">
             <label class="checkbox-label">
                 <input type="checkbox" id="gold-lead-input" checked="" value="Gold lead" onclick="goldLeadFunction()">Gold lead
                 <span class="checkmark"></span>
             </label>
         </div>
 
-        <div class="base-options base-option" id="points-table-div">
+        <div class="options option" id="points-table-div">
             <table class="table" id="points-table">
             </table>
         </div>
         
         <textarea id="game-notes"></textarea>
         
-        <div class="options-title" id="game-added-banner" style="display: none;">
+        <div class="container-banner" id="game-added-banner" style="display: none;">
             Added game
         </div>
 
-        <div id="submit-div">
+        <div class="submit-div">
             <input type="password" class="submit-input" id="password-field" placeholder="Password" >
             <input type="button" class="submit-input " id="submit-button" value="Submit" onclick="submitForm()">
         </div>
