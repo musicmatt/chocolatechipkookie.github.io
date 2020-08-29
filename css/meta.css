@@ -9,7 +9,7 @@
 
 body {
     background-color: #021631;
-    background: url(../resources/mars_slim.png) bottom no-repeat, linear-gradient(#010b19, #010b19, #03214a,#85c7f1);
+    background: url(../resources/mars.png) bottom no-repeat, linear-gradient(#010b19, #010b19, #03214a,#85c7f1);
     background-size: 100% auto;
     font-family: 'tm-default';
     text-transform: uppercase;
