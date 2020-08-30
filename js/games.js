@@ -36,3 +36,16 @@ async function loadExternalData(){
 
 loadExternalData();
 
+
+function redirectToGame(){
+    return;
+}
+
+//Add listener to password field
+var password_field = document.getElementById("game-search");
+password_field.addEventListener("keyup", function(event) {
+    if (event.keyCode === 13) {
+        event.preventDefault();
+        redirectToGame();
+    }
+});

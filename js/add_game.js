@@ -461,7 +461,7 @@ ${game.scores.map(score => `                    <td class="table-cell"><input cl
 </head>
 <body>
     <div class="container page-title">
-        Game1
+        ${game.name}
     </div>
 
     <div class="container">
