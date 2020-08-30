@@ -21,20 +21,22 @@
             Options
         </div>
 
-        <div class="options">
-            <div class="option">
+        <div class="sub-container">
+            <div class="sub-container--element">
                 <label for="name">Name:</label>
                 <input type="text" class="option-input" id="name-input">
             </div>
 
-            <div class="option">
+            <div class="sub-container--element">
                 <label for="date">Date:</label>
-                <input type="date" class="option-input" id="datepicker">
+                <input type="date" class="option-input" id="datepicker" required="required">
             </div>
 
-            <div class="option">
-                Select expansion:
-                <input type="button" class="option-input" value="Show" onclick="hideCheckboxContainer(this, 'expansion-checkbox-container')">
+            <div class="sub-container--element">
+                <div>
+                    <label for="hide-expansions">Select expansion:</label>
+                    <input type="button" id="hide-expansions" class="option-input" value="Show" onclick="hideCheckboxContainer(this, 'expansion-checkbox-container')">
+                </div>                
                 <div class="checkbox-list" style="display: none;" id="expansion-checkbox-container">
                     <label class="checkbox-label">
                         <input type="checkbox" checked="true" value="Base" disabled="true">Base
@@ -67,20 +69,19 @@
                 </div>
             </div>
 
-            <div class="option">
+            <div class="sub-container--element">
                 <label for="generations">Number of generations</label>            
                 <input type="number" class="option-input"  min="1" max="20" id="generations">
             </div>
 
-            <div class="option">
+            <div class="sub-container--element">
                 <label for="player-number">Number of players</label>
                 <input type="number" class="option-input"  min="1" max="5" id="player-number" value="2" onchange="generatePlayerInputs()">
                 
                 <div class = "player-list" id="player-list">  
                 </div>
 
-                <datalist id="datalist-players">
-                </datalist>
+                <datalist id="datalist-players"></datalist>
             </div>
 
             <div class="" id="base-option-generate">
@@ -93,9 +94,11 @@
         <div class="container-banner">
             Colonies
         </div>
-        <div class="options option">
-            Select colonies:
-            <input class="option-input" type="button" value="Hide" onclick="hideCheckboxContainer(this, 'colony-checkbox-container')">
+        <div class="sub-container sub-container--element">
+            <div>
+                <label for="hide-colonies">Select colonies:</label>
+                <input class="option-input" id="hide-colonies" type="button" value="Hide" onclick="hideCheckboxContainer(this, 'colony-checkbox-container')">    
+            </div>
             <div class="checkbox-list" id="colony-checkbox-container">
                 <label class="checkbox-label">
                     <input type="checkbox" onclick="checkboxFunction(this)" id="callisto-checkbox" value="callisto">Callisto
@@ -154,14 +157,14 @@
             Points
         </div>
 
-        <div class="option checkbox-list" style="width: 350px;">
+        <div class="sub-container sub-container--element checkbox-list" style="width: 350px;">
             <label class="checkbox-label">
                 <input type="checkbox" id="gold-lead-input" checked="" value="Gold lead" onclick="goldLeadFunction()">Gold lead
                 <span class="checkmark"></span>
             </label>
         </div>
 
-        <div class="options option" id="points-table-div">
+        <div class="sub-container sub-container--element" id="points-table-div">
             <table class="table" id="points-table">
             </table>
         </div>
@@ -176,12 +179,15 @@
             <input type="password" class="submit-input" id="password-field" placeholder="Password" >
             <input type="button" class="submit-input " id="submit-button" value="Submit" onclick="submitForm()">
         </div>
-        
+    </div>
+    <div class="link-button-wrapper">
+        <button class="link-button" onclick="window.location='/index.html';">Main page</button>
     </div>
 </body>
 <footer>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/3.1.2/rollups/aes.js"></script>    
     <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/3.1.2/rollups/sha256.js"></script>    
-    <script type="module" src="add_game.js"></script>
+    <script type="module" src="js/util.js"></script>
+    <script type="module" src="js/add_game.js"></script>
 </footer>
 

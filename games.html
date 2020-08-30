@@ -3,19 +3,50 @@
 <head>
     <meta charset="utf-8"/>
     <link href="css/meta.css" rel="stylesheet" type="text/css">    
-    <link href="css/index.css" rel="stylesheet" type="text/css">    
+    <link href="css/games.css" rel="stylesheet" type="text/css">    
+    <link href="css/checkbox.css" rel="stylesheet" type="text/css">    
+
 </head>
 <body>
-    <div class="link-container-wrapper">
-        <div class="link-container">
-            <button class="link-button" onclick="window.location='/add_game.html';">Add game</button>
-            <button class="link-button" onclick="window.location='/player_stats.html';">Player stats</button>
-            <button class="link-button" onclick="window.location='/corporation_stats.html';">Corporation stats</button>
-            <button class="link-button" onclick="window.location='/games.html';">Played games</button>
+
+    <div class="container page-title">
+        Played games
+    </div>
+    
+    <div class="container">
+        <div class="container-banner">
+            Links
+        </div>
+        <div class="sub-container">
+            <div class="sub-container--element">
+                <div>
+                    <label for="game-search">Search:</label>
+                    <input type="text" id="game-search" placeholder="Game name" class="option-input" list="datalist-games">
+                    <datalist id="datalist-games"></datalist>
+                </div>
+            </div>
+            <div class="sub-container--element">
+                <div>
+                    <label for="hide-game">Select game:</label>
+                    <input type="button" id="hide-game" class="option-input" value="Show" onclick="hideContainer(this, 'game-link-list')">
+                </div>
+                <div class="game-link-list" style="display: none;" id="game-link-list">
+                    <button class="game-link-button" onclick="window.location='/games.html';">Played games</button>
+                    <button class="game-link-button" onclick="window.location='/games.html';">Played games</button>
+                    <button class="game-link-button" onclick="window.location='/games.html';">Played games</button>
+                    <button class="game-link-button" onclick="window.location='/games.html';">Played games</button>
+                    <button class="game-link-button" onclick="window.location='/games.html';">Played games</button>
+                    <button class="game-link-button" onclick="window.location='/games.html';">Played games</button>
+                    <button class="game-link-button" onclick="window.location='/games.html';">Played games</button>
+                </div>
+            </div>
         </div>
     </div>
+    <div class="link-button-wrapper">
+        <button class="link-button" onclick="window.location='/index.html';">Main page</button>
+    </div>
 </body>
-
 <footer>
-
+    <script type="module" src="js/util.js"></script>
+    <script type="module" src="js/games.js"></script>
 </footer>
