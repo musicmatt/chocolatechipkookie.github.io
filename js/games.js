@@ -38,17 +38,8 @@ async function loadExternalData(){
 
 loadExternalData();
 
-generateGameSite(null)
-
-// Loads players and corporations from database
-async function generateGameSite(game){
-    const octokit = new Octokit();
-
-    // Fetch file from git
-    var data = await getFile("data/games.json", octokit);
-    // Decode base64 file content and parse json
-    game = JSON.parse(b64_to_utf8(data.data.content))[78];
-
+// Generates the html for the page
+function generateGameSite(game){
     var names = game.scores.map(score => `                    <td class="table-cell" style="font-weight: bolder; font-family: 'Courier New', Courier, monospace;">${score.player}</td>`).join('\n');
     var corp = game.scores.map(score => `                    <td class="table-cell">${score.corporation}</td>`).join('\n');
     var tr = game.scores.map(score => `                    <td class="table-cell"><input class="table-input" type="text" disabled value="${score.tr}"></td>`).join('\n');
@@ -88,8 +79,7 @@ ${game.scores.map(score => `                    <td class="table-cell"><input cl
     }
 
 
-    var site = 
-`
+    return `
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -134,7 +124,7 @@ ${game.scores.map(score => `                    <td class="table-cell"><input cl
             </div>
             <div class="sub-container--element">
                 <label for="winner-input">Winner:</label>
-                <input type="text" class="option-input" id="winner-input" disabled value="${game.winner}">
+                <input type="text" class="option-input" id="winner-input" style="font-weight: bolder; font-family: 'Courier New', Courier, monospace;" disabled value="${game.winner}">
             </div>
             <div class="sub-container--element">
                 <label for="win-corp-input">Winner corporation:</label>
@@ -207,6 +197,4 @@ ${note}
 <footer>
 </footer>
 `
-
-console.log(site);
 }
