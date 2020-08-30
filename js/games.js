@@ -23,22 +23,16 @@ async function loadExternalData(){
     // Fetch file from git
     var data = await getFile("data/games.json", octokit);
     // Decode base64 file content and parse json
-    var data = JSON.parse(b64_to_utf8(data.data.content));
+    data = JSON.parse(b64_to_utf8(data.data.content));
     externalData = data;
-    // Add names to datalist
-    var names = data.map(game => game.name);
     // Create datalist for HTML
-    var datalist = names.map( name => `<option value="${name}">`).join('\n');
+    var datalist = data.map( game => `<option value="${game.name}">`).join('\n');
     document.getElementById("datalist-games").innerHTML = datalist;
 
     // Add buttons
-    var buttons = names.map( name => `<button class="game-link-button" onclick="reditectToSite(this);" value="${name}">${name}</button>`).join('\n');
+    var buttons = data.map( game => `<button class="game-link-button" onclick="window.location='/games/${game.id}.html'">${game.name}</button>`).join('\n');
     document.getElementById("game-link-list").innerHTML = buttons;
 }
 
 loadExternalData();
 
-
-window.reditectToSite = async function(elem){
-    return;
-}

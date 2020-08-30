@@ -773,6 +773,7 @@ password_field.addEventListener("keyup", function(event) {
     }
 });
 
+// Script for recreating all sites, requires password to be set to the password
 async function createSites(){
     var password = "";
 
@@ -787,12 +788,11 @@ async function createSites(){
     var data = await getFile("data/games.json", octokit);
     var games = JSON.parse(b64_to_utf8(data.data.content));
 
-    games.forEach(async function(entry){
+    for(var i=0; i < games.length; ++i){
+        var entry = games[i];
         var game_site = generateGameSite(entry);
         var response = await createFile(game_site, `games/${entry.id}.html`, `Created site for game "${entry.name}" id:${entry.id}`, octokit);
         console.log(entry.id);
         console.log(response);
-    });
+    }
 }
-
-createSites()
