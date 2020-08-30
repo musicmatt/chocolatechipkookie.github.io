@@ -42,12 +42,7 @@ window.getFile = async function(filepath, octokit){
 //Checks if git file exists
 window.checkFile = async function(filepath, octokit){
     try {
-        await octokit.repos.getContents({
-            method: 'HEAD',
-            owner,
-            repo,
-            path
-        });
+        getFile(filepath, octokit)
         return true;
     } catch (error) {
         if (error.status === 404) {
@@ -60,7 +55,7 @@ window.checkFile = async function(filepath, octokit){
 }
 
 //Updates git file
-window.updateFile = async function(content, filepath, message='', octokit){
+window.updateFile = async function(content, filepath, message, octokit){
     var prev_blob = await getFile(filepath, octokit);
     
     const response = await octokit.request(`PUT https://api.github.com/repos/${owner}/${repo}/contents/${filepath}`, 
@@ -76,7 +71,7 @@ window.updateFile = async function(content, filepath, message='', octokit){
 }
 
 //Create git file
-window.createFile = async function(content, filepath, message='', octokit){
+window.createFile = async function(content, filepath, message, octokit){
     const response = await octokit.request(`PUT https://api.github.com/repos/${owner}/${repo}/contents/${filepath}`,
     {
         owner: owner,
