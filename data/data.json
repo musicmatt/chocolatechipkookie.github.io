@@ -552,22 +552,22 @@
       ],
       "best_games": [
         {
-          "id": -1,
-          "score": 0
-        },
-        {
-          "id": 9,
-          "score": 156
-        },
-        {
+          "players": 3,
           "id": 28,
           "score": 127
         },
         {
+          "players": 4,
           "id": 33,
           "score": 114
         },
         {
+          "players": 2,
+          "id": 9,
+          "score": 156
+        },
+        {
+          "players": 5,
           "id": 73,
           "score": 89
         }
@@ -645,24 +645,14 @@
       ],
       "best_games": [
         {
-          "id": -1,
-          "score": 0
-        },
-        {
-          "id": -1,
-          "score": 0
-        },
-        {
+          "players": 3,
           "id": 2,
           "score": 86
         },
         {
+          "players": 4,
           "id": 10,
           "score": 77
-        },
-        {
-          "id": -1,
-          "score": 0
         }
       ],
       "fave_corp": {
@@ -1046,22 +1036,22 @@
       ],
       "best_games": [
         {
-          "id": -1,
-          "score": 0
-        },
-        {
-          "id": 9,
-          "score": 132
-        },
-        {
+          "players": 3,
           "id": 37,
           "score": 129
         },
         {
+          "players": 4,
           "id": 33,
           "score": 104
         },
         {
+          "players": 2,
+          "id": 9,
+          "score": 132
+        },
+        {
+          "players": 5,
           "id": 53,
           "score": 88
         }
@@ -1363,22 +1353,17 @@
       ],
       "best_games": [
         {
-          "id": -1,
-          "score": 0
-        },
-        {
-          "id": -1,
-          "score": 0
-        },
-        {
-          "id": 39,
-          "score": 115
-        },
-        {
+          "players": 4,
           "id": 35,
           "score": 103
         },
         {
+          "players": 3,
+          "id": 39,
+          "score": 115
+        },
+        {
+          "players": 5,
           "id": 67,
           "score": 83
         }
@@ -1617,24 +1602,19 @@
       ],
       "best_games": [
         {
-          "id": -1,
-          "score": 0
-        },
-        {
-          "id": -1,
-          "score": 0
-        },
-        {
-          "id": 63,
-          "score": 115
-        },
-        {
+          "players": 4,
           "id": 72,
           "score": 93
         },
         {
-          "id": 62,
+          "players": 5,
+          "id": 54,
           "score": 81
+        },
+        {
+          "players": 3,
+          "id": 63,
+          "score": 115
         }
       ],
       "fave_corp": {
@@ -1668,24 +1648,9 @@
       ],
       "best_games": [
         {
-          "id": -1,
-          "score": 0
-        },
-        {
-          "id": -1,
-          "score": 0
-        },
-        {
-          "id": -1,
-          "score": 0
-        },
-        {
+          "players": 4,
           "id": 7,
           "score": 49
-        },
-        {
-          "id": -1,
-          "score": 0
         }
       ],
       "fave_corp": {
@@ -1733,24 +1698,9 @@
       ],
       "best_games": [
         {
-          "id": -1,
-          "score": 0
-        },
-        {
-          "id": -1,
-          "score": 0
-        },
-        {
-          "id": -1,
-          "score": 0
-        },
-        {
+          "players": 4,
           "id": 24,
           "score": 80
-        },
-        {
-          "id": -1,
-          "score": 0
         }
       ],
       "fave_corp": {
@@ -1784,24 +1734,9 @@
       ],
       "best_games": [
         {
-          "id": -1,
-          "score": 0
-        },
-        {
-          "id": -1,
-          "score": 0
-        },
-        {
-          "id": -1,
-          "score": 0
-        },
-        {
+          "players": 4,
           "id": 11,
           "score": 58
-        },
-        {
-          "id": -1,
-          "score": 0
         }
       ],
       "fave_corp": {
@@ -1835,24 +1770,9 @@
       ],
       "best_games": [
         {
-          "id": -1,
-          "score": 0
-        },
-        {
-          "id": -1,
-          "score": 0
-        },
-        {
-          "id": -1,
-          "score": 0
-        },
-        {
+          "players": 4,
           "id": 11,
           "score": 77
-        },
-        {
-          "id": -1,
-          "score": 0
         }
       ],
       "fave_corp": {
@@ -1893,24 +1813,9 @@
       ],
       "best_games": [
         {
-          "id": -1,
-          "score": 0
-        },
-        {
-          "id": -1,
-          "score": 0
-        },
-        {
-          "id": -1,
-          "score": 0
-        },
-        {
+          "players": 4,
           "id": 24,
           "score": 75
-        },
-        {
-          "id": -1,
-          "score": 0
         }
       ],
       "fave_corp": {
@@ -2210,22 +2115,17 @@
       ],
       "best_games": [
         {
-          "id": -1,
-          "score": 0
-        },
-        {
-          "id": -1,
-          "score": 0
-        },
-        {
-          "id": 32,
-          "score": 106
-        },
-        {
+          "players": 4,
           "id": 33,
           "score": 107
         },
         {
+          "players": 3,
+          "id": 32,
+          "score": 106
+        },
+        {
+          "players": 5,
           "id": 62,
           "score": 92
         }
@@ -2268,24 +2168,9 @@
       ],
       "best_games": [
         {
-          "id": -1,
-          "score": 0
-        },
-        {
-          "id": -1,
-          "score": 0
-        },
-        {
-          "id": -1,
-          "score": 0
-        },
-        {
+          "players": 4,
           "id": 16,
           "score": 79
-        },
-        {
-          "id": -1,
-          "score": 0
         }
       ],
       "fave_corp": {
@@ -2326,24 +2211,9 @@
       ],
       "best_games": [
         {
-          "id": -1,
-          "score": 0
-        },
-        {
-          "id": -1,
-          "score": 0
-        },
-        {
-          "id": -1,
-          "score": 0
-        },
-        {
+          "players": 4,
           "id": 17,
           "score": 85
-        },
-        {
-          "id": -1,
-          "score": 0
         }
       ],
       "fave_corp": {
@@ -2587,24 +2457,19 @@
       ],
       "best_games": [
         {
-          "id": -1,
-          "score": 0
-        },
-        {
-          "id": -1,
-          "score": 0
-        },
-        {
-          "id": 37,
-          "score": 97
-        },
-        {
+          "players": 4,
           "id": 35,
           "score": 102
         },
         {
+          "players": 5,
           "id": 59,
           "score": 78
+        },
+        {
+          "players": 3,
+          "id": 37,
+          "score": 97
         }
       ],
       "fave_corp": {
@@ -2638,24 +2503,9 @@
       ],
       "best_games": [
         {
-          "id": -1,
-          "score": 0
-        },
-        {
-          "id": -1,
-          "score": 0
-        },
-        {
-          "id": -1,
-          "score": 0
-        },
-        {
+          "players": 4,
           "id": 19,
           "score": 62
-        },
-        {
-          "id": -1,
-          "score": 0
         }
       ],
       "fave_corp": {
@@ -2703,24 +2553,14 @@
       ],
       "best_games": [
         {
-          "id": -1,
-          "score": 0
-        },
-        {
-          "id": -1,
-          "score": 0
-        },
-        {
-          "id": -1,
-          "score": 0
-        },
-        {
-          "id": 21,
-          "score": 56
-        },
-        {
+          "players": 5,
           "id": 70,
           "score": 53
+        },
+        {
+          "players": 4,
+          "id": 21,
+          "score": 56
         }
       ],
       "fave_corp": {
@@ -2768,24 +2608,14 @@
       ],
       "best_games": [
         {
-          "id": -1,
-          "score": 0
-        },
-        {
-          "id": -1,
-          "score": 0
-        },
-        {
-          "id": -1,
-          "score": 0
-        },
-        {
-          "id": 21,
-          "score": 58
-        },
-        {
+          "players": 5,
           "id": 20,
           "score": 62
+        },
+        {
+          "players": 4,
+          "id": 21,
+          "score": 58
         }
       ],
       "fave_corp": {
@@ -2847,24 +2677,14 @@
       ],
       "best_games": [
         {
-          "id": -1,
-          "score": 0
-        },
-        {
-          "id": -1,
-          "score": 0
-        },
-        {
-          "id": -1,
-          "score": 0
-        },
-        {
-          "id": 50,
-          "score": 71
-        },
-        {
+          "players": 5,
           "id": 53,
           "score": 83
+        },
+        {
+          "players": 4,
+          "id": 50,
+          "score": 71
         }
       ],
       "fave_corp": {
@@ -2898,22 +2718,7 @@
       ],
       "best_games": [
         {
-          "id": -1,
-          "score": 0
-        },
-        {
-          "id": -1,
-          "score": 0
-        },
-        {
-          "id": -1,
-          "score": 0
-        },
-        {
-          "id": -1,
-          "score": 0
-        },
-        {
+          "players": 5,
           "id": 30,
           "score": 55
         }
@@ -3012,22 +2817,12 @@
       ],
       "best_games": [
         {
-          "id": -1,
-          "score": 0
-        },
-        {
-          "id": -1,
-          "score": 0
-        },
-        {
-          "id": -1,
-          "score": 0
-        },
-        {
+          "players": 4,
           "id": 75,
           "score": 80
         },
         {
+          "players": 5,
           "id": 41,
           "score": 68
         }
@@ -3063,22 +2858,7 @@
       ],
       "best_games": [
         {
-          "id": -1,
-          "score": 0
-        },
-        {
-          "id": -1,
-          "score": 0
-        },
-        {
-          "id": -1,
-          "score": 0
-        },
-        {
-          "id": -1,
-          "score": 0
-        },
-        {
+          "players": 5,
           "id": 54,
           "score": 78
         }
@@ -3128,24 +2908,14 @@
       ],
       "best_games": [
         {
-          "id": -1,
-          "score": 0
-        },
-        {
-          "id": -1,
-          "score": 0
-        },
-        {
-          "id": 63,
-          "score": 63
-        },
-        {
-          "id": -1,
-          "score": 0
-        },
-        {
+          "players": 5,
           "id": 59,
           "score": 65
+        },
+        {
+          "players": 3,
+          "id": 63,
+          "score": 63
         }
       ],
       "fave_corp": {
@@ -3179,22 +2949,7 @@
       ],
       "best_games": [
         {
-          "id": -1,
-          "score": 0
-        },
-        {
-          "id": -1,
-          "score": 0
-        },
-        {
-          "id": -1,
-          "score": 0
-        },
-        {
-          "id": -1,
-          "score": 0
-        },
-        {
+          "players": 5,
           "id": 70,
           "score": 56
         }
