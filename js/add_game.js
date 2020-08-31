@@ -570,6 +570,170 @@ ${note}
 `
 }
 
+
+function calculateEloChange(players, game, data){
+
+}
+
+function recalculateStats(player, game, data, games){
+
+    // Operate on data by index
+    var id = data.player_stats.findIndex(elem => elem.player == player);
+
+    // Check if in data stats
+    // If not add entry
+    if (id == -1){
+        var stats = game.scores.find(elem => elem.player == player);
+        var wins = stats.rank == 1 ? 1 : 0;
+        var game_stats = {
+            player: player,
+            games: [
+                {
+                    id: game.id,
+                    corporation: stats.corporation,
+                    rank: stats.rank,
+                    points: stats.total,
+                    players: game.players
+                }
+            ],
+            best_games: [
+                {
+                    players: game.players,
+                    id: game.id,
+                    score: stats.total
+                }
+            ],
+            fave_corp: {
+                name: stats.corporation,
+                total: 1
+            },
+            best_corp: {
+                name: stats.corporation,
+                total: 1,
+                wins: wins
+            },
+            most_wins: {
+                name: stats.corporation,
+                wins: wins
+            },
+            elo: {
+                value: 1000,
+                history: [
+//                    {
+//                        id: 0,
+//                        delta: 0
+//                    }
+                ]
+            }
+        }
+        data.player_stats.push(game_stats);
+        return data;
+    }
+
+    // Else
+    var stats = game.scores.find(elem => elem.player == player);
+
+    // Add game to games
+    data.player_stats[id].games.push({
+        id: game.id,
+        corporation: stats.corporation,
+        rank: stats.rank,
+        points: stats.total,
+        players: game.players
+    });
+
+    // Check player number, and update best game if applicable
+    var best_game_index = data.player_stats[id].best_games.findIndex(elem => elem.players == game.players);
+    if(best_game_index == -1){
+        data.player_stats[id].best_games.push({
+                players: game.players,
+                id: game.id,
+                score: stats.total
+            });
+    } else if (data.player_stats[id].best_games[best_game_index].score < stats.total){
+        data.player_stats[id].best_games[best_game_index].id = game.id;
+        data.player_stats[id].best_games[best_game_index].score = stats.total;
+    }
+        
+    var occurances = {}
+    data.player_stats[id].games.forEach(
+        function (game){
+            if(occurances[game.corporation]){
+                occurances[game.corporation].total += 1;
+                occurances[game.corporation].wins += game.rank == 1 ? 1:0;
+            }
+            else{
+                occurances[game.corporation] = {total: 1, wins: (game.rank == 1 ? 1:0)};
+            }
+        }
+    )
+
+    occurances = Object.entries(occurances);
+    
+    function maxElem(array, key){
+        var tmp = array.map(key);
+        var max_value = Math.max(...tmp);
+        return array[tmp.findIndex(elem => elem == max_value)];
+    }
+
+    function maxElems(array, key){
+        var max_value = Math.max(...array.map(key));
+        return array.filter(elem => key(elem) == max_value);
+    }
+
+    // If fave corp, increment
+    if (data.player_stats[id].fave_corp.name == stats.corporation){
+        data.player_stats[id].fave_corp.total += 1;
+    } else{
+        var fave = maxElems(occurances, corp => corp[1].total);
+        fave = maxElem(fave, corp => corp[1].wins / corp[1].total);
+        data.player_stats[id].fave_corp.name = fave[0];
+        data.player_stats[id].fave_corp.total = fave[1].total;
+    }
+
+    // Update best corp if applicable
+    var best = maxElems(occurances, corp => corp[1].wins / corp[1].total);
+    best = maxElem(best, corp => corp[1].total);
+    data.player_stats[id].best_corp.name = best[0];
+    data.player_stats[id].best_corp.total = best[1].total;
+    data.player_stats[id].best_corp.wins = best[1].wins;
+
+    // Update most wins if applicablee
+    var most_wins = maxElems(occurances, corp => corp[1].wins);
+    most_wins = maxElem(most_wins, corp => -corp[1].total);
+    data.player_stats[id].most_wins.name = most_wins[0];
+    data.player_stats[id].most_wins.wins = most_wins[1].wins;
+
+    return data;
+}
+
+
+window.calculateAllStats = async function (password){
+    // Get GitHub api token by decrypting encrypted token
+    const encrypted_token = "U2FsdGVkX1+n1ehJgHqx60l9tKl1nu1zx0MlMiCXO+YDPnIW/5I0+1JboKey3qjNMo10biUocmSAMHrD0bwJ8Q==";
+    var decrypted = CryptoJS.AES.decrypt(encrypted_token, password);
+
+    // Init Octokit
+    const octokit = new Octokit({auth: decrypted.toString(CryptoJS.enc.Utf8)});
+
+    // Add all players to the database
+    var data = await getFile("data/games.json", octokit);
+    var games = JSON.parse(b64_to_utf8(data.data.content));
+    data = await getFile("data/data.json", octokit);
+    data = JSON.parse(b64_to_utf8(data.data.content));
+
+    data.player_stats = []
+
+    for(var i=0; i < games.length; ++i){
+        games[i].scores.forEach(function(elem){
+            recalculateStats(elem.player, games[i], data, games)
+        });
+    }
+
+    await updateFile(JSON.stringify(data, null, 2), "data/data.json", "Added player_stats to data/data.json", octokit)
+}
+
+
 window.submitForm = async function(){
     // Fetch submit button and set it to disabled
     var submit_button = document.getElementById("submit-button");
@@ -756,14 +920,6 @@ window.submitForm = async function(){
     window.location = "/index.html"
 }
 
-//Used to update the encrypted token in function above
-function encryptToken(token, password){
-    var encrypted = CryptoJS.AES.encrypt(token, password);
-    console.log(encrypted.toString());
-    console.log(CryptoJS.SHA256(password).toString());
-}
-
-
 //Add listener to password field
 var password_field = document.getElementById("password-field");
 password_field.addEventListener("keyup", function(event) {
@@ -773,10 +929,19 @@ password_field.addEventListener("keyup", function(event) {
     }
 });
 
-// Script for recreating all sites, requires password to be set to the password
-async function createSites(){
-    var password = "";
+///////////////////
+//   ADMIN UTIL
+///////////////////
 
+//Used to update the encrypted token in function above
+function encryptToken(token, password){
+    var encrypted = CryptoJS.AES.encrypt(token, password);
+    console.log(encrypted.toString());
+    console.log(CryptoJS.SHA256(password).toString());
+}
+
+// Script for recreating all sites, requires password to be set to the password
+async function createSites(password){
     // Get GitHub api token by decrypting encrypted token
     const encrypted_token = "U2FsdGVkX1+n1ehJgHqx60l9tKl1nu1zx0MlMiCXO+YDPnIW/5I0+1JboKey3qjNMo10biUocmSAMHrD0bwJ8Q==";
     var decrypted = CryptoJS.AES.decrypt(encrypted_token, password);
@@ -789,10 +954,14 @@ async function createSites(){
     var games = JSON.parse(b64_to_utf8(data.data.content));
 
     for(var i=0; i < games.length; ++i){
-        var entry = games[i];
-        var game_site = generateGameSite(entry);
-        var response = await createFile(game_site, `games/${entry.id}.html`, `Created site for game "${entry.name}" id:${entry.id}`, octokit);
-        console.log(entry.id);
-        console.log(response);
+        try{
+            var entry = games[i];
+            var game_site = generateGameSite(entry);
+            var response = await createFile(game_site, `games/${entry.id}.html`, `Created site for game "${entry.name}" id:${entry.id}`, octokit);
+            console.log(entry.id);
+            console.log(response);
+        } catch (error){
+            console.log(error);
+        }
     }
 }

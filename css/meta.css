@@ -70,6 +70,7 @@ body {
     text-align: center;
     font-family: inherit;
     font-size: 15px;
+    background: inherit;
 
     float: right;
     height: 35px;

@@ -3,19 +3,99 @@
 <head>
     <meta charset="utf-8"/>
     <link href="css/meta.css" rel="stylesheet" type="text/css">    
-    <link href="css/index.css" rel="stylesheet" type="text/css">    
+    <link href="css/player_stats.css" rel="stylesheet" type="text/css">    
 </head>
 <body>
-    <div class="link-container-wrapper">
-        <div class="link-container">
-            <button class="link-button" onclick="window.location='/add_game.html';">Add game</button>
-            <button class="link-button" onclick="window.location='/player_stats.html';">Player stats</button>
-            <button class="link-button" onclick="window.location='/corporation_stats.html';">Corporation stats</button>
-            <button class="link-button" onclick="window.location='/games.html';">Played games</button>
+
+    <div class="container page-title">
+        Player stats
+    </div>
+    
+    <div class="container">
+        <div class="container-banner">
+            Player(s)
+        </div>
+        <div class="sub-container">
+            <div class="sub-container--element">
+                <div>
+                    <label for="player-search">Search:</label>
+                    <input type="text" id="player-search" placeholder="Player" class="option-input" list="datalist-players">
+                    <datalist id="datalist-players"></datalist>
+                </div>
+            </div>
+            <div class="sub-container--element">
+                <div>
+                    <label for="hide-game">Select player:</label>
+                    <input type="button" id="hide-players" class="option-input" value="Show" onclick="hideContainer(this, 'player-list')">
+                </div>
+                <div class="player-link-list" style="display: none;" id="player-list">
+                </div>
+            </div>
         </div>
     </div>
+    
+    <div class="container">
+        <div class="container-banner">
+            Stats
+        </div>
+        <div class="sub-container">
+            <div class="sub-container--element">
+                <label for="player-elo">Elo:</label>
+                <input type="text" id="player-elo" disabled class="option-input" value="1200">
+            </div>
+            <div class="sub-container--element">
+                <label for="fav-corp">Favourite corporation:</label>
+                <input type="text" id="fav-corp-number" disabled class="option-input" value="6 times played">
+                <input type="text" id="fav-corp" disabled class="option-input" value="Satrun systems">
+            </div>
+            <div class="sub-container--element">
+                <label for="best-corp">Best corporation:</label>
+                <input type="text" id="best-corp-percentage" disabled class="option-input" value="40% win rate">
+                <input type="text" id="best-corp" disabled class="option-input" value="Satrun systems">
+            </div>
+            <div class="sub-container--element">
+                <label for="best-corp">Most wins:</label>
+                <input type="text" id="most-wins-corp" disabled class="option-input" value="2 wins">
+                <input type="text" id="most-wins" disabled class="option-input" value="Satrun systems">
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="container-banner">
+            Pie charts
+        </div>
+        <div class="sub-container">
+            <div class="sub-container--element">
+                Pie Chart with games played
+            </div>
+            <div class="sub-container--element">
+                Pie Chart with placements
+            </div>
+        </div>
+    </div>
+
+
+    <div class="container">
+        <div class="container-banner">
+            Games
+        </div>
+        <div class="sub-container">
+            <div class="sub-container--element">
+                Best 1, 2, 3, 4, 5 player games with links
+            </div>
+            <div class="sub-container--element">
+                List of games, placements, points and links
+            </div>
+        </div>
+    </div>
+
+
+    <div class="link-button-wrapper">
+        <button class="link-button" onclick="window.location='/index.html';">Main page</button>
+    </div>
 </body>
-
 <footer>
-
+    <script type="module" src="js/util.js"></script>
+    <script type="module" src="js/player_stats.js"></script>
 </footer>

@@ -21,32 +21,31 @@ var externalData = null;
 async function loadExternalData(){
     const octokit = new Octokit();
     // Fetch file from git
-    var data = await getFile("data/games.json", octokit);
+    var data = await getFile("data/data.json", octokit);
     // Decode base64 file content and parse json
     data = JSON.parse(b64_to_utf8(data.data.content));
     externalData = data;
     // Create datalist for HTML
-    var datalist = data.map( game => `<option value="${game.name}">`).join('\n');
-    document.getElementById("datalist-games").innerHTML = datalist;
+    var datalist = data.player_names.map( player => `<option value="${player}">`).join('\n');
+    document.getElementById("datalist-players").innerHTML = datalist;
 
     // Add buttons
-    var buttons = data.map( game => `<button class="game-link-button" onclick="window.location='/games/${game.id}.html'">${game.name}</button>`).join('\n');
-    document.getElementById("game-link-list").innerHTML = buttons;
+    var buttons = data.player_names.map( player => `<button class="player-link-button" onclick="displayPlayerStats('${player}');">${player}</button>`).join('\n');
+    document.getElementById("player-list").innerHTML = buttons;
 }
 
 loadExternalData();
 
-function redirectToGame(){
-    var name = document.getElementById("game-search").value;
-    var id = externalData.filter(elem => elem.name == name)[0].id;
-    window.location = `/games/${id}.html`
-}
-
 //Add listener to password field
-var game_search = document.getElementById("game-search");
+var game_search = document.getElementById("player-search");
 game_search.addEventListener("keyup", function(event) {
     if (event.keyCode === 13) {
         event.preventDefault();
-        redirectToGame();
+        displayPlayerStats(game_search.value);
     }
 });
+
+window.displayPlayerStats = function (name){
+    console.log(name);
+    return;
+}
