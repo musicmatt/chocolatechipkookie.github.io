@@ -69,9 +69,8 @@
   "metadata": {
     "current_id": 79
   },
-  "player_stats": [
-    {
-      "player": "Matteo Samsa",
+  "player_stats": {
+    "Matteo Samsa": {
       "games": [
         {
           "id": 0,
@@ -574,7 +573,8 @@
       ],
       "fave_corp": {
         "name": "Tharsis Republic",
-        "total": 7
+        "total": 7,
+        "wins": 5
       },
       "best_corp": {
         "name": "Phobolog",
@@ -583,6 +583,7 @@
       },
       "most_wins": {
         "name": "Tharsis Republic",
+        "total": 7,
         "wins": 5
       },
       "elo": {
@@ -590,8 +591,7 @@
         "history": []
       }
     },
-    {
-      "player": "Romana Ivković",
+    "Romana Ivković": {
       "games": [
         {
           "id": 0,
@@ -657,7 +657,8 @@
       ],
       "fave_corp": {
         "name": "Beginner",
-        "total": 2
+        "total": 2,
+        "wins": 2
       },
       "best_corp": {
         "name": "Beginner",
@@ -666,6 +667,7 @@
       },
       "most_wins": {
         "name": "Beginner",
+        "total": 2,
         "wins": 2
       },
       "elo": {
@@ -673,8 +675,7 @@
         "history": []
       }
     },
-    {
-      "player": "Jan Mastrović",
+    "Jan Mastrović": {
       "games": [
         {
           "id": 0,
@@ -1058,7 +1059,8 @@
       ],
       "fave_corp": {
         "name": "Tharsis Republic",
-        "total": 7
+        "total": 7,
+        "wins": 1
       },
       "best_corp": {
         "name": "Arklight",
@@ -1067,6 +1069,7 @@
       },
       "most_wins": {
         "name": "Saturn Systems",
+        "total": 5,
         "wins": 2
       },
       "elo": {
@@ -1074,8 +1077,7 @@
         "history": []
       }
     },
-    {
-      "player": "Mia Čaušević",
+    "Mia Čaušević": {
       "games": [
         {
           "id": 4,
@@ -1370,7 +1372,8 @@
       ],
       "fave_corp": {
         "name": "Phobolog",
-        "total": 6
+        "total": 6,
+        "wins": 1
       },
       "best_corp": {
         "name": "Teractor",
@@ -1379,6 +1382,7 @@
       },
       "most_wins": {
         "name": "Teractor",
+        "total": 1,
         "wins": 1
       },
       "elo": {
@@ -1386,8 +1390,7 @@
         "history": []
       }
     },
-    {
-      "player": "Andro Slavić",
+    "Andro Slavić": {
       "games": [
         {
           "id": 6,
@@ -1619,7 +1622,8 @@
       ],
       "fave_corp": {
         "name": "Teractor",
-        "total": 4
+        "total": 4,
+        "wins": 1
       },
       "best_corp": {
         "name": "Saturn Systems",
@@ -1628,6 +1632,7 @@
       },
       "most_wins": {
         "name": "Saturn Systems",
+        "total": 1,
         "wins": 1
       },
       "elo": {
@@ -1635,8 +1640,7 @@
         "history": []
       }
     },
-    {
-      "player": "Luka Lozina",
+    "Luka Lozina": {
       "games": [
         {
           "id": 7,
@@ -1655,7 +1659,8 @@
       ],
       "fave_corp": {
         "name": "Beginner",
-        "total": 1
+        "total": 1,
+        "wins": 0
       },
       "best_corp": {
         "name": "Beginner",
@@ -1664,6 +1669,7 @@
       },
       "most_wins": {
         "name": "Beginner",
+        "total": 1,
         "wins": 0
       },
       "elo": {
@@ -1671,8 +1677,7 @@
         "history": []
       }
     },
-    {
-      "player": "Marijan Vukelić",
+    "Marijan Vukelić": {
       "games": [
         {
           "id": 7,
@@ -1705,7 +1710,8 @@
       ],
       "fave_corp": {
         "name": "Beginner",
-        "total": 1
+        "total": 1,
+        "wins": 1
       },
       "best_corp": {
         "name": "Beginner",
@@ -1714,6 +1720,7 @@
       },
       "most_wins": {
         "name": "Beginner",
+        "total": 1,
         "wins": 1
       },
       "elo": {
@@ -1721,8 +1728,7 @@
         "history": []
       }
     },
-    {
-      "player": "Natan Turčinović",
+    "Natan Turčinović": {
       "games": [
         {
           "id": 11,
@@ -1741,7 +1747,8 @@
       ],
       "fave_corp": {
         "name": "Beginner",
-        "total": 1
+        "total": 1,
+        "wins": 0
       },
       "best_corp": {
         "name": "Beginner",
@@ -1750,6 +1757,7 @@
       },
       "most_wins": {
         "name": "Beginner",
+        "total": 1,
         "wins": 0
       },
       "elo": {
@@ -1757,8 +1765,7 @@
         "history": []
       }
     },
-    {
-      "player": "Vito Papa",
+    "Vito Papa": {
       "games": [
         {
           "id": 11,
@@ -1777,7 +1784,8 @@
       ],
       "fave_corp": {
         "name": "Beginner",
-        "total": 1
+        "total": 1,
+        "wins": 1
       },
       "best_corp": {
         "name": "Beginner",
@@ -1786,6 +1794,7 @@
       },
       "most_wins": {
         "name": "Beginner",
+        "total": 1,
         "wins": 1
       },
       "elo": {
@@ -1793,8 +1802,7 @@
         "history": []
       }
     },
-    {
-      "player": "Dino Šarić",
+    "Dino Šarić": {
       "games": [
         {
           "id": 12,
@@ -1820,7 +1828,8 @@
       ],
       "fave_corp": {
         "name": "Beginner",
-        "total": 1
+        "total": 1,
+        "wins": 0
       },
       "best_corp": {
         "name": "Beginner",
@@ -1829,6 +1838,7 @@
       },
       "most_wins": {
         "name": "Beginner",
+        "total": 1,
         "wins": 0
       },
       "elo": {
@@ -1836,8 +1846,7 @@
         "history": []
       }
     },
-    {
-      "player": "Luka Jenuš",
+    "Luka Jenuš": {
       "games": [
         {
           "id": 13,
@@ -2132,7 +2141,8 @@
       ],
       "fave_corp": {
         "name": "Point Luna",
-        "total": 5
+        "total": 5,
+        "wins": 2
       },
       "best_corp": {
         "name": "Manutech",
@@ -2141,6 +2151,7 @@
       },
       "most_wins": {
         "name": "Manutech",
+        "total": 2,
         "wins": 2
       },
       "elo": {
@@ -2148,8 +2159,7 @@
         "history": []
       }
     },
-    {
-      "player": "Jan/Karla",
+    "Jan/Karla": {
       "games": [
         {
           "id": 16,
@@ -2175,7 +2185,8 @@
       ],
       "fave_corp": {
         "name": "Poseidon",
-        "total": 1
+        "total": 1,
+        "wins": 1
       },
       "best_corp": {
         "name": "Poseidon",
@@ -2184,6 +2195,7 @@
       },
       "most_wins": {
         "name": "Poseidon",
+        "total": 1,
         "wins": 1
       },
       "elo": {
@@ -2191,8 +2203,7 @@
         "history": []
       }
     },
-    {
-      "player": "Mia/Romana",
+    "Mia/Romana": {
       "games": [
         {
           "id": 16,
@@ -2218,7 +2229,8 @@
       ],
       "fave_corp": {
         "name": "Poseidon",
-        "total": 1
+        "total": 1,
+        "wins": 1
       },
       "best_corp": {
         "name": "Poseidon",
@@ -2227,6 +2239,7 @@
       },
       "most_wins": {
         "name": "Poseidon",
+        "total": 1,
         "wins": 1
       },
       "elo": {
@@ -2234,8 +2247,7 @@
         "history": []
       }
     },
-    {
-      "player": "Adi Čaušević",
+    "Adi Čaušević": {
       "games": [
         {
           "id": 18,
@@ -2474,7 +2486,8 @@
       ],
       "fave_corp": {
         "name": "Saturn Systems",
-        "total": 5
+        "total": 5,
+        "wins": 2
       },
       "best_corp": {
         "name": "Cheung Shing Mars",
@@ -2483,6 +2496,7 @@
       },
       "most_wins": {
         "name": "Saturn Systems",
+        "total": 5,
         "wins": 2
       },
       "elo": {
@@ -2490,8 +2504,7 @@
         "history": []
       }
     },
-    {
-      "player": "Mia/Jan",
+    "Mia/Jan": {
       "games": [
         {
           "id": 19,
@@ -2510,7 +2523,8 @@
       ],
       "fave_corp": {
         "name": "Helion",
-        "total": 1
+        "total": 1,
+        "wins": 0
       },
       "best_corp": {
         "name": "Helion",
@@ -2519,6 +2533,7 @@
       },
       "most_wins": {
         "name": "Helion",
+        "total": 1,
         "wins": 0
       },
       "elo": {
@@ -2526,8 +2541,7 @@
         "history": []
       }
     },
-    {
-      "player": "Filip Pavletić",
+    "Filip Pavletić": {
       "games": [
         {
           "id": 20,
@@ -2565,7 +2579,8 @@
       ],
       "fave_corp": {
         "name": "Inventrix",
-        "total": 1
+        "total": 1,
+        "wins": 0
       },
       "best_corp": {
         "name": "Inventrix",
@@ -2574,6 +2589,7 @@
       },
       "most_wins": {
         "name": "Inventrix",
+        "total": 1,
         "wins": 0
       },
       "elo": {
@@ -2581,8 +2597,7 @@
         "history": []
       }
     },
-    {
-      "player": "Hrvoje Maligec",
+    "Hrvoje Maligec": {
       "games": [
         {
           "id": 20,
@@ -2620,7 +2635,8 @@
       ],
       "fave_corp": {
         "name": "Poseidon",
-        "total": 1
+        "total": 1,
+        "wins": 1
       },
       "best_corp": {
         "name": "Poseidon",
@@ -2629,6 +2645,7 @@
       },
       "most_wins": {
         "name": "Poseidon",
+        "total": 1,
         "wins": 1
       },
       "elo": {
@@ -2636,8 +2653,7 @@
         "history": []
       }
     },
-    {
-      "player": "Mislav Monjac",
+    "Mislav Monjac": {
       "games": [
         {
           "id": 29,
@@ -2689,7 +2705,8 @@
       ],
       "fave_corp": {
         "name": "Aridor",
-        "total": 2
+        "total": 2,
+        "wins": 0
       },
       "best_corp": {
         "name": "Vitor",
@@ -2698,6 +2715,7 @@
       },
       "most_wins": {
         "name": "Vitor",
+        "total": 1,
         "wins": 1
       },
       "elo": {
@@ -2705,8 +2723,7 @@
         "history": []
       }
     },
-    {
-      "player": "Nola Smolica",
+    "Nola Smolica": {
       "games": [
         {
           "id": 30,
@@ -2725,7 +2742,8 @@
       ],
       "fave_corp": {
         "name": "Saturn Systems",
-        "total": 1
+        "total": 1,
+        "wins": 0
       },
       "best_corp": {
         "name": "Saturn Systems",
@@ -2734,6 +2752,7 @@
       },
       "most_wins": {
         "name": "Saturn Systems",
+        "total": 1,
         "wins": 0
       },
       "elo": {
@@ -2741,8 +2760,7 @@
         "history": []
       }
     },
-    {
-      "player": "Dolores Frančišković",
+    "Dolores Frančišković": {
       "games": [
         {
           "id": 34,
@@ -2829,7 +2847,8 @@
       ],
       "fave_corp": {
         "name": "Tharsis Republic",
-        "total": 2
+        "total": 2,
+        "wins": 0
       },
       "best_corp": {
         "name": "Tharsis Republic",
@@ -2838,6 +2857,7 @@
       },
       "most_wins": {
         "name": "Saturn Systems",
+        "total": 1,
         "wins": 0
       },
       "elo": {
@@ -2845,8 +2865,7 @@
         "history": []
       }
     },
-    {
-      "player": "Marko Blaženić",
+    "Marko Blaženić": {
       "games": [
         {
           "id": 54,
@@ -2865,7 +2884,8 @@
       ],
       "fave_corp": {
         "name": "Tharsis Republic",
-        "total": 1
+        "total": 1,
+        "wins": 0
       },
       "best_corp": {
         "name": "Tharsis Republic",
@@ -2874,6 +2894,7 @@
       },
       "most_wins": {
         "name": "Tharsis Republic",
+        "total": 1,
         "wins": 0
       },
       "elo": {
@@ -2881,8 +2902,7 @@
         "history": []
       }
     },
-    {
-      "player": "Robert Bulaić",
+    "Robert Bulaić": {
       "games": [
         {
           "id": 54,
@@ -2920,7 +2940,8 @@
       ],
       "fave_corp": {
         "name": "Phobolog",
-        "total": 1
+        "total": 1,
+        "wins": 0
       },
       "best_corp": {
         "name": "Phobolog",
@@ -2929,6 +2950,7 @@
       },
       "most_wins": {
         "name": "Phobolog",
+        "total": 1,
         "wins": 0
       },
       "elo": {
@@ -2936,8 +2958,7 @@
         "history": []
       }
     },
-    {
-      "player": "Juraj Vladika",
+    "Juraj Vladika": {
       "games": [
         {
           "id": 70,
@@ -2956,7 +2977,8 @@
       ],
       "fave_corp": {
         "name": "Teractor",
-        "total": 1
+        "total": 1,
+        "wins": 0
       },
       "best_corp": {
         "name": "Teractor",
@@ -2965,6 +2987,7 @@
       },
       "most_wins": {
         "name": "Teractor",
+        "total": 1,
         "wins": 0
       },
       "elo": {
@@ -2972,5 +2995,5 @@
         "history": []
       }
     }
-  ]
+  }
 }
