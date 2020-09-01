@@ -848,7 +848,7 @@ window.submitForm = async function(){
     
     // Create entry
     var entry = {
-        id: player_data.metadata.id,
+        id: metadata.metadata.id,
         name: name,
         note: note,
         date: date,
