@@ -67,7 +67,7 @@
     "Orijan Markić"
   ],
   "metadata": {
-    "current_id": 80,
+    "current_id": 81,
     "id": null
   },
   "player_stats": {
@@ -561,6 +561,13 @@
           "rank": 4,
           "points": 89,
           "players": 5
+        },
+        {
+          "id": 80,
+          "corporation": "Teractor",
+          "rank": 3,
+          "points": 81,
+          "players": 4
         }
       ],
       "best_games": [
@@ -1060,6 +1067,13 @@
           "rank": 3,
           "points": 89,
           "players": 5
+        },
+        {
+          "id": 80,
+          "corporation": "Point Luna",
+          "rank": 1,
+          "points": 84,
+          "players": 4
         }
       ],
       "best_games": [
@@ -1094,8 +1108,8 @@
         "wins": 1
       },
       "most_wins": {
-        "name": "Saturn Systems",
-        "total": 5,
+        "name": "Point Luna",
+        "total": 4,
         "wins": 2
       },
       "elo": {
@@ -2159,6 +2173,13 @@
           "rank": 1,
           "points": 100,
           "players": 5
+        },
+        {
+          "id": 80,
+          "corporation": "Vitor",
+          "rank": 2,
+          "points": 83,
+          "players": 4
         }
       ],
       "best_games": [
@@ -2516,6 +2537,13 @@
           "rank": 2,
           "points": 93,
           "players": 5
+        },
+        {
+          "id": 80,
+          "corporation": "Recyclon",
+          "rank": 4,
+          "points": 67,
+          "players": 4
         }
       ],
       "best_games": [
