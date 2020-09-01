@@ -67,7 +67,8 @@
     "Orijan Markić"
   ],
   "metadata": {
-    "current_id": 79
+    "current_id": 79,
+    "id": null
   },
   "player_stats": {
     "Matteo Samsa": {
@@ -547,6 +548,12 @@
           "rank": 3,
           "points": 56,
           "players": 4
+        },
+        {
+          "corporation": "Inventrix",
+          "rank": 4,
+          "points": 89,
+          "players": 5
         }
       ],
       "best_games": [
@@ -1033,6 +1040,12 @@
           "rank": 4,
           "points": 62,
           "players": 5
+        },
+        {
+          "corporation": "Thorgate",
+          "rank": 3,
+          "points": 89,
+          "players": 5
         }
       ],
       "best_games": [
@@ -1053,8 +1066,7 @@
         },
         {
           "players": 5,
-          "id": 53,
-          "score": 88
+          "score": 89
         }
       ],
       "fave_corp": {
@@ -2120,6 +2132,12 @@
           "rank": 2,
           "points": 62,
           "players": 4
+        },
+        {
+          "corporation": "Manutech",
+          "rank": 1,
+          "points": 100,
+          "players": 5
         }
       ],
       "best_games": [
@@ -2135,8 +2153,7 @@
         },
         {
           "players": 5,
-          "id": 62,
-          "score": 92
+          "score": 100
         }
       ],
       "fave_corp": {
@@ -2146,13 +2163,13 @@
       },
       "best_corp": {
         "name": "Manutech",
-        "total": 2,
-        "wins": 2
+        "total": 3,
+        "wins": 3
       },
       "most_wins": {
         "name": "Manutech",
-        "total": 2,
-        "wins": 2
+        "total": 3,
+        "wins": 3
       },
       "elo": {
         "value": 1000,
@@ -2465,6 +2482,12 @@
           "rank": 1,
           "points": 80,
           "players": 4
+        },
+        {
+          "corporation": "Saturn Systems",
+          "rank": 2,
+          "points": 93,
+          "players": 5
         }
       ],
       "best_games": [
@@ -2475,8 +2498,7 @@
         },
         {
           "players": 5,
-          "id": 59,
-          "score": 78
+          "score": 93
         },
         {
           "players": 3,
@@ -2486,7 +2508,7 @@
       ],
       "fave_corp": {
         "name": "Saturn Systems",
-        "total": 5,
+        "total": 6,
         "wins": 2
       },
       "best_corp": {
@@ -2496,7 +2518,7 @@
       },
       "most_wins": {
         "name": "Saturn Systems",
-        "total": 5,
+        "total": 6,
         "wins": 2
       },
       "elo": {
@@ -2987,6 +3009,41 @@
       },
       "most_wins": {
         "name": "Teractor",
+        "total": 1,
+        "wins": 0
+      },
+      "elo": {
+        "value": 1000,
+        "history": []
+      }
+    },
+    "Orijan Markić": {
+      "games": [
+        {
+          "corporation": "Phobolog",
+          "rank": 5,
+          "points": 56,
+          "players": 5
+        }
+      ],
+      "best_games": [
+        {
+          "players": 5,
+          "score": 56
+        }
+      ],
+      "fave_corp": {
+        "name": "Phobolog",
+        "total": 1,
+        "wins": 0
+      },
+      "best_corp": {
+        "name": "Phobolog",
+        "total": 1,
+        "wins": 0
+      },
+      "most_wins": {
+        "name": "Phobolog",
         "total": 1,
         "wins": 0
       },
