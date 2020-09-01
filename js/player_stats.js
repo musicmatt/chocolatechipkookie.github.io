@@ -45,7 +45,36 @@ game_search.addEventListener("keyup", function(event) {
     }
 });
 
+window.playerSearch = function(){
+    displayPlayerStats(document.getElementById("player-search").value);
+}
+
 window.displayPlayerStats = function (name){
-    console.log(name);
+
+    var player_data = externalData.player_stats[name];
+    console.log(player_data);
+
+    document.getElementById("player-name").value = name;    
+
+    document.getElementById("player-total-games").value = player_data.games.length;
+    document.getElementById("fave-corp-number").value = `${player_data.fave_corp.total} games / ${player_data.fave_corp.wins} wins`;
+    document.getElementById("fave-corp").value = player_data.fave_corp.name;
+
+    document.getElementById("best-corp-number").value = `${player_data.best_corp.wins/player_data.best_corp.total * 100}% ( ${player_data.best_corp.wins} / ${player_data.best_corp.total} )`;
+    document.getElementById("best-corp").value = player_data.best_corp.name;
+
+    document.getElementById("win-corp-number").value = `${player_data.most_wins.wins} of ${player_data.most_wins.total} games`;
+    document.getElementById("win-corp").value = player_data.most_wins.name;
+
+    document.getElementById("stat-container").style.display = "block";
+
+    player_data.best_games.forEach(function(game){
+        var element_id = `${game.players}-game`;
+        document.getElementById(element_id + "-points").value = `${game.score} points scored`;
+        document.getElementById(element_id + "-link").onclick = function(){window.location = `/games/${game.id}.html`;};
+        document.getElementById(element_id).style.display = "block";
+    });
+
+    document.getElementById("game-container").style.display = "block";
     return;
 }

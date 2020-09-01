@@ -78,6 +78,11 @@ body {
     box-sizing: border-box;
 }
 
+.diacritic-text{
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: bolder;
+}
+
 /*
     Links
 */

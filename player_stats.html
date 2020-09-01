@@ -17,51 +17,56 @@
         </div>
         <div class="sub-container">
             <div class="sub-container--element">
-                <div>
-                    <label for="player-search">Search:</label>
-                    <input type="text" id="player-search" placeholder="Player" class="option-input" list="datalist-players">
-                    <datalist id="datalist-players"></datalist>
-                </div>
+                <label for="player-search">Search:</label>
+                <input type="button" id="player-button" class="option-input" style="width: 45px;" value="GO" onclick="playerSearch()">
+                <input type="text" id="player-search" placeholder="Player" class="option-input" style="width: 180px;" list="datalist-players">
+                <datalist id="datalist-players"></datalist>
             </div>
+
             <div class="sub-container--element">
-                <div>
-                    <label for="hide-game">Select player:</label>
-                    <input type="button" id="hide-players" class="option-input" value="Show" onclick="hideContainer(this, 'player-list')">
-                </div>
-                <div class="player-link-list" style="display: none;" id="player-list">
-                </div>
+                <label for="hide-game">Select player:</label>
+                <input type="button" id="hide-players" class="option-input" value="Show" style="width: 225px;" onclick="hideContainer(this, 'player-list')">
+                <div class="player-link-list" style="display: none;" id="player-list"></div>
             </div>
         </div>
     </div>
     
-    <div class="container">
+    <div class="container" id="stat-container" style="display: none;">
         <div class="container-banner">
             Stats
         </div>
         <div class="sub-container">
             <div class="sub-container--element">
+                <label for="player-name">Name:</label>
+                <input type="text" id="player-name" class="stat-input" disabled style="font-family: 'Courier New', Courier, monospace; font-weight: bolder;" value="">
+            </div>
+            <div class="sub-container--element">
+                <label for="player-total-games">Total games:</label>
+                <input type="text" id="player-total-games" class="stat-input" disabled value="">
+            </div>
+            <div class="sub-container--element">
                 <label for="player-elo">Elo:</label>
-                <input type="text" id="player-elo" disabled class="option-input" value="1200">
+                <input type="text" id="player-elo" class="stat-input" disabled value="">
             </div>
             <div class="sub-container--element">
                 <label for="fav-corp">Favourite corporation:</label>
-                <input type="text" id="fav-corp-number" disabled class="option-input" value="6 times played">
-                <input type="text" id="fav-corp" disabled class="option-input" value="Satrun systems">
+                <input type="text" id="fave-corp-number" class="stat-input" disabled  value="">
+                <input type="text" id="fave-corp" disabled class="stat-input" value="">
             </div>
             <div class="sub-container--element">
                 <label for="best-corp">Best corporation:</label>
-                <input type="text" id="best-corp-percentage" disabled class="option-input" value="40% win rate">
-                <input type="text" id="best-corp" disabled class="option-input" value="Satrun systems">
+                <input type="text" id="best-corp-number" class="stat-input" disabled  value="">
+                <input type="text" id="best-corp" class="stat-input" disabled value="">
             </div>
             <div class="sub-container--element">
                 <label for="best-corp">Most wins:</label>
-                <input type="text" id="most-wins-corp" disabled class="option-input" value="2 wins">
-                <input type="text" id="most-wins" disabled class="option-input" value="Satrun systems">
+                <input type="text" id="win-corp-number" class="stat-input" disabled value="">
+                <input type="text" id="win-corp" class="stat-input" disabled value="">
             </div>
         </div>
     </div>
 
-    <div class="container">
+    <div class="container" id="chart-container">
         <div class="container-banner">
             Pie charts
         </div>
@@ -76,11 +81,48 @@
     </div>
 
 
-    <div class="container">
+    <div class="container" id="game-container" style="display: none;">
         <div class="container-banner">
             Games
         </div>
         <div class="sub-container">
+            <div class="sub-container--element">
+                
+                <div class="games-container">
+
+                    <div class="game-container-banner" id="player-list">
+                        BEST GAMES
+                    </div>
+                    <div class="games-subcontainer">
+                        <div class="best-game--super" id="1-game" style="display: none;">
+                            <label>Solo:</label>
+                            <input type="button" id="1-game-link" class="option-input" value="Visit game">
+                            <input type="text" id="1-game-points" class="stat-input" value="102 points" disabled>
+                        </div>
+                        <div class="best-game--super" id="2-game" style="display: none;">
+                            <label>Duel:</label>
+                            <input type="button" id="2-game-link" class="option-input" value="Visit game">
+                            <input type="text" id="2-game-points" class="stat-input" value="" disabled>
+                        </div>
+                        <div class="best-game--super" id="3-game" style="display: none;">
+                            <label>3 players:</label>
+                            <input type="button" id="3-game-link" class="option-input" value="Visit game">
+                            <input type="text" id="3-game-points" class="stat-input" value="102 points" disabled>
+                        </div>
+                        <div class="best-game--super" id="4-game" style="display: none;">
+                            <label>4 players:</label>
+                            <input type="button" id="4-game-link" class="option-input" value="Visit game">
+                            <input type="text" id="4-game-points" class="stat-input" value="102 points" disabled>
+                        </div>
+                        <div class="best-game--super" id="5-game" style="display: none;">
+                            <label>5 players:</label>
+                            <input type="button" id="5-game-link" class="option-input" value="Visit game">
+                            <input type="text" id="5-game-points" class="stat-input" value="102 points" disabled>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
             <div class="sub-container--element">
                 Best 1, 2, 3, 4, 5 player games with links
             </div>
