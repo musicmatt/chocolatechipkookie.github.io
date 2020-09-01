@@ -834,7 +834,7 @@ window.submitForm = async function(){
     )
 
     // Get winner
-    var winner = players.filter(player => player.rank == 1);
+    var winner = players.find(player => player.rank == 1);
 
     // Add all players to the database
     var data = await getFile("data/log.json", octokit);
