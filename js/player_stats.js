@@ -65,6 +65,10 @@ window.displayPlayerStats = function (name){
 
     document.getElementById("stat-container").style.display = "block";
 
+    for(var i = 1; i <= 5; ++i){
+        document.getElementById(`${i}-player`).style.display = "none";
+    }
+
     player_data.best_games.forEach(function(game){
         var all = player_data.games.filter(elem => elem.players == game.players);
         var won = all.filter(elem => elem.rank == 1);
