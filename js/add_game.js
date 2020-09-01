@@ -214,7 +214,7 @@ window.increaseColonyNumber = function (elem){
 
     // Gets the current number of colonies on a moon
     var current_colonies = elem.querySelector("input");
-    current_colonies.value = (parseInt(current_colonies.value) + 1, 10) % 4;
+    current_colonies.value = (parseInt(current_colonies.value, 10) + 1) % 4;
 
     // Gets the text div element of elem
     var text = elem.querySelector("div");
