@@ -413,16 +413,16 @@ function createCode(modes){
 function generateGameSite(game){
     var names = game.scores.map(score => `                    <td class="table-cell" style="font-weight: bolder; font-family: 'Courier New', Courier, monospace;">${score.player}</td>`).join('\n');
     var corp = game.scores.map(score => `                    <td class="table-cell">${score.corporation}</td>`).join('\n');
-    var tr = game.scores.map(score => `                    <td class="table-cell"><input class="table-input" type="text" disabled value="${score.tr}"></td>`).join('\n');
-    var award = game.scores.map(score => `                    <td class="table-cell"><input class="table-input" type="text" disabled value="${score.awards}"></td>`).join('\n');
-    var milestones = game.scores.map(score => `                    <td class="table-cell"><input class="table-input" type="text" disabled value="${score.milestones}"></td>`).join('\n');
-    var greenery = game.scores.map(score => `                    <td class="table-cell"><input class="table-input" type="text" disabled value="${score.greenery}"></td>`).join('\n');
-    var cities = game.scores.map(score => `                    <td class="table-cell"><input class="table-input" type="text" disabled value="${score.cities}"></td>`).join('\n');
-    var cards = game.scores.map(score => `                    <td class="table-cell"><input class="table-input" type="text" disabled value="${score.cards}"></td>`).join('\n');
-    var lead = game.scores.map(score => `                    <td class="table-cell"><input class="table-input" type="text" disabled value="${score.lead}"></td>`).join('\n');
-    var total = game.scores.map(score => `                    <td class="table-cell"><input class="table-input" type="text" disabled value="${score.total}"></td>`).join('\n');
-    var rank = game.scores.map(score => `                    <td class="table-cell"><input class="table-input" type="text" disabled value="${score.rank}"></td>`).join('\n');
-    var note = game.scores.map(score => `                    <td class="table-cell"><input class="table-input" type="text" disabled value="${score.note}"></td>`).join('\n');
+    var tr = game.scores.map(score => `                    <td class="table-cell">${score.tr}</td>`).join('\n');
+    var award = game.scores.map(score => `                    <td class="table-cell">${score.awards}</td>`).join('\n');
+    var milestones = game.scores.map(score => `                    <td class="table-cell">${score.milestones}</td>`).join('\n');
+    var greenery = game.scores.map(score => `                    <td class="table-cell">${score.greenery}</td>`).join('\n');
+    var cities = game.scores.map(score => `                    <td class="table-cell">${score.cities}</td>`).join('\n');
+    var cards = game.scores.map(score => `                    <td class="table-cell">${score.cards}</td>`).join('\n');
+    var lead = game.scores.map(score => `                    <td class="table-cell">${score.lead}</td>`).join('\n');
+    var total = game.scores.map(score => `                    <td class="table-cell">${score.total}</td>`).join('\n');
+    var rank = game.scores.map(score => `                    <td class="table-cell">${score.rank}</td>`).join('\n');
+    var note = game.scores.map(score => `                    <td class="table-cell" style="text-transform: none; font-weight: bolder; font-family: 'Courier New', Courier, monospace;">${score.note}</td>`).join('\n');
 
     lead = 
         `
@@ -628,7 +628,6 @@ function recalculateStats(player, game, data){
     }
 
     // Else
-    console.log(player, game, game.scores)
     var game_stats = game.scores.find(elem => elem.player == player);
     var player_stats = data.player_stats[player];
 
@@ -726,6 +725,8 @@ window.calculateAllStats = async function (password){
     }
 
     await updateFile(JSON.stringify(data, null, 2), "data/data.json", "Added player_stats to data/data.json", octokit)
+
+    console.log("Updated stats");
 }
 
 window.submitForm = async function(){
@@ -961,8 +962,6 @@ async function createSites(password){
             var entry = games[i];
             var game_site = generateGameSite(entry);
             var response = await createFile(game_site, `games/${entry.id}.html`, `Created site for game "${entry.name}" id:${entry.id}`, octokit);
-            console.log(entry.id);
-            console.log(response);
         } catch (error){
             console.log(error);
         }
