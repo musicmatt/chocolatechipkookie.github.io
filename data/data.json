@@ -67,7 +67,7 @@
     "Orijan Markić"
   ],
   "metadata": {
-    "current_id": 79,
+    "current_id": 80,
     "id": null
   },
   "player_stats": {
@@ -550,6 +550,13 @@
           "players": 4
         },
         {
+          "corporation": "Inventrix",
+          "rank": 4,
+          "points": 89,
+          "players": 5
+        },
+        {
+          "id": 79,
           "corporation": "Inventrix",
           "rank": 4,
           "points": 89,
@@ -1042,6 +1049,13 @@
           "players": 5
         },
         {
+          "corporation": "Thorgate",
+          "rank": 3,
+          "points": 89,
+          "players": 5
+        },
+        {
+          "id": 79,
           "corporation": "Thorgate",
           "rank": 3,
           "points": 89,
@@ -2138,6 +2152,13 @@
           "rank": 1,
           "points": 100,
           "players": 5
+        },
+        {
+          "id": 79,
+          "corporation": "Manutech",
+          "rank": 1,
+          "points": 100,
+          "players": 5
         }
       ],
       "best_games": [
@@ -2163,13 +2184,13 @@
       },
       "best_corp": {
         "name": "Manutech",
-        "total": 3,
-        "wins": 3
+        "total": 4,
+        "wins": 4
       },
       "most_wins": {
         "name": "Manutech",
-        "total": 3,
-        "wins": 3
+        "total": 4,
+        "wins": 4
       },
       "elo": {
         "value": 1000,
@@ -2488,6 +2509,13 @@
           "rank": 2,
           "points": 93,
           "players": 5
+        },
+        {
+          "id": 79,
+          "corporation": "Saturn Systems",
+          "rank": 2,
+          "points": 93,
+          "players": 5
         }
       ],
       "best_games": [
@@ -2508,7 +2536,7 @@
       ],
       "fave_corp": {
         "name": "Saturn Systems",
-        "total": 6,
+        "total": 7,
         "wins": 2
       },
       "best_corp": {
@@ -2518,7 +2546,7 @@
       },
       "most_wins": {
         "name": "Saturn Systems",
-        "total": 6,
+        "total": 7,
         "wins": 2
       },
       "elo": {
@@ -3024,6 +3052,13 @@
           "rank": 5,
           "points": 56,
           "players": 5
+        },
+        {
+          "id": 79,
+          "corporation": "Phobolog",
+          "rank": 5,
+          "points": 56,
+          "players": 5
         }
       ],
       "best_games": [
@@ -3034,17 +3069,17 @@
       ],
       "fave_corp": {
         "name": "Phobolog",
-        "total": 1,
+        "total": 2,
         "wins": 0
       },
       "best_corp": {
         "name": "Phobolog",
-        "total": 1,
+        "total": 2,
         "wins": 0
       },
       "most_wins": {
         "name": "Phobolog",
-        "total": 1,
+        "total": 2,
         "wins": 0
       },
       "elo": {
