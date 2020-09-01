@@ -860,7 +860,7 @@ window.submitForm = async function(){
         mode: mode,
         mode_code: mode_code,
         map: map,
-        winner: winner.name,
+        winner: winner.player,
         win_corp: winner.corporation,
         win_score: winner.total,
         players: no_players,
