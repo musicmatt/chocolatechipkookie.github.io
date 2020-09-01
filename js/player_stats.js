@@ -50,10 +50,7 @@ window.playerSearch = function(){
 }
 
 window.displayPlayerStats = function (name){
-
     var player_data = externalData.player_stats[name];
-    console.log(player_data);
-
     document.getElementById("player-name").value = name;    
 
     document.getElementById("player-total-games").value = player_data.games.length;
@@ -69,12 +66,30 @@ window.displayPlayerStats = function (name){
     document.getElementById("stat-container").style.display = "block";
 
     player_data.best_games.forEach(function(game){
-        var element_id = `${game.players}-game`;
-        document.getElementById(element_id + "-points").value = `${game.score} points scored`;
-        document.getElementById(element_id + "-link").onclick = function(){window.location = `/games/${game.id}.html`;};
-        document.getElementById(element_id).style.display = "block";
+        var all = player_data.games.filter(elem => elem.players == game.players);
+        var won = all.filter(elem => elem.rank == 1);
+
+        document.getElementById(`${game.players}-total`).innerHTML = all.length;
+        document.getElementById(`${game.players}-won`).innerHTML = won.length
+        document.getElementById(`${game.players}-winrate`).innerHTML = `${(won.length/all.length*100).toFixed(2)} %`
+        document.getElementById(`${game.players}-best`).innerHTML = game.score;
+        document.getElementById(`${game.players}-link`).onclick = function(){window.location = `/games/${game.id}.html`};
+        document.getElementById(`${game.players}-player`).style.display = "";
     });
 
+    var all = player_data.games;
+    var won = all.filter(elem => elem.rank == 1);
+    var max_points = Math.max(...player_data.best_games.map(game => game.score));
+    var max_id = player_data.best_games.find(game => game.score == max_points).id;
+
+    document.getElementById("all-total").innerHTML = all.length;
+    document.getElementById("all-won").innerHTML = won.length
+    document.getElementById("all-winrate").innerHTML = `${(won.length/all.length*100).toFixed(2)} %`
+    document.getElementById("all-best").innerHTML = max_points;
+    document.getElementById("all-link").onclick = function(){window.location = `/games/${max_id}.html`};
+
+
+    // TODO: Tablica rezultata https://stackoverflow.com/questions/45857682/interpolation-of-colors
     document.getElementById("game-container").style.display = "block";
     return;
 }

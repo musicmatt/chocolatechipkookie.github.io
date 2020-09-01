@@ -4,6 +4,7 @@
     <meta charset="utf-8"/>
     <link href="css/meta.css" rel="stylesheet" type="text/css">    
     <link href="css/player_stats.css" rel="stylesheet" type="text/css">    
+    <link href="css/table.css" rel="stylesheet" type="text/css">    
 </head>
 <body>
 
@@ -66,7 +67,7 @@
         </div>
     </div>
 
-    <div class="container" id="chart-container">
+    <div class="container" id="chart-container" style="display: none;">
         <div class="container-banner">
             Pie charts
         </div>
@@ -87,44 +88,64 @@
         </div>
         <div class="sub-container">
             <div class="sub-container--element">
-                
-                <div class="games-container">
-
-                    <div class="game-container-banner" id="player-list">
-                        BEST GAMES
-                    </div>
-                    <div class="games-subcontainer">
-                        <div class="best-game--super" id="1-game" style="display: none;">
-                            <label>Solo:</label>
-                            <input type="button" id="1-game-link" class="option-input" value="Visit game">
-                            <input type="text" id="1-game-points" class="stat-input" value="102 points" disabled>
-                        </div>
-                        <div class="best-game--super" id="2-game" style="display: none;">
-                            <label>Duel:</label>
-                            <input type="button" id="2-game-link" class="option-input" value="Visit game">
-                            <input type="text" id="2-game-points" class="stat-input" value="" disabled>
-                        </div>
-                        <div class="best-game--super" id="3-game" style="display: none;">
-                            <label>3 players:</label>
-                            <input type="button" id="3-game-link" class="option-input" value="Visit game">
-                            <input type="text" id="3-game-points" class="stat-input" value="102 points" disabled>
-                        </div>
-                        <div class="best-game--super" id="4-game" style="display: none;">
-                            <label>4 players:</label>
-                            <input type="button" id="4-game-link" class="option-input" value="Visit game">
-                            <input type="text" id="4-game-points" class="stat-input" value="102 points" disabled>
-                        </div>
-                        <div class="best-game--super" id="5-game" style="display: none;">
-                            <label>5 players:</label>
-                            <input type="button" id="5-game-link" class="option-input" value="Visit game">
-                            <input type="text" id="5-game-points" class="stat-input" value="102 points" disabled>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="sub-container--element">
-                Best 1, 2, 3, 4, 5 player games with links
+                <table class="table" id="points-table">
+                    <tr id="player-names">
+                        <td class="table-cell">Players</td>
+                        <td class="table-cell">Played</td>
+                        <td class="table-cell">Won</td>
+                        <td class="table-cell">Winrate</td>
+                        <td class="table-cell">Best score</td>
+                        <td class="table-cell">Best game</td>
+                    </tr>
+                    <tr id="1-player" style="display: none;">
+                        <td class="table-cell">1</td>
+                        <td class="table-cell" id="1-total"></td>
+                        <td class="table-cell" id="1-won"></td>
+                        <td class="table-cell" id="1-winrate"></td>
+                        <td class="table-cell" id="1-best"></td>
+                        <td class="table-cell table-button" id="1-link">View best</td>
+                    </tr>
+                    <tr id="2-player" style="display: none;">
+                        <td class="table-cell">2</td>
+                        <td class="table-cell" id="2-total"></td>
+                        <td class="table-cell" id="2-won"></td>
+                        <td class="table-cell" id="2-winrate"></td>
+                        <td class="table-cell" id="2-best"></td>
+                        <td class="table-cell table-button" id="2-link">View best</td>
+                    </tr>
+                    <tr id="3-player" style="display: none;">
+                        <td class="table-cell">3</td>
+                        <td class="table-cell" id="3-total"></td>
+                        <td class="table-cell" id="3-won"></td>
+                        <td class="table-cell" id="3-winrate"></td>
+                        <td class="table-cell" id="3-best"></td>
+                        <td class="table-cell table-button" id="3-link">View best</td>
+                    </tr>
+                    <tr id="4-player" style="display: none;">
+                        <td class="table-cell">4</td>
+                        <td class="table-cell" id="4-total"></td>
+                        <td class="table-cell" id="4-won"></td>
+                        <td class="table-cell" id="4-winrate"></td>
+                        <td class="table-cell" id="4-best"></td>
+                        <td class="table-cell table-button" id="4-link">View best</td>
+                    </tr>
+                    <tr id="5-player" style="display: none;">
+                        <td class="table-cell">5</td>
+                        <td class="table-cell" id="5-total"></td>
+                        <td class="table-cell" id="5-won"></td>
+                        <td class="table-cell" id="5-winrate"></td>
+                        <td class="table-cell" id="5-best"></td>
+                        <td class="table-cell table-button" id="5-link">View best</td>
+                    </tr>
+                    <tr id="all-games">
+                        <td class="table-cell">Total</td>
+                        <td class="table-cell" id="all-total"></td>
+                        <td class="table-cell" id="all-won"></td>
+                        <td class="table-cell" id="all-winrate"></td>
+                        <td class="table-cell" id="all-best"></td>
+                        <td class="table-cell table-button" id="all-link">View best</td>
+                    </tr>
+                </table>
             </div>
             <div class="sub-container--element">
                 List of games, placements, points and links
