@@ -791,7 +791,7 @@ window.submitForm = async function(){
     // Fetch player specific inputs
     var players = Array.from(document.getElementsByClassName("player-input-div"))
         .map(function(elem){
-            return {name: elem.children[0].value, corporation: elem.children[1].value};
+            return {player: elem.children[0].value, corporation: elem.children[1].value};
         });
 
     var categories = [
@@ -850,7 +850,7 @@ window.submitForm = async function(){
     // Create entry
     var entry = {
         id: metadata.metadata.id,
-        player: name,
+        name: name,
         note: note,
         date: date,
         mode: mode,
