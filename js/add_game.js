@@ -822,9 +822,13 @@ window.submitForm = async function(){
 
             for(var i = 0; i < no_players; ++i){
                 //Points vs note in the end
-                players[i][category] = 
-                    category != "note" ? 
-                    parseInt(points[i].value, 10) : points[i].value;
+                if (category == "note"){
+                    players[i]["note"] = points[i].value;
+                }
+                else{
+                    players[i][category] = points[i].value == "" ? 0 : parseInt(points[i].value, 10);
+                }
+
             }
         }
     )
@@ -849,7 +853,7 @@ window.submitForm = async function(){
     
     // Create entry
     var entry = {
-        id: metadata.metadata.id,
+        id: metadata.metadata.current_id,
         name: name,
         note: note,
         date: date,
@@ -867,7 +871,7 @@ window.submitForm = async function(){
     }
 
     // Increase id counter
-    metadata.metadata.id++;
+    metadata.metadata.current_id++;
 
     // Add colonies
     if(mode.includes("Colonies")){
