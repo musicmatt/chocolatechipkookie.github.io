@@ -550,12 +550,6 @@
           "players": 4
         },
         {
-          "corporation": "Inventrix",
-          "rank": 4,
-          "points": 89,
-          "players": 5
-        },
-        {
           "id": 79,
           "corporation": "Inventrix",
           "rank": 4,
@@ -1056,12 +1050,6 @@
           "players": 5
         },
         {
-          "corporation": "Thorgate",
-          "rank": 3,
-          "points": 89,
-          "players": 5
-        },
-        {
           "id": 79,
           "corporation": "Thorgate",
           "rank": 3,
@@ -1094,6 +1082,7 @@
         },
         {
           "players": 5,
+          "id": 79,
           "score": 89
         }
       ],
@@ -2162,12 +2151,6 @@
           "players": 4
         },
         {
-          "corporation": "Manutech",
-          "rank": 1,
-          "points": 100,
-          "players": 5
-        },
-        {
           "id": 79,
           "corporation": "Manutech",
           "rank": 1,
@@ -2195,6 +2178,7 @@
         },
         {
           "players": 5,
+          "id": 79,
           "score": 100
         }
       ],
@@ -2205,13 +2189,13 @@
       },
       "best_corp": {
         "name": "Manutech",
-        "total": 4,
-        "wins": 4
+        "total": 3,
+        "wins": 3
       },
       "most_wins": {
         "name": "Manutech",
-        "total": 4,
-        "wins": 4
+        "total": 3,
+        "wins": 3
       },
       "elo": {
         "value": 1000,
@@ -2526,12 +2510,6 @@
           "players": 4
         },
         {
-          "corporation": "Saturn Systems",
-          "rank": 2,
-          "points": 93,
-          "players": 5
-        },
-        {
           "id": 79,
           "corporation": "Saturn Systems",
           "rank": 2,
@@ -2554,6 +2532,7 @@
         },
         {
           "players": 5,
+          "id": 79,
           "score": 93
         },
         {
@@ -2564,7 +2543,7 @@
       ],
       "fave_corp": {
         "name": "Saturn Systems",
-        "total": 7,
+        "total": 6,
         "wins": 2
       },
       "best_corp": {
@@ -2574,7 +2553,7 @@
       },
       "most_wins": {
         "name": "Saturn Systems",
-        "total": 7,
+        "total": 6,
         "wins": 2
       },
       "elo": {
@@ -3076,12 +3055,6 @@
     "Orijan Markić": {
       "games": [
         {
-          "corporation": "Phobolog",
-          "rank": 5,
-          "points": 56,
-          "players": 5
-        },
-        {
           "id": 79,
           "corporation": "Phobolog",
           "rank": 5,
@@ -3092,22 +3065,23 @@
       "best_games": [
         {
           "players": 5,
+          "id": 79,
           "score": 56
         }
       ],
       "fave_corp": {
         "name": "Phobolog",
-        "total": 2,
+        "total": 1,
         "wins": 0
       },
       "best_corp": {
         "name": "Phobolog",
-        "total": 2,
+        "total": 1,
         "wins": 0
       },
       "most_wins": {
         "name": "Phobolog",
-        "total": 2,
+        "total": 1,
         "wins": 0
       },
       "elo": {
