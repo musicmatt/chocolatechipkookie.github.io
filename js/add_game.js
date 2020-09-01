@@ -702,33 +702,6 @@ function recalculateStats(player, game, data){
     return data;
 }
 
-window.calculateAllStats = async function (password){
-    // Get GitHub api token by decrypting encrypted token
-    const encrypted_token = "U2FsdGVkX1+n1ehJgHqx60l9tKl1nu1zx0MlMiCXO+YDPnIW/5I0+1JboKey3qjNMo10biUocmSAMHrD0bwJ8Q==";
-    var decrypted = CryptoJS.AES.decrypt(encrypted_token, password);
-
-    // Init Octokit
-    const octokit = new Octokit({auth: decrypted.toString(CryptoJS.enc.Utf8)});
-
-    // Add all players to the database
-    var data = await getFile("data/games.json", octokit);
-    var games = JSON.parse(b64_to_utf8(data.data.content));
-    data = await getFile("data/data.json", octokit);
-    data = JSON.parse(b64_to_utf8(data.data.content));
-
-    data.player_stats = {}
-
-    for(var i=0; i < games.length; ++i){
-        games[i].scores.forEach(function(elem){
-            recalculateStats(elem.player, games[i], data)
-        });
-    }
-
-    await updateFile(JSON.stringify(data, null, 2), "data/data.json", "Added player_stats to data/data.json", octokit)
-
-    console.log("Updated stats");
-}
-
 window.submitForm = async function(){
     // Fetch submit button and set it to disabled
     var submit_button = document.getElementById("submit-button");
@@ -921,7 +894,7 @@ window.submitForm = async function(){
     await updateFile(JSON.stringify(metadata, null, 2), "data/data.json", `Added game "${name}"`, octokit);
     await updateFile(JSON.stringify(games_data, null, 2), "data/games.json", `Added game "${name}"`, octokit);
 
-    window.location = `/games/${entry.id}.html`
+    window.location = ``
 }
 
 //Add listener to password field
@@ -944,8 +917,35 @@ function encryptToken(token, password){
     console.log(CryptoJS.SHA256(password).toString());
 }
 
+window.calculateAllStats = async function (password){
+    // Get GitHub api token by decrypting encrypted token
+    const encrypted_token = "U2FsdGVkX1+n1ehJgHqx60l9tKl1nu1zx0MlMiCXO+YDPnIW/5I0+1JboKey3qjNMo10biUocmSAMHrD0bwJ8Q==";
+    var decrypted = CryptoJS.AES.decrypt(encrypted_token, password);
+
+    // Init Octokit
+    const octokit = new Octokit({auth: decrypted.toString(CryptoJS.enc.Utf8)});
+
+    // Add all players to the database
+    var data = await getFile("data/games.json", octokit);
+    var games = JSON.parse(b64_to_utf8(data.data.content));
+    data = await getFile("data/data.json", octokit);
+    data = JSON.parse(b64_to_utf8(data.data.content));
+
+    data.player_stats = {}
+
+    for(var i=0; i < games.length; ++i){
+        games[i].scores.forEach(function(elem){
+            recalculateStats(elem.player, games[i], data)
+        });
+    }
+
+    await updateFile(JSON.stringify(data, null, 2), "data/data.json", "Added player_stats to data/data.json", octokit)
+
+    console.log("Updated stats");
+}
+
 // Script for recreating all sites, requires password to be set to the password
-async function createSites(password){
+window.createSites = async function (password){
     // Get GitHub api token by decrypting encrypted token
     const encrypted_token = "U2FsdGVkX1+n1ehJgHqx60l9tKl1nu1zx0MlMiCXO+YDPnIW/5I0+1JboKey3qjNMo10biUocmSAMHrD0bwJ8Q==";
     var decrypted = CryptoJS.AES.decrypt(encrypted_token, password);
@@ -962,6 +962,7 @@ async function createSites(password){
             var entry = games[i];
             var game_site = generateGameSite(entry);
             var response = await createFile(game_site, `games/${entry.id}.html`, `Created site for game "${entry.name}" id:${entry.id}`, octokit);
+            console.log(`Created site ${games[i].id}.html`);
         } catch (error){
             console.log(error);
         }
