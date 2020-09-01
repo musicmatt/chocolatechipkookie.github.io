@@ -628,6 +628,7 @@ function recalculateStats(player, game, data){
     }
 
     // Else
+    console.log(player, game, game.scores)
     var game_stats = game.scores.find(elem => elem.player == player);
     var player_stats = data.player_stats[player];
 
@@ -849,7 +850,7 @@ window.submitForm = async function(){
     // Create entry
     var entry = {
         id: metadata.metadata.id,
-        name: name,
+        player: name,
         note: note,
         date: date,
         mode: mode,
