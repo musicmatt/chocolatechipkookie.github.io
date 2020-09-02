@@ -917,20 +917,16 @@ window.calculateAllStats = async function (password){
     const octokit = new Octokit({auth: decrypted.toString(CryptoJS.enc.Utf8)});
 
     // Add all players to the database
-    var data = await getFile("data/games.json", octokit);
-    var games = JSON.parse(b64_to_utf8(data.data.content));
-    data = await getFile("data/data.json", octokit);
-    data = JSON.parse(b64_to_utf8(data.data.content));
-
-    data.player_stats = {}
+    var games = JSON.parse(b64_to_utf8((await getFile("data/games.json", octokit)).data.content));
+    var player_stats = JSON.parse(b64_to_utf8((await getFile("data/player_stats.json", octokit)).data.content));
 
     for(var i=0; i < games.length; ++i){
         games[i].scores.forEach(function(elem){
-            recalculateStats(elem.player, games[i], data)
+            recalculateStats(elem.player, games[i], player_stats)
         });
     }
 
-    await updateFile(JSON.stringify(data, null, 2), "data/data.json", "Added player_stats to data/data.json", octokit)
+    await updateFile(JSON.stringify(data, null, 2), "data/player_stats.json", "Added player_stats to data/data.json", octokit)
 
     console.log("Updated stats");
 }
