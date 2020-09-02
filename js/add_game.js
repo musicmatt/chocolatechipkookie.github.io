@@ -199,6 +199,7 @@ setMaps()
 //      AWARDS
 //////////////////
 
+//Update scores for awards
 window.updateAwardScores = function (){
     var awards = Array.from(document.getElementsByClassName("award-select-player")).map(elem => elem.value);
     var player_counts = {}
@@ -245,7 +246,6 @@ window.updateAwardInputs = function (){
     }
 
     var active_awards = getAwards();
-    active_awards.sort();
 
     var awards_select = active_awards.map(award => `<option value="${award}">${award}</option>`).join("\n");
     var active_players_select = util.game_data.active_players.map(player => `<option value="${player}">${player}</option>`).join("\n");
@@ -267,6 +267,79 @@ window.updateAwardInputs = function (){
 //     MILESTONES
 //////////////////////
 
+//Update scores for awards
+window.updateMilestoneScores = function (){
+
+    updateTotals();
+}
+
+//Generates player input fields
+window.updateMilestoneInputs = function (){
+    // Gets the points div, points table and player list nodes
+    var milestones_div = document.getElementById("milestones");
+    var milestone_table = document.getElementById("milestone-table");
+    var player_list = document.getElementById("player-list");
+    var milestone_number = document.getElementById("milestone-number").value;
+
+    if(milestone_number == 0){
+        milestones_div.style.display = "none";
+        return;
+    }
+    
+    // Fetches the names of the players
+    var player_names = Array.from(player_list.children).map(
+        function(element) { return element.children[0].value; }
+    );
+
+    // Creates the name row for the table
+    var name_row = 
+    `<tr id="milestone-names">
+        <td class="table-cell">Name</td>
+        ${player_names.map(element => `<td class="table-cell">${element}</td>`).join("\n")}
+    </tr>`;
+
+    // Creates the inputs for the scores
+    var createInputs = (type, additional = "") => `<td class="table-cell"><input class="table-input" type="${type}" ${additional}></td>`.repeat(player_names.length);
+
+    function getMilestones(){
+        var active_milestones = [];
+        var active_map = document.getElementById("map").value;
+        active_milestones.push.apply(active_milestones, util.game_data.milestones[active_map]);
+        if(document.getElementById("venus-checkbox").checked){
+            active_milestones.push.apply(active_milestones, util.game_data.awards["Venus"]);
+        }
+        active_milestones.sort();
+
+        return active_milestones;
+    }
+
+    var active_milestones = getMilestones();
+
+    var milestones_select = active_milestones.map(milestone => `<option value="${milestone}">${milestone}</option>`).join("\n");    
+
+    // Adds all point rows
+    var milestones = `
+    <tr>
+        <td class="table-cell"><select class="milestone-select" id="map" onchange="updateAwardInputs()">${milestones_select}</select></td>
+        ${createInputs("number", 'onchange="updateMilestoneScores()"')}
+    </tr>
+    `.repeat(milestone_number)
+
+    var milestones_points = `
+    <tr id="milestone_points">
+        <td class="table-cell">Total points</td>
+        ${createInputs("number", 'disabled value="0"')}
+    </tr>
+    `
+    
+    // Creates the table and sets the style to visible
+    milestone_table.innerHTML = name_row + milestones +milestones_points;
+
+    document.getElementById("milestones").style.display = "block";
+
+    // Show points div
+    milestones_div.style.display = 'block';
+}
 
 //////////////////////
 //     COLONIES
@@ -472,7 +545,9 @@ window.generatePointTable = function(){
     updateTurmoil();
 
     updateAwardInputs();
-    document.getElementById("awards-options").style.display = "block";    
+    updateMilestoneInputs();
+    document.getElementById("award-options").style.display = "block";    
+    document.getElementById("milestone-options").style.display = "block";    
 
     // Show points div
     points_div.style.display = 'block';

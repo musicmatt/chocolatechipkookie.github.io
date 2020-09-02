@@ -155,7 +155,7 @@
         </div>
     </div>
 
-    <div class="container" id="awards-options" style="display: none;">
+    <div class="container" id="award-options" style="display: none;">
         <div class="container-banner">
             Awards
         </div>
@@ -173,13 +173,18 @@
             
     </div>
 
-    <div class="container" id="milestone-options">
+    <div class="container" id="milestone-options" style="display: none;">
         <div class="container-banner">
             Milestones
         </div>
         <div class="sub-container">
-            <div class="sub-container--element" id="awards">
-                I ovdje
+            <div class="sub-container--element">
+                <label for="generations">Number of milestones</label>
+                <input type="number" class="option-input"  min="0" max="3" id="milestone-number" value="3" onchange="updateMilestoneInputs()">
+            </div>
+            <div class="sub-container--element" id="milestones" style="display: none;">
+                <table class="table" id="milestone-table">
+                </table>
             </div>
         </div>
     </div>
