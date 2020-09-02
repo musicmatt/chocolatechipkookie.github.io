@@ -36,7 +36,7 @@ async function loadExternalData(){
 
 loadExternalData();
 
-function redirectToGame(){
+window.redirectToGame = function(){
     var name = document.getElementById("game-search").value;
     var id = externalData.filter(elem => elem.name == name)[0].id;
     window.location = `/games/${id}.html`

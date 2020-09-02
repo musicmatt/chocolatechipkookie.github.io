@@ -414,7 +414,7 @@ function generateGameSite(game){
 
     function transformDate(date){
         date = new Date(date);
-        return `${date.day}/${date.month}/${date.year}`
+        return `${date.getDay().toString().padStart(2, "0")}/${date.getMonth().toString().padStart(2, "0")}/${date.getFullYear()}`
     }
 
     var names = game.scores.map(score => `                    <td class="table-cell" style="font-weight: bolder; font-family: 'Courier New', Courier, monospace;">${score.player}</td>`).join('\n');
@@ -482,7 +482,7 @@ ${game.scores.map(score => `                    <td class="table-cell"><input cl
             </div>
             <div class="sub-container--element">
                 <label for="date-input">Date:</label>
-                <input type="date" class="option-input" id="date-input" disabled value="${transformDate(game.date)}" required="required">
+                <input type="text" class="option-input" id="date-input" disabled value="${transformDate(game.date)}" required="required">
             </div>
             <div class="sub-container--element">
                 <label for="mode-input">Mode:</label>
