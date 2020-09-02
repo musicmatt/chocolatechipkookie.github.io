@@ -123,16 +123,13 @@ setDefaultDate()
 //     PLAYERS
 /////////////////////
 
-var externalData = null;
-
 // Loads players and corporations from database
-async function loadExternalData(){
+async function loadPlayerNames(){
     const octokit = new Octokit();
     //Fetch file from git
     var data = await getFile("data/data.json", octokit);
     //Decode base64 file content and parse json
     data = JSON.parse(b64_to_utf8(data.data.content));
-    externalData = data;
 
     //Add names to datalist
     var names = data.player_names;
@@ -140,6 +137,8 @@ async function loadExternalData(){
     var datalist = names.map(function(name){return `<option value="${name}">`}).join('\n');
     document.getElementById("datalist-players").innerHTML = datalist;
 }
+
+loadPlayerNames();
 
 //Generates player input fields
 window.generatePlayerInputs = async function (){
@@ -158,12 +157,8 @@ window.generatePlayerInputs = async function (){
 
     //Initial loading of player names and corporations
 
-    if (externalData == null){
-        await loadExternalData();
-    }
-
     //Add corporations
-    var corporations = externalData.corporation_names;
+    var corporations = util.game_data.corporation_names;
     corporations.sort();
     var corporation_list = corporations.map(corp => `<option value="${corp}">${corp}</option>`).join("\n");
     
@@ -586,10 +581,10 @@ function calculateEloChange(players, game, data){
 
 }
 
-function recalculateStats(player, game, data){
+function recalculateStats(player, game, player_stats){
     // Check if in data stats
     // If not add entry
-    if (!data.player_stats[player]){
+    if (!player_stats[player]){
         var stats = game.scores.find(elem => elem.player == player);
         var wins = stats.rank == 1 ? 1 : 0;
         var game_stats = {
@@ -634,14 +629,13 @@ function recalculateStats(player, game, data){
                 ]
             }
         }
-        data.player_stats[player] = game_stats;
-        return data;
+        player_stats[player] = game_stats;
+        return player_stats;
     }
 
     // Else
     var game_stats = game.scores.find(elem => elem.player == player);
-    var player_stats = data.player_stats[player];
-
+    var player_stats = player_stats[player];
 
     // Add game to games
     player_stats.games.push({
@@ -710,7 +704,7 @@ function recalculateStats(player, game, data){
     most_wins = maxElem(most_wins, corp => -corp[1].total);
     player_stats.most_wins = {name: most_wins[0], total: most_wins[1].total, wins: most_wins[1].wins};
 
-    return data;
+    return player_stats;
 }
 
 window.submitForm = async function(){
@@ -819,16 +813,14 @@ window.submitForm = async function(){
     // Get winner
     var winner = players.find(player => player.rank == 1);
 
-    // Add all players to the database
-    var data = await getFile("data/log.json", octokit);
-    var log = JSON.parse(b64_to_utf8(data.data.content));
-    data = await getFile("data/data.json", octokit);
-    var metadata = JSON.parse(b64_to_utf8(data.data.content));
-    data = await getFile("data/games.json", octokit);
-    var games_data = JSON.parse(b64_to_utf8(data.data.content));
 
-    var game_names = games_data.map(game => game.name);
-    
+    // Get data
+    var metadata = JSON.parse(b64_to_utf8((await getFile("data/data.json", octokit)).data.content));;
+    var games_data = JSON.parse(b64_to_utf8((await getFile("data/games.json", octokit)).data.content));;
+    var player_stats = JSON.parse(b64_to_utf8((await getFile("data/player_stats.json", octokit)).data.content));;
+ 
+    // Check if game with same name exists
+    var game_names = games_data.map(game => game.name);   
     if (game_names.includes(name)){
         updateBanner("Game with same name already exists", true);
         return;
@@ -836,7 +828,7 @@ window.submitForm = async function(){
     
     // Create entry
     var entry = {
-        id: metadata.metadata.current_id,
+        id: metadata.current_id,
         name: name,
         note: note,
         date: date,
@@ -854,7 +846,7 @@ window.submitForm = async function(){
     }
 
     // Increase id counter
-    metadata.metadata.current_id++;
+    metadata.current_id++;
 
     // Add colonies
     if(mode.includes("Colonies")){
@@ -869,15 +861,6 @@ window.submitForm = async function(){
         entry.colonies = colonies;
     }
 
-    // Add redundant log
-    log.push(
-        {
-            action: "Added game entry",
-            date: new Date(),
-            data: entry
-        }
-    );
-
     // Add game
     games_data.push(entry);
 
@@ -890,7 +873,7 @@ window.submitForm = async function(){
 
     // Update stats
     player_names.forEach(function(player){
-        recalculateStats(player, entry, metadata);
+        recalculateStats(player, entry, player_stats);
     });
 
     // Create game site
@@ -899,7 +882,7 @@ window.submitForm = async function(){
     updateBanner("Game added!", true);
 
     // Push files
-    await updateFile(JSON.stringify(log, null, 2), "data/log.json", `Added game "${name}"`, octokit);
+    await updateFile(JSON.stringify(player_stats, null, 2), "data/player_stats.json", `Added game "${name}"`, octokit);
     await updateFile(JSON.stringify(metadata, null, 2), "data/data.json", `Added game "${name}"`, octokit);
     await updateFile(JSON.stringify(games_data, null, 2), "data/games.json", `Added game "${name}"`, octokit);
 

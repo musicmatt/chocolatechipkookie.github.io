@@ -135,6 +135,29 @@
     transform: translate(-50%, -50%);
 }
 
+
+/*
+    Awards
+*/
+
+#award-list{
+    border-style: solid;
+    border-width: 5px;
+    border-color: black;
+    border-radius: 25px;
+
+    padding: 20px;
+
+    display: block;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    background-color: rgb(240, 240, 240);
+}
+
+.award-container{
+    margin: 10px;
+}
+
 /*
     Single objects
 */

@@ -92,3 +92,104 @@ window.pushFile = async function(content, filepath, message, octokit){
     return createFile(content, filepath, message, octokit);
 }
 
+////////////
+//    DATA
+////////////
+
+window.util = {
+    "game_data":{
+        "corporation_names": [
+            "Beginner",
+            "Credicor",
+            "Ecoline",
+            "Helion",
+            "Interplanetary Cinematics",
+            "Inventrix",
+            "Mining Guild",
+            "Phobolog",
+            "Tharsis Republic",
+            "Thorgate",
+            "UNMI",
+            "Saturn Systems",
+            "Teractor",
+            "Aridor",
+            "Arklight",
+            "Polyphemos",
+            "Poseidon",
+            "Stormcraft Incorporated",
+            "Cheung Shing Mars",
+            "Point Luna",
+            "Robinson Industries",
+            "Valley Trust",
+            "Vitor",
+            "Aphrodite",
+            "Celestic",
+            "Manutech",
+            "Morning Star INC",
+            "Viron",
+            "Arcadian Communities",
+            "Recyclon",
+            "Splice",
+            "Lakefront Resorts",
+            "Pristar",
+            "Septem Tribus",
+            "Terralabs Research",
+            "Utopia Invest",
+            "Factorum",
+            "Mons Insurance",
+            "Philares"
+          ],
+        "awards":{
+            "Tharsis": [
+                "Builder",
+                "Gardener",
+                "Mayor",
+                "Planer",
+                "Terraformer"
+            ],
+            "Hellas":[
+                "Diversifier",
+                "Tactician",
+                "Polar Explorer",
+                "Energizer",
+                "Rim Settler"
+            ],
+            "Elysium":[
+                "Generalist",
+                "Specialist",
+                "Ecologist",
+                "Tycoon",
+                "Legend"
+            ],
+            "Venus":[
+                "Hoverlord"
+            ]
+          },
+        "milestones":{
+            "Tharsis":[
+                "Landlord",
+                "Scientist",
+                "Banker",
+                "Thermalist",
+                "Miner"
+            ],
+            "Hellas":[
+                "Cultivator",
+                "Magnate",
+                "Space Baron",
+                "Excentric",
+                "Contractor"
+            ],
+            "Elysium":[
+                "Celebrity",
+                "Industrialist",
+                "Desert Settler",
+                "Estate Dealer",
+                "Benefactor"
+            ],
+            "Venus":[
+                "Venuphile"
+            ]
+        }
+    }
+};
