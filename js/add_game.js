@@ -411,6 +411,15 @@ function createCode(modes){
 
 // Generates the html for the page
 function generateGameSite(game){
+
+    function transformDate(date){
+        console.log(date);
+        date = new Date(date);
+        console.log(date);
+        console.log(`${date.getDay()}/${date.date.getMonth()}/${date.date.getYear()}`);
+        return `${date.day}/${date.month}/${date.year}`
+    }
+
     var names = game.scores.map(score => `                    <td class="table-cell" style="font-weight: bolder; font-family: 'Courier New', Courier, monospace;">${score.player}</td>`).join('\n');
     var corp = game.scores.map(score => `                    <td class="table-cell">${score.corporation}</td>`).join('\n');
     var tr = game.scores.map(score => `                    <td class="table-cell">${score.tr}</td>`).join('\n');
@@ -476,7 +485,7 @@ ${game.scores.map(score => `                    <td class="table-cell"><input cl
             </div>
             <div class="sub-container--element">
                 <label for="date-input">Date:</label>
-                <input type="date" class="option-input" id="date-input" disabled value="${game.date}" required="required">
+                <input type="date" class="option-input" id="date-input" disabled value="${transformDate(game.date)}" required="required">
             </div>
             <div class="sub-container--element">
                 <label for="mode-input">Mode:</label>
@@ -969,3 +978,13 @@ window.createSites = async function (password){
         }
     }
 }
+
+async function generateSite1(){
+    const octokit = new Octokit();
+    var data = await getFile("data/games.json", octokit);
+    var games = JSON.parse(b64_to_utf8(data.data.content));
+    var game_site = generateGameSite(games[33]);
+    console.log(game_site);
+}
+
+generateSite1()
