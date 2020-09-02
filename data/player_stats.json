@@ -3026,6 +3026,13 @@
         "rank": 1,
         "points": 71,
         "players": 2
+      },
+      {
+        "id": 81,
+        "corporation": "Aphrodite",
+        "rank": 1,
+        "points": 71,
+        "players": 2
       }
     ],
     "best_games": [
@@ -3036,18 +3043,18 @@
     ],
     "fave_corp": {
       "name": "Aphrodite",
-      "total": 1,
+      "total": 2,
       "wins": 1
     },
     "best_corp": {
       "name": "Aphrodite",
-      "total": 1,
-      "wins": 1
+      "total": 2,
+      "wins": 2
     },
     "most_wins": {
       "name": "Aphrodite",
-      "total": 1,
-      "wins": 1
+      "total": 2,
+      "wins": 2
     },
     "elo": {
       "value": 1000,
@@ -3057,6 +3064,13 @@
   "Mia Čaušević": {
     "games": [
       {
+        "corporation": "Aphrodite",
+        "rank": 2,
+        "points": 70,
+        "players": 2
+      },
+      {
+        "id": 81,
         "corporation": "Aphrodite",
         "rank": 2,
         "points": 70,
@@ -3071,17 +3085,17 @@
     ],
     "fave_corp": {
       "name": "Aphrodite",
-      "total": 1,
+      "total": 2,
       "wins": 0
     },
     "best_corp": {
       "name": "Aphrodite",
-      "total": 1,
+      "total": 2,
       "wins": 0
     },
     "most_wins": {
       "name": "Aphrodite",
-      "total": 1,
+      "total": 2,
       "wins": 0
     },
     "elo": {
