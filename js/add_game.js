@@ -413,10 +413,7 @@ function createCode(modes){
 function generateGameSite(game){
 
     function transformDate(date){
-        console.log(date);
         date = new Date(date);
-        console.log(date);
-        console.log(`${date.getDay()}/${date.date.getMonth()}/${date.date.getYear()}`);
         return `${date.day}/${date.month}/${date.year}`
     }
 
@@ -978,13 +975,3 @@ window.createSites = async function (password){
         }
     }
 }
-
-async function generateSite1(){
-    const octokit = new Octokit();
-    var data = await getFile("data/games.json", octokit);
-    var games = JSON.parse(b64_to_utf8(data.data.content));
-    var game_site = generateGameSite(games[33]);
-    console.log(game_site);
-}
-
-generateSite1()
