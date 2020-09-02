@@ -155,8 +155,34 @@
 }
 
 .award-container{
+    height: auto;
+    text-align: center;
     margin: 10px;
 }
+
+.award-select{
+    text-align: center;
+    font-family: inherit;
+    font-size: 15px;
+    background: inherit;
+
+    height: 35px;
+    width: 225px;
+    box-sizing: border-box;
+}
+
+.award-select-player{
+    text-align: center;
+    font-family: inherit;
+    font-size: 15px;
+    background: inherit;
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: bolder;
+    height: 35px;
+    width: 225px;
+    box-sizing: border-box;
+}
+
 
 /*
     Single objects

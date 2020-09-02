@@ -15,22 +15,21 @@ window.hideContainer = function (elem, checkbox_container){
     }
 }
 
-var externalData = null;
+var metadata = null;
+var player_stats = null;
 
 // Loads players and corporations from database
 async function loadExternalData(){
     const octokit = new Octokit();
-    // Fetch file from git
-    var data = await getFile("data/data.json", octokit);
     // Decode base64 file content and parse json
-    data = JSON.parse(b64_to_utf8(data.data.content));
-    externalData = data;
+    metadata = JSON.parse(b64_to_utf8((await getFile("data/data.json", octokit)).data.content));
+    player_stats = JSON.parse(b64_to_utf8((await getFile("data/player_stats.json", octokit)).data.content));
     // Create datalist for HTML
-    var datalist = data.player_names.map( player => `<option value="${player}">`).join('\n');
+    var datalist = metadata.player_names.map( player => `<option value="${player}">`).join('\n');
     document.getElementById("datalist-players").innerHTML = datalist;
 
     // Add buttons
-    var buttons = data.player_names.map( player => `<button class="player-link-button" onclick="displayPlayerStatsToggle('${player}');">${player}</button>`).join('\n');
+    var buttons = metadata.player_names.map( player => `<button class="player-link-button" onclick="displayPlayerStatsToggle('${player}');">${player}</button>`).join('\n');
     document.getElementById("player-list").innerHTML = buttons;
 }
 
@@ -55,7 +54,7 @@ window.displayPlayerStatsToggle = function(name){
 }
 
 window.displayPlayerStats = function (name){
-    var player_data = externalData.player_stats[name];
+    var player_data = player_stats[name];
     document.getElementById("player-name").value = name;    
 
     document.getElementById("player-total-games").value = player_data.games.length;

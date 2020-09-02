@@ -33,6 +33,11 @@
             </div>
 
             <div class="sub-container--element">
+                <label for="map">Map:</label>
+                <select class="option-input" id="map" onchange="updateAwardInputs()"></select>
+            </div>
+
+            <div class="sub-container--element">
                 <div>
                     <label for="hide-expansions">Select expansion:</label>
                     <input type="button" id="hide-expansions" class="option-input" value="Show" onclick="hideCheckboxContainer(this, 'expansion-checkbox-container')">
@@ -59,11 +64,11 @@
                         <span class="checkmark"></span>
                     </label>
                     <label class="checkbox-label">
-                        <input id="turmoil-checkbox" type="checkbox" checked="false" value="Turmoil" onclick="updateTurmoil()">Turmoil
+                        <input id="turmoil-checkbox" type="checkbox" checked="false" value="Turmoil" onchange="updateTurmoil()">Turmoil
                         <span class="checkmark"></span>
                     </label>
                     <label class="checkbox-label">
-                        <input type="checkbox" checked="false" value="Venus">Venus next
+                        <input id="venus-checkbox" type="checkbox" checked="false" value="Venus" onchange="updateAwardInputs()">Venus next
                         <span class="checkmark"></span>
                     </label>
                 </div>
@@ -80,7 +85,6 @@
                 
                 <div class = "player-list" id="player-list">  
                 </div>
-
                 <datalist id="datalist-players"></datalist>
             </div>
 
@@ -151,32 +155,18 @@
         </div>
     </div>
 
-    <div class="container" id="awards-options">
+    <div class="container" id="awards-options" style="display: none;">
         <div class="container-banner">
             Awards
         </div>
 
         <div class="sub-container">
             <div class="sub-container--element">
-                <label for="generations">Number of awards</label>            
-                <input type="number" class="option-input"  min="0" max="3" id="award-number" value="0">
+                <label for="generations">Number of awards</label>
+                <input type="number" class="option-input"  min="0" max="3" id="award-number" value="3" onchange="updateAwardInputs()">
             </div>
-
-            <div class="sub-container--element" id="awards">
+            <div class="sub-container--element" id="awards" style="display: none">
                 <div id="award-list">
-                    <div class="award-container">
-                        <label for="player-search">Award:</label>
-                        <input type="text" placeholder="Player" class="option-input" style="font-family: 'Courier New', Courier, monospace; font-weight: bolder;" list="datalist-players">
-                    </div>
-                    <div class="award-container">
-                        <label for="player-search">Award:</label>
-                        <input type="text" placeholder="Player" class="option-input" style="font-family: 'Courier New', Courier, monospace; font-weight: bolder;" list="datalist-players">
-                    </div>
-                    <div class="award-container">
-                        <label for="player-search">Award:</label>
-                        <input type="text" placeholder="Player" class="option-input" style="font-family: 'Courier New', Courier, monospace; font-weight: bolder;" list="datalist-players">
-                    </div>
-                    <datalist id="datalist-players"></datalist>
                 </div>
             </div>
         </div>

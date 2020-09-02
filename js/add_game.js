@@ -181,14 +181,91 @@ window.generatePlayerInputs = async function (){
 
 generatePlayerInputs();
 
-// Set the listener to listen to enter key presses
-var number_of_players_input = document.getElementById("player-number");
-number_of_players_input.addEventListener("keyup", function(event) {
-    if (event.keyCode === 13) {
-        event.preventDefault();
-        generatePlayerInputs();
+
+//////////////////
+//      MAPS
+//////////////////
+
+function setMaps(){
+    var map_select = document.getElementById("map");
+    var maps = util.game_data.maps;
+    map_select.innerHTML = maps.map(elem => `<option value="${elem}">${elem}</option>`).join("\n");;
+}
+
+setMaps()
+
+
+//////////////////
+//      AWARDS
+//////////////////
+
+window.updateAwardScores = function (){
+    var awards = Array.from(document.getElementsByClassName("award-select-player")).map(elem => elem.value);
+    var player_counts = {}
+    awards.forEach(function(award){
+        player_counts[award] = player_counts[award] ? player_counts[award] + 1 : 1;
+    });
+
+    var player_list = Array.from(document.getElementById("player-list").querySelectorAll("input")).map(elem => elem.value);
+    var award_points = Array.from(document.getElementById("award-points").querySelectorAll("input"));
+
+    for(var i = 0; i < player_list.length; ++i){
+        var no_awards = player_counts[player_list[i]] ? player_counts[player_list[i]] : 0;
+        award_points[i].value =  5 * no_awards;
     }
-});
+
+    updateTotals();
+}
+
+//Generates player input fields
+window.updateAwardInputs = function (){
+    // Fetch number of awards
+    var number_of_awards_input = document.getElementById("award-number");
+    // Check and update the range
+    if (number_of_awards_input.value > 3)
+        number_of_awards_input.value = 3;
+    else if (number_of_awards_input.value < 0)
+        number_of_awards_input.value = 0;
+
+    // Fetch number of awards and player input list
+    var awards = number_of_awards_input.value;
+    var award_list = document.getElementById("award-list");
+
+    //Initial loading of awards names and corporations
+
+    function getAwards(){
+        var active_awards = [];
+        var active_map = document.getElementById("map").value;
+        active_awards.push.apply(active_awards, util.game_data.awards[active_map]);
+        if(document.getElementById("venus-checkbox").checked){
+            active_awards.push.apply(active_awards, util.game_data.awards["Venus"]);
+        }
+        active_awards.sort();
+        return active_awards;
+    }
+
+    var active_awards = getAwards();
+    active_awards.sort();
+
+    var awards_select = active_awards.map(award => `<option value="${award}">${award}</option>`).join("\n");
+    var active_players_select = util.game_data.active_players.map(player => `<option value="${player}">${player}</option>`).join("\n");
+    
+    // Create input fields
+    award_list.innerHTML = 
+        `<div class="award-container">
+            <select class="award-select"> ${awards_select}</select>
+            <select class="award-select-player" onchange="updateAwardScores()"> ${active_players_select}</select>
+        </div>`.repeat(awards);
+    
+    updateAwardScores();
+
+    // Set award input list to visible
+    document.getElementById("awards").style.display = awards == 0 ? "none":"block";
+}
+
+//////////////////////
+//     MILESTONES
+//////////////////////
 
 
 //////////////////////
@@ -324,6 +401,8 @@ window.generatePointTable = function(){
         function(element) { return element.children[0].value; }
     );
 
+    util.game_data.active_players = player_names;
+
     // Creates the name row for the table
     var name_row = 
     `<tr id="player-names">
@@ -354,6 +433,8 @@ window.generatePointTable = function(){
     </tr>
     `)
 
+    document.getElementsByClassName("")
+
     // Adds total points rows
     var total_points = 
         `<tr id="total-points">
@@ -378,13 +459,23 @@ window.generatePointTable = function(){
     // Creates the table and sets the style to visible
     table.innerHTML = name_row + points.join('\n') + total_points + ranks + note_input;
 
+    //Disable awards
+    Array.from(document.getElementById("award-points").querySelectorAll("input")).forEach(function(elem){
+        elem.disabled = true;
+        elem.value = 0;
+    });
+
+
     // Update display of gold lead
     goldLeadFunction();
 
     updateTurmoil();
 
+    updateAwardInputs();
+    document.getElementById("awards-options").style.display = "block";    
+
     // Show points div
-    points_div.style.display = 'block'
+    points_div.style.display = 'block';
 }
 
 //////////////////
@@ -813,15 +904,13 @@ window.submitForm = async function(){
     // Get winner
     var winner = players.find(player => player.rank == 1);
 
-
     // Get data
     var metadata = JSON.parse(b64_to_utf8((await getFile("data/data.json", octokit)).data.content));;
     var games_data = JSON.parse(b64_to_utf8((await getFile("data/games.json", octokit)).data.content));;
     var player_stats = JSON.parse(b64_to_utf8((await getFile("data/player_stats.json", octokit)).data.content));;
  
     // Check if game with same name exists
-    var game_names = games_data.map(game => game.name);   
-    if (game_names.includes(name)){
+    if (games_data.map(game => game.name).includes(name)){
         updateBanner("Game with same name already exists", true);
         return;
     } 
@@ -926,8 +1015,7 @@ window.calculateAllStats = async function (password){
         });
     }
 
-    await updateFile(JSON.stringify(data, null, 2), "data/player_stats.json", "Added player_stats to data/data.json", octokit)
-
+    await updateFile(JSON.stringify(player_stats, null, 2), "data/player_stats.json", "Added player_stats to data/data.json", octokit)
     console.log("Updated stats");
 }
 

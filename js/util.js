@@ -98,6 +98,11 @@ window.pushFile = async function(content, filepath, message, octokit){
 
 window.util = {
     "game_data":{
+        "maps": [
+            "Tharsis",
+            "Hellas",
+            "Elysium"
+        ],
         "corporation_names": [
             "Beginner",
             "Credicor",
