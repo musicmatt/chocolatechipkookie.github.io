@@ -1,4 +1,4 @@
-import { Octokit } from "https://cdn.pika.dev/@octokit/core";
+import { Octokit } from "https://cdn.skypack.dev/@octokit/core";
 
 // Updates the visibility of the container
 window.hideContainer = function (elem, checkbox_container){
@@ -30,7 +30,7 @@ async function loadExternalData(){
     document.getElementById("datalist-players").innerHTML = datalist;
 
     // Add buttons
-    var buttons = data.player_names.map( player => `<button class="player-link-button" onclick="displayPlayerStats('${player}');">${player}</button>`).join('\n');
+    var buttons = data.player_names.map( player => `<button class="player-link-button" onclick="displayPlayerStatsToggle('${player}');">${player}</button>`).join('\n');
     document.getElementById("player-list").innerHTML = buttons;
 }
 
@@ -47,6 +47,11 @@ game_search.addEventListener("keyup", function(event) {
 
 window.playerSearch = function(){
     displayPlayerStats(document.getElementById("player-search").value);
+}
+
+window.displayPlayerStatsToggle = function(name){
+    hideContainer( document.getElementById("hide-players"), "player-list");
+    displayPlayerStats(name);
 }
 
 window.displayPlayerStats = function (name){

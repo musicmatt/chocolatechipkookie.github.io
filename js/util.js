@@ -33,7 +33,8 @@ window.getElementInsideContainer = function(containerID, childID) {
 //////////////
 window.owner = 'ChocolateChipKookie';
 window.repo = "chocolatechipkookie.github.io";
-
+window.encrypted_token = "U2FsdGVkX1+n1ehJgHqx60l9tKl1nu1zx0MlMiCXO+YDPnIW/5I0+1JboKey3qjNMo10biUocmSAMHrD0bwJ8Q==";
+window.password_hash = "2127c97b1c21f675c8ea7c47ce5fffb827b15035aea988e525ab8a24fd8ad6d0"
 //Loads git file
 window.getFile = async function(filepath, octokit){
     return octokit.request(`GET https://api.github.com/repos/${owner}/${repo}/contents/${filepath}`);
@@ -81,5 +82,13 @@ window.createFile = async function(content, filepath, message, octokit){
         content: utf8_to_b64(content),
     });
     return response;
+}
+
+//Create git file
+window.pushFile = async function(content, filepath, message, octokit){
+    if(checkFile(filepath, octokit)){
+        return updateFile(content, filepath, message, octokit);
+    }
+    return createFile(content, filepath, message, octokit);
 }
 

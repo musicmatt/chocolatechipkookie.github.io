@@ -1,4 +1,4 @@
-import { Octokit } from "https://cdn.pika.dev/@octokit/core";
+import { Octokit } from "https://cdn.skypack.dev/@octokit/core";
 
 ///////////////
 //    UTIL
@@ -455,6 +455,7 @@ ${game.scores.map(score => `                    <td class="table-cell"><input cl
 <html lang="en">
 <head>
     <meta charset="utf-8"/>
+    <title>${game.name}</title>
     <link href="../css/meta.css" rel="stylesheet" type="text/css">    
     <link href="../css/game.css" rel="stylesheet" type="text/css">    
     <link href="../css/table.css" rel="stylesheet" type="text/css">
@@ -560,6 +561,10 @@ ${note}
                 </tr>
             </table>
         </div>
+    </div>
+    <div class="link-button-wrapper">
+        <button class="link-button-half" onclick="window.location='/games/${game.id - 1}.html';">Previous</button>
+        <button class="link-button-half" onclick="window.location='/games/${game.id + 1}.html';">Next</button>
     </div>
     <div class="link-button-wrapper">
         <button class="link-button" onclick="window.location='../index.html';">Main page</button>
@@ -718,7 +723,6 @@ window.submitForm = async function(){
     }
 
     // Passeword management
-    const password_hash = "2127c97b1c21f675c8ea7c47ce5fffb827b15035aea988e525ab8a24fd8ad6d0";
     var password_field = document.getElementById("password-field");
     var password = password_field.value;
     password_field.value = "";
@@ -744,7 +748,6 @@ window.submitForm = async function(){
     }
 
     // Get GitHub api token by decrypting encrypted token
-    const encrypted_token = "U2FsdGVkX1+n1ehJgHqx60l9tKl1nu1zx0MlMiCXO+YDPnIW/5I0+1JboKey3qjNMo10biUocmSAMHrD0bwJ8Q==";
     var decrypted = CryptoJS.AES.decrypt(encrypted_token, password);
 
     // Init Octokit
@@ -894,7 +897,7 @@ window.submitForm = async function(){
     await updateFile(JSON.stringify(metadata, null, 2), "data/data.json", `Added game "${name}"`, octokit);
     await updateFile(JSON.stringify(games_data, null, 2), "data/games.json", `Added game "${name}"`, octokit);
 
-    window.location = ``
+    window.location = '/index.html'
 }
 
 //Add listener to password field
@@ -911,15 +914,14 @@ password_field.addEventListener("keyup", function(event) {
 ///////////////////
 
 //Used to update the encrypted token in function above
-function encryptToken(token, password){
+window.encryptToken = function (token, password){
     var encrypted = CryptoJS.AES.encrypt(token, password);
-    console.log(encrypted.toString());
-    console.log(CryptoJS.SHA256(password).toString());
+    console.log("Encrypted", encrypted.toString());
+    console.log("SHA", CryptoJS.SHA256(password).toString());
 }
 
 window.calculateAllStats = async function (password){
     // Get GitHub api token by decrypting encrypted token
-    const encrypted_token = "U2FsdGVkX1+n1ehJgHqx60l9tKl1nu1zx0MlMiCXO+YDPnIW/5I0+1JboKey3qjNMo10biUocmSAMHrD0bwJ8Q==";
     var decrypted = CryptoJS.AES.decrypt(encrypted_token, password);
 
     // Init Octokit
@@ -947,7 +949,6 @@ window.calculateAllStats = async function (password){
 // Script for recreating all sites, requires password to be set to the password
 window.createSites = async function (password){
     // Get GitHub api token by decrypting encrypted token
-    const encrypted_token = "U2FsdGVkX1+n1ehJgHqx60l9tKl1nu1zx0MlMiCXO+YDPnIW/5I0+1JboKey3qjNMo10biUocmSAMHrD0bwJ8Q==";
     var decrypted = CryptoJS.AES.decrypt(encrypted_token, password);
 
     // Init Octokit
@@ -961,7 +962,7 @@ window.createSites = async function (password){
         try{
             var entry = games[i];
             var game_site = generateGameSite(entry);
-            var response = await createFile(game_site, `games/${entry.id}.html`, `Created site for game "${entry.name}" id:${entry.id}`, octokit);
+            var response = await pushFile(game_site, `games/${entry.id}.html`, `Created site for game "${entry.name}" id:${entry.id}`, octokit);
             console.log(`Created site ${games[i].id}.html`);
         } catch (error){
             console.log(error);

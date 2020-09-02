@@ -1,4 +1,4 @@
-import { Octokit } from "https://cdn.pika.dev/@octokit/core";
+import { Octokit } from "https://cdn.skypack.dev/@octokit/core";
 
 // Updates the visibility of the container
 window.hideContainer = function (elem, checkbox_container){
