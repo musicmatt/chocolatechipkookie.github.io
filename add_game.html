@@ -76,14 +76,14 @@
 
             <div class="sub-container--element">
                 <label for="generations">Number of generations</label>            
-                <input type="number" class="option-input"  min="1" max="20" id="generations">
+                <input type="number" class="option-input"  min="1" max="20" id="generations" value="0">
             </div>
 
             <div class="sub-container--element">
                 <label for="player-number">Number of players</label>
-                <input type="number" class="option-input"  min="1" max="5" id="player-number" value="2" onchange="generatePlayerInputs()">
+                <input type="number" class="option-input"  min="1" max="5" id="player-number" value="4" onchange="generatePlayerInputs()">
                 
-                <div class = "player-list" id="player-list">  
+                <div class = "player-list" id="player-list" style="display: none;">  
                 </div>
                 <datalist id="datalist-players"></datalist>
             </div>

@@ -927,7 +927,7 @@ window.submitForm = async function(){
     var mode = getActiveModes();
     var mode_code = createCode(mode);
 
-    var map = "Tharsis";
+    var map = document.getElementById("map").value;
     var no_players = parseInt(document.getElementById("player-number").value, 10);
     var generations = parseInt(document.getElementById("generations").value, 10);
 
