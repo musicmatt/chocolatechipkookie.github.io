@@ -490,6 +490,13 @@
         "rank": 3,
         "points": 81,
         "players": 4
+      },
+      {
+        "id": 81,
+        "corporation": "Lakefront Resorts",
+        "rank": 3,
+        "points": 103,
+        "players": 3
       }
     ],
     "best_games": [
@@ -2091,6 +2098,13 @@
         "rank": 2,
         "points": 83,
         "players": 4
+      },
+      {
+        "id": 81,
+        "corporation": "Manutech",
+        "rank": 1,
+        "points": 140,
+        "players": 3
       }
     ],
     "best_games": [
@@ -2101,8 +2115,8 @@
       },
       {
         "players": 3,
-        "id": 32,
-        "score": 106
+        "id": 81,
+        "score": 140
       },
       {
         "players": 5,
@@ -2117,13 +2131,13 @@
     },
     "best_corp": {
       "name": "Manutech",
-      "total": 3,
-      "wins": 3
+      "total": 4,
+      "wins": 4
     },
     "most_wins": {
       "name": "Manutech",
-      "total": 3,
-      "wins": 3
+      "total": 4,
+      "wins": 4
     },
     "elo": {
       "value": 1000,
@@ -2450,6 +2464,13 @@
         "rank": 4,
         "points": 67,
         "players": 4
+      },
+      {
+        "id": 81,
+        "corporation": "Credicor",
+        "rank": 2,
+        "points": 131,
+        "players": 3
       }
     ],
     "best_games": [
@@ -2465,8 +2486,8 @@
       },
       {
         "players": 3,
-        "id": 37,
-        "score": 97
+        "id": 81,
+        "score": 131
       }
     ],
     "fave_corp": {
