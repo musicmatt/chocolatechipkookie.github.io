@@ -1094,8 +1094,43 @@ window.calculateAllStats = async function (password){
     console.log("Updated stats");
 }
 
+
+window.createSite = async function(password, game_id){
+    //Check password
+    if (CryptoJS.SHA256(password).toString() != password_hash){
+        console.log("Wrong password");
+        return;
+    }
+
+    // Get GitHub api token by decrypting encrypted token
+    var decrypted = CryptoJS.AES.decrypt(encrypted_token, password);
+
+    // Init Octokit
+    const octokit = new Octokit({auth: decrypted.toString(CryptoJS.enc.Utf8)});
+
+    // Add all players to the database
+    var games = JSON.parse(b64_to_utf8((await getFile("data/games.json", octokit)).data.content));
+
+    try{
+        var entry = games.find(game => game.id == game_id);
+        var game_site = generateGameSite(entry);
+        var response = await pushFile(game_site, `games/${entry.id}.html`, `Created site for game "${entry.name}" id:${entry.id}`, octokit);
+        console.log(`Created site ${entry.id}.html`);
+    } catch (error){
+        console.log(error);
+    }
+
+}
+
+
 // Script for recreating all sites, requires password to be set to the password
-window.createSites = async function (password){
+window.createAllSites = async function (password){
+    //Check password
+    if (CryptoJS.SHA256(password).toString() != password_hash){
+        console.log("Wrong password");
+        return;
+    }
+    
     // Get GitHub api token by decrypting encrypted token
     var decrypted = CryptoJS.AES.decrypt(encrypted_token, password);
 
