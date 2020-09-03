@@ -724,7 +724,7 @@ ${lead}
         `
                 <tr id="turmoil-points">
                     <td class="table-cell">Turmoil</td>
-${game.scores.map(score => `                    <td class="table-cell"><input class="table-input" type="text" disabled value="${score.turmoil}"></td>`).join('\n')}
+${game.scores.map(score => `                    <td class="table-cell">${score.turmoil}</td>`).join('\n')}
                 </tr>
         `
     }
