@@ -137,10 +137,10 @@
 
 
 /*
-    Awards
+    Milestones
 */
 
-#award-list{
+#milestone-list{
     border-style: solid;
     border-width: 5px;
     border-color: black;
@@ -154,13 +154,13 @@
     background-color: rgb(240, 240, 240);
 }
 
-.award-container{
+.milestone-container{
     height: auto;
     text-align: center;
     margin: 10px;
 }
 
-.award-select{
+.milestone-select{
     text-align: center;
     font-family: inherit;
     font-size: 15px;
@@ -171,7 +171,7 @@
     box-sizing: border-box;
 }
 
-.award-select-player{
+.milestone-select-player{
     text-align: center;
     font-family: inherit;
     font-size: 15px;
@@ -184,10 +184,10 @@
 }
 
 /*
-    Milestones
+    Awards
 */
 
-.milestone-select{
+.award-select{
     text-align: center;
     font-family: inherit;
     font-size: 15px;

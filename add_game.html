@@ -34,7 +34,7 @@
 
             <div class="sub-container--element">
                 <label for="map">Map:</label>
-                <select class="option-input" id="map" onchange="updateAwardInputs()"></select>
+                <select class="option-input" id="map" onchange="updateMilestoneInputs(); updateAwardInputs();"></select>
             </div>
 
             <div class="sub-container--element">
@@ -68,7 +68,7 @@
                         <span class="checkmark"></span>
                     </label>
                     <label class="checkbox-label">
-                        <input id="venus-checkbox" type="checkbox" checked="false" value="Venus" onchange="updateAwardInputs()">Venus next
+                        <input id="venus-checkbox" type="checkbox" checked="false" value="Venus" onchange="updateMilestoneInputs(); updateAwardInputs();">Venus next
                         <span class="checkmark"></span>
                     </label>
                 </div>
@@ -155,35 +155,35 @@
         </div>
     </div>
 
-    <div class="container" id="award-options" style="display: none;">
+    <div class="container" id="milestone-options" style="display: none;">
         <div class="container-banner">
-            Awards
+            Milestones
         </div>
 
         <div class="sub-container">
             <div class="sub-container--element">
-                <label for="generations">Number of awards</label>
-                <input type="number" class="option-input"  min="0" max="3" id="award-number" value="3" onchange="updateAwardInputs()">
+                <label for="generations">Number of milestones</label>
+                <input type="number" class="option-input"  min="0" max="3" id="milestone-number" value="3" onchange="updateMilestoneInputs()">
             </div>
-            <div class="sub-container--element" id="awards" style="display: none">
-                <div id="award-list">
+            <div class="sub-container--element" id="milestones" style="display: none">
+                <div id="milestone-list">
                 </div>
             </div>
         </div>
             
     </div>
 
-    <div class="container" id="milestone-options" style="display: none;">
+    <div class="container" id="award-options" style="display: none;">
         <div class="container-banner">
-            Milestones
+            Awards
         </div>
         <div class="sub-container">
             <div class="sub-container--element">
-                <label for="generations">Number of milestones</label>
-                <input type="number" class="option-input"  min="0" max="3" id="milestone-number" value="3" onchange="updateMilestoneInputs()">
+                <label for="generations">Number of awards</label>
+                <input type="number" class="option-input"  min="0" max="3" id="award-number" value="3" onchange="updateAwardInputs()">
             </div>
-            <div class="sub-container--element" id="milestones" style="display: none;">
-                <table class="table" id="milestone-table">
+            <div class="sub-container--element" id="awards" style="display: none;">
+                <table class="table" id="award-table">
                 </table>
             </div>
         </div>

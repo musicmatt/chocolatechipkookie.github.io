@@ -195,152 +195,6 @@ function setMaps(){
 setMaps()
 
 
-//////////////////
-//      AWARDS
-//////////////////
-
-//Update scores for awards
-window.updateAwardScores = function (){
-    var awards = Array.from(document.getElementsByClassName("award-select-player")).map(elem => elem.value);
-    var player_counts = {}
-    awards.forEach(function(award){
-        player_counts[award] = player_counts[award] ? player_counts[award] + 1 : 1;
-    });
-
-    var player_list = Array.from(document.getElementById("player-list").querySelectorAll("input")).map(elem => elem.value);
-    var award_points = Array.from(document.getElementById("award-points").querySelectorAll("input"));
-
-    for(var i = 0; i < player_list.length; ++i){
-        var no_awards = player_counts[player_list[i]] ? player_counts[player_list[i]] : 0;
-        award_points[i].value =  5 * no_awards;
-    }
-
-    updateTotals();
-}
-
-//Generates player input fields
-window.updateAwardInputs = function (){
-    // Fetch number of awards
-    var number_of_awards_input = document.getElementById("award-number");
-    // Check and update the range
-    if (number_of_awards_input.value > 3)
-        number_of_awards_input.value = 3;
-    else if (number_of_awards_input.value < 0)
-        number_of_awards_input.value = 0;
-
-    // Fetch number of awards and player input list
-    var awards = number_of_awards_input.value;
-    var award_list = document.getElementById("award-list");
-
-    //Initial loading of awards names and corporations
-
-    function getAwards(){
-        var active_awards = [];
-        var active_map = document.getElementById("map").value;
-        active_awards.push.apply(active_awards, util.game_data.awards[active_map]);
-        if(document.getElementById("venus-checkbox").checked){
-            active_awards.push.apply(active_awards, util.game_data.awards["Venus"]);
-        }
-        active_awards.sort();
-        return active_awards;
-    }
-
-    var active_awards = getAwards();
-
-    var awards_select = active_awards.map(award => `<option value="${award}">${award}</option>`).join("\n");
-    var active_players_select = util.game_data.active_players.map(player => `<option value="${player}">${player}</option>`).join("\n");
-    
-    // Create input fields
-    award_list.innerHTML = 
-        `<div class="award-container">
-            <select class="award-select"> ${awards_select}</select>
-            <select class="award-select-player" onchange="updateAwardScores()"> ${active_players_select}</select>
-        </div>`.repeat(awards);
-    
-    updateAwardScores();
-
-    // Set award input list to visible
-    document.getElementById("awards").style.display = awards == 0 ? "none":"block";
-}
-
-//////////////////////
-//     MILESTONES
-//////////////////////
-
-//Update scores for awards
-window.updateMilestoneScores = function (){
-
-    updateTotals();
-}
-
-//Generates player input fields
-window.updateMilestoneInputs = function (){
-    // Gets the points div, points table and player list nodes
-    var milestones_div = document.getElementById("milestones");
-    var milestone_table = document.getElementById("milestone-table");
-    var player_list = document.getElementById("player-list");
-    var milestone_number = document.getElementById("milestone-number").value;
-
-    if(milestone_number == 0){
-        milestones_div.style.display = "none";
-        return;
-    }
-    
-    // Fetches the names of the players
-    var player_names = Array.from(player_list.children).map(
-        function(element) { return element.children[0].value; }
-    );
-
-    // Creates the name row for the table
-    var name_row = 
-    `<tr id="milestone-names">
-        <td class="table-cell">Name</td>
-        ${player_names.map(element => `<td class="table-cell">${element}</td>`).join("\n")}
-    </tr>`;
-
-    // Creates the inputs for the scores
-    var createInputs = (type, additional = "") => `<td class="table-cell"><input class="table-input" type="${type}" ${additional}></td>`.repeat(player_names.length);
-
-    function getMilestones(){
-        var active_milestones = [];
-        var active_map = document.getElementById("map").value;
-        active_milestones.push.apply(active_milestones, util.game_data.milestones[active_map]);
-        if(document.getElementById("venus-checkbox").checked){
-            active_milestones.push.apply(active_milestones, util.game_data.awards["Venus"]);
-        }
-        active_milestones.sort();
-
-        return active_milestones;
-    }
-
-    var active_milestones = getMilestones();
-
-    var milestones_select = active_milestones.map(milestone => `<option value="${milestone}">${milestone}</option>`).join("\n");    
-
-    // Adds all point rows
-    var milestones = `
-    <tr>
-        <td class="table-cell"><select class="milestone-select" id="map" onchange="updateAwardInputs()">${milestones_select}</select></td>
-        ${createInputs("number", 'onchange="updateMilestoneScores()"')}
-    </tr>
-    `.repeat(milestone_number)
-
-    var milestones_points = `
-    <tr id="milestone_points">
-        <td class="table-cell">Total points</td>
-        ${createInputs("number", 'disabled value="0"')}
-    </tr>
-    `
-    
-    // Creates the table and sets the style to visible
-    milestone_table.innerHTML = name_row + milestones +milestones_points;
-
-    document.getElementById("milestones").style.display = "block";
-
-    // Show points div
-    milestones_div.style.display = 'block';
-}
-
 //////////////////////
 //     COLONIES
 //////////////////////
@@ -364,6 +218,261 @@ window.increaseColonyNumber = function (elem){
     // Gets the text div element of elem
     var text = elem.querySelector("div");
     text.innerHTML = `${capitalize(colony)}<br>(${current_colonies.value})`
+}
+
+///////////////////////
+//      MILESTONES
+///////////////////////
+
+// Checks if there are more than one of the same milestone entered
+window.checkMilestonesValidity = function(){
+    var active_milestones = Array.from(document.getElementsByClassName("milestone-select"))
+        .map(milestone => milestone.value);
+    return (new Set(active_milestones)).size == active_milestones.length;
+}
+
+window.parseMilestones = function(){
+    var players = Array.from(document.getElementsByClassName("milestone-select-player")).map(elem => elem.value);
+    var milestones = Array.from(document.getElementsByClassName("milestone-select")).map(elem => elem.value);
+    var result = {};
+
+    for(var i = 0; i < milestones.length; ++i){
+        result[milestones[i]] = players[i];
+    }
+    
+    return result;
+}
+
+//Update scores for milestone
+window.updateMilestoneScores = function (){
+    var milestones = Array.from(document.getElementsByClassName("milestone-select-player")).map(elem => elem.value);
+    var player_counts = {}
+    milestones.forEach(function(milestone){
+        player_counts[milestone] = player_counts[milestone] ? player_counts[milestone] + 1 : 1;
+    });
+
+    var player_list = Array.from(document.getElementById("player-list").querySelectorAll("input")).map(elem => elem.value);
+    var milestone_points = Array.from(document.getElementById("milestone-points").querySelectorAll("input"));
+
+    for(var i = 0; i < player_list.length; ++i){
+        var no_milestones = player_counts[player_list[i]] ? player_counts[player_list[i]] : 0;
+        milestone_points[i].value =  5 * no_milestones;
+    }
+
+    updateTotals();
+}
+
+//Generates player input fields
+window.updateMilestoneInputs = function (){
+    // Fetch number of milestones
+    var number_of_milestones_input = document.getElementById("milestone-number");
+    // Check and update the range
+    if (number_of_milestones_input.value > 3)
+        number_of_milestones_input.value = 3;
+    else if (number_of_milestones_input.value < 0)
+        number_of_milestones_input.value = 0;
+
+    // Fetch number of milestones and player input list
+    var milestones = number_of_milestones_input.value;
+    var milestone_list = document.getElementById("milestone-list");
+
+    //Initial loading of milestones names and corporations
+
+    function getMilestones(){
+        var active_milestones = [];
+        var active_map = document.getElementById("map").value;
+        active_milestones.push.apply(active_milestones, util.game_data.milestones[active_map]);
+        if(document.getElementById("venus-checkbox").checked){
+            active_milestones.push.apply(active_milestones, util.game_data.milestones["Venus"]);
+        }
+        active_milestones.sort();
+        return active_milestones;
+    }
+
+    var milestones_select = getMilestones().map(milestone => `<option value="${milestone}">${milestone}</option>`).join("\n");
+    var active_players_select = util.game_data.active_players.map(player => `<option value="${player}">${player}</option>`).join("\n");
+    
+    // Create input fields
+    milestone_list.innerHTML = 
+        `<div class="milestone-container">
+            <select class="milestone-select"> ${milestones_select}</select>
+            <select class="milestone-select-player" onchange="updateMilestoneScores()"> ${active_players_select}</select>
+        </div>`.repeat(milestones);
+    
+    updateMilestoneScores();
+
+    // Set milestone input list to visible
+    document.getElementById("milestones").style.display = milestones == 0 ? "none":"block";
+}
+
+//////////////////////
+//     AWARDS
+//////////////////////
+
+// Checks if there are more than 1 of the same awards entered
+window.checkAwardsValidity = function(){
+    var active_awards = Array.from(document.getElementsByClassName("award-points-row"))
+        .map(award => award.children[0].children[0].value);
+    return (new Set(active_awards)).size == active_awards.length;
+}
+
+// Parse award points
+window.parseAwardPoints = function(){
+    var player_names = Array.from(document.getElementById("player-list").children).map( element => element.children[0].value);
+    var awards = Array.from(document.getElementsByClassName("award-points-row"));
+    var awards_points = {}
+
+    // For each award:
+    awards.forEach(function(award_row){
+        var award_name = award_row.children[0].children[0].value;
+        awards_points[award_name] = {};
+
+        //  Get all the scores:
+        var scores = Array.from(award_row.querySelectorAll("input"))
+            .map(award => parseInt(award.value, 10))
+            .map(score => isNaN(score) ? 0:score);
+
+        for(var i = 0; i < player_names.length; ++i){
+            awards_points[award_name][player_names[i]] = scores[i]
+        }
+
+    });
+    return awards_points;
+}
+
+// Calculates who won what awards
+window.calculateAwards = function(){
+    var player_names = Array.from(document.getElementById("player-list").children).map( element => element.children[0].value);
+    var awards = Array.from(document.getElementsByClassName("award-points-row"));
+    var player_awards = {}
+
+    // For each award:
+    awards.forEach(function(award_row){
+        var award_name = award_row.children[0].children[0].value;
+        player_awards[award_name] = {};
+        //  Get all the scores:
+        var scores = Array.from(award_row.querySelectorAll("input"))
+            .map(award => parseInt(award.value, 10))
+            .map(score => isNaN(score) ? 0:score);
+
+        //  Get the max score
+        var maxes = Array.from(new Set(scores)).sort(function(a, b){return b - a;});
+
+        //  If only one player with max score
+        if (scores.filter(score => score == maxes[0]).length == 1){
+            // Give that player first place for the award
+            var first_index = scores.findIndex(score => score == maxes[0]);
+            player_awards[award_name].first = [player_names[first_index]];
+            player_awards[award_name].second = [];
+            // Check the second highest score
+            // Give all players with second highest score the second place
+            for (var i = 0; i < player_names.length; ++i){
+                if (scores[i] == maxes[1]){
+                    player_awards[award_name].second.push(player_names[i]);
+                }
+            }
+        }
+        else{
+            player_awards[award_name].first = [];
+            player_awards[award_name].second = [];
+            // Give all players with highest score the first place
+            for (var i = 0; i < player_names.length; ++i){
+                if (scores[i] == maxes[0]){
+                    player_awards[award_name].first.push(player_names[i]);
+                }
+            }
+        }
+    });
+    return player_awards;
+}
+
+//Update scores for awards
+window.updateAwardScores = function (){
+    var award_scores = calculateAwards();
+    
+    var player_names = Array.from(document.getElementById("player-list").children).map( element => element.children[0].value);
+    var totals = Array.from(document.getElementById("award-table-points").querySelectorAll("input"))
+    var totals_point_table = Array.from(document.getElementById("award-points").querySelectorAll("input"))
+    
+    for(var i = 0; i < player_names.length; ++i){
+        var entries = Object.entries(award_scores);
+        var total_score = 0;
+
+        entries.forEach(function(entry){
+            if(entry[1].first.includes(player_names[i]))        total_score += 5;
+            else if(entry[1].second.includes(player_names[i]))  total_score += 2;
+        });
+        totals[i].value = total_score;
+        totals_point_table[i].value = total_score;
+    }
+
+    updateTotals();
+}
+
+//Generates player input fields
+window.updateAwardInputs = function (){
+    // Gets the points div, points table and player list nodes
+    var awards_div = document.getElementById("awards");
+    var award_table = document.getElementById("award-table");
+    var player_list = document.getElementById("player-list");
+    var award_number = document.getElementById("award-number").value;
+
+    if(award_number == 0){
+        awards_div.style.display = "none";
+        return;
+    }
+    
+    // Fetches the names of the players
+    var player_names = Array.from(player_list.children).map(
+        function(element) { return element.children[0].value; }
+    );
+
+    // Creates the name row for the table
+    var name_row = 
+    `<tr id="award-names">
+        <td class="table-cell">Name</td>
+        ${player_names.map(element => `<td class="table-cell">${element}</td>`).join("\n")}
+    </tr>`;
+
+    // Creates the inputs for the scores
+    var createInputs = (type, additional = "") => `<td class="table-cell"><input class="table-input" type="${type}" ${additional}></td>`.repeat(player_names.length);
+
+    function getAwards(){
+        var active_awards = [];
+        var active_map = document.getElementById("map").value;
+        active_awards.push.apply(active_awards, util.game_data.awards[active_map]);
+        if(document.getElementById("venus-checkbox").checked){
+            active_awards.push.apply(active_awards, util.game_data.awards["Venus"]);
+        }
+        active_awards.sort();
+
+        return active_awards;
+    }
+
+    var awards_select = getAwards().map(award => `<option value="${award}">${award}</option>`).join("\n");
+
+    // Adds all point rows
+    var awards = `
+    <tr class="award-points-row">
+        <td class="table-cell"><select class="award-select" >${awards_select}</select></td>
+        ${createInputs("number", 'onchange="updateAwardScores()" min="-5" value="0"')}
+    </tr>
+    `.repeat(award_number)
+
+    var awards_points = `
+    <tr id="award-table-points">
+        <td class="table-cell">Total points</td>
+        ${createInputs("number", 'disabled value="0"')}
+    </tr>
+    `
+    
+    // Creates the table and sets the style to visible
+    award_table.innerHTML = name_row + awards + awards_points;
+
+    document.getElementById("awards").style.display = "block";
+
+    // Show points div
+    awards_div.style.display = 'block';
 }
 
 //////////////////
@@ -533,10 +642,14 @@ window.generatePointTable = function(){
     table.innerHTML = name_row + points.join('\n') + total_points + ranks + note_input;
 
     //Disable awards
-    Array.from(document.getElementById("award-points").querySelectorAll("input")).forEach(function(elem){
-        elem.disabled = true;
-        elem.value = 0;
-    });
+    ["award-points", "milestone-points"].forEach(key =>
+        Array.from(document.getElementById(key).querySelectorAll("input")).forEach(function(elem){
+            elem.disabled = true;
+            elem.value = 0;
+        })
+    );
+    
+
 
 
     // Update display of gold lead
@@ -616,6 +729,9 @@ ${game.scores.map(score => `                    <td class="table-cell"><input cl
         `
     }
 
+    // TODO: Add milestones and awards if they are part of the entry
+    // if (entry[milestones]) ...
+    // if (entry[awards]) ...
 
     return `
 <!DOCTYPE html>
@@ -893,9 +1009,25 @@ window.submitForm = async function(){
     var password = password_field.value;
     password_field.value = "";
 
+    ////////////////////////
+    //      Program exits
+    ////////////////////////
+
     // Check if password is valid
     if (CryptoJS.SHA256(password).toString() != password_hash){
         updateBanner("Wrong password!", true);
+        return;
+    }
+
+    // Check if milestones is valid
+    if (!checkMilestonesValidity()){
+        updateBanner("Repeating milestones not allowed!", true);
+        return;
+    }
+
+    // Check if award is valid
+    if (!checkAwardsValidity()){
+        updateBanner("Repeating awards not allowed!", true);
         return;
     }
 
@@ -912,6 +1044,7 @@ window.submitForm = async function(){
         updateBanner("Players with same name not allowed", true);
         return;
     }
+
 
     // Get GitHub api token by decrypting encrypted token
     var decrypted = CryptoJS.AES.decrypt(encrypted_token, password);
@@ -1011,6 +1144,12 @@ window.submitForm = async function(){
 
     // Increase id counter
     metadata.current_id++;
+
+    // Add milestones
+    entry.milestones = parseMilestones();
+
+    // Add awards
+    entry.awards = {winners: calculateAwards(), points: parseAwardPoints()};
 
     // Add colonies
     if(mode.includes("Colonies")){

@@ -144,7 +144,7 @@ window.util = {
             "Mons Insurance",
             "Philares"
           ],
-        "awards":{
+        "milestones":{
             "Tharsis": [
                 "Builder",
                 "Gardener",
@@ -170,7 +170,7 @@ window.util = {
                 "Hoverlord"
             ]
           },
-        "milestones":{
+        "awards":{
             "Tharsis":[
                 "Landlord",
                 "Scientist",
