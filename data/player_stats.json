@@ -1004,6 +1004,13 @@
         "rank": 4,
         "points": 60,
         "players": 4
+      },
+      {
+        "id": 83,
+        "corporation": "UNMI",
+        "rank": 5,
+        "points": 54,
+        "players": 5
       }
     ],
     "best_games": [
@@ -1572,6 +1579,13 @@
         "rank": 1,
         "points": 72,
         "players": 5
+      },
+      {
+        "id": 83,
+        "corporation": "Morning Star INC",
+        "rank": 4,
+        "points": 70,
+        "players": 5
       }
     ],
     "best_games": [
@@ -2119,6 +2133,13 @@
         "rank": 1,
         "points": 91,
         "players": 4
+      },
+      {
+        "id": 83,
+        "corporation": "Saturn Systems",
+        "rank": 2,
+        "points": 73,
+        "players": 5
       }
     ],
     "best_games": [
@@ -2492,6 +2513,13 @@
         "rank": 3,
         "points": 67,
         "players": 4
+      },
+      {
+        "id": 83,
+        "corporation": "Viron",
+        "rank": 1,
+        "points": 74,
+        "players": 5
       }
     ],
     "best_games": [
@@ -2865,6 +2893,13 @@
         "rank": 2,
         "points": 83,
         "players": 4
+      },
+      {
+        "id": 83,
+        "corporation": "Philares",
+        "rank": 3,
+        "points": 71,
+        "players": 5
       }
     ],
     "best_games": [
@@ -2875,8 +2910,8 @@
       },
       {
         "players": 5,
-        "id": 41,
-        "score": 68
+        "id": 83,
+        "score": 71
       }
     ],
     "fave_corp": {
