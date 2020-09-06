@@ -51,24 +51,24 @@
     },
     "stddev": {
       "2": {
-        "total": null,
+        "total": 2108,
         "count": 6,
-        "stddev": null
+        "stddev": 18.743887892679396
       },
       "3": {
-        "total": null,
+        "total": 21516.984848484848,
         "count": 66,
-        "stddev": null
+        "stddev": 18.05588330563587
       },
       "4": {
-        "total": null,
+        "total": 32409.512195121963,
         "count": 164,
-        "stddev": null
+        "stddev": 14.05770168980421
       },
       "5": {
-        "total": null,
+        "total": 14542.62222222222,
         "count": 90,
-        "stddev": null
+        "stddev": 12.711596727320478
       }
     }
   }
