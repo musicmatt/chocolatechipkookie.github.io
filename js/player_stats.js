@@ -56,7 +56,7 @@ window.displayPlayerStatsToggle = function(name){
 window.displayPlayerStats = function (name){
     var player_data = player_stats[name];
     document.getElementById("player-name").value = name;    
-    document.getElementById("player-elo").style.display = "block";
+    document.getElementById("player-elo").style.display = Math.floor(player_data.elo.value);
 
     document.getElementById("player-total-games").value = player_data.games.length;
     document.getElementById("fave-corp-number").value = `${player_data.fave_corp.total} games / ${player_data.fave_corp.wins} wins`;
