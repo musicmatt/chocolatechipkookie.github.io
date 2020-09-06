@@ -8069,5 +8069,345 @@
         "count": 3
       }
     ]
+  },
+  {
+    "id": 82,
+    "name": "Lešina (Game 85)",
+    "note": "Zanimljivo specifican los game, jako sporo i monotono. Najzanimljiviji dio je kupnjenje buildera.",
+    "date": "2020-08-04",
+    "mode": [
+      "Base",
+      "Colonies",
+      "Corporate Era",
+      "Draft",
+      "Prelude",
+      "Venus"
+    ],
+    "mode_code": "B+Col+CE+Dr+Pr+Ve",
+    "map": "Tharsis",
+    "winner": "Luka Jenuš",
+    "win_corp": "Phobolog",
+    "win_score": 91,
+    "players": 4,
+    "generation": 9,
+    "image": "",
+    "scores": [
+      {
+        "player": "Luka Jenuš",
+        "corporation": "Phobolog",
+        "tr": 43,
+        "awards": 7,
+        "milestones": 5,
+        "greenery": 7,
+        "cities": 13,
+        "cards": 16,
+        "lead": 0,
+        "total": 91,
+        "rank": 1,
+        "note": ""
+      },
+      {
+        "player": "Jan Mastrović",
+        "corporation": "Point Luna",
+        "tr": 31,
+        "awards": 0,
+        "milestones": 5,
+        "greenery": 1,
+        "cities": 1,
+        "cards": 22,
+        "lead": 0,
+        "total": 60,
+        "rank": 4,
+        "note": ""
+      },
+      {
+        "player": "Adi Čaušević",
+        "corporation": "Helion",
+        "tr": 32,
+        "awards": 7,
+        "milestones": 0,
+        "greenery": 1,
+        "cities": 2,
+        "cards": 25,
+        "lead": 0,
+        "total": 67,
+        "rank": 3,
+        "note": ""
+      },
+      {
+        "player": "Dolores Frančišković",
+        "corporation": "Tharsis Republic",
+        "tr": 37,
+        "awards": 7,
+        "milestones": 5,
+        "greenery": 8,
+        "cities": 15,
+        "cards": 11,
+        "lead": 0,
+        "total": 83,
+        "rank": 2,
+        "note": ""
+      }
+    ],
+    "milestones": {
+      "Terraformer": "Luka Jenuš",
+      "Mayor": "Dolores Frančišković",
+      "Planer": "Jan Mastrović"
+    },
+    "awards": {
+      "winners": {
+        "Landlord": {
+          "first": [
+            "Dolores Frančišković"
+          ],
+          "second": [
+            "Luka Jenuš"
+          ]
+        },
+        "Banker": {
+          "first": [
+            "Adi Čaušević"
+          ],
+          "second": [
+            "Dolores Frančišković"
+          ]
+        },
+        "Miner": {
+          "first": [
+            "Luka Jenuš"
+          ],
+          "second": [
+            "Adi Čaušević"
+          ]
+        }
+      },
+      "points": {
+        "Landlord": {
+          "Luka Jenuš": 13,
+          "Jan Mastrović": 3,
+          "Adi Čaušević": 3,
+          "Dolores Frančišković": 15
+        },
+        "Banker": {
+          "Luka Jenuš": 28,
+          "Jan Mastrović": 10,
+          "Adi Čaušević": 34,
+          "Dolores Frančišković": 33
+        },
+        "Miner": {
+          "Luka Jenuš": 17,
+          "Jan Mastrović": 6,
+          "Adi Čaušević": 13,
+          "Dolores Frančišković": 1
+        }
+      }
+    },
+    "colonies": [
+      {
+        "name": "Io",
+        "count": 1
+      },
+      {
+        "name": "Europa",
+        "count": 1
+      },
+      {
+        "name": "Enceladus",
+        "count": 0
+      },
+      {
+        "name": "Ganymede",
+        "count": 1
+      },
+      {
+        "name": "Ceres",
+        "count": 1
+      },
+      {
+        "name": "Triton",
+        "count": 2
+      }
+    ]
+  },
+  {
+    "id": 83,
+    "name": "DrugiSjebaniGejmUDanu",
+    "note": "",
+    "date": "2020-09-04",
+    "mode": [
+      "Base",
+      "Colonies",
+      "Corporate Era",
+      "Draft",
+      "Prelude",
+      "Venus"
+    ],
+    "mode_code": "B+Col+CE+Dr+Pr+Ve",
+    "map": "Tharsis",
+    "winner": "Adi Čaušević",
+    "win_corp": "Viron",
+    "win_score": 74,
+    "players": 5,
+    "generation": 7,
+    "image": "",
+    "scores": [
+      {
+        "player": "Luka Jenuš",
+        "corporation": "Saturn Systems",
+        "tr": 47,
+        "awards": 2,
+        "milestones": 0,
+        "greenery": 5,
+        "cities": 2,
+        "cards": 17,
+        "lead": 0,
+        "total": 73,
+        "rank": 2,
+        "note": ""
+      },
+      {
+        "player": "Andro Slavić",
+        "corporation": "Morning Star INC",
+        "tr": 29,
+        "awards": 10,
+        "milestones": 5,
+        "greenery": 0,
+        "cities": 0,
+        "cards": 26,
+        "lead": 0,
+        "total": 70,
+        "rank": 4,
+        "note": ""
+      },
+      {
+        "player": "Jan Mastrović",
+        "corporation": "UNMI",
+        "tr": 38,
+        "awards": 2,
+        "milestones": 0,
+        "greenery": 1,
+        "cities": 6,
+        "cards": 7,
+        "lead": 0,
+        "total": 54,
+        "rank": 5,
+        "note": "najgori gejm ikad"
+      },
+      {
+        "player": "Adi Čaušević",
+        "corporation": "Viron",
+        "tr": 28,
+        "awards": 4,
+        "milestones": 0,
+        "greenery": 0,
+        "cities": 2,
+        "cards": 40,
+        "lead": 0,
+        "total": 74,
+        "rank": 1,
+        "note": "viron+physics complex+callisto"
+      },
+      {
+        "player": "Dolores Frančišković",
+        "corporation": "Philares",
+        "tr": 32,
+        "awards": 5,
+        "milestones": 10,
+        "greenery": 6,
+        "cities": 13,
+        "cards": 5,
+        "lead": 0,
+        "total": 71,
+        "rank": 3,
+        "note": ""
+      }
+    ],
+    "milestones": {
+      "Mayor": "Dolores Frančišković",
+      "Gardener": "Dolores Frančišković",
+      "Hoverlord": "Andro Slavić"
+    },
+    "awards": {
+      "winners": {
+        "Landlord": {
+          "first": [
+            "Dolores Frančišković"
+          ],
+          "second": [
+            "Luka Jenuš"
+          ]
+        },
+        "Scientist": {
+          "first": [
+            "Andro Slavić"
+          ],
+          "second": [
+            "Adi Čaušević"
+          ]
+        },
+        "Venuphile": {
+          "first": [
+            "Andro Slavić"
+          ],
+          "second": [
+            "Jan Mastrović",
+            "Adi Čaušević"
+          ]
+        }
+      },
+      "points": {
+        "Landlord": {
+          "Luka Jenuš": 6,
+          "Andro Slavić": 1,
+          "Jan Mastrović": 5,
+          "Adi Čaušević": 2,
+          "Dolores Frančišković": 12
+        },
+        "Scientist": {
+          "Luka Jenuš": 2,
+          "Andro Slavić": 9,
+          "Jan Mastrović": 1,
+          "Adi Čaušević": 5,
+          "Dolores Frančišković": 3
+        },
+        "Venuphile": {
+          "Luka Jenuš": 1,
+          "Andro Slavić": 9,
+          "Jan Mastrović": 4,
+          "Adi Čaušević": 4,
+          "Dolores Frančišković": 0
+        }
+      }
+    },
+    "colonies": [
+      {
+        "name": "Callisto",
+        "count": 2
+      },
+      {
+        "name": "Io",
+        "count": 0
+      },
+      {
+        "name": "Titan",
+        "count": 1
+      },
+      {
+        "name": "Europa",
+        "count": 0
+      },
+      {
+        "name": "Enceladus",
+        "count": 1
+      },
+      {
+        "name": "Ganymede",
+        "count": 1
+      },
+      {
+        "name": "Miranda",
+        "count": 0
+      }
+    ]
   }
 ]
