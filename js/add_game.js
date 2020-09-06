@@ -687,8 +687,7 @@ function createCode(modes){
 function generateGameSite(game){
 
     function transformDate(date){
-        date = new Date(date);
-        return `${date.getDay().toString().padStart(2, "0")}/${date.getMonth().toString().padStart(2, "0")}/${date.getFullYear()}`
+        return `${date.substring(8)}/${date.substring(5, 7)}/${date.substring(0, 4)}`
     }
 
     var names = game.scores.map(score => `                    <td class="table-cell" style="font-weight: bolder; font-family: 'Courier New', Courier, monospace;">${score.player}</td>`).join('\n');
@@ -858,9 +857,90 @@ ${note}
 `
 }
 
+window.calculateEloParameters = function(games){
+    var means = {}
+    games.forEach(function(game){
+        if(!means[game.players]){
+            means[game.players] = {total:0, count:0};
+        }
+        game.scores.forEach(function(score){
+            means[game.players].total += score.total;
+            means[game.players].count += 1;
+        });
+    });
+    Object.keys(means).forEach(key => means[key].mean = means[key].total / means[key].count);
+    
+    var dev = {}
+    games.forEach(function(game){
+        if(!dev[game.players]){
+            dev[game.players] = {total:0, count:0};
+        }
+        game.scores.forEach(function(score){
+            var diff = (score.total - means[game.players].mean);
+            dev[game.players].total += diff*diff;
+            dev[game.players].count += 1;
+        });
+    });
+    
+    Object.keys(dev).forEach(key => dev[key].stddev = Math.sqrt(dev[key].total / dev[key].count));
+    
+    return {means: means, stddev:dev};
+}
 
-function calculateEloChange(players, game, data){
+function calculateEloChange(game, player_stats, means, stddevs){
+    var mean = means[game.players].mean;
+    var stddev = stddevs[game.players].stddev;
+    
+    var players = game.scores.map(elem => elem.player);
+    const pool_percentage = 0.05;
+    var pool = players.reduce((acc, player) => acc + (player_stats[player].elo.value * pool_percentage), 0);
 
+
+    function getFactor(score){
+        function erf(x) {
+            var z;
+            const ERF_A = 0.147; 
+            var the_sign_of_x;
+            if(0==x) {
+                the_sign_of_x = 0;
+                return 0;
+            } else if(x>0){
+                the_sign_of_x = 1;
+            } else {
+                the_sign_of_x = -1;
+            }
+
+            var one_plus_axsqrd = 1 + ERF_A * x * x;
+            var four_ovr_pi_etc = 4/Math.PI + ERF_A * x * x;
+            var ratio = four_ovr_pi_etc / one_plus_axsqrd;
+            ratio *= x * -x;
+            var expofun = Math.exp(ratio);
+            var radical = Math.sqrt(1-expofun);
+            z = radical * the_sign_of_x;
+            return z;
+        }
+
+        var normalized = (score - mean) / stddev;
+        const sqrt2 = 1.41421356237;
+
+        return (erf(normalized/sqrt2) + 1)/2;
+    }
+
+    var scores = {}
+    game.scores.forEach(elem => scores[elem.player] = 
+        {
+            score: elem.total, 
+            elo: player_stats[elem.player].elo.value,
+            factor: getFactor(elem.total)
+        });
+
+    var total_factors = Object.keys(scores).reduce((acc, key) => scores[key].factor + acc, 0);
+    players.forEach(function(player) {
+        scores[player].factor /= total_factors;
+        scores[player].change = pool * scores[player].factor - scores[player].elo * pool_percentage;
+    });
+
+    return scores;
 }
 
 function recalculateStats(player, game, player_stats){
@@ -1179,6 +1259,23 @@ window.submitForm = async function(){
         recalculateStats(player, entry, player_stats);
     });
 
+    // Recalculate elo
+    var elo_params = calculateEloParameters(games);
+    Object.keys(player_stats).forEach(key => player_stats[key].elo = {value: 1000, history:[]});
+
+    games_data.forEach(function(game){
+        var means = elo_params.means;
+        var stddevs = elo_params.stddev;
+        var changes = calculateEloChange(game, player_stats, means, stddevs)
+        game.scores
+            .map(score=>score.player)
+            .forEach(function(player){
+                var change = changes[player].change;
+                player_stats[player].elo.value += change;
+                player_stats[player].elo.history.push({id:game.id, change:change});
+            });
+    });
+
     // Create game site
     var game_site = generateGameSite(entry);
     await createFile(game_site, `games/${entry.id}.html`, `Created site for game "${name}" id:${entry.id}`, octokit)
@@ -1233,7 +1330,6 @@ window.calculateAllStats = async function (password){
     console.log("Updated stats");
 }
 
-
 window.createSite = async function(password, game_id){
     //Check password
     if (CryptoJS.SHA256(password).toString() != password_hash){
@@ -1260,7 +1356,6 @@ window.createSite = async function(password, game_id){
     }
 
 }
-
 
 // Script for recreating all sites, requires password to be set to the password
 window.createAllSites = async function (password){
@@ -1291,3 +1386,43 @@ window.createAllSites = async function (password){
         }
     }
 }
+
+// Script for recreating all sites, requires password to be set to the password
+window.recalculateAllEloScores = async function (password){
+    //Check password
+    if (CryptoJS.SHA256(password).toString() != password_hash){
+        console.log("Wrong password");
+        return;
+    }
+    
+    // Get GitHub api token by decrypting encrypted token
+    var decrypted = CryptoJS.AES.decrypt(encrypted_token, password);
+
+    // Init Octokit
+    const octokit = new Octokit({auth: decrypted.toString(CryptoJS.enc.Utf8)});
+
+    // Add all players to the database
+    var player_stats = JSON.parse(b64_to_utf8((await getFile("data/player_stats.json", octokit)).data.content));
+    var games = JSON.parse(b64_to_utf8((await getFile("data/games.json", octokit)).data.content));
+
+    var elo_params = calculateEloParameters(games);
+
+    // Reset elo values
+    Object.keys(player_stats).forEach(key => player_stats[key].elo = {value: 1000, history:[]});
+
+    games.forEach(function(game){
+        var means = elo_params.means;
+        var stddevs = elo_params.stddev;
+        var changes = calculateEloChange(game, player_stats, means, stddevs)
+        game.scores
+            .map(score=>score.player)
+            .forEach(function(player){
+                var change = changes[player].change;
+                player_stats[player].elo.value += change;
+                player_stats[player].elo.history.push({id:game.id, change:change});
+            });
+    });
+    
+    await updateFile(JSON.stringify(player_stats, null, 2), "data/player_stats.json", `Updated elo "${name}"`, octokit);
+}
+
