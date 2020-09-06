@@ -25,5 +25,51 @@
     "Vito Papa",
     "Orijan Markić"
   ],
-  "current_id": 84
+  "current_id": 84,
+  "elo_params": {
+    "means": {
+      "2": {
+        "total": 738,
+        "count": 6,
+        "mean": 123
+      },
+      "3": {
+        "total": 6115,
+        "count": 66,
+        "mean": 92.65151515151516
+      },
+      "4": {
+        "total": 12188,
+        "count": 164,
+        "mean": 74.3170731707317
+      },
+      "5": {
+        "total": 6332,
+        "count": 90,
+        "mean": 70.35555555555555
+      }
+    },
+    "stddev": {
+      "2": {
+        "total": null,
+        "count": 6,
+        "stddev": null
+      },
+      "3": {
+        "total": null,
+        "count": 66,
+        "stddev": null
+      },
+      "4": {
+        "total": null,
+        "count": 164,
+        "stddev": null
+      },
+      "5": {
+        "total": null,
+        "count": 90,
+        "stddev": null
+      }
+    }
+  }
 }
