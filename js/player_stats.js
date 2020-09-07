@@ -30,11 +30,13 @@ async function loadExternalData(){
     var datalist = metadata.player_names.map( player => `<option value="${player}">`).join('\n');
     document.getElementById("datalist-players").innerHTML = datalist;
 
+    var placement_games = all_games.length / 10;
+
     // Add buttons
     var buttons = metadata.player_names
         .map( player => `
             <button class="player-link-button" onclick="displayPlayerStatsToggle('${player}');">${player}</button>
-            <button class="player-link-button" disabled style="width:100px">${Math.floor(player_stats[player].elo.value)}</button>
+            <button class="player-link-button" disabled style="width:125px">${Math.floor(player_stats[player].elo.value)}${player_stats[player].games.length < placement_games ? "?":""}</button>
         `)
         .join('\n');
     document.getElementById("player-list").innerHTML = buttons;
