@@ -17,11 +17,13 @@ window.hideContainer = function (elem, checkbox_container){
 
 var metadata = null;
 var player_stats = null;
+var all_games = null;
 
 // Loads players and corporations from database
 async function loadExternalData(){
     const octokit = new Octokit();
     // Decode base64 file content and parse json
+    all_games = JSON.parse(b64_to_utf8((await getFile("data/games.json", octokit)).data.content));
     metadata = JSON.parse(b64_to_utf8((await getFile("data/data.json", octokit)).data.content));
     player_stats = JSON.parse(b64_to_utf8((await getFile("data/player_stats.json", octokit)).data.content));
     // Create datalist for HTML
@@ -96,6 +98,30 @@ window.displayPlayerStats = function (name){
     document.getElementById("all-winrate").innerHTML = `${(won.length/all.length*100).toFixed(2)} %`
     document.getElementById("all-best").innerHTML = max_points;
     document.getElementById("all-link").onclick = function(){window.location = `/games/${max_id}.html`};
+
+
+    // Point table
+
+    var table = document.getElementById("game-table");
+
+    var table_header = `
+    <tr>
+        <td class="table-cell">Game</td>
+        <td class="table-cell">Score</td>
+        <td class="table-cell">Rank</td>
+        <td class="table-cell">Elo</td>
+        <td class="table-cell">Link</td>
+    </tr>
+`
+    var games = {};
+    player_data.games.forEach(game => games[game.id] = {score:game.points, rank:game.rank});
+    Object.keys(games).forEach(function(id){
+        var game = all_games.find(game=>game.id == id);
+        games[id].name = game.name;
+        var elo = player_stats.elo.history.find(game=>game.id = id);
+        games[id].elo = elo.value;
+        games[id].elo_change = elo.change;
+    });
 
 
     // TODO: Tablica rezultata https://stackoverflow.com/questions/45857682/interpolation-of-colors

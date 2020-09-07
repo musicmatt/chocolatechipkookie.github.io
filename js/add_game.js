@@ -1419,7 +1419,7 @@ window.recalculateAllEloScores = async function (password){
             .forEach(function(player){
                 var change = changes[player].change;
                 player_stats[player].elo.value += change;
-                player_stats[player].elo.history.push({id:game.id, change:change});
+                player_stats[player].elo.history.push({id:game.id, value:player_stats[player].elo.value, change:change});
             });
     });
     
