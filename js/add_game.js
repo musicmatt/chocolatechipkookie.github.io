@@ -1260,7 +1260,7 @@ window.submitForm = async function(){
     });
 
     // Recalculate elo
-    var elo_params = calculateEloParameters(games);
+    var elo_params = calculateEloParameters(games_data);
     Object.keys(player_stats).forEach(key => player_stats[key].elo = {value: 1000, history:[]});
 
     games_data.forEach(function(game){
