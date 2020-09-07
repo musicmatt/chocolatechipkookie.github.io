@@ -31,7 +31,9 @@ async function loadExternalData(){
     document.getElementById("datalist-players").innerHTML = datalist;
 
     // Add buttons
-    var buttons = metadata.player_names.map( player => `<button class="player-link-button" onclick="displayPlayerStatsToggle('${player}');">${player}</button>`).join('\n');
+    var buttons = metadata.player_names
+        .map( player => `<button class="player-link-button" onclick="displayPlayerStatsToggle('${player}');">${player} (${Math.floor(player_stats[player].elo.value)})</button>`)
+        .join('\n');
     document.getElementById("player-list").innerHTML = buttons;
 }
 
@@ -106,11 +108,10 @@ window.displayPlayerStats = function (name){
 
     var table_header = `
     <tr>
-        <td class="table-cell">Game</td>
+        <td class="table-cell">Game (link)</td>
         <td class="table-cell">Score</td>
         <td class="table-cell">Rank</td>
         <td class="table-cell">Elo</td>
-        <td class="table-cell">Link</td>
     </tr>
     `
     var table_contents = ""
@@ -122,11 +123,10 @@ window.displayPlayerStats = function (name){
         var elo = player_data.elo.history.find(game=>game.id == id);
         table_contents += `
         <tr>
-            <td class="table-cell">${game.name}</td>
+            <td class="table-cell table-button" onclick="window.location = '/games/${id}.html'">${game.name}</td>
             <td class="table-cell">${games[id].score}</td>
             <td class="table-cell">${games[id].rank}</td>
             <td class="table-cell">${Math.floor(elo.value)} (${elo.change < 0 ? "":"+"}${Math.floor(elo.change)})</td>
-            <td class="table-cell table-button" onclick="window.location = '/games/${id}.html'">Link</td>
         </tr>`
     });
 
