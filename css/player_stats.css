@@ -24,7 +24,7 @@
     border-color: black;
     border-radius: 15px;
 
-    display: block;
+    display: inline-block;
     text-align: center;
 
     font-family: 'Courier New', Courier, monospace;

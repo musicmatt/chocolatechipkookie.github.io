@@ -32,7 +32,10 @@ async function loadExternalData(){
 
     // Add buttons
     var buttons = metadata.player_names
-        .map( player => `<button class="player-link-button" onclick="displayPlayerStatsToggle('${player}');">${player} (${Math.floor(player_stats[player].elo.value)})</button>`)
+        .map( player => `
+            <button class="player-link-button" onclick="displayPlayerStatsToggle('${player}');">${player}</button>
+            <button class="player-link-button" disabled style="width:100px">${Math.floor(player_stats[player].elo.value)}</button>
+        `)
         .join('\n');
     document.getElementById("player-list").innerHTML = buttons;
 }
