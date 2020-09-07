@@ -112,17 +112,25 @@ window.displayPlayerStats = function (name){
         <td class="table-cell">Elo</td>
         <td class="table-cell">Link</td>
     </tr>
-`
+    `
+    var table_contents = ""
+
     var games = {};
     player_data.games.forEach(game => games[game.id] = {score:game.points, rank:game.rank});
     Object.keys(games).forEach(function(id){
         var game = all_games.find(game=>game.id == id);
-        games[id].name = game.name;
-        var elo = player_stats.elo.history.find(game=>game.id = id);
-        games[id].elo = elo.value;
-        games[id].elo_change = elo.change;
+        var elo = player_data.elo.history.find(game=>game.id == id);
+        table_contents += `
+        <tr>
+            <td class="table-cell">${game.name}</td>
+            <td class="table-cell">${games[id].score}</td>
+            <td class="table-cell">${games[id].rank}</td>
+            <td class="table-cell">${Math.floor(elo.value)} (${elo.change < 0 ? "":"+"}${Math.floor(elo.change)})</td>
+            <td class="table-cell table-button" onclick="window.location = '/games/${id}.html'">Link</td>
+        </tr>`
     });
 
+    table.innerHTML = table_header + table_contents;
 
     // TODO: Tablica rezultata https://stackoverflow.com/questions/45857682/interpolation-of-colors
     document.getElementById("game-container").style.display = "block";
