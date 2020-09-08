@@ -18,9 +18,14 @@ var players = null;
 
 
 function parseTime(time){
+    if (time < 0){
+        return "Negative"
+    }
+
     var hours = Math.floor(time/3600000)
     var minutes = Math.floor(time%3600000/60000)
     var seconds = Math.floor(time%60000/1000)
+
     return `${hours.toString().padStart(2, "0")}:${minutes.toString().padStart(2, "0")}:${seconds.toString().padStart(2, "0")}`;
 }
 
