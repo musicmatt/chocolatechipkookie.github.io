@@ -1,6 +1,6 @@
 var canvas;
 var MAX_PLAYERS = 5;
-var no_players = 2;
+var no_players = 3;
 var timer_box = null;
 
 var clicks = [];
@@ -16,9 +16,6 @@ var active_player = 0;
 var timers = [];
 var players = null;
 
-var unitWidth = 0;
-var unitHeight = 0;
-
 
 function parseTime(time){
     var hours = Math.floor(time/3600000)
@@ -31,9 +28,8 @@ function startSequence(){
     // Set start flag to true
     start = true;
 
-    unitWidth = 0.8*windowWidth;
-
-    unitHeight = (windowHeight - (10*no_players) - 2 * 30 - 20) / (no_players + 3);
+    var unitWidth = 0.8*windowWidth;
+    var unitHeight = (windowHeight - (10*no_players) - 2 * 30 - 15) / (no_players + 3);
     
     // Create players
     players = new Array(no_players).fill().map(Object);
@@ -152,50 +148,59 @@ function colorRotate (index){
 }
 
 function setup() {
+    // Set graphics globals
     createCanvas(windowWidth, windowHeight);
     frameRate(30);
-    count=0;
+    var unitHeight = (windowHeight - 8 * 15) / 7;
 
+    //Create player counter
     clickNoPlayers = new Clickable();
-    clickNoPlayers.locate(20, 20);
-    clickNoPlayers.onOutside = function () {
-        this.color = "#EEEEEE";
-        this.text = no_players;
-        this.textColor = "#000000";
-    };
-
+    clickNoPlayers.locate(0.1*windowWidth, 15);
+    clickNoPlayers.resize(0.35*windowWidth, unitHeight);
+    clickNoPlayers.text = no_players;
+    clickNoPlayers.textFont = 'Courier New';
+    clickNoPlayers.textSize = 40;
     clickNoPlayers.onPress = function () {
         no_players += 1;
-
         if (no_players > 5) 
-            no_players = 2;
-
+            no_players = 1;
         this.text = no_players;
     };
 
+    // Create time counter
     clickTime = new Clickable();
-    clickTime.locate(170, 20);
-    clickTime.onOutside = function () {
-        this.color = "#EEEEEE";
-        this.text = max_time;
-        this.textColor = "#000000";
-    }
+    clickTime.locate(0.55*windowWidth, 15);
+    clickTime.resize(0.35*windowWidth, unitHeight);
+    clickTime.text = max_time;
+    clickTime.textFont = 'Courier New';
+    clickTime.textSize = 40;
     clickTime.onPress = function () {
-        max_time = (max_time + 5) % 120;
+        max_time = max_time + 5;
+        if(max_time > 120){
+            max_time = 5;
+        }
         this.text = max_time;
     }
 
     clickStart = new Clickable();
-    clickStart.locate(10, 200);
+    clickStart.locate(0.1*windowWidth, unitHeight + 30);
+    clickStart.resize(0.8*windowWidth, unitHeight);
+    clickStart.updatePosition = function(){
+        this.locate(0.1*windowWidth, 15 + (unitHeight + 15) * (no_players + 1));
+        return this;
+    }
+
     clickStart.textScaled = true;
     clickStart.text = "Start";
-    clickStart.resize(250, 100);
+    clickStart.textFont = 'Courier New';
+    clickStart.textSize = 40;
     clickStart.onPress = startSequence;
   
     for(var i = 0; i < MAX_PLAYERS; ++i){
         var click = new Clickable();
         click.id = i;
-        click.locate(20 + 100 * i, 100);
+        click.locate(0.1*windowWidth, 15 + (unitHeight + 15) * (i+1));
+        click.resize(0.8*windowWidth, unitHeight);
         click.text = "";
         click.color = colors[i];
         click.onPress = function () {
@@ -210,7 +215,7 @@ function draw() {
     background(192,192,192);
     if (!start){
         clickNoPlayers.draw();
-        clickStart.draw();
+        clickStart.updatePosition().draw();
         clickTime.draw();
 
         for(var i = 0; i < no_players; ++i){
