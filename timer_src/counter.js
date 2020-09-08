@@ -54,6 +54,13 @@ function startSequence(){
         players[active_player].timer_start = Date.now();
     }
 
+    function nextGen(){
+        active_player = gen_first = (gen_first + 1) % no_players;
+        players.forEach(player=>player.big_pass = false);
+        timers.forEach(timer => timer.color = "#FFF");
+        timer_box.stroke = colors[active_player];
+    }
+
     // Create a timer box for every player
     for(var i = 0; i < no_players; ++i){
         var timer = new Clickable();
@@ -68,12 +75,9 @@ function startSequence(){
             if(active_player == this.id){
                 players[this.id].big_pass = true;
                 var finished = players.reduce((acc, elem)=> acc && elem.big_pass, true);
+                this.color = "#BBB";
                 if (finished){
-                    // Next gen
-                    active_player = gen_first = (gen_first + 1) % no_players;
-                    players.forEach(player=>player.big_pass = false);
-                    timer_box.stroke = colors[active_player];
-                    // Enter pause
+                    nextGen();
                     enterPause();
                 }
                 else{
