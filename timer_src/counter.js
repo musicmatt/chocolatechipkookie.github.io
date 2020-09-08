@@ -7,7 +7,10 @@ var clicks = [];
 var start=false;
 var pause = false;
 
-var colors = ["#000000","#FF0000","#00FF00","#0000FF","#FFFF00"];
+var colors = ["#444444","#B90E0A","#11AA11","#3344AA","#CCCC11"];
+var text_color = "#000"
+var button_color = "#DDD"
+var passed_color = "#999"
 
 var max_time = 5;
 var gen_first = 0;
@@ -61,7 +64,7 @@ function startSequence(){
     function nextGen(){
         active_player = gen_first = (gen_first + 1) % no_players;
         players.forEach(player=>player.big_pass = false);
-        timers.forEach(timer => timer.color = "#FFF");
+        timers.forEach(timer => timer.color = button_color);
         timer_box.stroke = colors[active_player];
     }
 
@@ -70,21 +73,30 @@ function startSequence(){
         var timer = new Clickable();
         timer.locate(0.1 * windowWidth, 10 + (unitHeight + 10) * i);
         timer.resize(unitWidth, unitHeight);
+        timer.color = button_color;
+        timer.textColor = text_color;
         timer.strokeWeight = 10;
         timer.stroke = colors[i];
         timer.id = i;
         timer.textSize = 20;
         timer.textFont = 'Courier New';
         timer.onPress = function(){
+            // If paused, the player cannot pass
+            if(pause) return;
+            // Player can only pass when he is active
             if(active_player == this.id){
+                // Update player to big pass
                 players[this.id].big_pass = true;
+                this.color = passed_color;
+                // Check if the generation is finished
                 var finished = players.reduce((acc, elem)=> acc && elem.big_pass, true);
-                this.color = "#BBB";
                 if (finished){
+                    // Go to next generation and pause
                     nextGen();
                     enterPause();
                 }
                 else{
+                    // Go to next player
                     nextPlayer();
                 }
             }
@@ -106,9 +118,12 @@ function startSequence(){
     timer_box = new Clickable();
     timer_box.locate(0.1 * windowWidth, 40 + (unitHeight + 10) * no_players);
     timer_box.resize(unitWidth, unitHeight * 2);
+    timer_box.textColor = text_color;
+    timer_box.color = button_color;
     timer_box.textSize = 40;
     timer_box.textFont = 'Courier New';
     timer_box.strokeWeight = 30;
+    timer_box.stroke = colors[active_player];
     // Update text to the current player time
     timer_box.updateText = function(){
         var time_delta = !pause ? Date.now() - players[active_player].timer_start : 0;
@@ -122,6 +137,8 @@ function startSequence(){
     clickPause = new Clickable();
     clickPause.locate(0.1 * windowWidth, 70 + (unitHeight + 10) * no_players + 2*unitHeight);
     clickPause.resize(unitWidth, unitHeight);
+    clickPause.textColor = text_color;
+    clickPause.color = button_color;
     clickPause.text = 'Pause';
     clickPause.onPress = enterPause;
     clickPause.textSize = 40;
@@ -165,6 +182,7 @@ function setup() {
     clickNoPlayers = new Clickable();
     clickNoPlayers.locate(0.1*windowWidth, 15);
     clickNoPlayers.resize(0.35*windowWidth, unitHeight);
+    clickNoPlayers.color = button_color;
     clickNoPlayers.text = no_players;
     clickNoPlayers.textFont = 'Courier New';
     clickNoPlayers.textSize = 40;
@@ -179,6 +197,7 @@ function setup() {
     clickTime = new Clickable();
     clickTime.locate(0.55*windowWidth, 15);
     clickTime.resize(0.35*windowWidth, unitHeight);
+    clickTime.color = button_color;
     clickTime.text = max_time;
     clickTime.textFont = 'Courier New';
     clickTime.textSize = 40;
@@ -198,6 +217,7 @@ function setup() {
         return this;
     }
 
+    clickStart.color = button_color;
     clickStart.textScaled = true;
     clickStart.text = "Start";
     clickStart.textFont = 'Courier New';
@@ -220,7 +240,7 @@ function setup() {
 
 
 function draw() {
-    background(192,192,192);
+    background(32, 32, 32);
     if (!start){
         clickNoPlayers.draw();
         clickStart.updatePosition().draw();
