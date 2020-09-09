@@ -1259,23 +1259,6 @@ window.submitForm = async function(){
         recalculateStats(player, entry, player_stats);
     });
 
-    // Recalculate elo
-    var elo_params = calculateEloParameters(games_data);
-    Object.keys(player_stats).forEach(key => player_stats[key].elo = {value: 1000, history:[]});
-
-    games_data.forEach(function(game){
-        var means = elo_params.means;
-        var stddevs = elo_params.stddev;
-        var changes = calculateEloChange(game, player_stats, means, stddevs)
-        game.scores
-            .map(score=>score.player)
-            .forEach(function(player){
-                var change = changes[player].change;
-                player_stats[player].elo.value += change;
-                player_stats[player].elo.history.push({id:game.id, change:change});
-            });
-    });
-
     // Create game site
     var game_site = generateGameSite(entry);
     await createFile(game_site, `games/${entry.id}.html`, `Created site for game "${name}" id:${entry.id}`, octokit)
@@ -1285,6 +1268,9 @@ window.submitForm = async function(){
     await updateFile(JSON.stringify(player_stats, null, 2), "data/player_stats.json", `Added game "${name}"`, octokit);
     await updateFile(JSON.stringify(metadata, null, 2), "data/data.json", `Added game "${name}"`, octokit);
     await updateFile(JSON.stringify(games_data, null, 2), "data/games.json", `Added game "${name}"`, octokit);
+
+    //Update elo
+    await recalculateAllEloScores(password);
 
     window.location = '/index.html'
 }
