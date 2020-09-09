@@ -10,10 +10,11 @@ var pause = false;
 var colors = ["#444444","#B90E0A","#11AA11","#3344AA","#CCCC11"];
 var text_color = "#000"
 var button_color = "#DDD"
-var passed_color = "#999"
+var passed_color = "#999";
 
 var max_time = 5;
 var gen_first = 0;
+var generation = 1;
 var active_player = 0;
 
 var timers = [];
@@ -62,10 +63,12 @@ function startSequence(){
     }
 
     function nextGen(){
+        timers[gen_first].strokeWeight = 
         active_player = gen_first = (gen_first + 1) % no_players;
         players.forEach(player=>player.big_pass = false);
         timers.forEach(timer => timer.color = button_color);
         timer_box.stroke = colors[active_player];
+        generation += 1;
     }
 
     // Create a timer box for every player
@@ -83,6 +86,12 @@ function startSequence(){
         timer.onPress = function(){
             // If paused, the player cannot pass
             if(pause) return;
+            // If big pass, able to unpass
+            if(players[this.id].big_pass){
+                players[this.id].big_pass = false;
+                this.color = button_color;
+                return;
+            }
             // Player can only pass when he is active
             if(active_player == this.id){
                 // Update player to big pass
@@ -101,13 +110,13 @@ function startSequence(){
                 }
             }
         }
-
         timer.updateText = function () {
             var time_delta = 0;
             if ((this.id == active_player)&&!pause){
                 time_delta = Date.now() - players[this.id].timer_start;
             }
-            this.text = parseTime(players[this.id].time - time_delta);
+            var time = parseTime(players[this.id].time - time_delta);
+            this.text = this.id == gen_first ? `[${time}]` : time;
             return this;
         }
 
@@ -127,7 +136,7 @@ function startSequence(){
     // Update text to the current player time
     timer_box.updateText = function(){
         var time_delta = !pause ? Date.now() - players[active_player].timer_start : 0;
-        this.text = parseTime(players[active_player].time - time_delta);
+        this.text = `${parseTime(players[active_player].time - time_delta)}\nGeneration: ${generation}`;
         return this;
     };
     // On press change player
