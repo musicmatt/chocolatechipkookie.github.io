@@ -8589,5 +8589,169 @@
         "count": 3
       }
     ]
+  },
+  {
+    "id": 85,
+    "name": "Šah na Marsu (Game 88)",
+    "note": "",
+    "date": "2020-09-09",
+    "mode": [
+      "Base",
+      "Colonies",
+      "Corporate Era",
+      "Draft",
+      "Prelude",
+      "Turmoil",
+      "Venus"
+    ],
+    "mode_code": "B+Col+CE+Dr+Pr+Tu+Ve",
+    "map": "Tharsis",
+    "winner": "Luka Jenuš",
+    "win_corp": "Point Luna",
+    "win_score": 88,
+    "players": 4,
+    "generation": 9,
+    "image": "",
+    "scores": [
+      {
+        "player": "Adi Čaušević",
+        "corporation": "Morning Star INC",
+        "tr": 18,
+        "awards": 7,
+        "milestones": 5,
+        "greenery": 2,
+        "cities": 2,
+        "cards": 34,
+        "lead": 0,
+        "total": 69,
+        "rank": 3,
+        "note": "Space factory bez spacea (-10 na space)",
+        "turmoil": 1
+      },
+      {
+        "player": "Matteo Samsa",
+        "corporation": "Helion",
+        "tr": 35,
+        "awards": 5,
+        "milestones": 5,
+        "greenery": 5,
+        "cities": 7,
+        "cards": 9,
+        "lead": 0,
+        "total": 67,
+        "rank": 4,
+        "note": "Klasični Helion",
+        "turmoil": 1
+      },
+      {
+        "player": "Andro Slavić",
+        "corporation": "Utopia Invest",
+        "tr": 34,
+        "awards": 4,
+        "milestones": 0,
+        "greenery": 6,
+        "cities": 10,
+        "cards": 29,
+        "lead": 0,
+        "total": 85,
+        "rank": 2,
+        "note": "Predatori na veneri, dobra utopia",
+        "turmoil": 2
+      },
+      {
+        "player": "Luka Jenuš",
+        "corporation": "Point Luna",
+        "tr": 33,
+        "awards": 5,
+        "milestones": 5,
+        "greenery": 3,
+        "cities": 5,
+        "cards": 35,
+        "lead": 0,
+        "total": 88,
+        "rank": 1,
+        "note": "Školska Point Luna",
+        "turmoil": 2
+      }
+    ],
+    "milestones": {
+      "Builder": "Matteo Samsa",
+      "Hoverlord": "Luka Jenuš",
+      "Planer": "Adi Čaušević"
+    },
+    "awards": {
+      "winners": {
+        "Banker": {
+          "first": [
+            "Luka Jenuš"
+          ],
+          "second": [
+            "Andro Slavić"
+          ]
+        },
+        "Thermalist": {
+          "first": [
+            "Matteo Samsa"
+          ],
+          "second": [
+            "Adi Čaušević"
+          ]
+        },
+        "Miner": {
+          "first": [
+            "Adi Čaušević"
+          ],
+          "second": [
+            "Andro Slavić"
+          ]
+        }
+      },
+      "points": {
+        "Banker": {
+          "Adi Čaušević": 18,
+          "Matteo Samsa": 14,
+          "Andro Slavić": 21,
+          "Luka Jenuš": 29
+        },
+        "Thermalist": {
+          "Adi Čaušević": 33,
+          "Matteo Samsa": 40,
+          "Andro Slavić": 21,
+          "Luka Jenuš": 9
+        },
+        "Miner": {
+          "Adi Čaušević": 25,
+          "Matteo Samsa": 0,
+          "Andro Slavić": 17,
+          "Luka Jenuš": 4
+        }
+      }
+    },
+    "colonies": [
+      {
+        "name": "Callisto",
+        "count": 0
+      },
+      {
+        "name": "Ceres",
+        "count": 2
+      },
+      {
+        "name": "Europa",
+        "count": 1
+      },
+      {
+        "name": "Miranda",
+        "count": 0
+      },
+      {
+        "name": "Pluto",
+        "count": 1
+      },
+      {
+        "name": "Triton",
+        "count": 3
+      }
+    ]
   }
 ]
