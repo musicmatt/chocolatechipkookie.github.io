@@ -8753,5 +8753,191 @@
         "count": 3
       }
     ]
+  },
+  {
+    "id": 86,
+    "name": "Samsa isteko",
+    "note": "Jaaaaakooo dug game, samsa nije igrao zadnju generaciju jer se kurcio s vremenom. 35 minut.",
+    "date": "2020-09-10",
+    "mode": [
+      "Base",
+      "Colonies",
+      "Corporate Era",
+      "Draft",
+      "Prelude",
+      "Turmoil",
+      "Venus"
+    ],
+    "mode_code": "B+Col+CE+Dr+Pr+Tu+Ve",
+    "map": "Tharsis",
+    "winner": "Andro Slavić",
+    "win_corp": "Teractor",
+    "win_score": 102,
+    "players": 5,
+    "generation": 11,
+    "image": "",
+    "scores": [
+      {
+        "player": "Luka Jenuš",
+        "corporation": "Philares",
+        "tr": 27,
+        "awards": 5,
+        "milestones": 10,
+        "greenery": 6,
+        "cities": 12,
+        "cards": 16,
+        "lead": 0,
+        "total": 79,
+        "rank": 4,
+        "note": "hmmm",
+        "turmoil": 3
+      },
+      {
+        "player": "Matteo Samsa",
+        "corporation": "Point Luna",
+        "tr": 24,
+        "awards": 5,
+        "milestones": 0,
+        "greenery": 3,
+        "cities": 6,
+        "cards": 46,
+        "lead": 0,
+        "total": 84,
+        "rank": 2,
+        "note": "Pusi zbog vremena",
+        "turmoil": 0
+      },
+      {
+        "player": "Dolores Frančišković",
+        "corporation": "Recyclon",
+        "tr": 20,
+        "awards": 0,
+        "milestones": 0,
+        "greenery": 10,
+        "cities": 18,
+        "cards": 19,
+        "lead": 0,
+        "total": 69,
+        "rank": 5,
+        "note": "Tipicni recyclon",
+        "turmoil": 2
+      },
+      {
+        "player": "Andro Slavić",
+        "corporation": "Teractor",
+        "tr": 31,
+        "awards": 4,
+        "milestones": 5,
+        "greenery": 3,
+        "cities": 8,
+        "cards": 49,
+        "lead": 0,
+        "total": 102,
+        "rank": 1,
+        "note": "Nije uplatio zadnju temp",
+        "turmoil": 2
+      },
+      {
+        "player": "Adi Čaušević",
+        "corporation": "Credicor",
+        "tr": 28,
+        "awards": 7,
+        "milestones": 0,
+        "greenery": 7,
+        "cities": 16,
+        "cards": 25,
+        "lead": 0,
+        "total": 83,
+        "rank": 3,
+        "note": "ahh...",
+        "turmoil": 0
+      }
+    ],
+    "milestones": {
+      "Terraformer": "Luka Jenuš",
+      "Gardener": "Luka Jenuš",
+      "Hoverlord": "Andro Slavić"
+    },
+    "awards": {
+      "winners": {
+        "Scientist": {
+          "first": [
+            "Matteo Samsa"
+          ],
+          "second": [
+            "Adi Čaušević"
+          ]
+        },
+        "Miner": {
+          "first": [
+            "Luka Jenuš"
+          ],
+          "second": [
+            "Andro Slavić"
+          ]
+        },
+        "Thermalist": {
+          "first": [
+            "Adi Čaušević"
+          ],
+          "second": [
+            "Andro Slavić"
+          ]
+        }
+      },
+      "points": {
+        "Scientist": {
+          "Luka Jenuš": 0,
+          "Matteo Samsa": 10,
+          "Dolores Frančišković": 3,
+          "Andro Slavić": 4,
+          "Adi Čaušević": 5
+        },
+        "Miner": {
+          "Luka Jenuš": 36,
+          "Matteo Samsa": 2,
+          "Dolores Frančišković": 1,
+          "Andro Slavić": 9,
+          "Adi Čaušević": 7
+        },
+        "Thermalist": {
+          "Luka Jenuš": 9,
+          "Matteo Samsa": 8,
+          "Dolores Frančišković": 4,
+          "Andro Slavić": 17,
+          "Adi Čaušević": 23
+        }
+      }
+    },
+    "colonies": [
+      {
+        "name": "Callisto",
+        "count": 0
+      },
+      {
+        "name": "Europa",
+        "count": 0
+      },
+      {
+        "name": "Enceladus",
+        "count": 0
+      },
+      {
+        "name": "Ganymede",
+        "count": 0
+      },
+      {
+        "name": "Io",
+        "count": 0
+      },
+      {
+        "name": "Miranda",
+        "count": 0
+      },
+      {
+        "name": "Titan",
+        "count": 0
+      }
+    ]
   }
 ]
