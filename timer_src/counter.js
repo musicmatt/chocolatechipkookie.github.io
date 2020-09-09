@@ -58,7 +58,6 @@ function startSequence(){
             active_player = (active_player + 1) % no_players;
         } while(players[active_player].big_pass);
 
-        timer_box.stroke = colors[active_player];
         players[active_player].timer_start = Date.now();
     }
 
@@ -82,7 +81,7 @@ function startSequence(){
         timer.stroke = colors[i];
         timer.id = i;
         timer.textSize = 20;
-        timer.textFont = 'Courier New';
+        timer.textFont = prototype;
         timer.onPress = function(){
             // If paused, the player cannot pass
             if(pause) return;
@@ -130,13 +129,11 @@ function startSequence(){
     timer_box.textColor = text_color;
     timer_box.color = button_color;
     timer_box.textSize = 40;
-    timer_box.textFont = 'Courier New';
-    timer_box.strokeWeight = 30;
-    timer_box.stroke = colors[active_player];
+    timer_box.textFont = prototype;
     // Update text to the current player time
     timer_box.updateText = function(){
         var time_delta = !pause ? Date.now() - players[active_player].timer_start : 0;
-        this.text = `${parseTime(players[active_player].time - time_delta)}\nGeneration: ${generation}`;
+        this.text = `${parseTime(players[active_player].time - time_delta)}\nGen: ${generation}`;
         return this;
     };
     // On press change player
@@ -151,7 +148,7 @@ function startSequence(){
     clickPause.text = 'Pause';
     clickPause.onPress = enterPause;
     clickPause.textSize = 40;
-    clickPause.textFont = 'Courier New';
+    clickPause.textFont = prototype;
 
     function enterPause(){
         // Ako se ulazi u pauzu
@@ -185,6 +182,8 @@ function setup() {
     // Set graphics globals
     createCanvas(windowWidth, windowHeight);
     frameRate(30);
+    prototype = loadFont('../resources/fonts/Prototype.ttf');
+
     var unitHeight = (windowHeight - 8 * 15) / 7;
 
     //Create player counter
@@ -193,7 +192,7 @@ function setup() {
     clickNoPlayers.resize(0.35*windowWidth, unitHeight);
     clickNoPlayers.color = button_color;
     clickNoPlayers.text = no_players;
-    clickNoPlayers.textFont = 'Courier New';
+    clickNoPlayers.textFont = prototype;
     clickNoPlayers.textSize = 40;
     clickNoPlayers.onPress = function () {
         no_players += 1;
@@ -208,7 +207,7 @@ function setup() {
     clickTime.resize(0.35*windowWidth, unitHeight);
     clickTime.color = button_color;
     clickTime.text = max_time;
-    clickTime.textFont = 'Courier New';
+    clickTime.textFont = prototype;
     clickTime.textSize = 40;
     clickTime.onPress = function () {
         max_time = max_time + 5;
@@ -229,7 +228,7 @@ function setup() {
     clickStart.color = button_color;
     clickStart.textScaled = true;
     clickStart.text = "Start";
-    clickStart.textFont = 'Courier New';
+    clickStart.textFont = prototype;
     clickStart.textSize = 40;
     clickStart.onPress = startSequence;
   
@@ -247,10 +246,9 @@ function setup() {
     }
 }
 
-
 function draw() {
-    background(32, 32, 32);
     if (!start){
+        background(32, 32, 32);
         clickNoPlayers.draw();
         clickStart.updatePosition().draw();
         clickTime.draw();
@@ -260,6 +258,7 @@ function draw() {
         }
     }
     else{
+        background(colors[active_player]);
         timer_box.updateText().draw();
         clickPause.draw();
         timers.forEach(timer => timer.updateText().draw());
