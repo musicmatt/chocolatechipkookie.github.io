@@ -9269,5 +9269,169 @@
         "count": 2
       }
     ]
+  },
+  {
+    "id": 89,
+    "name": "",
+    "note": "",
+    "date": "2020-09-15",
+    "mode": [
+      "Base",
+      "Colonies",
+      "Corporate Era",
+      "Draft",
+      "Prelude",
+      "Turmoil",
+      "Venus"
+    ],
+    "mode_code": "B+Col+CE+Dr+Pr+Tu+Ve",
+    "map": "Tharsis",
+    "winner": "Matteo Samsa",
+    "win_corp": "Lakefront Resorts",
+    "win_score": 74,
+    "players": 4,
+    "generation": 8,
+    "image": "",
+    "scores": [
+      {
+        "player": "Luka Jenuš",
+        "corporation": "Vitor",
+        "tr": 29,
+        "awards": 7,
+        "milestones": 0,
+        "greenery": 1,
+        "cities": 4,
+        "cards": 29,
+        "lead": 0,
+        "total": 72,
+        "rank": 2,
+        "note": "",
+        "turmoil": 2
+      },
+      {
+        "player": "Matteo Samsa",
+        "corporation": "Lakefront Resorts",
+        "tr": 34,
+        "awards": 5,
+        "milestones": 10,
+        "greenery": 5,
+        "cities": 7,
+        "cards": 11,
+        "lead": 0,
+        "total": 74,
+        "rank": 1,
+        "note": "",
+        "turmoil": 2
+      },
+      {
+        "player": "Andro Slavić",
+        "corporation": "Inventrix",
+        "tr": 18,
+        "awards": 7,
+        "milestones": 0,
+        "greenery": 1,
+        "cities": 2,
+        "cards": 40,
+        "lead": 0,
+        "total": 70,
+        "rank": 3,
+        "note": "",
+        "turmoil": 2
+      },
+      {
+        "player": "Robert Bulaić",
+        "corporation": "Credicor",
+        "tr": 26,
+        "awards": 2,
+        "milestones": 5,
+        "greenery": 3,
+        "cities": 10,
+        "cards": 9,
+        "lead": 0,
+        "total": 56,
+        "rank": 4,
+        "note": "",
+        "turmoil": 1
+      }
+    ],
+    "milestones": {
+      "Terraformer": "Matteo Samsa",
+      "Mayor": "Robert Bulaić",
+      "Gardener": "Matteo Samsa"
+    },
+    "awards": {
+      "winners": {
+        "Landlord": {
+          "first": [
+            "Matteo Samsa"
+          ],
+          "second": [
+            "Robert Bulaić"
+          ]
+        },
+        "Scientist": {
+          "first": [
+            "Andro Slavić"
+          ],
+          "second": [
+            "Luka Jenuš"
+          ]
+        },
+        "Miner": {
+          "first": [
+            "Luka Jenuš"
+          ],
+          "second": [
+            "Andro Slavić"
+          ]
+        }
+      },
+      "points": {
+        "Landlord": {
+          "Luka Jenuš": 3,
+          "Matteo Samsa": 11,
+          "Andro Slavić": 5,
+          "Robert Bulaić": 9
+        },
+        "Scientist": {
+          "Luka Jenuš": 6,
+          "Matteo Samsa": 2,
+          "Andro Slavić": 9,
+          "Robert Bulaić": 2
+        },
+        "Miner": {
+          "Luka Jenuš": 7,
+          "Matteo Samsa": 1,
+          "Andro Slavić": 6,
+          "Robert Bulaić": 3
+        }
+      }
+    },
+    "colonies": [
+      {
+        "name": "Callisto",
+        "count": 0
+      },
+      {
+        "name": "Luna",
+        "count": 3
+      },
+      {
+        "name": "Miranda",
+        "count": 1
+      },
+      {
+        "name": "Pluto",
+        "count": 1
+      },
+      {
+        "name": "Triton",
+        "count": 1
+      },
+      {
+        "name": "Titan",
+        "count": 0
+      }
+    ]
   }
 ]
