@@ -532,6 +532,13 @@
         "rank": 3,
         "points": 90,
         "players": 4
+      },
+      {
+        "id": 89,
+        "corporation": "Lakefront Resorts",
+        "rank": 1,
+        "points": 74,
+        "players": 4
       }
     ],
     "best_games": [
@@ -2574,6 +2581,13 @@
         "rank": 2,
         "points": 95,
         "players": 4
+      },
+      {
+        "id": 89,
+        "corporation": "Inventrix",
+        "rank": 3,
+        "points": 70,
+        "players": 4
       }
     ],
     "best_games": [
@@ -3383,6 +3397,13 @@
         "corporation": "Vitor",
         "rank": 1,
         "points": 96,
+        "players": 4
+      },
+      {
+        "id": 89,
+        "corporation": "Vitor",
+        "rank": 2,
+        "points": 72,
         "players": 4
       }
     ],
@@ -4878,6 +4899,13 @@
         "rank": 2,
         "points": 66,
         "players": 5
+      },
+      {
+        "id": 89,
+        "corporation": "Credicor",
+        "rank": 4,
+        "points": 56,
+        "players": 4
       }
     ],
     "best_games": [
@@ -4890,6 +4918,11 @@
         "players": 3,
         "id": 63,
         "score": 63
+      },
+      {
+        "players": 4,
+        "id": 89,
+        "score": 56
       }
     ],
     "fave_corp": {
