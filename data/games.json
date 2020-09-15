@@ -5091,7 +5091,7 @@
         "note": ""
       },
       {
-        "player": "Robert Bulaić",
+        "player": "Robert Bulajić",
         "corporation": "Phobolog",
         "tr": 29,
         "awards": 10,
@@ -5618,7 +5618,7 @@
         "note": ""
       },
       {
-        "player": "Robert Bulaić",
+        "player": "Robert Bulajić",
         "corporation": "Cheung Shing Mars",
         "tr": 28,
         "awards": 0,
@@ -6105,7 +6105,7 @@
         "note": ""
       },
       {
-        "player": "Robert Bulaić",
+        "player": "Robert Bulajić",
         "corporation": "Viron",
         "tr": 32,
         "awards": 7,
@@ -8231,7 +8231,7 @@
   },
   {
     "id": 83,
-    "name": "Drugi Sjebani Gejm U Danu",
+    "name": "Drugi Sjebani Gejm U Danu (Game 86)",
     "note": "",
     "date": "2020-09-04",
     "mode": [
@@ -8461,7 +8461,7 @@
         "note": "pluto zakurac"
       },
       {
-        "player": "Robert Bulaić",
+        "player": "Robert Bulajić",
         "corporation": "Robinson Industries",
         "tr": 28,
         "awards": 7,
@@ -8505,7 +8505,7 @@
     ],
     "milestones": {
       "Mayor": "Adi Čaušević",
-      "Gardener": "Robert Bulaić",
+      "Gardener": "Robert Bulajić",
       "Planer": "Luka Jenuš"
     },
     "awards": {
@@ -8515,7 +8515,7 @@
             "Mia Čaušević"
           ],
           "second": [
-            "Robert Bulaić"
+            "Robert Bulajić"
           ]
         },
         "Scientist": {
@@ -8528,7 +8528,7 @@
         },
         "Thermalist": {
           "first": [
-            "Robert Bulaić"
+            "Robert Bulajić"
           ],
           "second": [
             "Mia Čaušević"
@@ -8539,21 +8539,21 @@
         "Landlord": {
           "Adi Čaušević": 5,
           "Luka Jenuš": 2,
-          "Robert Bulaić": 7,
+          "Robert Bulajić": 7,
           "Matteo Samsa": 5,
           "Mia Čaušević": 10
         },
         "Scientist": {
           "Adi Čaušević": 7,
           "Luka Jenuš": 6,
-          "Robert Bulaić": 3,
+          "Robert Bulajić": 3,
           "Matteo Samsa": 4,
           "Mia Čaušević": 1
         },
         "Thermalist": {
           "Adi Čaušević": 1,
           "Luka Jenuš": 10,
-          "Robert Bulaić": 25,
+          "Robert Bulajić": 25,
           "Matteo Samsa": 6,
           "Mia Čaušević": 16
         }
@@ -8756,7 +8756,7 @@
   },
   {
     "id": 86,
-    "name": "Samsa isteko",
+    "name": "Samsa isteko (Game 89)",
     "note": "Jaaaaakooo dug game, samsa nije igrao zadnju generaciju jer se kurcio s vremenom. 35 minut.",
     "date": "2020-09-10",
     "mode": [
@@ -9107,7 +9107,7 @@
   },
   {
     "id": 88,
-    "name": "sat je izbugan (Game 91)",
+    "name": "Sat je izbugan (Game 91)",
     "note": "",
     "date": "2020-09-12",
     "mode": [
@@ -9272,7 +9272,7 @@
   },
   {
     "id": 89,
-    "name": "",
+    "name": "Samsa neocekivano uzeo (Game 92)",
     "note": "",
     "date": "2020-09-15",
     "mode": [
@@ -9305,7 +9305,7 @@
         "lead": 0,
         "total": 72,
         "rank": 2,
-        "note": "",
+        "note": "Falilo kartica",
         "turmoil": 2
       },
       {
@@ -9320,7 +9320,7 @@
         "lead": 0,
         "total": 74,
         "rank": 1,
-        "note": "",
+        "note": "Advanced ecosystems od prve ruke",
         "turmoil": 2
       },
       {
@@ -9335,11 +9335,11 @@
         "lead": 0,
         "total": 70,
         "rank": 3,
-        "note": "",
+        "note": "Titan vrijedio 4, a još je unity bio na vlasti 4 od 8 generacija",
         "turmoil": 2
       },
       {
-        "player": "Robert Bulaić",
+        "player": "Robert Bulajić",
         "corporation": "Credicor",
         "tr": 26,
         "awards": 2,
@@ -9350,13 +9350,13 @@
         "lead": 0,
         "total": 56,
         "rank": 4,
-        "note": "",
+        "note": "Ostalo 30+ topline, a nije uplatio termalista",
         "turmoil": 1
       }
     ],
     "milestones": {
       "Terraformer": "Matteo Samsa",
-      "Mayor": "Robert Bulaić",
+      "Mayor": "Robert Bulajić",
       "Gardener": "Matteo Samsa"
     },
     "awards": {
@@ -9366,7 +9366,7 @@
             "Matteo Samsa"
           ],
           "second": [
-            "Robert Bulaić"
+            "Robert Bulajić"
           ]
         },
         "Scientist": {
@@ -9391,19 +9391,19 @@
           "Luka Jenuš": 3,
           "Matteo Samsa": 11,
           "Andro Slavić": 5,
-          "Robert Bulaić": 9
+          "Robert Bulajić": 9
         },
         "Scientist": {
           "Luka Jenuš": 6,
           "Matteo Samsa": 2,
           "Andro Slavić": 9,
-          "Robert Bulaić": 2
+          "Robert Bulajić": 2
         },
         "Miner": {
           "Luka Jenuš": 7,
           "Matteo Samsa": 1,
           "Andro Slavić": 6,
-          "Robert Bulaić": 3
+          "Robert Bulajić": 3
         }
       }
     },
